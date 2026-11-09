@@ -1,7 +1,7 @@
 # ChinaBound Travel SEO Learning 闭环报告
 
-**生成时间**: 2026-11-02 05:03:59
-**策略版本**: 2.0-20261102_050359
+**生成时间**: 2026-11-09 05:20:29
+**策略版本**: 2.0-20261109_052029
 
 ---
 
@@ -36,13 +36,13 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 | https://www.chinaboundtravel.com/posts/c | 12 | 7.6 |
 | https://www.chinaboundtravel.com/free-it | 6 | 4.5 |
 | https://www.chinaboundtravel.com/posts/2 | 3 | 3.6 |
+| https://www.chinaboundtravel.com/affilia | 3 | 2.2 |
 | https://www.chinaboundtravel.com/posts/2 | 3 | 3.5 |
 | https://www.chinaboundtravel.com/posts/s | 2 | 8.4 |
 | https://www.chinaboundtravel.com/ebook/7 | 2 | 6.7 |
 | https://www.chinaboundtravel.com/posts/a | 2 | 1.0 |
 | https://www.chinaboundtravel.com/posts/2 | 2 | 8.3 |
 | https://www.chinaboundtravel.com/cities/ | 1 | 4.0 |
-| https://www.chinaboundtravel.com/posts/a | 1 | 9.0 |
 
 ---
 
@@ -71,7 +71,7 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 **建议:** 分析该关键词的标题和描述模式，复制到其他关键词
 
 ### 2. 快速提升机会关键词
-发现 18 个排名在4-10之间的关键词，小幅优化即可进入Top 3
+发现 20 个排名在4-10之间的关键词，小幅优化即可进入Top 3
 
 **建议:** 优先优化这些关键词的页面，提升内链和内容质量
 
@@ -86,7 +86,7 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 - 行动: 扩充内容、增加内链、优化标题和描述
 
 🔴 **快速提升排名4-10的关键词**
-- 发现 18 个快速提升机会关键词
+- 发现 20 个快速提升机会关键词
 - 行动: 小幅优化即可进入Top 3，优先处理
 
 🟡 **拓展低难度关键词**

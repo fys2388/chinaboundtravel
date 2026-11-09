@@ -475,8 +475,36 @@
       "metadata": {},
       "calculated": {},
       "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/china-airport-transfer-guide/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "date": "2026-11-08",
+      "metrics": {
+        "pageviews": 9,
+        "sessions": 10,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/posts/food-recommendations-guide/",
+      "title": "China Food Guide 2026: What to Eat & Where",
+      "date": "2026-11-08",
+      "metrics": {
+        "pageviews": 8,
+        "sessions": 8,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
     }
   ],
   "version": "1.0",
-  "last_updated": "2026-11-02T05:03:59.882581"
+  "last_updated": "2026-11-09T05:20:29.229531"
 }

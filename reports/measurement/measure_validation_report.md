@@ -1,8 +1,8 @@
 # Measure验证报告（前后对照）
 
-**验证时间**: 2026-11-02 05:04:00
+**验证时间**: 2026-11-09 05:20:29
 **基线日期**: 2026-08-31
-**当前日期**: 2026-11-02
+**当前日期**: 2026-11-09
 **整体评分**: 60.7/100
 **学习有效**: ✅ 是
 
@@ -27,49 +27,49 @@
 
 | 指标 | 基线(Before) | 当前(After) | 变化 | 变化率 | 趋势 |
 |------|-------------|------------|------|--------|------|
-| engagementRate | 0 | 0.7150537634408602 | +0.72 | +0.0% | 📈 improved |
-| sessions | 0 | 186 | +186.00 | +0.0% | 📈 improved |
-| newUsers | 0 | 170 | +170.00 | +0.0% | 📈 improved |
-| bounceRate | 0 | 0.2849462365591398 | +0.28 | +0.0% | 📈 improved |
-| activeUsers | 0 | 172 | +172.00 | +0.0% | 📈 improved |
-| averageSessionDuration | 0 | 56.38797705913978 | +56.39 | +0.0% | 📈 improved |
-| engagedSessions | 0 | 133 | +133.00 | +0.0% | 📈 improved |
-| screenPageViews | 0 | 203 | +203.00 | +0.0% | 📈 improved |
+| engagementRate | 0 | 0.6590909090909091 | +0.66 | +0.0% | 📈 improved |
+| bounceRate | 0 | 0.3409090909090909 | +0.34 | +0.0% | 📈 improved |
+| sessions | 0 | 176 | +176.00 | +0.0% | 📈 improved |
+| activeUsers | 0 | 163 | +163.00 | +0.0% | 📈 improved |
+| screenPageViews | 0 | 196 | +196.00 | +0.0% | 📈 improved |
+| newUsers | 0 | 161 | +161.00 | +0.0% | 📈 improved |
+| averageSessionDuration | 0 | 57.60662219886364 | +57.61 | +0.0% | 📈 improved |
+| engagedSessions | 0 | 116 | +116.00 | +0.0% | 📈 improved |
 
 ### CONTENT
 
 | 指标 | 基线(Before) | 当前(After) | 变化 | 变化率 | 趋势 |
 |------|-------------|------------|------|--------|------|
-| avg_word_count | 1928 | 2222 | +294.00 | +15.2% | 📈 improved |
-| articles_this_week | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 | articles_with_affiliate_links | 4 | 39 | +35.00 | +875.0% | 📈 improved |
-| articles_with_internal_links | 10 | 71 | +61.00 | +610.0% | 📈 improved |
+| articles_this_week | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| avg_word_count | 1928 | 2234 | +306.00 | +15.9% | 📈 improved |
+| articles_with_internal_links | 10 | 72 | +62.00 | +620.0% | 📈 improved |
 | total_articles | 59 | 73 | +14.00 | +23.7% | 📈 improved |
 
 ### SOCIAL
 
 | 指标 | 基线(Before) | 当前(After) | 变化 | 变化率 | 趋势 |
 |------|-------------|------------|------|--------|------|
-| total_likes | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| total_comments | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| total_shares | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| total_impressions | 0 | 5 | +5.00 | +0.0% | 📈 improved |
 | avg_engagement_rate | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| total_shares | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| total_comments | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 | total_posts | 0 | 20 | +20.00 | +0.0% | 📈 improved |
+| total_impressions | 0 | 27 | +27.00 | +0.0% | 📈 improved |
 | total_clicks | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| total_likes | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 
 ### SEO
 
 | 指标 | 基线(Before) | 当前(After) | 变化 | 变化率 | 趋势 |
 |------|-------------|------------|------|--------|------|
-| ctr | 0 | 0.0 | +0.00 | +0.0% | ➖ unchanged |
+| sitemap_pages | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| impressions | 0 | 639 | +639.00 | +0.0% | 📈 improved |
+| average_position | 0 | 62.9 | +62.90 | +0.0% | 📈 improved |
+| index_errors | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 | clicks | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 | sitemap_count | 0 | 1 | +1.00 | +0.0% | 📈 improved |
+| ctr | 0 | 0.0 | +0.00 | +0.0% | ➖ unchanged |
 | indexed_pages | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| sitemap_pages | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| index_errors | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| average_position | 0 | 62.6 | +62.60 | +0.0% | 📈 improved |
-| impressions | 0 | 546 | +546.00 | +0.0% | 📈 improved |
 
 
 ---
@@ -112,4 +112,4 @@
 ---
 
 *报告由Measure验证引擎自动生成*
-*生成时间: 2026-11-02 05:04:00*
+*生成时间: 2026-11-09 05:20:29*

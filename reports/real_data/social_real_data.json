@@ -1,12 +1,12 @@
 {
   "source": "buffer_api",
-  "pull_time": "2026-11-08T12:22:28.820761",
-  "data_date": "2026-11-08",
+  "pull_time": "2026-11-09T05:20:26.366413",
+  "data_date": "2026-11-09",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_posts": 20,
-    "total_impressions": 14,
+    "total_impressions": 27,
     "total_clicks": 0,
     "total_likes": 0,
     "total_comments": 0,
@@ -14,14 +14,46 @@
   },
   "posts": [
     {
+      "id": "6af0bcb29214322f686c7a50",
+      "text": "Everything you need to know about Alipay — in one practical guide.\n\n· How to Use Alipay & WeChat Pay in China 2026\n\nRead the full guide: https://www.chinaboundtravel.com/alipay-wechat-pay-foreigners-g",
+      "platform": "instagram",
+      "channel_name": "chinaboundtravel",
+      "published_at": "2026-11-08T20:17:38.931Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6af0bcaa51492b796e53664e",
+      "text": "What travelers discover about Food — lessons from the ground. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/?utm_so",
+      "platform": "twitter",
+      "channel_name": "fys2388",
+      "published_at": "2026-11-08T20:17:16.352Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
       "id": "6af01f25004e4879a79f22b5",
       "text": "Visual guide to China travel: what to see and capture.\n\nRead the full guide: https://www.chinaboundtravel.com/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/?utm_source=ig&utm_medium=soc",
       "platform": "instagram",
       "channel_name": "chinaboundtravel",
       "published_at": "2026-11-08T09:05:22.724Z",
       "status": "sent",
-      "metrics_available": false,
-      "has_impression_metric": false,
+      "metrics_available": true,
+      "has_impression_metric": true,
       "likes": 0,
       "comments": 0,
       "shares": 0,
@@ -42,7 +74,7 @@
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 2,
       "engagement_rate": 0.0
     },
     {
@@ -52,8 +84,8 @@
       "channel_name": "chinaboundtravel",
       "published_at": "2026-11-08T09:05:24.493Z",
       "status": "sent",
-      "metrics_available": false,
-      "has_impression_metric": false,
+      "metrics_available": true,
+      "has_impression_metric": true,
       "likes": 0,
       "comments": 0,
       "shares": 0,
@@ -74,7 +106,7 @@
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 2,
       "engagement_rate": 0.0
     },
     {
@@ -90,7 +122,7 @@
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 4,
       "engagement_rate": 0.0
     },
     {
@@ -106,7 +138,7 @@
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 4,
       "engagement_rate": 0.0
     },
     {
@@ -122,7 +154,7 @@
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 3,
       "engagement_rate": 0.0
     },
     {
@@ -138,31 +170,15 @@
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 1,
       "engagement_rate": 0.0
     },
     {
-      "id": "6af01e819214322f68391a56",
-      "text": "⚠️ SAFETY ADVISORY\n\nURGENT: Shipping from China to Australia [Updated November 2026 ] - Freightos\n\nShipping from China to Australia [Updated November 2026 ] Freightos\n\nSource: Google News RSS\n\n\n\n#Trav",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-11-08T09:02:31.285Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6af01e80229bf05daf96c203",
-      "text": "⚠️ SAFETY ADVISORY\n\nURGENT: Chinese tourists avoid Thailand amid fears of floods, kidnapping and scams - South China Morning...\n\nChinese tourists avoid Thailand amid fears of floods, kidnapping and sc",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-11-08T09:02:31.861Z",
+      "id": "6af01f2951492b796e216d4a",
+      "text": "Chinese Train Stations: Survival Guide for | Essential Train tips most first-time visitors miss.\n\nChinese Train Stations: Survival Guide for\n\n📌 Save this for your China trip planning.\n\nFull guide: htt",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-11-08T20:05:16.311Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -316,40 +332,24 @@
       "clicks": 0,
       "impressions": 3,
       "engagement_rate": 0.0
-    },
-    {
-      "id": "6ae991d53b00665c737f8e57",
-      "text": "China 144 Hour Transit Visa: Complete Guide | Essential Visa tips most first-time visitors miss.\n\nChina 144 Hour Transit Visa: Complete Guide\n\n📌 Save this for your China trip planning.\n\nFull guide: ht",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-11-03T20:48:46.426Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 3,
-      "engagement_rate": 0.0
     }
   ],
   "by_platform": {
     "instagram": {
-      "posts": 2,
+      "posts": 3,
       "impressions": 0,
       "clicks": 0,
       "likes": 0
     },
     "twitter": {
-      "posts": 8,
-      "impressions": 0,
+      "posts": 7,
+      "impressions": 16,
       "clicks": 0,
       "likes": 0
     },
     "pinterest": {
       "posts": 10,
-      "impressions": 14,
+      "impressions": 11,
       "clicks": 0,
       "likes": 0
     }
@@ -357,12 +357,12 @@
   "raw_source": "Buffer GraphQL API",
   "status": "OK",
   "error": null,
-  "metrics_available_count": 18,
-  "impression_metric_count": 18,
+  "metrics_available_count": 20,
+  "impression_metric_count": 20,
   "freshness_info": {
     "fresh": true,
     "reason": "Fresh",
     "age_days": 0,
-    "data_date": "2026-11-08"
+    "data_date": "2026-11-09"
   }
 }

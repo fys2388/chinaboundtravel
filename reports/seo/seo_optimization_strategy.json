@@ -1,6 +1,6 @@
 {
-  "version": "2.0-20261102_050359",
-  "last_updated": "2026-11-02T05:03:59.840423",
+  "version": "2.0-20261109_052029",
+  "last_updated": "2026-11-09T05:20:29.184795",
   "keyword_rules": {
     "target_difficulty": "low_medium",
     "min_search_volume": 100,
@@ -98,14 +98,14 @@
       "position": 3.6
     },
     {
+      "keyword": "https://www.chinaboundtravel.com/affiliate-disclosure/",
+      "traffic_potential": 3.12,
+      "position": 2.2
+    },
+    {
       "keyword": "https://www.chinaboundtravel.com/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/",
       "traffic_potential": 2.6,
       "position": 3.5
-    },
-    {
-      "keyword": "https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/",
-      "traffic_potential": 2.2399999999999998,
-      "position": 8.4
     }
   ],
   "learning_insights": [
@@ -116,7 +116,7 @@
     },
     {
       "pattern": "快速提升机会关键词",
-      "description": "发现 18 个排名在4-10之间的关键词，小幅优化即可进入Top 3",
+      "description": "发现 20 个排名在4-10之间的关键词，小幅优化即可进入Top 3",
       "recommendation": "优先优化这些关键词的页面，提升内链和内容质量",
       "keywords": [
         "https://www.chinaboundtravel.com/cancel/",
@@ -129,10 +129,10 @@
   ],
   "strategy_changes": [
     {
-      "field": "best_keywords",
-      "reason": "基于GSC数据分析，更新最佳关键词排名",
+      "field": "high_priority_keywords",
+      "reason": "基于流量潜力分析，更新高优先级关键词",
       "version": "2.1",
-      "timestamp": "2026-11-02T05:03:59.813778",
+      "timestamp": "2026-11-09T05:20:29.166264",
       "evidence": "based on performance data analysis"
     }
   ]

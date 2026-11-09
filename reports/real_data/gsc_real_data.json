@@ -1,25 +1,18 @@
 {
   "source": "gsc_api",
-  "pull_time": "2026-11-08T12:22:28.147877",
-  "data_date": "2026-11-05",
+  "pull_time": "2026-11-09T05:20:25.472150",
+  "data_date": "2026-11-06",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "impressions": 637,
+    "impressions": 639,
     "clicks": 0,
     "ctr": 0.0,
-    "average_position": 62.5,
+    "average_position": 62.9,
     "sitemap_count": 1,
     "sitemap_last_submitted": "2026-09-08T00:57:40.422Z"
   },
   "daily": [
-    {
-      "date": "2026-10-09",
-      "impressions": 35,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 25.3
-    },
     {
       "date": "2026-10-10",
       "impressions": 54,
@@ -208,6 +201,13 @@
       "clicks": 0,
       "ctr": 0,
       "position": 23.6
+    },
+    {
+      "date": "2026-11-06",
+      "impressions": 45,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 35.0
     }
   ],
   "top_queries": [
@@ -318,10 +318,10 @@
     },
     {
       "query": "accommodation china",
-      "impressions": 10,
+      "impressions": 11,
       "clicks": 0,
       "ctr": 0,
-      "position": 67.4
+      "position": 69
     },
     {
       "query": "accommodation in china",
@@ -362,17 +362,17 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/free-itinerary/",
-      "impressions": 57,
+      "impressions": 58,
       "clicks": 1,
       "ctr": 0.02,
-      "position": 13.5
+      "position": 13.4
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary/",
-      "impressions": 101,
+      "impressions": 104,
       "clicks": 1,
       "ctr": 0.01,
-      "position": 18
+      "position": 18.5
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/",
@@ -446,10 +446,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/guilin/",
-      "impressions": 9,
+      "impressions": 10,
       "clicks": 0,
       "ctr": 0,
-      "position": 46.8
+      "position": 51.9
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/western-sichuan/",
@@ -501,6 +501,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 3,
-    "data_date": "2026-11-05"
+    "data_date": "2026-11-06"
   }
 }

@@ -21743,8 +21743,104 @@
         "content_id": "",
         "content_type": "post"
       }
+    },
+    {
+      "post_id": "6af0bcb29214322f686c7a50",
+      "platform": "instagram",
+      "text": "Everything you need to know about Alipay — in one practical guide.\n\n· How to Use Alipay & WeChat Pay in China 2026\n\nRead the full guide: https://www.chinaboundtravel.com/alipay-wechat-pay-foreigners-g",
+      "published_at": "2026-11-08T20:17:38.931Z",
+      "date": "2026-11-08",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "engagement": 0,
+        "engagement_rate": 0.0
+      },
+      "metadata": {
+        "channel_name": "chinaboundtravel",
+        "status": "sent"
+      },
+      "calculated": {
+        "ctr": 0,
+        "engagement_rate": 0.0,
+        "engagement_per_impression": 0,
+        "engagement": 0
+      },
+      "content": {
+        "hook": "Everything you need to know about Alipay — in one practical guide.\n\n· How to Use Alipay & WeChat Pay",
+        "cta": "",
+        "content_id": "",
+        "content_type": "post"
+      }
+    },
+    {
+      "post_id": "6af0bcaa51492b796e53664e",
+      "platform": "twitter",
+      "text": "What travelers discover about Food — lessons from the ground. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/?utm_so",
+      "published_at": "2026-11-08T20:17:16.352Z",
+      "date": "2026-11-08",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "engagement": 0,
+        "engagement_rate": 0.0
+      },
+      "metadata": {
+        "channel_name": "fys2388",
+        "status": "sent"
+      },
+      "calculated": {
+        "ctr": 0,
+        "engagement_rate": 0.0,
+        "engagement_per_impression": 0,
+        "engagement": 0
+      },
+      "content": {
+        "hook": "What travelers discover about Food — lessons from the ground. → #ChinaTravel\n\nhttps://www.chinabound",
+        "cta": "",
+        "content_id": "",
+        "content_type": "post"
+      }
+    },
+    {
+      "post_id": "6af01f2951492b796e216d4a",
+      "platform": "pinterest",
+      "text": "Chinese Train Stations: Survival Guide for | Essential Train tips most first-time visitors miss.\n\nChinese Train Stations: Survival Guide for\n\n📌 Save this for your China trip planning.\n\nFull guide: htt",
+      "published_at": "2026-11-08T20:05:16.311Z",
+      "date": "2026-11-08",
+      "metrics": {
+        "impressions": 0,
+        "clicks": 0,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "engagement": 0,
+        "engagement_rate": 0.0
+      },
+      "metadata": {
+        "channel_name": "Joranchinatravel",
+        "status": "sent"
+      },
+      "calculated": {
+        "ctr": 0,
+        "engagement_rate": 0.0,
+        "engagement_per_impression": 0,
+        "engagement": 0
+      },
+      "content": {
+        "hook": "Chinese Train Stations: Survival Guide for | Essential Train tips most first-time visitors miss.\n\nCh",
+        "cta": "",
+        "content_id": "",
+        "content_type": "post"
+      }
     }
   ],
-  "last_updated": "2026-11-08T12:22:31.453327",
+  "last_updated": "2026-11-09T05:20:28.918023",
   "version": "1.0"
 }

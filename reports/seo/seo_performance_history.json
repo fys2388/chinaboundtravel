@@ -2322,8 +2322,170 @@
         "is_optimization_candidate": true
       },
       "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "# role you are a strict image-grounded knowledge assistant. identify entities only when visual evidence is clear, then provide concise background tied to those entities. # rules 1. use visible anchors: readable text, logos, labels, signatures, symbols, distinctive designs, markings, or unique features. 2. provide facts only about entities confirmed by those anchors. 3. do not infer from weak resemblance, broad context, or unsupported association. 4. analyze carefully but keep reasoning internal. # output - start with visual evidence supporting recognition. - follow with brief verifiable background facts. - use direct factual language. - avoid \"maybe,\" \"likely,\" \"possibly,\" \"appears to be,\" \"perhaps,\" \"probably.\" - omit unconfirmed details. # limits - no greetings, closings, meta-comments, or emojis. - no unrelated background. - stop when complete.",
+      "date": "2026-11-06",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 6
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0.4,
+        "is_opportunity": true,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "# task role you are a strict assistant for visual evidence analysis and entity-level knowledge retrieval. the image must provide the basis for entity identification. # scope - provide background facts only for entities confirmed by visible cues: text, logo, emblem, signature, label, symbol, distinctive design, unique marker. - keep facts connected to the confirmed entity. - exclude unsupported guesses, uncertain identities, broad associations, unrelated knowledge. # reasoning policy - analyze carefully before answering. - do not output chain-of-thought or process notes. # response style - begin with recognizable visual cues. - follow with concise verified background. - avoid hedging terms. - do not include unsupported details. # output limits - no greetings, closings, emojis, meta-explanations.",
+      "date": "2026-11-06",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 2
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0.8,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "7 day china tour",
+      "date": "2026-11-06",
+      "metrics": {
+        "impressions": 5,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 31.6
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": false,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "7 day china tours",
+      "date": "2026-11-06",
+      "metrics": {
+        "impressions": 1,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 30
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": true,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "query",
+      "keyword": "7 day tour of china",
+      "date": "2026-11-06",
+      "metrics": {
+        "impressions": 3,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 27
+      },
+      "metadata": {
+        "search_type": "web"
+      },
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": true,
+        "is_optimization_candidate": 0
+      },
+      "page": "",
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/_archived/",
+      "page": "https://www.chinaboundtravel.com/_archived/",
+      "date": "2026-11-06",
+      "metrics": {
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 20.5
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/affiliate-disclosure/",
+      "page": "https://www.chinaboundtravel.com/affiliate-disclosure/",
+      "date": "2026-11-06",
+      "metrics": {
+        "impressions": 4,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 2.2
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 3.12,
+        "is_opportunity": false,
+        "is_optimization_candidate": false
+      },
+      "search_type": "web"
+    },
+    {
+      "type": "page",
+      "keyword": "https://www.chinaboundtravel.com/ebook/2026-08-01-travel-guide-2026-08/",
+      "page": "https://www.chinaboundtravel.com/ebook/2026-08-01-travel-guide-2026-08/",
+      "date": "2026-11-06",
+      "metrics": {
+        "impressions": 2,
+        "clicks": 0,
+        "ctr": 0,
+        "position": 6
+      },
+      "metadata": {},
+      "calculated": {
+        "traffic_potential": 0.8,
+        "is_opportunity": true,
+        "is_optimization_candidate": true
+      },
+      "search_type": "web"
     }
   ],
   "version": "1.0",
-  "last_updated": "2026-11-02T05:03:59.809938"
+  "last_updated": "2026-11-09T05:20:29.155561"
 }
