@@ -1,53 +1,53 @@
 {
   "version": "1.0",
   "created_at": "2026-08-31T01:16:40.176953",
-  "last_updated": "2026-11-09T05:20:29.362961",
+  "last_updated": "2026-11-09T14:36:48.029443",
   "agents": {
     "social": {
       "name": "Social Learning",
-      "last_run": "2026-11-09T05:20:28.998877",
+      "last_run": "2026-11-09T14:36:47.790998",
       "status": "success",
-      "strategy_version": "2.1-20261109_052028_quality_gated",
+      "strategy_version": "2.1-20261109_143647_quality_gated",
       "strategy_changes": 0,
       "learning_insights": 1
     },
     "content": {
       "name": "Content Learning",
-      "last_run": "2026-11-09T05:20:29.066042",
+      "last_run": "2026-11-09T14:36:47.835159",
       "status": "success",
-      "strategy_version": "2.0-20261109_052029",
+      "strategy_version": "2.0-20261109_143647",
       "strategy_changes": 0,
       "learning_insights": 1
     },
     "conversion": {
       "name": "Conversion Learning",
-      "last_run": "2026-11-09T05:20:29.111127",
+      "last_run": "2026-11-09T14:36:47.875606",
       "status": "success",
-      "strategy_version": "2.0-20261109_052029",
+      "strategy_version": "2.0-20261109_143647",
       "strategy_changes": 0,
       "learning_insights": 2
     },
     "seo": {
       "name": "SEO Learning",
-      "last_run": "2026-11-09T05:20:29.191853",
+      "last_run": "2026-11-09T14:36:47.935771",
       "status": "success",
-      "strategy_version": "2.0-20261109_052029",
-      "strategy_changes": 1,
+      "strategy_version": "2.0-20261109_143647",
+      "strategy_changes": 0,
       "learning_insights": 2
     },
     "user": {
       "name": "User Learning",
-      "last_run": "2026-11-09T05:20:29.237960",
+      "last_run": "2026-11-09T14:36:47.974040",
       "status": "success",
-      "strategy_version": "2.0-20261109_052029",
-      "strategy_changes": 1,
+      "strategy_version": "2.0-20261109_143647",
+      "strategy_changes": 0,
       "learning_insights": 2
     },
     "revenue": {
       "name": "Revenue Learning",
-      "last_run": "2026-11-09T05:20:29.362916",
+      "last_run": "2026-11-09T14:36:48.029392",
       "status": "success",
-      "strategy_version": "2.0-20261109_052029",
+      "strategy_version": "2.0-20261109_143648",
       "strategy_changes": 0,
       "learning_insights": 2
     }
