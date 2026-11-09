@@ -2,7 +2,7 @@
   "month_post_count": 1,
   "last_reset_date": "2026-11-01",
   "last_social_publish": "2026-11-06 03:32:29",
-  "daily_social_publish_date": "2026-11-06",
+  "daily_social_publish_date": "2026-11-09",
   "daily_social_publish_count": 0,
   "daily_social_publish_limit": 5,
   "history_topics": [
@@ -47,24 +47,6 @@
       "geo_region": "AU",
       "category": "general",
       "create_date": "2026-08-01"
-    },
-    {
-      "topic": "chinese language survival phrases",
-      "geo_region": "EU",
-      "category": "general",
-      "create_date": "2026-08-02"
-    },
-    {
-      "topic": "chinese language survival phrases",
-      "geo_region": "US",
-      "category": "general",
-      "create_date": "2026-08-03"
-    },
-    {
-      "topic": "china family travel tips",
-      "geo_region": "EU",
-      "category": "travel",
-      "create_date": "2026-08-05"
     },
     {
       "topic": "china remote work guide",
