@@ -209,6 +209,8 @@ Sources: National Immigration Administration
 
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
 
+- [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
+
 ## FAQ
 
 ### Do I need a visa for China?

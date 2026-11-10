@@ -231,3 +231,5 @@ So, what are you waiting for? Book your trip to Xi'an today and experience the w
 - [Best China Itineraries for 10 Days: Three Routes Compared](/posts/best-china-itineraries-for-10-days-three-routes-compared-au/)
 
 - [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
+
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)

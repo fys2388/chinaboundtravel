@@ -209,3 +209,5 @@ Hangzhou is China's most livable city  clean, beautiful, well-organized, and gen
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
 
 - [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
+
+- [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)
