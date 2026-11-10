@@ -1,7 +1,7 @@
 {
   "queue_type": "manual",
   "reason": "issue type 不在 agent_task_executor.AUTO_FIXABLE_TYPES 内，executor 会返回 need_manual。改为一次性落盘，不再每天重派 agent 任务。",
-  "generated_at": "2026-11-10T05:17:29.836339",
+  "generated_at": "2026-11-10T19:13:52.853719",
   "target_date": "2026-11-10",
   "issue_count": 2,
   "by_agent": {
@@ -20,14 +20,14 @@
   },
   "issues": [
     {
-      "id": "issue_b5456d270bc5",
+      "id": "issue_fb6f1afef8ec",
       "type": "social_no_traffic",
-      "description": "社媒曝光16但点击为0，需检查帖子链接和CTA",
+      "description": "社媒曝光14但点击为0，需检查帖子链接和CTA",
       "severity": "high",
       "agent": "social",
       "action": "audit_links_and_cta",
-      "source_file": "social_daily_2026-11-08.json",
-      "detected_at": "2026-11-10T05:17:29.831895",
+      "source_file": "social_daily_2026-11-09.json",
+      "detected_at": "2026-11-10T19:13:52.847760",
       "status": "new",
       "assigned": false,
       "auto_fixable": false
@@ -40,7 +40,7 @@
       "agent": "seo",
       "action": "optimize_meta",
       "source_file": "site_health_issues_2026-11-10.json",
-      "detected_at": "2026-11-10T05:17:29.834756",
+      "detected_at": "2026-11-10T19:13:52.851512",
       "status": "new",
       "assigned": false,
       "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",

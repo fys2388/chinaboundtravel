@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-10T05:17:27.744770+00:00",
+  "timestamp": "2026-11-10T19:13:49.942678+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
@@ -8,12 +8,12 @@
     "high": 0,
     "medium": 2,
     "low": 4,
-    "auto_fixed": 5,
-    "need_manual": 25,
-    "resolved": 17,
+    "auto_fixed": 4,
+    "need_manual": 24,
+    "resolved": 16,
     "inherited_resolved": 21,
     "in_progress": 0,
-    "last_updated": "2026-11-10T05:17:30.095618"
+    "last_updated": "2026-11-10T19:13:53.190518"
   },
   "issues": [
     {
@@ -63,22 +63,6 @@
       "resolved_by": "coordinator_2026-09-23",
       "resolution_note": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
       "resolved_at": "2026-09-23"
-    },
-    {
-      "type": "file_mojibake",
-      "severity": "medium",
-      "file": "config/news_digest.json",
-      "message": "检测到乱码字符（双编码）",
-      "auto_fixable": true,
-      "fix_action": "fix_encoding",
-      "agent": "site_health",
-      "status": "false_positive",
-      "resolved_by": "agent_captain",
-      "resolution_note": "[WL-005] config/news_digest.json 是合法 UTF-8 编码 JSON 文件（已通过 utf-8 decode + json.loads 验证）。site_health_agent.py 的 mojibake 检测逻辑对多字节 UTF-8 字符（如中文、emoji）误判为 latin-1 双字节编码残留。",
-      "resolved_at": "2026-10-29",
-      "whitelist_id": "WL-005",
-      "fix_status": "fixed",
-      "fix_message": "已从latin-1转换为UTF-8"
     },
     {
       "type": "ai_forbidden_word",

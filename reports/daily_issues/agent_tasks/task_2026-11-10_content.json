@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-11-10_content",
   "created_at": "2026-11-10T01:01:03.897581+00:00",
-  "updated_at": "2026-11-10T18:00:41.994365",
+  "updated_at": "2026-11-10T19:13:53.191178",
   "target_date": "2026-11-10",
   "issue_count": 15,
   "severity_summary": {
@@ -114,7 +114,7 @@
       "detected_at": "2026-11-10T01:01:03.896992+00:00"
     },
     {
-      "id": "site_health-7b6d022db084f74e",
+      "id": "site_health-76537c95bbfc85a6",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -131,10 +131,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-10T18:00:41.301777+00:00"
+      "detected_at": "2026-11-10T19:13:52.925608+00:00"
     },
     {
-      "id": "site_health-61827b24621fc3ed",
+      "id": "site_health-3735cc75dcbf83b",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -151,7 +151,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-10T18:00:41.301773+00:00"
+      "detected_at": "2026-11-10T19:13:52.925602+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -271,10 +271,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-10T05:17:29.834741"
+      "detected_at": "2026-11-10T05:17:29.834749"
     },
     {
-      "id": "site_health-55cf1c3c1530df9f",
+      "id": "site_health-3becaca2279a8182",
       "type": "ai_forbidden_word",
       "title": "ai_forbidden_word",
       "description": "ai_forbidden_word",
@@ -291,7 +291,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-10T18:00:41.301815+00:00"
+      "detected_at": "2026-11-10T19:13:52.925668+00:00"
     },
     {
       "id": "issue_97911b4c4038",
