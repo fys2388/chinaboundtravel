@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-11-03 09:19:45",
+  "timestamp": "2026-11-10 09:34:54",
   "site_url": "https://www.chinaboundtravel.com/",
   "status": "success",
-  "indexed_count": 4,
+  "indexed_count": 7,
   "submitted_count": 20,
   "total_sitemap_urls": 50,
   "submitted_urls": 20,
@@ -134,8 +134,8 @@
       "message": "indexing request submitted",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
-        "verdict": "NEUTRAL",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "verdict": "PASS",
+        "indexingState": "INDEXING_ALLOWED",
         "status": "success"
       }
     },
@@ -145,8 +145,8 @@
       "message": "indexing request submitted",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/china-visa-free-entry-2026-complete-guide-countries-rules-tips/",
-        "verdict": "NEUTRAL",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "verdict": "PASS",
+        "indexingState": "INDEXING_ALLOWED",
         "status": "success"
       }
     },
@@ -189,8 +189,8 @@
       "message": "indexing request submitted",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide/",
-        "verdict": "NEUTRAL",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "verdict": "PASS",
+        "indexingState": "INDEXING_ALLOWED",
         "status": "success"
       }
     },
