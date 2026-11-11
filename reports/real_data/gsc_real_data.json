@@ -1,25 +1,18 @@
 {
   "source": "gsc_api",
-  "pull_time": "2026-11-10T13:54:50.035730",
-  "data_date": "2026-11-07",
+  "pull_time": "2026-11-11T06:54:22.505598",
+  "data_date": "2026-11-08",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "impressions": 685,
-    "clicks": 0,
-    "ctr": 0.0,
-    "average_position": 63.3,
+    "impressions": 707,
+    "clicks": 1,
+    "ctr": 0.14,
+    "average_position": 62.9,
     "sitemap_count": 1,
     "sitemap_last_submitted": "2026-09-08T00:57:40.422Z"
   },
   "daily": [
-    {
-      "date": "2026-10-11",
-      "impressions": 45,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 15.2
-    },
     {
       "date": "2026-10-12",
       "impressions": 51,
@@ -208,9 +201,23 @@
       "clicks": 0,
       "ctr": 0,
       "position": 48.2
+    },
+    {
+      "date": "2026-11-08",
+      "impressions": 60,
+      "clicks": 1,
+      "ctr": 0.02,
+      "position": 31.5
     }
   ],
   "top_queries": [
+    {
+      "query": "chinese visa itinerary template",
+      "impressions": 7,
+      "clicks": 1,
+      "ctr": 0.14,
+      "position": 9.3
+    },
     {
       "query": "\"wechat accepted\"",
       "impressions": 1,
@@ -311,10 +318,10 @@
     },
     {
       "query": "accommodation china",
-      "impressions": 11,
+      "impressions": 12,
       "clicks": 0,
       "ctr": 0,
-      "position": 69
+      "position": 69.1
     },
     {
       "query": "accommodation in china",
@@ -343,43 +350,36 @@
       "clicks": 0,
       "ctr": 0,
       "position": 65
-    },
-    {
-      "query": "accommodation standards of chengdu youth travel service",
-      "impressions": 1,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 45
     }
   ],
   "top_pages": [
     {
+      "page": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary/",
+      "impressions": 117,
+      "clicks": 2,
+      "ctr": 0.02,
+      "position": 17.3
+    },
+    {
       "page": "https://www.chinaboundtravel.com/",
-      "impressions": 14,
+      "impressions": 13,
       "clicks": 1,
-      "ctr": 0.07,
-      "position": 9.6
+      "ctr": 0.08,
+      "position": 10.3
     },
     {
       "page": "https://www.chinaboundtravel.com/free-itinerary/",
-      "impressions": 57,
+      "impressions": 58,
       "clicks": 1,
       "ctr": 0.02,
-      "position": 13.3
-    },
-    {
-      "page": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary/",
-      "impressions": 108,
-      "clicks": 1,
-      "ctr": 0.01,
-      "position": 18.1
+      "position": 13.1
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/",
-      "impressions": 9,
+      "impressions": 8,
       "clicks": 1,
-      "ctr": 0.11,
-      "position": 8.8
+      "ctr": 0.12,
+      "position": 8.5
     },
     {
       "page": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
@@ -410,6 +410,13 @@
       "position": 2.2
     },
     {
+      "page": "https://www.chinaboundtravel.com/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/?utm_source=ig&utm_mediu",
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 4
+    },
+    {
       "page": "https://www.chinaboundtravel.com/cancel/",
       "impressions": 1,
       "clicks": 0,
@@ -418,10 +425,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/categories/",
-      "impressions": 5,
+      "impressions": 3,
       "clicks": 0,
       "ctr": 0,
-      "position": 9
+      "position": 6.7
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/",
@@ -467,17 +474,17 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/contact/",
-      "impressions": 11,
+      "impressions": 10,
       "clicks": 0,
       "ctr": 0,
-      "position": 27
+      "position": 29.3
     },
     {
       "page": "https://www.chinaboundtravel.com/content/",
-      "impressions": 2,
+      "impressions": 1,
       "clicks": 0,
       "ctr": 0,
-      "position": 8
+      "position": 9
     },
     {
       "page": "https://www.chinaboundtravel.com/disclaimer/",
@@ -485,13 +492,6 @@
       "clicks": 0,
       "ctr": 0,
       "position": 4.8
-    },
-    {
-      "page": "https://www.chinaboundtravel.com/ebook/2026-08-01-travel-guide-2026-08/",
-      "impressions": 2,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 6
     }
   ],
   "raw_source": "Google Search Console REST API v3",
@@ -501,6 +501,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 3,
-    "data_date": "2026-11-07"
+    "data_date": "2026-11-08"
   }
 }
