@@ -17,7 +17,7 @@ TocOpen: false
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/general/144-hour-visa-free-transit-guide.webp"
 categories: ["visa", "cities"]
-last_updated: "2026-11-10"
+last_updated: "2026-11-11"
 fact_checked: "2026-09-13"
 reviewed_by: "ChinaBound Travel Editorial Team"
 reviewed_at: "2026-09-13"

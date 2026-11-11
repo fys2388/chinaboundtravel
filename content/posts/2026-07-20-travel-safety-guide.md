@@ -319,6 +319,8 @@ Originally posted on ChinaBound Travel Blog
 
 - [Yunnan Travel Guide 2026: 7-Day Itinerary, Rice Terraces & Ancient Towns](/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/)
 
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
+
 ## FAQ
 
 ### What should I know about how safe is china,travel & destinations,210,26,informational,0.0,/resources?
