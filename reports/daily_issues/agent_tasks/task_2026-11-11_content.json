@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-11-11_content",
   "created_at": "2026-11-11T01:00:53.168010+00:00",
-  "updated_at": "2026-11-11T18:00:26.945995",
+  "updated_at": "2026-11-11T19:10:34.204739",
   "target_date": "2026-11-11",
   "issue_count": 15,
   "severity_summary": {
@@ -114,7 +114,7 @@
       "detected_at": "2026-11-11T01:00:53.167370+00:00"
     },
     {
-      "id": "site_health-9a49ca3e8197395",
+      "id": "site_health-6cb5f7bb1f340aa5",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -131,10 +131,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-11T18:00:26.519383+00:00"
+      "detected_at": "2026-11-11T19:10:34.023911+00:00"
     },
     {
-      "id": "site_health-57cea42771965420",
+      "id": "site_health-1cefbee7e70b557",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -151,7 +151,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-11T18:00:26.519377+00:00"
+      "detected_at": "2026-11-11T19:10:34.023908+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -271,10 +271,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-11T03:49:42.960038"
+      "detected_at": "2026-11-11T03:49:42.960048"
     },
     {
-      "id": "site_health-62b0cc59509d9841",
+      "id": "site_health-5ac66cd54cc5655c",
       "type": "ai_forbidden_word",
       "title": "ai_forbidden_word",
       "description": "ai_forbidden_word",
@@ -291,7 +291,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-11T18:00:26.519443+00:00"
+      "detected_at": "2026-11-11T19:10:34.023951+00:00"
     },
     {
       "id": "issue_17dbe216e433",

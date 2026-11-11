@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-11T03:49:39.865146+00:00",
+  "timestamp": "2026-11-11T19:10:25.317547+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
@@ -8,12 +8,12 @@
     "high": 0,
     "medium": 2,
     "low": 4,
-    "auto_fixed": 4,
-    "need_manual": 24,
-    "resolved": 16,
+    "auto_fixed": 5,
+    "need_manual": 25,
+    "resolved": 17,
     "inherited_resolved": 21,
     "in_progress": 0,
-    "last_updated": "2026-11-11T03:49:43.257046"
+    "last_updated": "2026-11-11T19:10:34.204176"
   },
   "issues": [
     {
@@ -31,7 +31,7 @@
     {
       "type": "draft_leak",
       "severity": "high",
-      "file": "content/_archived/2026-07-22-cultural-etiquette-guide.md",
+      "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
       "message": "draft:true的文章可能已发布到线上",
       "auto_fixable": false,
       "agent": "content",
@@ -43,7 +43,7 @@
     {
       "type": "draft_leak",
       "severity": "high",
-      "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
+      "file": "content/_archived/2026-07-22-cultural-etiquette-guide.md",
       "message": "draft:true的文章可能已发布到线上",
       "auto_fixable": false,
       "agent": "content",
@@ -65,40 +65,20 @@
       "resolved_at": "2026-09-23"
     },
     {
-      "type": "ai_forbidden_word",
+      "type": "file_mojibake",
       "severity": "medium",
-      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
-      "message": "AI禁用词: cheapest",
-      "auto_fixable": false,
-      "agent": "content",
-      "status": "need_manual",
-      "assigned": true,
-      "resolved_by": "content_agent",
-      "resolution_note": "无替换表: ai_forbidden_word"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists.md",
-      "message": "AI禁用词: #1",
-      "auto_fixable": false,
-      "agent": "content",
-      "status": "resolved",
-      "resolved_by": "content_agent",
-      "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content/posts/144-hour-visa-free-transit-guide.md",
-      "message": "AI禁用词: #1",
-      "auto_fixable": false,
-      "agent": "content",
-      "status": "resolved",
-      "resolved_by": "content_agent",
-      "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+      "file": "config/news_digest.json",
+      "message": "检测到乱码字符（双编码）",
+      "auto_fixable": true,
+      "fix_action": "fix_encoding",
+      "agent": "site_health",
+      "status": "false_positive",
+      "resolved_by": "agent_captain",
+      "resolution_note": "[WL-005] config/news_digest.json 是合法 UTF-8 编码 JSON 文件（已通过 utf-8 decode + json.loads 验证）。site_health_agent.py 的 mojibake 检测逻辑对多字节 UTF-8 字符（如中文、emoji）误判为 latin-1 双字节编码残留。",
+      "resolved_at": "2026-10-29",
+      "whitelist_id": "WL-005",
+      "fix_status": "fixed",
+      "fix_message": "已从latin-1转换为UTF-8"
     },
     {
       "type": "ai_forbidden_word",
@@ -111,6 +91,30 @@
       "resolved_by": "content_agent",
       "resolution_note": "已将 4 处 'perfect' 替换为 'excellent'  (content/posts/2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md)",
       "resolved_at": "2026-10-12T20:48:26.363751+00:00"
+    },
+    {
+      "type": "ai_forbidden_word",
+      "severity": "medium",
+      "file": "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
+      "message": "AI禁用词: #1",
+      "auto_fixable": false,
+      "agent": "content",
+      "status": "resolved",
+      "resolved_by": "content_agent",
+      "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)",
+      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+    },
+    {
+      "type": "ai_forbidden_word",
+      "severity": "medium",
+      "file": "content/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists.md",
+      "message": "AI禁用词: #1",
+      "auto_fixable": false,
+      "agent": "content",
+      "status": "resolved",
+      "resolved_by": "content_agent",
+      "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)",
+      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
     },
     {
       "type": "ai_forbidden_word",
@@ -140,19 +144,7 @@
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
-      "file": "content/posts/2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md",
-      "message": "AI禁用词: perfect",
-      "auto_fixable": false,
-      "agent": "content",
-      "status": "resolved",
-      "resolved_by": "content_agent",
-      "resolution_note": "已将 4 处 'perfect' 替换为 'excellent'  (content/posts/2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md)",
-      "resolved_at": "2026-10-12T20:48:26.363751+00:00"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content/posts/western-sichuan-overland-camping-route.md",
+      "file": "content/posts/144-hour-visa-free-transit-guide.md",
       "message": "AI禁用词: #1",
       "auto_fixable": false,
       "agent": "content",
@@ -176,14 +168,14 @@
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
-      "file": "content/posts/2026-08-01-chinabound-travel-guide-2026-08-monthly-update.md",
-      "message": "AI禁用词: #1",
+      "file": "content/posts/2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md",
+      "message": "AI禁用词: perfect",
       "auto_fixable": false,
       "agent": "content",
       "status": "resolved",
       "resolved_by": "content_agent",
-      "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)",
-      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+      "resolution_note": "已将 4 处 'perfect' 替换为 'excellent'  (content/posts/2026-10-12-kung-fu-and-martial-arts-in-china-where-to-see-and-train.md)",
+      "resolved_at": "2026-10-12T20:48:26.363751+00:00"
     },
     {
       "type": "ai_forbidden_word",
@@ -210,16 +202,28 @@
       "resolved_at": "2026-09-05T11:52:14.559893+00:00"
     },
     {
-      "type": "meta_description_too_short",
-      "severity": "low",
-      "file": "content/ebook/2026-09-01-travel-guide-2026-09.md",
-      "message": "Meta description过短(54字符)",
+      "type": "ai_forbidden_word",
+      "severity": "medium",
+      "file": "content/posts/western-sichuan-overland-camping-route.md",
+      "message": "AI禁用词: #1",
       "auto_fixable": false,
-      "agent": "seo",
+      "agent": "content",
       "status": "resolved",
-      "resolved_by": "seo_agent",
-      "resolution_note": "meta description已生成(155字符)",
+      "resolved_by": "content_agent",
+      "resolution_note": "禁用词已不存在（可能已修复）: perfect (content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md)",
       "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+    },
+    {
+      "type": "ai_forbidden_word",
+      "severity": "medium",
+      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "message": "AI禁用词: cheapest",
+      "auto_fixable": false,
+      "agent": "content",
+      "status": "need_manual",
+      "assigned": true,
+      "resolved_by": "content_agent",
+      "resolution_note": "无替换表: ai_forbidden_word"
     },
     {
       "type": "meta_description_too_short",
@@ -258,16 +262,28 @@
       "resolved_at": "2026-09-05T11:52:14.559893+00:00"
     },
     {
-      "type": "title_too_long",
+      "type": "meta_description_too_short",
       "severity": "low",
-      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
-      "message": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
-      "auto_fixable": true,
-      "fix_action": "shorten_title",
-      "fix_hint": "缩短 front matter title 至 60 字符以内；若需保留“| ChinaBound Travel”后缀，建议控制在前 40 字符内",
+      "file": "content/ebook/2026-09-01-travel-guide-2026-09.md",
+      "message": "Meta description过短(54字符)",
+      "auto_fixable": false,
       "agent": "seo",
-      "fix_status": "failed",
-      "fix_message": "无 front matter"
+      "status": "resolved",
+      "resolved_by": "seo_agent",
+      "resolution_note": "meta description已生成(155字符)",
+      "resolved_at": "2026-09-05T11:52:14.559893+00:00"
+    },
+    {
+      "type": "meta_description_too_short",
+      "severity": "low",
+      "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
+      "message": "Meta description过短(67字符)",
+      "auto_fixable": false,
+      "agent": "seo",
+      "status": "resolved",
+      "resolved_by": "seo_agent",
+      "resolution_note": "meta description已生成(154字符)",
+      "resolved_at": "2026-10-06T03:54:39.743270+00:00"
     },
     {
       "type": "title_too_long",
@@ -284,6 +300,18 @@
       "resolved_at": "2026-10-25T02:21:55.118833+00:00",
       "fix_status": "fixed",
       "fix_message": "title 已缩短: 72->58字符"
+    },
+    {
+      "type": "title_too_long",
+      "severity": "low",
+      "file": "content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
+      "message": "Title过长(63字符，模板上限60): China Extends 240-Hour Visa-Free Transit...",
+      "auto_fixable": true,
+      "fix_action": "shorten_title",
+      "fix_hint": "缩短 front matter title 至 60 字符以内；若需保留“| ChinaBound Travel”后缀，建议控制在前 40 字符内",
+      "agent": "seo",
+      "fix_status": "fixed",
+      "fix_message": "title 已缩短: 63->56字符"
     },
     {
       "type": "title_too_long",
@@ -308,18 +336,6 @@
     {
       "type": "title_too_long",
       "severity": "low",
-      "file": "content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
-      "message": "Title过长(63字符，模板上限60): China Extends 240-Hour Visa-Free Transit...",
-      "auto_fixable": true,
-      "fix_action": "shorten_title",
-      "fix_hint": "缩短 front matter title 至 60 字符以内；若需保留“| ChinaBound Travel”后缀，建议控制在前 40 字符内",
-      "agent": "seo",
-      "fix_status": "fixed",
-      "fix_message": "title 已缩短: 63->56字符"
-    },
-    {
-      "type": "title_too_long",
-      "severity": "low",
       "file": "content/posts/2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
       "message": "Title过长(65字符，模板上限60): China Photography Guide: Best Spots, Gea...",
       "auto_fixable": true,
@@ -334,16 +350,16 @@
       "fix_message": "title 已缩短: 65->55字符"
     },
     {
-      "type": "meta_description_too_short",
+      "type": "title_too_long",
       "severity": "low",
-      "file": "content/_archived/2026-08-25-china-nightlife-guide-bars-clubs-and-evening-culture-guide-attempt1.md",
-      "message": "Meta description过短(67字符)",
-      "auto_fixable": false,
+      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "message": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
+      "auto_fixable": true,
+      "fix_action": "shorten_title",
+      "fix_hint": "缩短 front matter title 至 60 字符以内；若需保留“| ChinaBound Travel”后缀，建议控制在前 40 字符内",
       "agent": "seo",
-      "status": "resolved",
-      "resolved_by": "seo_agent",
-      "resolution_note": "meta description已生成(154字符)",
-      "resolved_at": "2026-10-06T03:54:39.743270+00:00"
+      "fix_status": "failed",
+      "fix_message": "无 front matter"
     }
   ]
 }
