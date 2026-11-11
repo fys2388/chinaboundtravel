@@ -1047,9 +1047,49 @@
         "x"
       ],
       "success": true
+    },
+    "2df1f878f271": {
+      "title": "China improving air connectivity with Central Asia, aiding t",
+      "posted_at": "2026-11-11T07:37:18.266000+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "58ea3e02b971": {
+      "title": "China's charm offensive pays off as foreign tourism rebounds",
+      "posted_at": "2026-11-11T07:37:19.475604+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "d3d07df73ba9": {
+      "title": "China’s Inbound Tourism Revenue Could Reach $470 Billion by ",
+      "posted_at": "2026-11-11T07:37:21.179253+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "e17908c7531b": {
+      "title": "UNESCO–Africa–China Workshop strengthens World Heritage capa",
+      "posted_at": "2026-11-11T07:37:23.068357+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "dba494893911": {
+      "title": "Expo gives broader audiences better access to heritage - Chi",
+      "posted_at": "2026-11-11T07:37:24.673755+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
     }
   },
-  "last_run": "2026-11-10T08:07:16.231276+00:00",
-  "total_posts": 112,
+  "last_run": "2026-11-11T07:37:24.673780+00:00",
+  "total_posts": 117,
   "total_failures": 70
 }
