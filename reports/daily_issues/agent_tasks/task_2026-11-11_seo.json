@@ -3,7 +3,7 @@
   "agent_name": "SEO Intelligent Agent (SEO智能优化)",
   "task_id": "task_2026-11-11_seo",
   "created_at": "2026-11-11T01:00:53.168609+00:00",
-  "updated_at": "2026-11-11T19:10:34.304726",
+  "updated_at": "2026-11-11T22:30:15.178047",
   "target_date": "2026-11-11",
   "issue_count": 4,
   "severity_summary": {
@@ -54,27 +54,7 @@
       "detected_at": "2026-11-11T03:49:42.960053"
     },
     {
-      "id": "site_health-46e6b4a675ec95f8",
-      "type": "title_too_long",
-      "title": "title_too_long",
-      "description": "title_too_long",
-      "page": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
-      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
-      "evidence": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
-      "recommended_action": "Review and remediate the reported issue.",
-      "severity": "medium",
-      "agent": "seo",
-      "action": "manual_review",
-      "source": "site_health",
-      "source_file": "",
-      "task_source": "quality_gate",
-      "status": "new",
-      "assigned": true,
-      "assigned_to": "seo",
-      "detected_at": "2026-11-11T19:10:34.023957+00:00"
-    },
-    {
-      "id": "site_health-55e0f4917e86f3e0",
+      "id": "site_health-2d0a5831eef81ea4",
       "type": "meta_description_too_long",
       "title": "meta_description_too_long",
       "description": "meta_description_too_long",
@@ -91,7 +71,27 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-11-11T19:10:34.023954+00:00"
+      "detected_at": "2026-11-11T22:30:14.727320+00:00"
+    },
+    {
+      "id": "site_health-618c748fa200b5b5",
+      "type": "title_too_long",
+      "title": "title_too_long",
+      "description": "title_too_long",
+      "page": "content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
+      "file": "content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
+      "evidence": "Title过长(63字符，模板上限60): China Extends 240-Hour Visa-Free Transit...",
+      "recommended_action": "Review and remediate the reported issue.",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "manual_review",
+      "source": "site_health",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-11-11T22:30:14.727325+00:00"
     }
   ],
   "priority_issue": {
@@ -120,9 +120,9 @@
   ],
   "status": "partial",
   "execution": {
-    "resolved_count": 0,
+    "resolved_count": 1,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=2, failed=0"
+    "note": "resolved=1, need_manual=1, failed=0"
   }
 }
