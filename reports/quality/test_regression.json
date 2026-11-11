@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-10T15:08:13+00:00",
+  "generated_at": "2026-11-11T14:39:10+00:00",
   "counts": {
     "collected": 1350,
-    "failed": 26,
-    "passed": 1324,
+    "failed": 27,
+    "passed": 1323,
     "skipped": 0,
     "baseline": 16,
     "new_failures": 12,
-    "fixed_failures": 2
+    "fixed_failures": 1
   },
   "new_failures": [
     {
@@ -108,10 +108,10 @@
     }
   ],
   "fixed_baseline_failures": [
-    "tests.test_agent_kpi_data_integrity::test_daily_report_values_are_real_measurements",
     "tests.test_okr_and_experiment_semantics.TestOkrFakeGreen::test_zero_new_content_is_not_green"
   ],
   "all_current_failures": [
+    "tests.test_agent_kpi_data_integrity::test_daily_report_values_are_real_measurements",
     "tests.test_avatar_webp::test_about_hero_prefers_webp",
     "tests.test_avatar_webp::test_profile_mode_uses_webp",
     "tests.test_avatar_webp::test_schema_json_still_has_avatar",

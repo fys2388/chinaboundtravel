@@ -1,11 +1,11 @@
 # 测试回归报告
 
-生成时间: 2026-11-10T15:08:13
+生成时间: 2026-11-11T14:39:10
 
-- 本次运行: 1350 collected, 26 failed
+- 本次运行: 1350 collected, 27 failed
 - 基线存量失败: 16
 - **新增失败: 12**（阻断条件）
-- 已修复的基线失败: 2（建议 --update-baseline 收敛）
+- 已修复的基线失败: 1（建议 --update-baseline 收敛）
 
 ## 新增失败（需要处理）
 
@@ -35,5 +35,4 @@
 
 ## 已修复的基线失败（更新基线可收敛）
 
-- `tests.test_agent_kpi_data_integrity::test_daily_report_values_are_real_measurements`
 - `tests.test_okr_and_experiment_semantics.TestOkrFakeGreen::test_zero_new_content_is_not_green`
