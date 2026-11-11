@@ -1,12 +1,12 @@
 {
   "source": "buffer_api",
-  "pull_time": "2026-11-10T13:54:51.511114",
-  "data_date": "2026-11-10",
+  "pull_time": "2026-11-11T13:08:08.961013",
+  "data_date": "2026-11-11",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_posts": 20,
-    "total_impressions": 4,
+    "total_impressions": 0,
     "total_clicks": 0,
     "total_likes": 0,
     "total_comments": 0,
@@ -14,11 +14,27 @@
   },
   "posts": [
     {
-      "id": "6af2d159d35dff5701eaa1d1",
-      "text": "Visual guide to Train: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/2026-05-27-how-to-survive-chinese-train-stati",
+      "id": "6af41b93095081ea08c29941",
+      "text": "Everything you need to know about Itinerary — in one practical guide.\n\n· 7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026\n\nRead the full guide: https://www.chinaboundtravel.com/7-day-china-itiner",
+      "platform": "instagram",
+      "channel_name": "chinaboundtravel",
+      "published_at": "2026-11-11T09:39:10.448Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6af41b8b095081ea08c297ea",
+      "text": "Visual guide to Visa: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/144-hour-visa-free-transit-guide/?utm_source=f",
       "platform": "facebook",
       "channel_name": "ChinaBound Travel",
-      "published_at": "2026-11-10T10:10:19.452Z",
+      "published_at": "2026-11-11T09:39:06.152Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -30,11 +46,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6af2d155223aa16048fadab9",
-      "text": "Essential Food tips most first-time visitors miss.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-a-foodies",
+      "id": "6af41b87e324ad2873734c28",
+      "text": "Essential Alipay tips most first-time visitors miss.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/alipay-for-foreigners-guide/?utm_source=",
       "platform": "facebook",
       "channel_name": "ChinaBound Travel",
-      "published_at": "2026-11-10T10:10:09.232Z",
+      "published_at": "2026-11-11T09:39:06.125Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -46,27 +62,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6af2d14db59b34913a661b8e",
-      "text": "Visual guide to China travel: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/accommodation-tips-guide/?utm_source=f",
-      "platform": "facebook",
-      "channel_name": "ChinaBound Travel",
-      "published_at": "2026-11-10T10:10:09.174Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6af2d0b2e261c09accabc91f",
-      "text": "🗺️ DESTINATION UPDATE\n\nChinese intangible cultural heritage expo brings traditions into modern life - CGTN\n\nChinese intangible cultural heritage expo brings traditions into modern life CGTN\n\nSource: G",
+      "id": "6af41b339a3abc82a1d97ff8",
+      "text": "🗺️ DESTINATION UPDATE\n\nExpo gives broader audiences better access to heritage - China Daily\n\nExpo gives broader audiences better access to heritage China Daily\n\nSource: Google News RSS\n\n\n\n#ChinaTravel",
       "platform": "twitter",
       "channel_name": "fys2388",
-      "published_at": "2026-11-10T10:07:16.371Z",
+      "published_at": "2026-11-11T09:37:31.230Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -78,11 +78,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6af2d0b1d35dff5701ea695e",
-      "text": "🗺️ DESTINATION UPDATE\n\nOnly a fraction of World Heritage sites are in Africa. China wants to fix that - SCMP\n\nOnly a fraction of World Heritage sites are in Africa. China wants to fix that SCMP\n\nSourc",
+      "id": "6af41b32095081ea08c28859",
+      "text": "🗺️ DESTINATION UPDATE\n\nUNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou - EIN...\n\nUNESCO–Africa–China Workshop strengthens World Heritage capacity and coope",
       "platform": "twitter",
       "channel_name": "fys2388",
-      "published_at": "2026-11-10T10:07:16.409Z",
+      "published_at": "2026-11-11T09:37:31.119Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -94,11 +94,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6af2d0af223aa16048faa4f2",
-      "text": "🗺️ DESTINATION UPDATE\n\nAt the Exhibition | \"Enduring Heritage, Harmonious Asia-Pacific\" Special Exhibition Opens -...\n\nAt the Exhibition | \"Enduring Heritage, Harmonious Asia-Pacific\" Special Exhibiti",
+      "id": "6af41b309a3abc82a1d97e7e",
+      "text": "📊 INDUSTRY NEWS\n\nChina’s Inbound Tourism Revenue Could Reach $470 Billion by 2040, UBS Says - Caixin Global\n\nChina’s Inbound Tourism Revenue Could Reach $470 Billion by 2040, UBS Says Caixin Global\n\nS",
       "platform": "twitter",
       "channel_name": "fys2388",
-      "published_at": "2026-11-10T10:07:16.438Z",
+      "published_at": "2026-11-11T09:37:31.235Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -110,11 +110,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6af2d0ad223aa16048faa4c5",
-      "text": "📊 INDUSTRY NEWS\n\nJapan refuses to kowtow to China even with tourists gone, rare earths squeezed - IntelliNews\n\nJapan refuses to kowtow to China even with tourists gone, rare earths squeezed IntelliNew",
+      "id": "6af41b2e9a3abc82a1d97e27",
+      "text": "📊 INDUSTRY NEWS\n\nChina's charm offensive pays off as foreign tourism rebounds - France 24\n\nChina's charm offensive pays off as foreign tourism rebounds France 24\n\nSource: Google News RSS\n\n\n\n#ChinaTrav",
       "platform": "twitter",
       "channel_name": "fys2388",
-      "published_at": "2026-11-10T10:07:16.956Z",
+      "published_at": "2026-11-11T09:37:31.109Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -126,11 +126,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6af2d0acb59b34913a65d041",
-      "text": "📊 INDUSTRY NEWS\n\n​Visa-Free Policy Fuels Inbound Tourism and Bridges Cultures - Macau Business\n\n​Visa-Free Policy Fuels Inbound Tourism and Bridges Cultures Macau Business\n\nSource: Google News RSS\n\n\n\n",
+      "id": "6af41b2d54dc8a4764849eb1",
+      "text": "📊 INDUSTRY NEWS\n\nChina improving air connectivity with Central Asia, aiding trade and tourism - Eurasianet\n\nChina improving air connectivity with Central Asia, aiding trade and tourism Eurasianet\n\nSou",
       "platform": "twitter",
       "channel_name": "fys2388",
-      "published_at": "2026-11-10T10:07:16.457Z",
+      "published_at": "2026-11-11T09:37:31.227Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -142,11 +142,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6af2d0aa26f9e6aeeaf2e039",
-      "text": "📊 INDUSTRY NEWS\n\nChina expands visa-free access and digital payments to support international tourism growth -...\n\nChina expands visa-free access and digital payments to support international tourism ",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-11-10T10:07:16.265Z",
+      "id": "6af37d2f41bc75bbeb601518",
+      "text": "What travelers discover about Food — practical lessons from the ground.\n\nRead the full guide: https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/?",
+      "platform": "instagram",
+      "channel_name": "chinaboundtravel",
+      "published_at": "2026-11-10T22:23:23.686Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -158,11 +158,27 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6af2d0a8e261c09accabc219",
-      "text": "⚠️ SAFETY ADVISORY\n\nURGENT: China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan...\n\nChina’s Forland Expands Its Presence in Libya with Local Manufacturin",
+      "id": "6af37d2c2cac17fcaff664d6",
+      "text": "What travelers discover about Visa — lessons from the ground. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/144-hour-visa-free-transit-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_",
       "platform": "twitter",
       "channel_name": "fys2388",
-      "published_at": "2026-11-10T10:07:16.445Z",
+      "published_at": "2026-11-10T22:23:16.570Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6af2d151223aa16048fada2f",
+      "text": "China 144 Hour Transit Visa: Complete Guide | Essential Visa tips most first-time visitors miss.\n\nChina 144 Hour Transit Visa: Complete Guide\n\n📌 Save this for your China trip planning.\n\nFull guide: ht",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-11-10T21:10:05.381Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -316,40 +332,30 @@
       "clicks": 0,
       "impressions": 0,
       "engagement_rate": 0.0
-    },
-    {
-      "id": "6aec352f3ddb81d221145ebc",
-      "text": "Is China Safe for Tourists in 2026? Honest | Everything you need to know about China travel — in one practical guide.\n\nIs China Safe for Tourists in 2026? Honest\n\n📌 Save this for your China trip plann",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-11-05T20:50:17.492Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 4,
-      "engagement_rate": 0.0
     }
   ],
   "by_platform": {
+    "instagram": {
+      "posts": 2,
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0
+    },
     "facebook": {
-      "posts": 3,
+      "posts": 2,
       "impressions": 0,
       "clicks": 0,
       "likes": 0
     },
     "twitter": {
-      "posts": 7,
+      "posts": 6,
       "impressions": 0,
       "clicks": 0,
       "likes": 0
     },
     "pinterest": {
       "posts": 10,
-      "impressions": 4,
+      "impressions": 0,
       "clicks": 0,
       "likes": 0
     }
@@ -363,6 +369,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 0,
-    "data_date": "2026-11-10"
+    "data_date": "2026-11-11"
   }
 }
