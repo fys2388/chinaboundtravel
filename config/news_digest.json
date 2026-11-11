@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "last_updated": "2026-11-10T15:42:25.053875+00:00",
-  "last_updated_date": "2026-11-10",
+  "last_updated": "2026-11-11T02:53:26.407264+00:00",
+  "last_updated_date": "2026-11-11",
   "total_items": 40,
   "digest": {
     "visa_policy": [
@@ -9,11 +9,22 @@
         "title": "中国240小时过境免签“朋友圈”扩展至57国",
         "summary": "From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)",
         "url": "https://www.gov.cn/lianbo/202608/content_7078699.htm",
-        "date": "2026-11-10",
+        "date": "2026-11-11",
         "source": "State Council 57-country notice",
         "category": "visa_policy",
         "type": "policy_page",
         "_hash": "d35a146c4b77"
+      },
+      {
+        "title": "​Visa-Free Policy Fuels Inbound Tourism and Bridges Cultures - The Manila Times",
+        "summary": "​Visa-Free Policy Fuels Inbound Tourism and Bridges Cultures The Manila Times",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOZzE1V0ZDTmdQREFabDFuc21hdVFteEFjODViZXJVRnY2R0c4YXBIYm82Mndhb2xReldfdERkcDZsVndRVURUVVFlcXFSOERHVWU5QzFEQk9Lb3RCdnh3Z213MjdXMzByTVlLeWdibFNVOVlLcEl3V09NMi05ZlVhQjJKNENTV0lYUmRVdk1CWVBqZXh4cjBmbm90NmhOdTZ1WVFSTlNxMV9HemVPTTNDYWE3aDdxUDZIU1NWOWZORXVfLTU1WksyVGFn0gHPAUFVX3lxTE1uSzlXY0RCZTI1ODlkSF9pSEJzcmdGaFhVaXE2cnJvZDFITlQ2MWhLdncwVjZsWFA3ZzRQZVZtVlFrbEhnNm9CLWVPR2VnZXZheFdTb2h6Ui1LWWZrYnc5eWNkNkhGSTlNSlpIREowcmc3T0g4NGhmT3laNGozM20wRXpVQ2NJckFtV3dXbTdRWFgxMTRZYXY0elF0YXNjU3E5V3FBUkZmVERacHQ2VF9CSm5hODFIT2RCMzFlMnFnQ0RCc2R6QUFWdlJCYVVmMA?oc=5",
+        "date": "2026-11-09",
+        "source": "Google News RSS",
+        "source_query": "China+visa+free+transit+240+hour",
+        "category": "visa_policy",
+        "type": "news",
+        "_hash": "f4d5d5467f12"
       },
       {
         "title": "China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends - South China Morning Post",
@@ -102,20 +113,20 @@
         "category": "visa_policy",
         "type": "news",
         "_hash": "f6400329b9d7"
-      },
-      {
-        "title": "Mainland China: More Nationals Eligible for Visa Exemption; Expanded Rights Under Exemption - Fragomen",
-        "summary": "Mainland China: More Nationals Eligible for Visa Exemption; Expanded Rights Under Exemption Fragomen",
-        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQQ2Q4T1FCS0g2UjVQYXZVR0hFempLSHZudHc2T09XaXJqazk4eVhzdGVWRWhKdHExZFlqdUZFc3pNdmpRM1NMYl9lUUQ1a2duRXJVQldTOWVCT2tuNmZzb3pNT1hfeXB1bkRqRmJHc3ZlN05kQXZUSkhyckFkd1pRNHNlNEg1VmI4c2lJSzNvWUMtVXBNellCRHVSVmZIQXpER0ktTGRGeTV6b29iQ2NWcHBCYm5LdjlaaURXRzhKSGRyUU4tdWpr?oc=5",
-        "date": "2026-05-27",
-        "source": "Google News RSS",
-        "source_query": "China+visa+policy+2026",
-        "category": "visa_policy",
-        "type": "news",
-        "_hash": "56e01ed17e41"
       }
     ],
     "travel_industry": [
+      {
+        "title": "China improving air connectivity with Central Asia, aiding trade and tourism - Eurasianet",
+        "summary": "China improving air connectivity with Central Asia, aiding trade and tourism Eurasianet",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxONmxtTkhZTFNDakU0OXhZNFR2elBFdjYwenBNOWxiRnhqem92X3hEZzJFMTVOOHAzbjBWcS1jV3R3SVExX1dNbjV1SlhTM25rUHpFNXlvOE91WUV0LV9kTGpybU80anpXR19JYzFJanFTa01jQmhUcEVmVWM3Y01BS3l3cmRONGl6SFFrQXF2OVM3X0lWLW9ZVzJZd0ZBLUU?oc=5",
+        "date": "2026-11-10",
+        "source": "Google News RSS",
+        "source_query": "China+tourism+news",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "2df1f878f271"
+      },
       {
         "title": "China's charm offensive pays off as foreign tourism rebounds - France 24",
         "summary": "China's charm offensive pays off as foreign tourism rebounds France 24",
@@ -128,26 +139,26 @@
         "_hash": "58ea3e02b971"
       },
       {
-        "title": "​Visa-Free Policy Fuels Inbound Tourism and Bridges Cultures - Macau Business",
-        "summary": "​Visa-Free Policy Fuels Inbound Tourism and Bridges Cultures Macau Business",
-        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNamd2QVM5TXZWd1RwVVFYQVUwelZvWnVTd2dIbGtKcTV2X1p1aGxOY1VFbmhCWW5lTGJqb280RjZZNVRtcWpzWWtjQVBGT25tV240S0hjNUc4TEhGUXlfZWdWRzdLNnVlNlNVRlRXZHlGS1lGLUFRbzZJYXFyMWlnbkphMC01QXdVb1pka1RSNA?oc=5",
-        "date": "2026-11-09",
-        "source": "Google News RSS",
-        "source_query": "China+inbound+tourism",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "f855116b73f6"
-      },
-      {
-        "title": "Japan refuses to kowtow to China even with tourists gone, rare earths squeezed - IntelliNews",
-        "summary": "Japan refuses to kowtow to China even with tourists gone, rare earths squeezed IntelliNews",
-        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRFRXbm9JY3lRUEltSzVVSGFnaVBETTZpLTZrVVFsMGQ2cmZoN0xQLXp5Ul9uZW15Nnh2NjRHTHdWZnhjOWZsMkJZYVVneWZ3ZW5LZFhlX0Q3Uk1idEdfVng3TTVvUVpyWUI0WmtTRmdjM0RaZG5jZ1kyQklRNmFEczBSbkVBekROMm9xRExVb3NMcGdFcE03YjA2NDhOV2M4c3RreXpwMmpLWFFIdFlnQmJSYw?oc=5",
-        "date": "2026-11-08",
+        "title": "China’s Inbound Tourism Revenue Could Reach $470 Billion by 2040, UBS Says - Caixin Global",
+        "summary": "China’s Inbound Tourism Revenue Could Reach $470 Billion by 2040, UBS Says Caixin Global",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPOUxOQTVmNGNMU05QNHFiVVAxenhqSTVsVW9PREQ4ODFYMXRaSlNTWWNXeS1iaUFlcjMxU1F0c0JMd0doWlBCTURGYlpYTTFiSlhxZzJibEVIVUJmMmQyUGNNcjJlb3pCTHdmQmNZMUhObFpsY1VZQnMxRnFXb1VVMlYwenhLRjA0UEYtMmlzQTdhSHBsWENoZVdUN3p0bF9kcTdhWTIzN0RJM1JHNlJkOU5HVUZLR0k2YkZDR0RXRXpIeHFa?oc=5",
+        "date": "2026-11-10",
         "source": "Google News RSS",
         "source_query": "China+tourism+news",
         "category": "travel_industry",
         "type": "news",
-        "_hash": "a4078584917e"
+        "_hash": "d3d07df73ba9"
+      },
+      {
+        "title": "Greater Zhangjiajie alliance launches new inbound tourism itineraries - China Daily",
+        "summary": "Greater Zhangjiajie alliance launches new inbound tourism itineraries China Daily",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE13ZkhROUYxa3E0ZEpFd2RFTC1WdUZfbmZFN0NPZ0FSTW96VU5GX2p6Z0E4WmpuNVdVaTVMWV9MbzZSV2ZlRHNzODNxZWNiUlVTRFdaa1gzTy1ZbjZ4SjNPbUVyQVJ6NXVBU2tfeTVRelpZMVMwS2p0VWM5ZEJDUQ?oc=5",
+        "date": "2026-11-10",
+        "source": "Google News RSS",
+        "source_query": "China+inbound+tourism",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "d313808fc121"
       },
       {
         "title": "Chinese Ambassador to Ireland Zhao Xiyuan Introduces China’s Inbound Tourism Facilitation Policies in Irish Media - 中华人民共和国外交部",
@@ -181,17 +192,6 @@
         "category": "travel_industry",
         "type": "news",
         "_hash": "a670e57dd7ee"
-      },
-      {
-        "title": "China’s visa-free boom is rewriting inbound tourism - Asia Times",
-        "summary": "China’s visa-free boom is rewriting inbound tourism Asia Times",
-        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcG53eE4yN3QwRjFPWTJtdmMwZ1I3aTVPT0JMRENkMzhvQVA0SEJ6aVRzMVZrR3phbFk2dTlGOHhLRFZydUltWDR2Nk5QTk1FQmh2SDN1dUN3QVk0U2twXzlkNjBhMGNpd0l6ZWpQLXlqWm56elpqU0w4Z1BNUkE4MXloek5YNzl2?oc=5",
-        "date": "2026-08-31",
-        "source": "Google News RSS",
-        "source_query": "China+inbound+tourism",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "9440552d7b82"
       },
       {
         "title": "China Tightens Entry And Exit Rules From Sept 15 - Migrant Times",
@@ -262,17 +262,6 @@
         "_hash": "c9915ae30a33"
       },
       {
-        "title": "15 of the best China tours - The Times",
-        "summary": "15 of the best China tours The Times",
-        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNWFNaai1RNHl1VGo3TGQ1SWhEOUFuU2xUbjFLTDBjVENHa3dUSC13dW93RDF4SE9rRmxkRTZqRS1HOGJlWHBVVGdFbEx3ell5TmN4enJOX2FrNDA3VTJkdktVREZGR1ZGaHdoSGJoekVVNmhQWmZxcG5razlyMkJ3czBpd0dudHV6TjZVOGFHMDN6RE0?oc=5",
-        "date": "2026-10-26",
-        "source": "Google News RSS",
-        "source_query": "Chengdu+Shanghai+Beijing+Xian+travel",
-        "category": "destination_news",
-        "type": "news",
-        "_hash": "295912ca76ac"
-      },
-      {
         "title": "Americans could be detained for years in popular travel destination, officials warn - Fox News",
         "summary": "Americans could be detained for years in popular travel destination, officials warn Fox News",
         "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNREkwZEZOV0xpUG9ubFphM3dsbFBYTU9ZcXFrTDAyMGxsbDI5MUhqU0o0TGNaWGlKTlA5dC1USlhYZWVBTTVCNDRGeXVfMjFyeW0xNmNaM0c0ZDk2bmR1RU1FNmhCUGJ1eFFxVV9rVm5kajlPSy16YUltX3p4eFhWNzFENF9pWjhfTmJQQjB6Zmx4UdIBlwFBVV95cUxPQktOT0hNOEh6YWRxcDVEa0ozQ0twZ1pqVUJCbkd1ODJwREIyb3RxTjlJYndLcXVlWU5sZWJGQmhNck5jeVlkMTl0OVY2eGZhVXlMaDZsWURUQlc1UzRPZXhPV1VrV3Etak9TVVJWYTNpaVE1RHFsNFdPOVZiRzhXSko4V2M1LXpGWkZlNkY3WUlIVWVVZE9N?oc=5",
@@ -306,6 +295,17 @@
         "_hash": "69f48bf04a8c"
       },
       {
+        "title": "2-Week China Itinerary for Families: Beijing, Luoyang, Xian, Chengdu and Shanghai - YouTube",
+        "summary": "2-Week China Itinerary for Families: Beijing, Luoyang, Xian, Chengdu and Shanghai YouTube",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9MRlhyRXE5cjF6UThjN3R3RlZ3Z0szdlJsbWNiQ01RLUpCQm5mOWlwcWdfRHl3NWowV1VjWktzZ2xhUTBJd3VsbnVtRU5WUG5yU2psM1hQeTltaksw?oc=5",
+        "date": "2026-08-27",
+        "source": "Google News RSS",
+        "source_query": "Chengdu+Shanghai+Beijing+Xian+travel",
+        "category": "destination_news",
+        "type": "news",
+        "_hash": "4f217dadf0f4"
+      },
+      {
         "title": "China's factory tours are becoming the newest tourist attractions - Travel Weekly Asia",
         "summary": "China's factory tours are becoming the newest tourist attractions Travel Weekly Asia",
         "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPLUVEaUkxM2M5Mzh6bnUxM2hHLXloTGJzcXB1S01FRGo0eGR0eVpvTVNvRmxsam0xTjNVRFJZVVBzSjdmSUNINksyUkFiemg3dUpDRXpJalVyM2drdDJ0UE5ZNkNsSFdjSTNwcHB1ZUpWWVhkeXRwakViN1hab1VORXJUcEhsVHdrVjVBSEM0Q3h6R1gzNlhKemhBOWVWczRLQ21ucXV0VVptVWgzWDl3MFJzR3N6QnEzUXBuNjBMRkM?oc=5",
@@ -328,15 +328,15 @@
         "_hash": "23942f1225f9"
       },
       {
-        "title": "2-Week China Essence and Panda Tour - China Highlights",
-        "summary": "2-Week China Essence and Panda Tour China Highlights",
-        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE52V2dXa2tnRVVlWm9kNzR5OTE3Y1JBNGxyaU9Wa0dLeDAwV1ZDMWVMTTd4QzFlR1RWcEVlX2QxLVp1ZHJKZF9VSzA5OFBPZzVjY3pCcGNmSWpJaEZpLVpmMnkyOUpBbWF4QlV2UjBnSlJCZDlkUnpYOFJUalE?oc=5",
-        "date": "2026-01-14",
+        "title": "On the rise: local media IP in Asian attractions - blooloop",
+        "summary": "On the rise: local media IP in Asian attractions blooloop",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1FSVgwWThGcmhWN2FacTZyX0pZd0pvS0JLLVpjX2FGR0YyQ2I2QmlERlg1Zl9Cd1pSN0N1VGNQdHAyd1pNMWZpOW0xTQ?oc=5",
+        "date": "2026-05-28",
         "source": "Google News RSS",
-        "source_query": "Chengdu+Shanghai+Beijing+Xian+travel",
+        "source_query": "China+new+attractions+open",
         "category": "destination_news",
         "type": "news",
-        "_hash": "be082795835f"
+        "_hash": "b47cd01bad08"
       }
     ],
     "safety_alerts": [
@@ -374,17 +374,6 @@
         "_hash": "7c3d42157519"
       },
       {
-        "title": "Shipping from China to Australia [Updated November 2026 ] - Freightos",
-        "summary": "Shipping from China to Australia [Updated November 2026 ] Freightos",
-        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNWTdOQWV2cHM1aXRpQU1UUkFuX0pmaEE4QkdDLUFUSUt6RFdpNmZqZUVXNEZ6aXJ0c2xQQlB5eHNaNWRFZTh4QVcwR2JaNTh6d3FOVUJONTlWenJFTHFyUlBHSlZvWm41eEZ2UUtmV2lCTExWVndJcmw1bGJVZWNrYQ?oc=5",
-        "date": "2026-11-03",
-        "source": "Google News RSS",
-        "source_query": "China+transportation+update",
-        "category": "safety_alerts",
-        "type": "news",
-        "_hash": "cf9e85885c3a"
-      },
-      {
         "title": "U.S. Adds Wrongful Detention Warning to China Travel Advisory - AgroLatam",
         "summary": "U.S. Adds Wrongful Detention Warning to China Travel Advisory AgroLatam",
         "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPX1lBcl9RQ2hOUWdVQ2dhSmJnRm5WU3E5cE9lR2R0SUMzWExtNURXYVlOTzZWa0tqN3VZTVB2OFp1ei1UckpjamhqeF9DdEh4U2M3cjh0OGxWVW1XSGJVQ2lwYnQ5SW1WS0NqSHZ1anJ1RW1BV3VUZS00cDhIU2I4UlczbXZiX2VfLTdrLXBmcmhNZUF4dW5HSzNIMUxIU2dmc1FqbERSWlR1RjJNVkhudmVtZERaQndBM1F3dg?oc=5",
@@ -405,6 +394,17 @@
         "category": "safety_alerts",
         "type": "news",
         "_hash": "18966a9cd38e"
+      },
+      {
+        "title": "China's 240-hour visa-free transit policy - English.gov.cn",
+        "summary": "China's 240-hour visa-free transit policy English.gov.cn",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxONVB0Yk1udXR1NU5WTGpJMVNscHlVdnpJbGJzWDQ0ZmxuZHhfRVVBcVVvVVIxakdlVmxLUUNPRjk5MWtkcmpYS3VkNjU0ZXg2cUZQLWlyZXpkWEVqbDFJbEhBNWFOVWFUdHY1RlotYU5HMnBINERocWdlZFV2aHpRX2gzbWR0OTVxRHBLOVBSSkFyN21ndTdLTm9R?oc=5",
+        "date": "2026-08-21",
+        "source": "Google News RSS",
+        "source_query": "China+transportation+update",
+        "category": "safety_alerts",
+        "type": "news",
+        "_hash": "007efa1b5d47"
       },
       {
         "title": "Weather Alert: Typhoon Dolphin - U.S. Embassy & Consulates in China",
@@ -454,8 +454,8 @@
     ]
   },
   "llm_summary": {
-    "visa_policy": "- [2026-11-10] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-10-21] China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends - South China Morning Post\n  China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends South China Morning Post\n- [2026-10-20] Visa-free foreign entries rise 24.1% in Q3 as ‘China Haul’ reflects appeal of Chinese innovation, experiences - Global Times\n  Visa-free foreign entries rise 24.1% in Q3 as ‘China Haul’ reflects appeal of Chinese innovation, experiences Global Times",
-    "travel_industry": "- [2026-11-10] China's charm offensive pays off as foreign tourism rebounds - France 24\n  China's charm offensive pays off as foreign tourism rebounds France 24\n- [2026-11-09] ​Visa-Free Policy Fuels Inbound Tourism and Bridges Cultures - Macau Business\n  ​Visa-Free Policy Fuels Inbound Tourism and Bridges Cultures Macau Business\n- [2026-11-08] Japan refuses to kowtow to China even with tourists gone, rare earths squeezed - IntelliNews\n  Japan refuses to kowtow to China even with tourists gone, rare earths squeezed IntelliNews",
+    "visa_policy": "- [2026-11-11] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-11-09] ​Visa-Free Policy Fuels Inbound Tourism and Bridges Cultures - The Manila Times\n  ​Visa-Free Policy Fuels Inbound Tourism and Bridges Cultures The Manila Times\n- [2026-10-21] China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends - South China Morning Post\n  China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends South China Morning Post",
+    "travel_industry": "- [2026-11-10] China improving air connectivity with Central Asia, aiding trade and tourism - Eurasianet\n  China improving air connectivity with Central Asia, aiding trade and tourism Eurasianet\n- [2026-11-10] China's charm offensive pays off as foreign tourism rebounds - France 24\n  China's charm offensive pays off as foreign tourism rebounds France 24\n- [2026-11-10] China’s Inbound Tourism Revenue Could Reach $470 Billion by 2040, UBS Says - Caixin Global\n  China’s Inbound Tourism Revenue Could Reach $470 Billion by 2040, UBS Says Caixin Global",
     "destination_news": "- [2026-11-10] UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou - EIN News\n  UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou EIN News\n- [2026-11-10] Expo gives broader audiences better access to heritage - China Daily\n  Expo gives broader audiences better access to heritage China Daily\n- [2026-11-08] Only a fraction of World Heritage sites are in Africa. China wants to fix that - South China Morning Post\n  Only a fraction of World Heritage sites are in Africa. China wants to fix that South China Morning Post",
     "safety_alerts": "- [2026-11-09] Thick fog disrupts UK travel as another weather warning issued - BBC\n  Thick fog disrupts UK travel as another weather warning issued BBC\n- [2026-11-09] China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan - Libya Update News - Libya Update News\n  China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan Libya Update News - Libya Update News\n- [2026-11-07] Chinese tourists avoid Thailand amid fears of floods, kidnapping and scams - South China Morning Post\n  Chinese tourists avoid Thailand amid fears of floods, kidnapping and scams South China Morning Post",
     "general": "- [2024-03-16] A local’s travel guide to Washington DC: what to eat, see and do in three days\n  Top sights in Washington include Capitol Hill Books, the Black Cat music venue and a top-rated Filipino restaurant From phone chargers to podcasts, th"
@@ -477,5 +477,5 @@
     "provinces": 24
   },
   "policy_change": null,
-  "official_state_checked_at": "2026-11-10T15:42:25.054057+00:00"
+  "official_state_checked_at": "2026-11-11T02:53:26.407463+00:00"
 }
