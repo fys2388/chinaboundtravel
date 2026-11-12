@@ -1,6 +1,6 @@
 # AFFILIATE GAPS
 
-- Generated: 2026-11-05
+- Generated: 2026-11-12
 
 Detection rules:
 - A: high commercial intent + no affiliate
