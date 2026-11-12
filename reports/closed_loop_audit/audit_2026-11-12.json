@@ -1,6 +1,6 @@
 {
   "audit_date": "2026-11-12",
-  "audited_at": "2026-11-12T04:57:12.979353",
+  "audited_at": "2026-11-12T19:27:26.471258",
   "score": {
     "total_score": 75,
     "max_score": 100,
@@ -20,7 +20,7 @@
       "status": "pass",
       "issues": [],
       "details": {
-        "site_health_total": 6,
+        "site_health_total": 5,
         "site_health_file": "site_health_2026-11-12.json",
         "daily_issues_count": 4
       }
@@ -36,7 +36,7 @@
         "assigned": 1,
         "unassigned": 3,
         "assignment_rate": "25.0%",
-        "agent_tasks": 3
+        "agent_tasks": 4
       }
     },
     {
@@ -44,13 +44,13 @@
       "status": "pass",
       "issues": [],
       "details": {
-        "total_tasks": 3,
+        "total_tasks": 4,
         "completed": 0,
         "pending": 0,
         "failed": 0,
-        "partial": 3,
-        "total_issues": 20,
-        "resolved_issues": 1
+        "partial": 4,
+        "total_issues": 21,
+        "resolved_issues": 0
       }
     },
     {
@@ -58,10 +58,10 @@
       "status": "pass",
       "issues": [],
       "details": {
-        "need_manual": 24,
+        "need_manual": 25,
         "resolved": 18,
         "execution_log_exists": true,
-        "total_executions": 10310
+        "total_executions": 10432
       }
     },
     {

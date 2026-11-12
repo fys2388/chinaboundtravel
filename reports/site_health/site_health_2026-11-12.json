@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-11-12T04:57:09.906647+00:00",
+  "timestamp": "2026-11-12T19:27:22.331002+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
-    "total_issues": 6,
+    "total_issues": 5,
     "critical": 0,
     "high": 0,
     "medium": 2,
-    "low": 4,
+    "low": 3,
     "auto_fixed": 5,
-    "need_manual": 24,
+    "need_manual": 25,
     "resolved": 18,
-    "inherited_resolved": 22,
+    "inherited_resolved": 23,
     "in_progress": 0,
-    "last_updated": "2026-11-12T04:57:12.817313"
+    "last_updated": "2026-11-12T19:27:26.320451"
   },
   "issues": [
     {
@@ -89,7 +89,7 @@
       "status": "need_manual",
       "assigned": true,
       "resolved_by": "content_agent",
-      "resolution_note": "无替换表: cheapest"
+      "resolution_note": "无替换表: ai_forbidden_word"
     },
     {
       "type": "ai_forbidden_word",
@@ -137,7 +137,7 @@
       "status": "need_manual",
       "assigned": true,
       "resolved_by": "content_agent",
-      "resolution_note": "无替换表: ai_forbidden_word"
+      "resolution_note": "无替换表: cheapest"
     },
     {
       "type": "ai_forbidden_word",
@@ -148,7 +148,7 @@
       "agent": "content",
       "status": "need_manual",
       "resolved_by": "content_agent",
-      "resolution_note": "无替换表: ai_forbidden_word",
+      "resolution_note": "无替换表: cheapest",
       "resolved_at": "2026-10-12T20:48:26.363751+00:00",
       "assigned": true
     },
@@ -329,12 +329,12 @@
       "fix_action": "shorten_title",
       "fix_hint": "缩短 front matter title 至 60 字符以内；若需保留“| ChinaBound Travel”后缀，建议控制在前 40 字符内",
       "agent": "seo",
-      "fix_status": "fixed",
-      "fix_message": "title 已缩短: 63->56字符",
       "status": "resolved",
-      "assigned": true,
       "resolved_by": "seo_agent",
-      "resolution_note": "title已合规(56字符)"
+      "resolution_note": "title已合规(56字符)",
+      "resolved_at": "2026-11-12T04:57:09.906647+00:00",
+      "fix_status": "fixed",
+      "fix_message": "title 已缩短: 63->56字符"
     },
     {
       "type": "title_too_long",
