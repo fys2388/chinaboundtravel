@@ -168,6 +168,8 @@ Another thing to keep in mind when visiting the Chengdu Panda Base is the crowds
 
 - [Best China Itineraries for 10 Days: Three Routes Compared](/posts/best-china-itineraries-for-10-days-three-routes-compared-au/)
 
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
+
 ## FAQ
 
 ### What should I know about dos and donts in china?

@@ -234,6 +234,8 @@ Here are some related articles on chinaboundtravel.com that you might find inter
 
 - [Best China Itineraries for 10 Days: Three Routes Compared](/posts/best-china-itineraries-for-10-days-three-routes-compared-au/)
 
+- [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
+
 ## FAQ
 
 ### What should I know about sichuan travel accommodation recommendations?

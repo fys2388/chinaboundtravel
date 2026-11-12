@@ -159,6 +159,8 @@ For more information on China travel, check out these articles:
 
 - [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
 
+- [China Remote Work Guide: Digital Nomad Tips](/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)
+
 ## FAQ
 
 ### How do I book how to take train in china?

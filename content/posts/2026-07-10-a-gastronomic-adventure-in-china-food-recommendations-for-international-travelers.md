@@ -188,6 +188,8 @@ If you want to learn more about China travel, be sure to check out these related
 
 - [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
 
+- [China Remote Work Guide: Digital Nomad Tips](/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)
+
 ## FAQ
 
 ### What should I know about best food in china?
