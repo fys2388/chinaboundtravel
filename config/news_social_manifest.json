@@ -98,7 +98,7 @@
     },
     "e3aa35ed5a33": {
       "title": "A local’s travel guide to Washington DC: what to eat, see an",
-      "posted_at": "2026-11-10T08:07:16.231255+00:00",
+      "posted_at": "2026-11-12T08:04:35.864071+00:00",
       "platforms": [
         "x"
       ],
@@ -1087,9 +1087,65 @@
         "x"
       ],
       "success": true
+    },
+    "a7b079a4a350": {
+      "title": "China visa rules: 6 documents Indian applicants need to keep",
+      "posted_at": "2026-11-12T08:04:22.782174+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "18346042cc6f": {
+      "title": "India's new visa rules: Tourist visa replaced, 70% less pape",
+      "posted_at": "2026-11-12T08:04:25.065430+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "b5b42adc2046": {
+      "title": "Community in China's Xizang improves quality of cultural and",
+      "posted_at": "2026-11-12T08:04:27.586186+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "7dc2a5549dd1": {
+      "title": "China Rips Taiwan Over Tourist Told to Back Island’s Soverei",
+      "posted_at": "2026-11-12T08:04:29.424543+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "ab42aa4c326a": {
+      "title": "Outcry after Taiwan asks mainland Chinese tourist to sign in",
+      "posted_at": "2026-11-12T08:04:31.125191+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "117dc5764f46": {
+      "title": "Iran to present three intangible heritage nominations at UNE",
+      "posted_at": "2026-11-12T08:04:33.124303+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "20e3f484891a": {
+      "title": "Written in bone: China bets on ancient scripts for modern so",
+      "posted_at": "2026-11-12T08:04:35.219698+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
     }
   },
-  "last_run": "2026-11-11T07:37:24.673780+00:00",
-  "total_posts": 117,
-  "total_failures": 70
+  "last_run": "2026-11-12T08:04:35.864097+00:00",
+  "total_posts": 124,
+  "total_failures": 71
 }
