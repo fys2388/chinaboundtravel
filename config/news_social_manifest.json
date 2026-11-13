@@ -450,7 +450,7 @@
     },
     "e848ebb2cc94": {
       "title": "Mercedes readies 2030 strategy update with China at its core",
-      "posted_at": "2026-11-09T07:46:39.114269+00:00",
+      "posted_at": "2026-11-13T07:41:57.064704+00:00",
       "platforms": [
         "x"
       ],
@@ -1143,9 +1143,73 @@
         "x"
       ],
       "success": true
+    },
+    "bd7cb5053763": {
+      "title": "India Visa Rules 2026: New Visitor Visa, 9 Categories, Appli",
+      "posted_at": "2026-11-13T07:41:54.431499+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "f9d9fe092b1c": {
+      "title": "China's Mazu early weather warning box makes global debut - ",
+      "posted_at": "2026-11-13T07:41:56.491723+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "bb3487633139": {
+      "title": "WTA reports highlight evolving global tourism trends, China'",
+      "posted_at": "2026-11-13T07:41:59.214253+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "754fd585714c": {
+      "title": "China Tourism Group Duty Free to Pay 831 Million Yuan Divide",
+      "posted_at": "2026-11-13T07:42:00.949144+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "41cb15a1105a": {
+      "title": "Tourism puts visitor experience first - China Daily",
+      "posted_at": "2026-11-13T07:42:02.837820+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "674370f4f9ce": {
+      "title": "Modernization rooted in Chinese cultural heritage - China Da",
+      "posted_at": "2026-11-13T07:42:04.849114+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "4b5fd992e91b": {
+      "title": "BEST PLACES TO VISIT IN 2027 REVEALED AS CHINA, MALTA AND SL",
+      "posted_at": "2026-11-13T07:42:06.611694+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "7a91c7bb2009": {
+      "title": "Nearly 1,400 cultural relics from National Museum of China g",
+      "posted_at": "2026-11-13T07:42:08.718574+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
     }
   },
-  "last_run": "2026-11-12T08:04:35.864097+00:00",
-  "total_posts": 124,
-  "total_failures": 71
+  "last_run": "2026-11-13T07:42:08.718597+00:00",
+  "total_posts": 132,
+  "total_failures": 72
 }
