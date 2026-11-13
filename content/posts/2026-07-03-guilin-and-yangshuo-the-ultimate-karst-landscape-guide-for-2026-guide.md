@@ -224,3 +224,5 @@ If you're planning a nature-focused China trip, [Zhangjiajie's Avatar Mountains]
 - [Yunnan Travel Guide 2026: 7-Day Itinerary, Rice Terraces & Ancient Towns](/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/)
 
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
+
+- [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)

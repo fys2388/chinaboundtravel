@@ -214,3 +214,5 @@ Travel insurance is one of the practical pieces of preparation that gives peace 
 - [China Remote Work Guide: Digital Nomad Tips](/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)
 
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
+
+- [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)

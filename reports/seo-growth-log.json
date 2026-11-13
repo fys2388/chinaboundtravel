@@ -10673,6 +10673,192 @@
       "target": "https://www.chinaboundtravel.com/posts/china-family-travel-tips-a-californians-guide/",
       "detail": "OK: Indexing API notified: ok",
       "timestamp": "2026-11-12T10:47:39.797361"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "'Traveling To China For Business: Meetings, Dining &' -> 'Traveling To China For Business: Meetings, Dining &' (keyword: traveling to china for business)",
+      "timestamp": "2026-11-13T10:43:33.621767"
+    },
+    {
+      "type": "internal_link",
+      "target": "guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026 -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=1",
+      "timestamp": "2026-11-13T10:43:35.391325"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-high-speed-train-survival-guide-booking-classes-and-insider-tips -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=1",
+      "timestamp": "2026-11-13T10:43:36.864606"
+    },
+    {
+      "type": "internal_link",
+      "target": "yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=1",
+      "timestamp": "2026-11-13T10:43:38.342828"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-remote-work-guide-a-californians-5-year-chengdu-experience -> chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls",
+      "detail": "score=2",
+      "timestamp": "2026-11-13T10:43:40.023270"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-08-monthly-update -> chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls",
+      "detail": "score=2",
+      "timestamp": "2026-11-13T10:43:41.854229"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinese-language-survival-phrases-guide -> chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls",
+      "detail": "score=2",
+      "timestamp": "2026-11-13T10:43:43.346497"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-insurance-do-you-really-need-it-and-how-to-choose -> yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide",
+      "detail": "score=1",
+      "timestamp": "2026-11-13T10:43:44.815806"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-national-parks-zhangjiajie-jiuzhaigou-and-beyond-guide -> china-airport-transfer-guide",
+      "detail": "score=1",
+      "timestamp": "2026-11-13T10:43:46.285326"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-etiquette-tipping-photos-and-unwritten-rules-guide -> china-airport-transfer-guide",
+      "detail": "score=1",
+      "timestamp": "2026-11-13T10:43:47.735695"
+    },
+    {
+      "type": "internal_link",
+      "target": "kung-fu-and-martial-arts-in-china-where-to-see-and-train -> china-airport-transfer-guide",
+      "detail": "score=1",
+      "timestamp": "2026-11-13T10:43:49.192616"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-insurance-do-you-really-need-it-and-how-to-choose -> china-business-travel-guide-meetings-dining-and-networking",
+      "detail": "score=1",
+      "timestamp": "2026-11-13T10:43:50.659072"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-insurance-do-you-really-need-it-and-how-to-choose -> chinabound-travel-guide-2026-08-monthly-update",
+      "detail": "score=2",
+      "timestamp": "2026-11-13T10:43:52.154909"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-high-speed-rail-how-to-book-tickets -> china-photography-guide-capturing-the-wonders-of-the-middle-kingdom",
+      "detail": "score=2",
+      "timestamp": "2026-11-13T10:43:53.638558"
+    },
+    {
+      "type": "internal_link",
+      "target": "ultimate-guide-to-china-visa-for-tourists -> china-photography-guide-capturing-the-wonders-of-the-middle-kingdom",
+      "detail": "score=2",
+      "timestamp": "2026-11-13T10:43:55.115352"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls -> china-photography-guide-capturing-the-wonders-of-the-middle-kingdom",
+      "detail": "score=2",
+      "timestamp": "2026-11-13T10:43:56.573374"
+    },
+    {
+      "type": "internal_link",
+      "target": "navigating-china-with-confidence-a-californians-guide-to-travel-safety -> china-remote-work-guide-a-californians-5-year-chengdu-experience",
+      "detail": "score=2",
+      "timestamp": "2026-11-13T10:43:58.072266"
+    },
+    {
+      "type": "internal_link",
+      "target": "transportation-guide -> china-remote-work-guide-a-californians-5-year-chengdu-experience",
+      "detail": "score=2",
+      "timestamp": "2026-11-13T10:43:59.529545"
+    },
+    {
+      "type": "internal_link",
+      "target": "food-recommendations-guide -> china-remote-work-guide-a-californians-5-year-chengdu-experience",
+      "detail": "score=2",
+      "timestamp": "2026-11-13T10:44:00.994264"
+    },
+    {
+      "type": "internal_link",
+      "target": "sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance -> 7-day-china-itinerary",
+      "detail": "score=1",
+      "timestamp": "2026-11-13T10:44:02.474115"
+    },
+    {
+      "type": "internal_link",
+      "target": "xian-terracotta-army-history-discovery-and-insider-tips -> 7-day-china-itinerary",
+      "detail": "score=1",
+      "timestamp": "2026-11-13T10:44:03.940605"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-13T10:44:04.427005"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-13T10:44:04.724034"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-13T10:44:04.949795"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-13T10:44:05.200458"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-13T10:44:05.492025"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-13T10:44:05.789404"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-13T10:44:06.089851"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-13T10:44:06.348296"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-13T10:44:06.644323"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-13T10:44:06.899153"
     }
   ]
 }
