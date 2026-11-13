@@ -846,6 +846,13 @@
       "fixed_by": "auto_error_router:orchestrator",
       "fix_note": "已创建Issue: https://github.com/fys2388/chinaboundtravel/issues/122",
       "fixed_at": "2026-11-12T15:31:13.431664"
+    },
+    {
+      "workflow": "SEO Audit (2.0 SEO综合审计)",
+      "status": "needs_manual",
+      "fixed_by": "auto_error_router:orchestrator",
+      "fix_note": "已创建Issue: https://github.com/fys2388/chinaboundtravel/issues/123",
+      "fixed_at": "2026-11-13T03:46:20.323173"
     }
   ]
 }

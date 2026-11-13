@@ -2514,6 +2514,17 @@
       "error_message": "##[error]Process completed with exit code 1.",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20261113_034618",
+      "timestamp": "2026-11-13T03:46:18.260953",
+      "workflow_name": "SEO Audit (2.0 SEO综合审计)",
+      "run_id": "43361041211",
+      "category": "unknown",
+      "category_name": "未知错误",
+      "error_message": "strict mode failed: broken=0 malformed=2\n##[error]Process completed with exit code 1.",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
