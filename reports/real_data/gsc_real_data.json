@@ -1,25 +1,18 @@
 {
   "source": "gsc_api",
-  "pull_time": "2026-11-12T14:10:49.485438",
-  "data_date": "2026-11-09",
+  "pull_time": "2026-11-13T07:01:45.821002",
+  "data_date": "2026-11-10",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "impressions": 718,
+    "impressions": 750,
     "clicks": 1,
-    "ctr": 0.14,
-    "average_position": 62.7,
+    "ctr": 0.13,
+    "average_position": 62.9,
     "sitemap_count": 1,
     "sitemap_last_submitted": "2026-09-08T00:57:40.422Z"
   },
   "daily": [
-    {
-      "date": "2026-10-13",
-      "impressions": 31,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 31.8
-    },
     {
       "date": "2026-10-14",
       "impressions": 48,
@@ -208,15 +201,22 @@
       "clicks": 1,
       "ctr": 0.01,
       "position": 41.8
+    },
+    {
+      "date": "2026-11-10",
+      "impressions": 136,
+      "clicks": 1,
+      "ctr": 0.01,
+      "position": 38.8
     }
   ],
   "top_queries": [
     {
       "query": "chinese visa itinerary template",
-      "impressions": 8,
+      "impressions": 9,
       "clicks": 1,
-      "ctr": 0.12,
-      "position": 8.8
+      "ctr": 0.11,
+      "position": 8.4
     },
     {
       "query": "\"wechat accepted\"",
@@ -224,20 +224,6 @@
       "clicks": 0,
       "ctr": 0,
       "position": 37
-    },
-    {
-      "query": "# role you are a strict image-grounded knowledge assistant. identify entities only when visual evidence is clear, then provide concise background tied to those entities. # rules 1. use visible anchors: readable text, logos, labels, signatures, symbols, distinctive designs, markings, or unique features. 2. provide facts only about entities confirmed by those anchors. 3. do not infer from weak resemblance, broad context, or unsupported association. 4. analyze carefully but keep reasoning internal. # output - start with visual evidence supporting recognition. - follow with brief verifiable background facts. - use direct factual language. - avoid \"maybe,\" \"likely,\" \"possibly,\" \"appears to be,\" \"perhaps,\" \"probably.\" - omit unconfirmed details. # limits - no greetings, closings, meta-comments, or emojis. - no unrelated background. - stop when complete.",
-      "impressions": 1,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 6
-    },
-    {
-      "query": "# task role you are a strict assistant for visual evidence analysis and entity-level knowledge retrieval. the image must provide the basis for entity identification. # scope - provide background facts only for entities confirmed by visible cues: text, logo, emblem, signature, label, symbol, distinctive design, unique marker. - keep facts connected to the confirmed entity. - exclude unsupported guesses, uncertain identities, broad associations, unrelated knowledge. # reasoning policy - analyze carefully before answering. - do not output chain-of-thought or process notes. # response style - begin with recognizable visual cues. - follow with concise verified background. - avoid hedging terms. - do not include unsupported details. # output limits - no greetings, closings, emojis, meta-explanations.",
-      "impressions": 1,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 2
     },
     {
       "query": "144 hour",
@@ -355,24 +341,31 @@
   "top_pages": [
     {
       "page": "https://www.chinaboundtravel.com/free-itinerary/",
-      "impressions": 61,
+      "impressions": 60,
       "clicks": 2,
       "ctr": 0.03,
-      "position": 12.9
+      "position": 13.2
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary/",
-      "impressions": 125,
+      "impressions": 137,
       "clicks": 2,
-      "ctr": 0.02,
-      "position": 17.4
+      "ctr": 0.01,
+      "position": 16.5
     },
     {
       "page": "https://www.chinaboundtravel.com/",
-      "impressions": 13,
+      "impressions": 14,
       "clicks": 1,
-      "ctr": 0.08,
-      "position": 10.3
+      "ctr": 0.07,
+      "position": 10.1
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
+      "impressions": 64,
+      "clicks": 1,
+      "ctr": 0.02,
+      "position": 10.9
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/",
@@ -383,10 +376,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
-      "impressions": 4,
+      "impressions": 2,
       "clicks": 0,
       "ctr": 0,
-      "position": 4.8
+      "position": 1.5
     },
     {
       "page": "https://www.chinaboundtravel.com/_archived/",
@@ -481,17 +474,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/yangshuo/",
-      "impressions": 11,
+      "impressions": 12,
       "clicks": 0,
       "ctr": 0,
-      "position": 15
-    },
-    {
-      "page": "https://www.chinaboundtravel.com/contact/",
-      "impressions": 10,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 29.3
+      "position": 16
     }
   ],
   "raw_source": "Google Search Console REST API v3",
@@ -501,6 +487,7 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 3,
-    "data_date": "2026-11-09"
-  }
+    "data_date": "2026-11-10"
+  },
+  "prompt_noise_filtered": 2
 }
