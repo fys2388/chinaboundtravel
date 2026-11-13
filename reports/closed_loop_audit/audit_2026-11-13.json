@@ -1,6 +1,6 @@
 {
   "audit_date": "2026-11-13",
-  "audited_at": "2026-11-13T04:10:28.120298",
+  "audited_at": "2026-11-13T19:06:35.611551",
   "score": {
     "total_score": 75,
     "max_score": 100,
@@ -49,7 +49,7 @@
         "pending": 0,
         "failed": 0,
         "partial": 4,
-        "total_issues": 21,
+        "total_issues": 22,
         "resolved_issues": 0
       }
     },
@@ -61,7 +61,7 @@
         "need_manual": 25,
         "resolved": 18,
         "execution_log_exists": true,
-        "total_executions": 10472
+        "total_executions": 10598
       }
     },
     {
@@ -69,7 +69,7 @@
       "status": "pass",
       "issues": [],
       "details": {
-        "ga4_daily_days": 86,
+        "ga4_daily_days": 87,
         "gsc_daily_days": 90
       }
     }
