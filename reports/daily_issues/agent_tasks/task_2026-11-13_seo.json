@@ -3,7 +3,7 @@
   "agent_name": "SEO Intelligent Agent (SEO智能优化)",
   "task_id": "task_2026-11-13_seo",
   "created_at": "2026-11-13T01:00:37.518905+00:00",
-  "updated_at": "2026-11-13T19:06:35.489445",
+  "updated_at": "2026-11-13T21:51:21.837095",
   "target_date": "2026-11-13",
   "issue_count": 4,
   "severity_summary": {
@@ -54,27 +54,7 @@
       "detected_at": "2026-11-13T04:10:27.668945"
     },
     {
-      "id": "site_health-d25a1ff7c4d48fc",
-      "type": "title_too_long",
-      "title": "title_too_long",
-      "description": "title_too_long",
-      "page": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
-      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
-      "evidence": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
-      "recommended_action": "Review and remediate the reported issue.",
-      "severity": "medium",
-      "agent": "seo",
-      "action": "manual_review",
-      "source": "site_health",
-      "source_file": "",
-      "task_source": "quality_gate",
-      "status": "new",
-      "assigned": true,
-      "assigned_to": "seo",
-      "detected_at": "2026-11-13T19:06:35.201700+00:00"
-    },
-    {
-      "id": "site_health-2fbcff7af81276ab",
+      "id": "site_health-3e3e154cbbb83c58",
       "type": "meta_description_too_long",
       "title": "meta_description_too_long",
       "description": "meta_description_too_long",
@@ -91,7 +71,27 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-11-13T19:06:35.201697+00:00"
+      "detected_at": "2026-11-13T21:51:21.318196+00:00"
+    },
+    {
+      "id": "site_health-3bd6c0c3b0465000",
+      "type": "title_too_long",
+      "title": "title_too_long",
+      "description": "title_too_long",
+      "page": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+      "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+      "evidence": "Title过长(70字符，模板上限60): China Winter Travel Guide for Australian...",
+      "recommended_action": "Review and remediate the reported issue.",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "manual_review",
+      "source": "site_health",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-11-13T21:51:21.318200+00:00"
     }
   ],
   "priority_issue": {
@@ -120,9 +120,9 @@
   ],
   "status": "partial",
   "execution": {
-    "resolved_count": 0,
+    "resolved_count": 1,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=2, failed=0"
+    "note": "resolved=1, need_manual=1, failed=0"
   }
 }
