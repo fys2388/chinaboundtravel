@@ -1,503 +1,8 @@
 {
   "log_version": "1.0",
-  "last_updated": "2026-11-12T14:10:53.356996",
+  "last_updated": "2026-11-13T13:34:34.434032",
   "total_entries": 100,
   "entries": [
-    {
-      "rollback_id": "20261018_100251_social",
-      "timestamp": "2026-10-18T10:02:51.156761",
-      "domain": "social",
-      "strategy_file": "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/social/social_publish_strategy.json",
-      "pre_change_version": "2.1-20261018_100251_quality_gated",
-      "pre_change_last_updated": "2026-10-18T10:02:51.156701",
-      "snapshot": {
-        "version": "2.1-20261018_100251_quality_gated",
-        "last_updated": "2026-10-18T10:02:51.156701",
-        "platforms": {
-          "pinterest": {
-            "best_times": [
-              "00:00",
-              "22:00",
-              "14:00"
-            ],
-            "best_hooks": [
-              "Essential China travel tips",
-              "China itinerary planning",
-              "China visa guide",
-              "China payment setup"
-            ],
-            "best_ctas": [
-              "save for later",
-              "click to read"
-            ],
-            "content_types": [
-              "guide",
-              "tips",
-              "itinerary"
-            ],
-            "max_posts_per_day": 3,
-            "hook_template": "{title} | {type_hook}",
-            "optimal_pin_style": "vertical_2:3, text_overlay_key_points"
-          },
-          "instagram": {
-            "best_times": [
-              "00:00",
-              "22:00",
-              "14:00"
-            ],
-            "best_hooks": [
-              "What travelers discover",
-              "Visual guide to"
-            ],
-            "best_ctas": [
-              "link in bio",
-              "comment below"
-            ],
-            "content_types": [
-              "visual",
-              "lifestyle",
-              "tips"
-            ],
-            "max_posts_per_day": 2,
-            "hook_template": "{type_hook}",
-            "optimal_format": "carousel_4:5 or reel_9:16"
-          },
-          "facebook": {
-            "best_times": [
-              "00:00",
-              "22:00",
-              "14:00"
-            ],
-            "best_hooks": [
-              "What travelers discover"
-            ],
-            "best_ctas": [
-              "read more",
-              "share your thoughts"
-            ],
-            "content_types": [
-              "guide",
-              "tips",
-              "news"
-            ],
-            "max_posts_per_day": 2,
-            "hook_template": "{type_hook}",
-            "optimal_format": "single_image_or_carousel"
-          },
-          "x": {
-            "best_times": [
-              "00:00",
-              "22:00",
-              "14:00"
-            ],
-            "best_hooks": [
-              "Research-backed facts about {topic}",
-              "Essential {topic} tips",
-              "What travelers discover about {topic}"
-            ],
-            "best_ctas": [
-              "read thread",
-              "click link"
-            ],
-            "content_types": [
-              "tips",
-              "facts",
-              "thread"
-            ],
-            "max_posts_per_day": 3,
-            "hook_template": "single_sentence_hook",
-            "optimal_format": "thread_5-8_tweets"
-          }
-        },
-        "global_rules": {
-          "max_posts_per_day_per_platform": 3,
-          "min_interval_minutes": 120,
-          "use_utm_tracking": true,
-          "brand_voice": "editorial",
-          "avoid_legacy_persona": true,
-          "no_fire_emoji_prefix": true,
-          "no_single_word_hooks": true
-        },
-        "learning_insights": [
-          {
-            "pattern": "高CTR帖子特征",
-            "description": "Top 20%帖子平均CTR 37.92%，比Bottom 20%高 37.92个百分点",
-            "common_hooks": [],
-            "best_times": [
-              "0:00",
-              "22:00",
-              "14:00"
-            ]
-          }
-        ]
-      },
-      "changes_applied": [],
-      "changes_count": 0
-    },
-    {
-      "rollback_id": "20261018_100251_social",
-      "timestamp": "2026-10-18T10:02:51.268658",
-      "domain": "social",
-      "strategy_file": "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/social/social_publish_strategy.json",
-      "pre_change_version": "2.1-20261018_100251_quality_gated",
-      "pre_change_last_updated": "2026-10-18T10:02:51.268593",
-      "snapshot": {
-        "version": "2.1-20261018_100251_quality_gated",
-        "last_updated": "2026-10-18T10:02:51.268593",
-        "platforms": {
-          "pinterest": {
-            "best_times": [
-              "00:00",
-              "22:00",
-              "14:00"
-            ],
-            "best_hooks": [
-              "Essential China travel tips",
-              "China itinerary planning",
-              "China visa guide",
-              "China payment setup"
-            ],
-            "best_ctas": [
-              "save for later",
-              "click to read"
-            ],
-            "content_types": [
-              "guide",
-              "tips",
-              "itinerary"
-            ],
-            "max_posts_per_day": 3,
-            "hook_template": "{title} | {type_hook}",
-            "optimal_pin_style": "vertical_2:3, text_overlay_key_points"
-          },
-          "instagram": {
-            "best_times": [
-              "00:00",
-              "22:00",
-              "14:00"
-            ],
-            "best_hooks": [
-              "What travelers discover",
-              "Visual guide to"
-            ],
-            "best_ctas": [
-              "link in bio",
-              "comment below"
-            ],
-            "content_types": [
-              "visual",
-              "lifestyle",
-              "tips"
-            ],
-            "max_posts_per_day": 2,
-            "hook_template": "{type_hook}",
-            "optimal_format": "carousel_4:5 or reel_9:16"
-          },
-          "facebook": {
-            "best_times": [
-              "00:00",
-              "22:00",
-              "14:00"
-            ],
-            "best_hooks": [
-              "What travelers discover"
-            ],
-            "best_ctas": [
-              "read more",
-              "share your thoughts"
-            ],
-            "content_types": [
-              "guide",
-              "tips",
-              "news"
-            ],
-            "max_posts_per_day": 2,
-            "hook_template": "{type_hook}",
-            "optimal_format": "single_image_or_carousel"
-          },
-          "x": {
-            "best_times": [
-              "00:00",
-              "22:00",
-              "14:00"
-            ],
-            "best_hooks": [
-              "Research-backed facts about {topic}",
-              "Essential {topic} tips",
-              "What travelers discover about {topic}"
-            ],
-            "best_ctas": [
-              "read thread",
-              "click link"
-            ],
-            "content_types": [
-              "tips",
-              "facts",
-              "thread"
-            ],
-            "max_posts_per_day": 3,
-            "hook_template": "single_sentence_hook",
-            "optimal_format": "thread_5-8_tweets"
-          }
-        },
-        "global_rules": {
-          "max_posts_per_day_per_platform": 3,
-          "min_interval_minutes": 120,
-          "use_utm_tracking": true,
-          "brand_voice": "editorial",
-          "avoid_legacy_persona": true,
-          "no_fire_emoji_prefix": true,
-          "no_single_word_hooks": true
-        },
-        "learning_insights": [
-          {
-            "pattern": "高CTR帖子特征",
-            "description": "Top 20%帖子平均CTR 37.92%，比Bottom 20%高 37.92个百分点",
-            "common_hooks": [],
-            "best_times": [
-              "0:00",
-              "22:00",
-              "14:00"
-            ]
-          }
-        ]
-      },
-      "changes_applied": [],
-      "changes_count": 0
-    },
-    {
-      "rollback_id": "20261018_100251_seo",
-      "timestamp": "2026-10-18T10:02:51.370105",
-      "domain": "seo",
-      "strategy_file": "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/seo/seo_optimization_strategy.json",
-      "pre_change_version": "2.0-20261018_100251",
-      "pre_change_last_updated": "2026-10-18T10:02:51.370050",
-      "snapshot": {
-        "version": "2.0-20261018_100251",
-        "last_updated": "2026-10-18T10:02:51.370050",
-        "keyword_rules": {
-          "target_difficulty": "low_medium",
-          "min_search_volume": 100,
-          "max_keyword_density": 2.5,
-          "min_keyword_density": 0.5,
-          "long_tail_priority": true
-        },
-        "on_page_rules": {
-          "title_length": "50-60",
-          "meta_description_length": "150-160",
-          "heading_structure": "H1-H2-H3",
-          "internal_links_min": 3,
-          "external_links_min": 1,
-          "image_alt_required": true,
-          "schema_required": true,
-          "url_friendly": true
-        },
-        "best_keywords": [
-          {
-            "keyword": "https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/",
-            "ctr": 0.33,
-            "position": 13.7,
-            "impressions": 3
-          },
-          {
-            "keyword": "https://www.chinaboundtravel.com/free-itinerary/",
-            "ctr": 0.2,
-            "position": 4.5,
-            "impressions": 10
-          },
-          {
-            "keyword": "https://www.chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/",
-            "ctr": 0.12,
-            "position": 9.2,
-            "impressions": 8
-          },
-          {
-            "keyword": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
-            "ctr": 0.05,
-            "position": 21.1,
-            "impressions": 20
-          },
-          {
-            "keyword": "https://www.chinaboundtravel.com/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/",
-            "ctr": 0.05,
-            "position": 10.6,
-            "impressions": 20
-          },
-          {
-            "keyword": "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/",
-            "ctr": 0.02,
-            "position": 19.1,
-            "impressions": 53
-          },
-          {
-            "keyword": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
-            "ctr": 0.02,
-            "position": 7.6,
-            "impressions": 51
-          },
-          {
-            "keyword": "https://www.chinaboundtravel.com/posts/chinese-language-survival-phrases-your-ticket-to-a-smooth-china-adventure/",
-            "ctr": 0.01,
-            "position": 20.8,
-            "impressions": 75
-          },
-          {
-            "keyword": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
-            "ctr": 0.01,
-            "position": 73.1,
-            "impressions": 71
-          },
-          {
-            "keyword": "144 china visa",
-            "ctr": 0,
-            "position": 80.5,
-            "impressions": 2
-          }
-        ],
-        "best_pages": [],
-        "high_priority_keywords": [
-          {
-            "keyword": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
-            "traffic_potential": 12.240000000000002,
-            "position": 7.6
-          },
-          {
-            "keyword": "https://www.chinaboundtravel.com/free-itinerary/",
-            "traffic_potential": 5.5,
-            "position": 4.5
-          },
-          {
-            "keyword": "https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
-            "traffic_potential": 3.2,
-            "position": 3.6
-          },
-          {
-            "keyword": "https://www.chinaboundtravel.com/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/",
-            "traffic_potential": 2.6,
-            "position": 3.5
-          },
-          {
-            "keyword": "https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20260906&utm_content=ig_v1",
-            "traffic_potential": 1.8,
-            "position": 1
-          }
-        ],
-        "learning_insights": [
-          {
-            "pattern": "高CTR关键词特征",
-            "description": "'https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/'CTR最高，达到 33.0%，排名 13.7",
-            "recommendation": "分析该关键词的标题和描述模式，复制到其他关键词"
-          },
-          {
-            "pattern": "快速提升机会关键词",
-            "description": "发现 13 个排名在4-10之间的关键词，小幅优化即可进入Top 3",
-            "recommendation": "优先优化这些关键词的页面，提升内链和内容质量",
-            "keywords": [
-              "https://www.chinaboundtravel.com/cancel/",
-              "https://www.chinaboundtravel.com/cities/guilin/",
-              "https://www.chinaboundtravel.com/cities/yangshuo/",
-              "https://www.chinaboundtravel.com/posts/",
-              "https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/"
-            ]
-          }
-        ]
-      },
-      "changes_applied": [],
-      "changes_count": 0
-    },
-    {
-      "rollback_id": "20261018_100251_revenue",
-      "timestamp": "2026-10-18T10:02:51.444164",
-      "domain": "revenue",
-      "strategy_file": "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/revenue/revenue_optimization_strategy.json",
-      "pre_change_version": "2.0-20261018_100251",
-      "pre_change_last_updated": "2026-10-18T10:02:51.444120",
-      "snapshot": {
-        "version": "2.0-20261018_100251",
-        "last_updated": "2026-10-18T10:02:51.444120",
-        "product_rules": {
-          "priority_products": [
-            "hotels",
-            "flights",
-            "tours",
-            "esim",
-            "insurance",
-            "car_rental",
-            "transfers"
-          ],
-          "commission_threshold": 0.05,
-          "min_commission_rate": 0.03
-        },
-        "channel_rules": {
-          "best_channels": [],
-          "channel_optimization": {
-            "organic_search": "提升SEO排名，增加高意图流量",
-            "social": "优化社媒内容，增加联盟链接曝光",
-            "email": "建立邮件列表，推送高转化产品",
-            "direct": "提升品牌认知，增加直接访问"
-          }
-        },
-        "best_products": [
-          {
-            "product": "",
-            "revenue": 0,
-            "clicks": 0,
-            "conversion_rate": 0,
-            "commission_rate": 0
-          },
-          {
-            "product": "",
-            "revenue": 0,
-            "clicks": 0,
-            "conversion_rate": 0,
-            "commission_rate": 0
-          }
-        ],
-        "best_partners": [],
-        "best_channels": [
-          {
-            "channel": "unknown",
-            "revenue": 0.0,
-            "clicks": 0,
-            "ctr": 0.0
-          }
-        ],
-        "high_commission_products": [
-          {
-            "product": "",
-            "commission_rate": 0,
-            "revenue": 0
-          },
-          {
-            "product": "",
-            "commission_rate": 0,
-            "revenue": 0
-          }
-        ],
-        "learning_insights": [
-          {
-            "pattern": "高收入产品特征",
-            "description": "''产品收入最高，达到 $0.00，转化率 0.0%",
-            "recommendation": "增加''产品的曝光和推荐位置",
-            "key_metrics": {
-              "高转化": ">0.0%",
-              "高点击": ">0次"
-            }
-          },
-          {
-            "pattern": "高佣金产品机会",
-            "description": "''佣金率最高，达到 0.0%，但当前收入 $0.00",
-            "recommendation": "重点推广高佣金''产品，提升流量和转化",
-            "key_metrics": {
-              "高佣金": ">0.0%",
-              "增长潜力": "大"
-            }
-          }
-        ]
-      },
-      "changes_applied": [],
-      "changes_count": 0
-    },
     {
       "rollback_id": "20261019_112809_social",
       "timestamp": "2026-10-19T11:28:09.873781",
@@ -12588,6 +12093,509 @@
       "snapshot": {
         "version": "2.0-20261112_141053",
         "last_updated": "2026-11-12T14:10:53.351241",
+        "product_rules": {
+          "priority_products": [
+            "hotels",
+            "flights",
+            "tours",
+            "esim",
+            "insurance",
+            "car_rental",
+            "transfers"
+          ],
+          "commission_threshold": 0.05,
+          "min_commission_rate": 0.03
+        },
+        "channel_rules": {
+          "best_channels": [],
+          "channel_optimization": {
+            "organic_search": "提升SEO排名，增加高意图流量",
+            "social": "优化社媒内容，增加联盟链接曝光",
+            "email": "建立邮件列表，推送高转化产品",
+            "direct": "提升品牌认知，增加直接访问"
+          }
+        },
+        "best_products": [
+          {
+            "product": "",
+            "revenue": 0,
+            "clicks": 0,
+            "conversion_rate": 0,
+            "commission_rate": 0
+          },
+          {
+            "product": "",
+            "revenue": 0,
+            "clicks": 0,
+            "conversion_rate": 0,
+            "commission_rate": 0
+          }
+        ],
+        "best_partners": [],
+        "best_channels": [
+          {
+            "channel": "unknown",
+            "revenue": 0.0,
+            "clicks": 0,
+            "ctr": 0.0
+          }
+        ],
+        "high_commission_products": [
+          {
+            "product": "",
+            "commission_rate": 0,
+            "revenue": 0
+          },
+          {
+            "product": "",
+            "commission_rate": 0,
+            "revenue": 0
+          }
+        ],
+        "learning_insights": [
+          {
+            "pattern": "高收入产品特征",
+            "description": "''产品收入最高，达到 $0.00，转化率 0.0%",
+            "recommendation": "增加''产品的曝光和推荐位置",
+            "key_metrics": {
+              "高转化": ">0.0%",
+              "高点击": ">0次"
+            }
+          },
+          {
+            "pattern": "高佣金产品机会",
+            "description": "''佣金率最高，达到 0.0%，但当前收入 $0.00",
+            "recommendation": "重点推广高佣金''产品，提升流量和转化",
+            "key_metrics": {
+              "高佣金": ">0.0%",
+              "增长潜力": "大"
+            }
+          }
+        ]
+      },
+      "changes_applied": [],
+      "changes_count": 0
+    },
+    {
+      "rollback_id": "20261113_133434_social",
+      "timestamp": "2026-11-13T13:34:34.086523",
+      "domain": "social",
+      "strategy_file": "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/social/social_publish_strategy.json",
+      "pre_change_version": "2.1-20261113_133434_quality_gated",
+      "pre_change_last_updated": "2026-11-13T13:34:34.086454",
+      "snapshot": {
+        "version": "2.1-20261113_133434_quality_gated",
+        "last_updated": "2026-11-13T13:34:34.086454",
+        "platforms": {
+          "pinterest": {
+            "best_times": [
+              "22:00",
+              "14:00",
+              "13:00"
+            ],
+            "best_hooks": [
+              "Essential China travel tips",
+              "China itinerary planning",
+              "China visa guide",
+              "China payment setup"
+            ],
+            "best_ctas": [
+              "save for later",
+              "click to read"
+            ],
+            "content_types": [
+              "guide",
+              "tips",
+              "itinerary"
+            ],
+            "max_posts_per_day": 3,
+            "hook_template": "{title} | {type_hook}",
+            "optimal_pin_style": "vertical_2:3, text_overlay_key_points"
+          },
+          "instagram": {
+            "best_times": [
+              "22:00",
+              "14:00",
+              "13:00"
+            ],
+            "best_hooks": [
+              "What travelers discover",
+              "Visual guide to"
+            ],
+            "best_ctas": [
+              "link in bio",
+              "comment below"
+            ],
+            "content_types": [
+              "visual",
+              "lifestyle",
+              "tips"
+            ],
+            "max_posts_per_day": 2,
+            "hook_template": "{type_hook}",
+            "optimal_format": "carousel_4:5 or reel_9:16"
+          },
+          "facebook": {
+            "best_times": [
+              "22:00",
+              "14:00",
+              "13:00"
+            ],
+            "best_hooks": [
+              "What travelers discover"
+            ],
+            "best_ctas": [
+              "read more",
+              "share your thoughts"
+            ],
+            "content_types": [
+              "guide",
+              "tips",
+              "news"
+            ],
+            "max_posts_per_day": 2,
+            "hook_template": "{type_hook}",
+            "optimal_format": "single_image_or_carousel"
+          },
+          "x": {
+            "best_times": [
+              "22:00",
+              "14:00",
+              "13:00"
+            ],
+            "best_hooks": [
+              "Research-backed facts about {topic}",
+              "Essential {topic} tips",
+              "What travelers discover about {topic}"
+            ],
+            "best_ctas": [
+              "read thread",
+              "click link"
+            ],
+            "content_types": [
+              "tips",
+              "facts",
+              "thread"
+            ],
+            "max_posts_per_day": 3,
+            "hook_template": "single_sentence_hook",
+            "optimal_format": "thread_5-8_tweets"
+          }
+        },
+        "global_rules": {
+          "max_posts_per_day_per_platform": 3,
+          "min_interval_minutes": 120,
+          "use_utm_tracking": true,
+          "brand_voice": "editorial",
+          "avoid_legacy_persona": true,
+          "no_fire_emoji_prefix": true,
+          "no_single_word_hooks": true
+        },
+        "learning_insights": [
+          {
+            "pattern": "高CTR帖子特征",
+            "description": "Top 20%帖子平均CTR 23.51%，比Bottom 20%高 23.51个百分点",
+            "common_hooks": [],
+            "best_times": [
+              "22:00",
+              "14:00",
+              "13:00"
+            ]
+          }
+        ]
+      },
+      "changes_applied": [],
+      "changes_count": 0
+    },
+    {
+      "rollback_id": "20261113_133434_social",
+      "timestamp": "2026-11-13T13:34:34.223583",
+      "domain": "social",
+      "strategy_file": "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/social/social_publish_strategy.json",
+      "pre_change_version": "2.1-20261113_133434_quality_gated",
+      "pre_change_last_updated": "2026-11-13T13:34:34.223501",
+      "snapshot": {
+        "version": "2.1-20261113_133434_quality_gated",
+        "last_updated": "2026-11-13T13:34:34.223501",
+        "platforms": {
+          "pinterest": {
+            "best_times": [
+              "22:00",
+              "14:00",
+              "13:00"
+            ],
+            "best_hooks": [
+              "Essential China travel tips",
+              "China itinerary planning",
+              "China visa guide",
+              "China payment setup"
+            ],
+            "best_ctas": [
+              "save for later",
+              "click to read"
+            ],
+            "content_types": [
+              "guide",
+              "tips",
+              "itinerary"
+            ],
+            "max_posts_per_day": 3,
+            "hook_template": "{title} | {type_hook}",
+            "optimal_pin_style": "vertical_2:3, text_overlay_key_points"
+          },
+          "instagram": {
+            "best_times": [
+              "22:00",
+              "14:00",
+              "13:00"
+            ],
+            "best_hooks": [
+              "What travelers discover",
+              "Visual guide to"
+            ],
+            "best_ctas": [
+              "link in bio",
+              "comment below"
+            ],
+            "content_types": [
+              "visual",
+              "lifestyle",
+              "tips"
+            ],
+            "max_posts_per_day": 2,
+            "hook_template": "{type_hook}",
+            "optimal_format": "carousel_4:5 or reel_9:16"
+          },
+          "facebook": {
+            "best_times": [
+              "22:00",
+              "14:00",
+              "13:00"
+            ],
+            "best_hooks": [
+              "What travelers discover"
+            ],
+            "best_ctas": [
+              "read more",
+              "share your thoughts"
+            ],
+            "content_types": [
+              "guide",
+              "tips",
+              "news"
+            ],
+            "max_posts_per_day": 2,
+            "hook_template": "{type_hook}",
+            "optimal_format": "single_image_or_carousel"
+          },
+          "x": {
+            "best_times": [
+              "22:00",
+              "14:00",
+              "13:00"
+            ],
+            "best_hooks": [
+              "Research-backed facts about {topic}",
+              "Essential {topic} tips",
+              "What travelers discover about {topic}"
+            ],
+            "best_ctas": [
+              "read thread",
+              "click link"
+            ],
+            "content_types": [
+              "tips",
+              "facts",
+              "thread"
+            ],
+            "max_posts_per_day": 3,
+            "hook_template": "single_sentence_hook",
+            "optimal_format": "thread_5-8_tweets"
+          }
+        },
+        "global_rules": {
+          "max_posts_per_day_per_platform": 3,
+          "min_interval_minutes": 120,
+          "use_utm_tracking": true,
+          "brand_voice": "editorial",
+          "avoid_legacy_persona": true,
+          "no_fire_emoji_prefix": true,
+          "no_single_word_hooks": true
+        },
+        "learning_insights": [
+          {
+            "pattern": "高CTR帖子特征",
+            "description": "Top 20%帖子平均CTR 23.51%，比Bottom 20%高 23.51个百分点",
+            "common_hooks": [],
+            "best_times": [
+              "22:00",
+              "14:00",
+              "13:00"
+            ]
+          }
+        ]
+      },
+      "changes_applied": [],
+      "changes_count": 0
+    },
+    {
+      "rollback_id": "20261113_133434_seo",
+      "timestamp": "2026-11-13T13:34:34.346917",
+      "domain": "seo",
+      "strategy_file": "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/seo/seo_optimization_strategy.json",
+      "pre_change_version": "2.0-20261113_133434",
+      "pre_change_last_updated": "2026-11-13T13:34:34.346833",
+      "snapshot": {
+        "version": "2.0-20261113_133434",
+        "last_updated": "2026-11-13T13:34:34.346833",
+        "keyword_rules": {
+          "target_difficulty": "low_medium",
+          "min_search_volume": 100,
+          "max_keyword_density": 2.5,
+          "min_keyword_density": 0.5,
+          "long_tail_priority": true
+        },
+        "on_page_rules": {
+          "title_length": "50-60",
+          "meta_description_length": "150-160",
+          "heading_structure": "H1-H2-H3",
+          "internal_links_min": 3,
+          "external_links_min": 1,
+          "image_alt_required": true,
+          "schema_required": true,
+          "url_friendly": true
+        },
+        "best_keywords": [
+          {
+            "keyword": "https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/",
+            "ctr": 0.33,
+            "position": 13.7,
+            "impressions": 3
+          },
+          {
+            "keyword": "https://www.chinaboundtravel.com/free-itinerary/",
+            "ctr": 0.2,
+            "position": 4.5,
+            "impressions": 10
+          },
+          {
+            "keyword": "https://www.chinaboundtravel.com/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/",
+            "ctr": 0.12,
+            "position": 9.2,
+            "impressions": 8
+          },
+          {
+            "keyword": "chinese visa itinerary template",
+            "ctr": 0.11,
+            "position": 8.4,
+            "impressions": 9
+          },
+          {
+            "keyword": "https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/",
+            "ctr": 0.07,
+            "position": 8.4,
+            "impressions": 14
+          },
+          {
+            "keyword": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
+            "ctr": 0.05,
+            "position": 21.1,
+            "impressions": 20
+          },
+          {
+            "keyword": "https://www.chinaboundtravel.com/posts/2026-05-28-chinese-food-delivery-meituan-eleme-guide/",
+            "ctr": 0.05,
+            "position": 10.6,
+            "impressions": 20
+          },
+          {
+            "keyword": "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/",
+            "ctr": 0.02,
+            "position": 19.1,
+            "impressions": 53
+          },
+          {
+            "keyword": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
+            "ctr": 0.02,
+            "position": 7.6,
+            "impressions": 51
+          },
+          {
+            "keyword": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary/",
+            "ctr": 0.02,
+            "position": 17.4,
+            "impressions": 62
+          }
+        ],
+        "best_pages": [],
+        "high_priority_keywords": [
+          {
+            "keyword": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
+            "traffic_potential": 12.240000000000002,
+            "position": 7.6
+          },
+          {
+            "keyword": "https://www.chinaboundtravel.com/free-itinerary/",
+            "traffic_potential": 5.5,
+            "position": 4.5
+          },
+          {
+            "keyword": "https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
+            "traffic_potential": 3.2,
+            "position": 3.6
+          },
+          {
+            "keyword": "https://www.chinaboundtravel.com/affiliate-disclosure/",
+            "traffic_potential": 3.12,
+            "position": 2.2
+          },
+          {
+            "keyword": "https://www.chinaboundtravel.com/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/",
+            "traffic_potential": 2.6,
+            "position": 3.5
+          }
+        ],
+        "learning_insights": [
+          {
+            "pattern": "高CTR关键词特征",
+            "description": "'https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/'CTR最高，达到 33.0%，排名 13.7",
+            "recommendation": "分析该关键词的标题和描述模式，复制到其他关键词"
+          },
+          {
+            "pattern": "快速提升机会关键词",
+            "description": "发现 24 个排名在4-10之间的关键词，小幅优化即可进入Top 3",
+            "recommendation": "优先优化这些关键词的页面，提升内链和内容质量",
+            "keywords": [
+              "https://www.chinaboundtravel.com/cancel/",
+              "https://www.chinaboundtravel.com/cities/guilin/",
+              "https://www.chinaboundtravel.com/cities/yangshuo/",
+              "https://www.chinaboundtravel.com/posts/",
+              "https://www.chinaboundtravel.com/posts/2026-05-25-shanghai-bund-french-concession-2-day-guide/"
+            ]
+          }
+        ]
+      },
+      "changes_applied": [
+        {
+          "field": "best_keywords",
+          "reason": "基于GSC数据分析，更新最佳关键词排名",
+          "version": "2.1",
+          "timestamp": "2026-11-13T13:34:34.346831",
+          "evidence": "based on performance data analysis"
+        }
+      ],
+      "changes_count": 1
+    },
+    {
+      "rollback_id": "20261113_133434_revenue",
+      "timestamp": "2026-11-13T13:34:34.429483",
+      "domain": "revenue",
+      "strategy_file": "/home/runner/work/chinaboundtravel/chinaboundtravel/reports/revenue/revenue_optimization_strategy.json",
+      "pre_change_version": "2.0-20261113_133434",
+      "pre_change_last_updated": "2026-11-13T13:34:34.429431",
+      "snapshot": {
+        "version": "2.0-20261113_133434",
+        "last_updated": "2026-11-13T13:34:34.429431",
         "product_rules": {
           "priority_products": [
             "hotels",

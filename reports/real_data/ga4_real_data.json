@@ -1,26 +1,20 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-11-12T14:10:46.605872",
-  "data_date": "2026-11-11",
+  "pull_time": "2026-11-13T13:34:24.336143",
+  "data_date": "2026-11-12",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "activeUsers": 178,
-    "sessions": 191,
-    "screenPageViews": 213,
-    "engagedSessions": 115,
-    "bounceRate": 0.39790575916230364,
-    "averageSessionDuration": 52.90352156020943,
-    "engagementRate": 0.6020942408376964,
-    "newUsers": 176
+    "activeUsers": 186,
+    "sessions": 199,
+    "screenPageViews": 221,
+    "engagedSessions": 119,
+    "bounceRate": 0.4020100502512563,
+    "averageSessionDuration": 51.364708738693466,
+    "engagementRate": 0.5979899497487438,
+    "newUsers": 184
   },
   "daily": [
-    {
-      "date": "2026-10-16",
-      "sessions": 8,
-      "activeUsers": 8,
-      "pageviews": 8
-    },
     {
       "date": "2026-10-17",
       "sessions": 13,
@@ -173,6 +167,12 @@
     },
     {
       "date": "2026-11-12",
+      "sessions": 8,
+      "activeUsers": 8,
+      "pageviews": 8
+    },
+    {
+      "date": "2026-11-13",
       "sessions": 7,
       "activeUsers": 7,
       "pageviews": 7
@@ -182,8 +182,8 @@
     {
       "path": "/",
       "title": "ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners",
-      "pageviews": 27,
-      "sessions": 26
+      "pageviews": 28,
+      "sessions": 27
     },
     {
       "path": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
@@ -246,6 +246,12 @@
       "sessions": 8
     },
     {
+      "path": "/best-china-itineraries-for-10-days-three-routes-compared/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "pageviews": 5,
+      "sessions": 5
+    },
+    {
       "path": "/posts/144-hour-visa-free-transit-guide/",
       "title": "China 144 Hour Transit Visa 2026: Complete Guide",
       "pageviews": 5,
@@ -262,12 +268,6 @@
       "title": "China 144 Hour Transit Visa: Complete Guide",
       "pageviews": 4,
       "sessions": 4
-    },
-    {
-      "path": "/posts/is-china-safe-for-tourists-2026-honest-safety-assessment/",
-      "title": "Is China Safe for Tourists in 2026? | ChinaBound Travel",
-      "pageviews": 4,
-      "sessions": 4
     }
   ],
   "traffic_sources": [
@@ -279,9 +279,9 @@
     },
     {
       "channel": "Direct",
-      "sessions": 55,
-      "activeUsers": 52,
-      "engagementRate": 0.0727
+      "sessions": 59,
+      "activeUsers": 56,
+      "engagementRate": 0.0678
     },
     {
       "channel": "Organic Search",
@@ -294,6 +294,12 @@
       "sessions": 7,
       "activeUsers": 2,
       "engagementRate": 0.5714
+    },
+    {
+      "channel": "Cross-network",
+      "sessions": 4,
+      "activeUsers": 4,
+      "engagementRate": 1.0
     }
   ],
   "raw_source": "GA4 Data API v1beta",
@@ -303,6 +309,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 1,
-    "data_date": "2026-11-11"
+    "data_date": "2026-11-12"
   }
 }
