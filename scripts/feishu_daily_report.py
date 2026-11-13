@@ -1012,6 +1012,13 @@ class FeishuDailyReporter:
         
         # Top 搜索关键词
         top_keywords = data.get("top_keywords", [])
+        # 防御：过滤 prompt 注入 / 非自然查询词（历史数据可能残留，见 real_data_pull_engine._is_prompt_noise_query）
+        _pn_markers = ("# role you are", "# task role", "image-grounded", "knowledge assistant",
+                       "strict assistant", "visual evidence analysis", "chain-of-thought",
+                       "entity-level knowledge", "response style", "output limits")
+        top_keywords = [kw for kw in top_keywords
+                        if not (len((kw.get("keyword") or "").lower()) > 120
+                                or any(m in (kw.get("keyword") or "").lower() for m in _pn_markers))]
         kw_lines = ["暂无数据"]
         if gsc_has_data and top_keywords:
             kw_lines = []

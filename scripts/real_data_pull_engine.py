@@ -413,6 +413,27 @@ def pull_ga4_data(days: int = 28, save: bool = True) -> Dict:
 # GSC 数据拉取（Search Console API 直连）
 # ============================================================
 
+# 非自然查询词识别：AI prompt 注入 / 超长系统提示被当作搜索词命中站点，
+# 会污染 GSC 数据与日报 Top 关键词。真实用户查询极少超过 120 字符或含
+# "role you are" / "image-grounded" 这类系统提示特征。
+_PROMPT_NOISE_MARKERS = (
+    "# role you are", "# task role", "image-grounded", "knowledge assistant",
+    "strict assistant", "visual evidence analysis", "chain-of-thought",
+    "entity-level knowledge", "response style", "output limits",
+    "identify entities only when visual evidence",
+)
+
+
+def _is_prompt_noise_query(q: str) -> bool:
+    """判断是否为 prompt 注入 / 非自然查询词（应被过滤）。"""
+    if not q:
+        return False
+    ql = q.lower()
+    if len(ql) > 120:
+        return True
+    return any(m in ql for m in _PROMPT_NOISE_MARKERS)
+
+
 def pull_gsc_data(days: int = 28, save: bool = True) -> Dict:
     """直接调用 Search Console REST API 拉取真实搜索数据。
 
@@ -560,15 +581,23 @@ def pull_gsc_data(days: int = 28, save: bool = True) -> Dict:
         result["status"] = "OK"
         print(f"  GSC API 成功: {total_impressions:.0f} impressions, {total_clicks:.0f} clicks, avg pos {avg_position:.1f}")
 
-        # Top Queries
+        # Top Queries（过滤 prompt 注入 / 非自然查询词）
+        noise_filtered = 0
         for row in all_rows[:20]:
+            q = row.get("keys", [""])[0] if row.get("keys") else ""
+            if _is_prompt_noise_query(q):
+                noise_filtered += 1
+                continue
             result["top_queries"].append({
-                "query": row.get("keys", [""])[0] if row.get("keys") else "",
+                "query": q,
                 "impressions": row.get("impressions", 0),
                 "clicks": row.get("clicks", 0),
                 "ctr": round(row.get("ctr", 0), 2),
                 "position": round(row.get("position", 0), 1),
             })
+        if noise_filtered:
+            result["prompt_noise_filtered"] = noise_filtered
+            print(f"  GSC prompt-noise 查询已过滤: {noise_filtered} 条")
 
     except Exception as e:
         result["status"] = "API_EXCEPTION"
