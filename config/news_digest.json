@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-11-14T03:26:06.269157+00:00",
+  "last_updated": "2026-11-14T14:23:09.121235+00:00",
   "last_updated_date": "2026-11-14",
   "total_items": 40,
   "digest": {
@@ -49,17 +49,6 @@
         "_hash": "7fcd3edbe304"
       },
       {
-        "title": "China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends - South China Morning Post",
-        "summary": "China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends South China Morning Post",
-        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVzZNSnQ0azFwbEtkS2VYcml6b2FNb0JKX0xJb3dadEJjcjJJaDllTS0tRi1Ib0k0eTY4TjJZQVhiWElwZWJxQm1QLVktOHVEX2dQWFUtTjZ2VXJrdXd4NEI2WmxObkJzb2d3UDMzMVR3M09iYW4xdklSY3p6eTBza1c4Zk1sQTM5X2ZPMnA1ZExyLW9kTHRZZXRyaGdGVUplZUdaSGx2OUh2Y3Z6czM4LUh1WDBMamJaYU5Z0gG7AUFVX3lxTFBlLTVjR0FpQXNBcU5obW0wZzI3dFFyRXNPd25JYS1kRU1PTFY2X0xFakt6dXZZRlZJSGhkVXVNbXo5RURYTzIyQWcyUmRaSHBqblI3MXYtOGVXazVTTkdHaDkwYVBWX290Y3JXNmNRd04wb2hwS0RrQnNVS0RybWdaR0p0aW5mRTAyUjlVa0JLV0xReUFkMjBnMTZTNDI2Y0Y5akdvMEhBeWYtckpROFBSM0t2NHhfOVhnUUU?oc=5",
-        "date": "2026-10-21",
-        "source": "Google News RSS",
-        "source_query": "China+entry+policy+foreign+travelers",
-        "category": "visa_policy",
-        "type": "news",
-        "_hash": "454c6d010498"
-      },
-      {
         "title": "Visa-free foreign entries rise 24.1% in Q3 as ‘China Haul’ reflects appeal of Chinese innovation, experiences - Global Times",
         "summary": "Visa-free foreign entries rise 24.1% in Q3 as ‘China Haul’ reflects appeal of Chinese innovation, experiences Global Times",
         "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5HNi1VcnlnLTI5OTVBWVNJLXowRTVSRmt6bXg0akJjdWptOUxMNEEtQno0cFdkc1dkUGh6d3dldDM5SUZGMHlfTkw2emRwb0hLbWJIT09Oa21mU0VsQjBFRXhB?oc=5",
@@ -69,6 +58,17 @@
         "category": "visa_policy",
         "type": "news",
         "_hash": "191a9b20c91f"
+      },
+      {
+        "title": "China tightens travel restrictions for citizens - BBC",
+        "summary": "China tightens travel restrictions for citizens BBC",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5HN2R0OGJtZHhZNXdSNnZQNGtKcGgyTGpJY1JxWEZWckNfQ0NIX1J5Y0lFNkZnV3lncXEzZFhEY1Q2aGJpMEcyVVIwdENwTWwtcl9JRTIzQ2lGek0?oc=5",
+        "date": "2026-09-15",
+        "source": "Google News RSS",
+        "source_query": "China+passport+policy+update",
+        "category": "visa_policy",
+        "type": "news",
+        "_hash": "a670e57dd7ee"
       },
       {
         "title": "China's 240-hour visa-free transit policy - English.gov.cn",
@@ -98,7 +98,7 @@
         "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPNFJYbmlYX19xLVBDcVpmRElGQ2V5a3RSZmk4dGRUT3B2TTVRaWd0Um9zYmdlZnpIckctcm1sbzBDclNLM096MF9IUlEwWjNKSks2QnQ4M0NLZ1hqLWhMZlR3OFRJUUV3VmhSNnJ2eUhsLUdzRENfY3FBd0RyS2dpV0Y5TzdDbks0emNxMm5nWEc?oc=5",
         "date": "2026-08-06",
         "source": "Google News RSS",
-        "source_query": "China+passport+policy+update",
+        "source_query": "China+entry+policy+foreign+travelers",
         "category": "visa_policy",
         "type": "news",
         "_hash": "f6400329b9d7"
@@ -117,15 +117,15 @@
     ],
     "travel_industry": [
       {
-        "title": "China pavilion turns heads at London event - The Independent",
-        "summary": "China pavilion turns heads at London event The Independent",
-        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPUUdORHhKZVVDeUYyUVF4ZG5IYmdfX1ZBWkJFT2hLWTliRXhuQnBaOUM0ZjVZQ3UtdTBwYkl5X2Vab096eFVoYUs1QllOdUwxODdHZHlHZ25zLTdNNVRyeEQ3WmR1UlJZRW9kSlQxeVFMbXNPLXhFaS1QSFVMaVROZlhHTzFKNDh6R2ZtdXpJOUpsMmh0QVNvckZIOUJWd0RnSmEyZmdudFFUTllaVkFfdlU1eF9WQnpaV3RPc0xPSE1ueWZBNUE?oc=5",
-        "date": "2026-11-13",
+        "title": "How tourism is creating new livelihoods in China's rural villages - CGTN",
+        "summary": "How tourism is creating new livelihoods in China's rural villages CGTN",
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOalc0YTlka0lUcXpjVG55UXlQa0NLeEJac2xSY01uVlhISnlBU0RfUHVsT1RuSlVLODZHbkJBZ0lCdHZyUnlNNWlNcFZkanBrZ2trd2pybnlZVkU4REdkRGFVM0dPMzU2RTMzUDF4Ujh6YndXbktHVW1GeEtBdzJFdEp4UTQtX1AtOUFsdHlhaVFQWjQ1UjBzSGN6WENCLWFOOXR6dDdFS2swQmE0ZG1WTW8wb3hsVjBZS3VRcXh2aw?oc=5",
+        "date": "2026-11-14",
         "source": "Google News RSS",
-        "source_query": "China+travel+industry+2026",
+        "source_query": "China+tourism+news",
         "category": "travel_industry",
         "type": "news",
-        "_hash": "12bf119c310b"
+        "_hash": "86de96827a43"
       },
       {
         "title": "WTA reports highlight evolving global tourism trends, China's market outlook - China Daily",
@@ -150,26 +150,15 @@
         "_hash": "ab42aa4c326a"
       },
       {
-        "title": "China Rips Taiwan Over Tourist Told to Back Island’s Sovereignty - Bloomberg",
-        "summary": "China Rips Taiwan Over Tourist Told to Back Island’s Sovereignty Bloomberg",
+        "title": "China Rips Taiwan Over Tourist Told to Back Island’s Sovereignty - Bloomberg.com",
+        "summary": "China Rips Taiwan Over Tourist Told to Back Island’s Sovereignty Bloomberg.com",
         "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNcTQxLXM4ZUk2T29iMF9oQXZrQzNHSFJSQjVlRGZtZ2tXTWNLYVJZZ2VnRk5INDJnUUgweGxrT0J3Z1NwdmpLT2U0SnBuVkR6ejJCZmpQNl92UWlnZV9GaWZEbFVqU0E4SGt0dTQwSkxlLVM1aEJvOFRVd3BEbHZ5NmZfeWVPQ2dKb2R0Tm5CdXhrS0t2NGF5NHpRcEE0ZGRRd3RoZkp5ZjZPc1RMdlh1ZmlGQ3hLQQ?oc=5",
         "date": "2026-11-11",
         "source": "Google News RSS",
         "source_query": "China+tourism+news",
         "category": "travel_industry",
         "type": "news",
-        "_hash": "7dc2a5549dd1"
-      },
-      {
-        "title": "China’s Inbound Tourism Revenue Could Reach $470 Billion by 2040, UBS Says - Caixin Global",
-        "summary": "China’s Inbound Tourism Revenue Could Reach $470 Billion by 2040, UBS Says Caixin Global",
-        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPOUxOQTVmNGNMU05QNHFiVVAxenhqSTVsVW9PREQ4ODFYMXRaSlNTWWNXeS1iaUFlcjMxU1F0c0JMd0doWlBCTURGYlpYTTFiSlhxZzJibEVIVUJmMmQyUGNNcjJlb3pCTHdmQmNZMUhObFpsY1VZQnMxRnFXb1VVMlYwenhLRjA0UEYtMmlzQTdhSHBsWENoZVdUN3p0bF9kcTdhWTIzN0RJM1JHNlJkOU5HVUZLR0k2YkZDR0RXRXpIeHFa?oc=5",
-        "date": "2026-11-10",
-        "source": "Google News RSS",
-        "source_query": "China+inbound+tourism",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "d3d07df73ba9"
+        "_hash": "9e124def9890"
       },
       {
         "title": "Chinese Ambassador to Ireland Zhao Xiyuan Introduces China’s Inbound Tourism Facilitation Policies in Irish Media - 中华人民共和国外交部",
@@ -194,6 +183,17 @@
         "_hash": "f9c470f71dbe"
       },
       {
+        "title": "China's Golden Week travel surge masks cautious consumer spending - Reuters",
+        "summary": "China's Golden Week travel surge masks cautious consumer spending Reuters",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNdm9HZjg0WXpHcEN4R21wd3ZZOFVJNmRMTVRNWUhRQl96TEVVWG1HQnB5UTZvU3JyaWswRUtaRlh5Q2dQMzJqY1U2UFdCRjJRcEY2eDVXenZsU1RWX3R3T1ZLSmlSeXREemhST0FCMEdsbnE3ZDE5MjlwRW9QWTl1VVFmWG5tQ0YyREZ4d2RuZ25PYmNVV2NLRW1YODA5R3FNMHFDa29udTEzTHhTQndvZ2lDeFBvdEdYWEVJ?oc=5",
+        "date": "2026-09-29",
+        "source": "Google News RSS",
+        "source_query": "China+travel+industry+2026",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "094bc273bc7a"
+      },
+      {
         "title": "China tightens travel restrictions for citizens - BBC",
         "summary": "China tightens travel restrictions for citizens BBC",
         "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5HN2R0OGJtZHhZNXdSNnZQNGtKcGgyTGpJY1JxWEZWckNfQ0NIX1J5Y0lFNkZnV3lncXEzZFhEY1Q2aGJpMEcyVVIwdENwTWwtcl9JRTIzQ2lGek0?oc=5",
@@ -205,6 +205,17 @@
         "_hash": "a670e57dd7ee"
       },
       {
+        "title": "China’s visa-free boom is rewriting inbound tourism - Asia Times",
+        "summary": "China’s visa-free boom is rewriting inbound tourism Asia Times",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcG53eE4yN3QwRjFPWTJtdmMwZ1I3aTVPT0JMRENkMzhvQVA0SEJ6aVRzMVZrR3phbFk2dTlGOHhLRFZydUltWDR2Nk5QTk1FQmh2SDN1dUN3QVk0U2twXzlkNjBhMGNpd0l6ZWpQLXlqWm56elpqU0w4Z1BNUkE4MXloek5YNzl2?oc=5",
+        "date": "2026-08-31",
+        "source": "Google News RSS",
+        "source_query": "China+inbound+tourism",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "9440552d7b82"
+      },
+      {
         "title": "China Tightens Entry And Exit Rules From Sept 15 - Migrant Times",
         "summary": "China Tightens Entry And Exit Rules From Sept 15 Migrant Times",
         "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxObS1uWjBXeVJwRzV5Ui13N3BLbHhQM202X2lWRS00blc3b24zQk9NVVRmMXBFaFVPU2pBY3NVUlRibUQ4RFhIR3ZoNzNYX3dKVHhENmJ2UENxdl9wWkRIaWM4bmhVWHhyN09lSExTT21MdkdjeWpQZXQ3bFNZYm1WWXJKc2hXMkJoc0o1bGNnQ244Y092WlBJR2RBX1QxcFY1a2c?oc=5",
@@ -214,52 +225,41 @@
         "category": "travel_industry",
         "type": "news",
         "_hash": "47da71bd3f02"
-      },
-      {
-        "title": "China Issues New Regulations on Exit and Entry Administration - Newland Chase",
-        "summary": "China Issues New Regulations on Exit and Entry Administration Newland Chase",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPNFJYbmlYX19xLVBDcVpmRElGQ2V5a3RSZmk4dGRUT3B2TTVRaWd0Um9zYmdlZnpIckctcm1sbzBDclNLM096MF9IUlEwWjNKSks2QnQ4M0NLZ1hqLWhMZlR3OFRJUUV3VmhSNnJ2eUhsLUdzRENfY3FBd0RyS2dpV0Y5TzdDbks0emNxMm5nWEc?oc=5",
-        "date": "2026-08-06",
-        "source": "Google News RSS",
-        "source_query": "China+travel+restrictions+update",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "f6400329b9d7"
       }
     ],
     "destination_news": [
       {
-        "title": "Modernization rooted in Chinese cultural heritage - China Daily",
-        "summary": "Modernization rooted in Chinese cultural heritage China Daily",
-        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9ad0dKdzctUXRzZEpJRG93bW5CVHVEYzhlTUlRZk9fbWQzT2tLVnZnTE1pQm9vdWppUi1wS0s1WTlOWWM5Wmk4RlpSYXhtQndVTmlLenhYZUxIN3pxOGRnR3N4YVlwdkhrZ2FTTWVMeDFOOUpIOEpRNTVNd2VJZw?oc=5",
-        "date": "2026-11-13",
+        "title": "Frozen Model Pipeline Improves Traditional Chinese Cultural Generation Accuracy to 88.6 Percent - Bioengineer.org",
+        "summary": "Frozen Model Pipeline Improves Traditional Chinese Cultural Generation Accuracy to 88.6 Percent Bioengineer.org",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOTjV0N1BMWG5aT3UyN1hZOW9LSzFSRVk3aFdlU1NhVlJRQ1dMM1pjYXFTTkdnekVxS3ExOXFBeFBDQUsyOUJzUnRkSHJjNVMtRlBuYkNyWXVBMjBVUGcyUDhYb0VRVG1VeW5PY0JzVl9feHlLLWllM01rb1p5alFWMmFETzgxSUJXVlN0YjF0Q3hBeVByV1JVVmwtMnlHR3FiUDdaMGo0eGFzdTdYNXlkdS1VbGpSa1RLYWVIRg?oc=5",
+        "date": "2026-11-14",
         "source": "Google News RSS",
         "source_query": "China+cultural+heritage+news",
         "category": "destination_news",
         "type": "news",
-        "_hash": "674370f4f9ce"
+        "_hash": "5793081dde66"
       },
       {
-        "title": "Nearly 1,400 cultural relics from National Museum of China go on display in Shenzhen ahead of APEC - Global Times",
-        "summary": "Nearly 1,400 cultural relics from National Museum of China go on display in Shenzhen ahead of APEC Global Times",
-        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFB0SkFKTmR1bW12dG0xbC04N2R2SEtROUlaTUhzM2EtcjZ1c0hOVllUR2U4NGhNb0hSVXdIaXBsbTBJaHZHQXo3bGpIVjN2bVd4cEd1ZTZKbUdsV0YtdUxoenN3?oc=5",
-        "date": "2026-11-12",
+        "title": "Xinhua News | China adds three sites to world geological heritage list - Xinhua",
+        "summary": "Xinhua News | China adds three sites to world geological heritage list Xinhua",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5pZ29IVWNZT0lkZ1V3am1DeVBidkZXRUZuRThTdnEtTE5RdXQyeG5XV3FQazd0TlhmSzQxTmlOWGZXX0t1R2FBNUZDaE5aWEYtYWUyRUJaRmxWS2FaZ0hOcC1OSlQ0Y0JVV2kyMU1yQVJwNFdDODBiU1ZweGQ?oc=5",
+        "date": "2026-11-14",
         "source": "Google News RSS",
         "source_query": "China+cultural+heritage+news",
         "category": "destination_news",
         "type": "news",
-        "_hash": "7a91c7bb2009"
+        "_hash": "2bc49ed5d2bc"
       },
       {
-        "title": "Written in bone: China bets on ancient scripts for modern soft power - South China Morning Post",
-        "summary": "Written in bone: China bets on ancient scripts for modern soft power South China Morning Post",
-        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOM2JoVEthQnRtZ1dDcFFxZi1JUlVEMHJGMThBTE4tbmlJVVpPYjk5U3Ayem9yS3E0UkNDV3RBR1ZUamwtVHMyM0x5N0ZUUERoek9nZkh1TG96bF92ZDNob0JaODA1ZXNNMGdPLVVQQ296azBfWVNHQ3VFcjZETlVzUkI0NlRnR1VaZzRnRzZHWmFjT1g4djFVNGx0NEZQMm5NRWlnVnNKNjBmYTJQTjk0MUVVQk_SAbQBQVVfeXFMUEl2VkdZVC0yRmdzZ2liSjA0LVZHUFUzejVFa3pTU3Zja0hROGxWS2dVejVaWHU2RGZvaW9nRGJZN2hRX1hMSmVFWU5WSGtKN0VnbXpyWGxCT1BlRVI3SXNGRkZrYU5uaFZMT3RGNm1PQ25uVk1CUDZnclYybWVSQUd0TmxtTG9Od2ZRckpmdlZTOUZZWXE4VWdZNTYydWJ2TWlDVVZYVHVmblp5YXgtVW9MczhZ?oc=5",
-        "date": "2026-11-11",
+        "title": "UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou - UNESCO World Heritage Centre",
+        "summary": "UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou UNESCO World Heritage Centre",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBiSC02aWgyVElvRHhHbW50TmpKY05QZ0NhQmdpbzBtMS1xcDJGWVh4T1NLRjBWLXFKR2x0VHF3MHJ1b2pqeWFxclozSQ?oc=5",
+        "date": "2026-11-09",
         "source": "Google News RSS",
         "source_query": "China+cultural+heritage+news",
         "category": "destination_news",
         "type": "news",
-        "_hash": "20e3f484891a"
+        "_hash": "c545d2b74bb9"
       },
       {
         "title": "Americans could be detained for years in popular travel destination, officials warn - Fox News",
@@ -271,17 +271,6 @@
         "category": "destination_news",
         "type": "news",
         "_hash": "6fe72a77cb3a"
-      },
-      {
-        "title": "Hasbro unveils new immersive attractions and brand experiences across the world - blooloop",
-        "summary": "Hasbro unveils new immersive attractions and brand experiences across the world blooloop",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBxMDBFRkVyNkZXYUF1ODE2Sm5xSUpLM1J5eTNwcC16RDJXZ3cwVWw1TE5HbzV1ZEtUQnlNTHFBaFpvWXlJcHJyM3JYS2RvSDRFS2ktamlHdUozYktZOHpSOTRiZEQtUm1JTnBZYQ?oc=5",
-        "date": "2026-10-08",
-        "source": "Google News RSS",
-        "source_query": "China+new+attractions+open",
-        "category": "destination_news",
-        "type": "news",
-        "_hash": "adc3442d439b"
       },
       {
         "title": "China's travel landscape enters new era - chinadailyhk",
@@ -337,9 +326,42 @@
         "category": "destination_news",
         "type": "news",
         "_hash": "94aac9bc0109"
+      },
+      {
+        "title": "Disney World sets opening dates of new and refreshed attractions - blooloop",
+        "summary": "Disney World sets opening dates of new and refreshed attractions blooloop",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBURV9zYzhJTHU0TXBCT1M5cElheHc2eFpqbllnRFptal9xdll6akd6Y1cyTTlsaEtiYnk4NUxRN0xtbkpKOS1LdF9YWEQ2c1Z3cTdlazVIRzdjeEdLWjFHeEpCUGFVREpZMlkzMA?oc=5",
+        "date": "2026-03-16",
+        "source": "Google News RSS",
+        "source_query": "China+new+attractions+open",
+        "category": "destination_news",
+        "type": "news",
+        "_hash": "a153bae1758b"
       }
     ],
     "safety_alerts": [
+      {
+        "title": "China's Mazu early weather warning box makes global debut - Global Times",
+        "summary": "China's Mazu early weather warning box makes global debut Global Times",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5JMG13eTJYWlVxMTluS0JvaWZ6X3VaQzROcjdBeWdQWmFuaWxsY2ZxTXI1aFJBUzlKN2NQZlQ3MWNfYnlOU0F1ZGVvUjlqbUE3SHRzSmswU09HVEthSS1kWEhR?oc=5",
+        "date": "2026-11-12",
+        "source": "Google News RSS",
+        "source_query": "China+weather+warning+travel",
+        "category": "safety_alerts",
+        "type": "news",
+        "_hash": "f9d9fe092b1c"
+      },
+      {
+        "title": "China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan - Libya Update News - Libya Update News",
+        "summary": "China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan Libya Update News - Libya Update News",
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbnROODBlM2NRb3BXb3A2Q1A5LVh4OF9KSGt2cDZEY2RYZUZVREp4MGFRelVGQTNmWnRMQmt3ZzA3TFZxVlVrUThWZlA5Z1Z6RVRzbjFSQUZ1NjNoN0NXcllCem5RcDA5elZUd05mdzJxVHV5TWhuOWprY2FKN1pwbndaOHhEcGVNYjdUcUZwRVZXTjI1eV9zS185U1B5RW94T0JyOGRMaE5NMWIySC1vNnNMUVgwN0R5d2tTV2xhbw?oc=5",
+        "date": "2026-11-09",
+        "source": "Google News RSS",
+        "source_query": "China+transportation+update",
+        "category": "safety_alerts",
+        "type": "news",
+        "_hash": "8f537a18c6a9"
+      },
       {
         "title": "U.S. Adds Wrongful Detention Warning to China Travel Advisory - AgroLatam",
         "summary": "U.S. Adds Wrongful Detention Warning to China Travel Advisory AgroLatam",
@@ -352,15 +374,15 @@
         "_hash": "fa31abf1d061"
       },
       {
-        "title": "US adds wrongful detention warning to China travel advisory - VOA - Voice of America English News",
-        "summary": "US adds wrongful detention warning to China travel advisory VOA - Voice of America English News",
+        "title": "US adds wrongful detention warning to China travel advisory - Voice of America English News",
+        "summary": "US adds wrongful detention warning to China travel advisory Voice of America English News",
         "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNNHlfWEZDUFNEd0pRVkVRMHNfbHVfZ1lGeDJOeXhsbDVPcjBlN2JadTE3NjJPZHd0dUkxQUJZR2xRY0VXVWVpRkFobDJmT2owUm1EVWNtZWp0dTRZOHpwX05seXJtSmVCUVBMRUg3Q1VvT1FqcVozNUMyTkY4UXItNnpuLUd4QWV2MHZoLTAtN0NINHZTMWlJZHlyb2h2MUnSAaIBQVVfeXFMUHBoSWxKTmUxYkNaM202S3ctSFpsdEduVU5jNUYwdGpTOVhBUXNiazI4ZkhLOVJNdjlWRkVHWWlzLWM4b0VpRE5rTkJVQnNUMHpzMlY4VTZZOU9ULUplWDhKSVJYbmV2Qmc3Q2o4RS0yUUphZWpZcElaRnVPQ2prRV9WbkF6ZlZtT3h3bTlRakNCd1IxbERKSmo1TGJESi15dzZR?oc=5",
         "date": "2026-10-21",
         "source": "Google News RSS",
         "source_query": "China+travel+safety+alert",
         "category": "safety_alerts",
         "type": "news",
-        "_hash": "18966a9cd38e"
+        "_hash": "cf07478389df"
       },
       {
         "title": "US adds ‘wrongful detention’ warning for Americans travelling to China - South China Morning Post",
@@ -374,17 +396,6 @@
         "_hash": "38c86176c05c"
       },
       {
-        "title": "Update: China's railway passenger trips hit record single-day high - Xinhua",
-        "summary": "Update: China's railway passenger trips hit record single-day high Xinhua",
-        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE43NXJrZzVQaDlGRXhYNW4xempHNWVLLW1PSnZLWmQtMnZOUElHVmJFUUFsamRFUUF2TmI0RmpfRnYxT2dOTUpvbUcxQ1VQb0Itb1lRYkgtblB2VElFVS1hMUdwbVhERnFzNnBjaEsyUG12R2hiaE95YXNSeUE?oc=5",
-        "date": "2026-10-02",
-        "source": "Google News RSS",
-        "source_query": "China+transportation+update",
-        "category": "safety_alerts",
-        "type": "news",
-        "_hash": "bd15056e0d37"
-      },
-      {
         "title": "China's 240-hour visa-free transit policy - English.gov.cn",
         "summary": "China's 240-hour visa-free transit policy English.gov.cn",
         "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxONVB0Yk1udXR1NU5WTGpJMVNscHlVdnpJbGJzWDQ0ZmxuZHhfRVVBcVVvVVIxakdlVmxLUUNPRjk5MWtkcmpYS3VkNjU0ZXg2cUZQLWlyZXpkWEVqbDFJbEhBNWFOVWFUdHY1RlotYU5HMnBINERocWdlZFV2aHpRX2gzbWR0OTVxRHBLOVBSSkFyN21ndTdLTm9R?oc=5",
@@ -394,17 +405,6 @@
         "category": "safety_alerts",
         "type": "news",
         "_hash": "007efa1b5d47"
-      },
-      {
-        "title": "Storm weakens, but disrupts travel in China - Taipei Times",
-        "summary": "Storm weakens, but disrupts travel in China Taipei Times",
-        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1qaGEyc0FLaWhlWlBsejJ1ajdRTEZBcEZaTVRESFNqTUhGeTZzcE9PbW12N3ZLd1FyRGhsY1RRbXFVR3lsczU1RXE0ejV5N21WcGJGbHY4Y3VhYmtfZ0N0ZXNhMkppaGZJRG5tMVRYSExTUGZXdUFBMw?oc=5",
-        "date": "2026-08-11",
-        "source": "Google News RSS",
-        "source_query": "China+weather+warning+travel",
-        "category": "safety_alerts",
-        "type": "news",
-        "_hash": "cb324ec34cae"
       },
       {
         "title": "Weather Alert: Typhoon Dolphin - U.S. Embassy & Consulates in China",
@@ -455,9 +455,9 @@
   },
   "llm_summary": {
     "visa_policy": "- [2026-11-14] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-11-12] Could China extend its 30-day visa-free policy through 2027? - VisasNews\n  Could China extend its 30-day visa-free policy through 2027? VisasNews\n- [2026-11-11] China visa rules: 6 documents Indian applicants need to keep ready - The Indian Express\n  China visa rules: 6 documents Indian applicants need to keep ready The Indian Express",
-    "travel_industry": "- [2026-11-13] China pavilion turns heads at London event - The Independent\n  China pavilion turns heads at London event The Independent\n- [2026-11-13] WTA reports highlight evolving global tourism trends, China's market outlook - China Daily\n  WTA reports highlight evolving global tourism trends, China's market outlook China Daily\n- [2026-11-11] Outcry after Taiwan asks mainland Chinese tourist to sign independence statement - South China Morning Post\n  Outcry after Taiwan asks mainland Chinese tourist to sign independence statement South China Morning Post",
-    "destination_news": "- [2026-11-13] Modernization rooted in Chinese cultural heritage - China Daily\n  Modernization rooted in Chinese cultural heritage China Daily\n- [2026-11-12] Nearly 1,400 cultural relics from National Museum of China go on display in Shenzhen ahead of APEC - Global Times\n  Nearly 1,400 cultural relics from National Museum of China go on display in Shenzhen ahead of APEC Global Times\n- [2026-11-11] Written in bone: China bets on ancient scripts for modern soft power - South China Morning Post\n  Written in bone: China bets on ancient scripts for modern soft power South China Morning Post",
-    "safety_alerts": "- [2026-10-22] U.S. Adds Wrongful Detention Warning to China Travel Advisory - AgroLatam\n  U.S. Adds Wrongful Detention Warning to China Travel Advisory AgroLatam\n- [2026-10-21] US adds wrongful detention warning to China travel advisory - VOA - Voice of America English News\n  US adds wrongful detention warning to China travel advisory VOA - Voice of America English News\n- [2026-10-20] US adds ‘wrongful detention’ warning for Americans travelling to China - South China Morning Post\n  US adds ‘wrongful detention’ warning for Americans travelling to China South China Morning Post",
+    "travel_industry": "- [2026-11-14] How tourism is creating new livelihoods in China's rural villages - CGTN\n  How tourism is creating new livelihoods in China's rural villages CGTN\n- [2026-11-13] WTA reports highlight evolving global tourism trends, China's market outlook - China Daily\n  WTA reports highlight evolving global tourism trends, China's market outlook China Daily\n- [2026-11-11] Outcry after Taiwan asks mainland Chinese tourist to sign independence statement - South China Morning Post\n  Outcry after Taiwan asks mainland Chinese tourist to sign independence statement South China Morning Post",
+    "destination_news": "- [2026-11-14] Frozen Model Pipeline Improves Traditional Chinese Cultural Generation Accuracy to 88.6 Percent - Bioengineer.org\n  Frozen Model Pipeline Improves Traditional Chinese Cultural Generation Accuracy to 88.6 Percent Bioengineer.org\n- [2026-11-14] Xinhua News | China adds three sites to world geological heritage list - Xinhua\n  Xinhua News | China adds three sites to world geological heritage list Xinhua\n- [2026-11-09] UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou - UNESCO World Heritage Centre\n  UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou UNESCO World Heritage Centre",
+    "safety_alerts": "- [2026-11-12] China's Mazu early weather warning box makes global debut - Global Times\n  China's Mazu early weather warning box makes global debut Global Times\n- [2026-11-09] China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan - Libya Update News - Libya Update News\n  China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan Libya Update News - Libya Update News\n- [2026-10-22] U.S. Adds Wrongful Detention Warning to China Travel Advisory - AgroLatam\n  U.S. Adds Wrongful Detention Warning to China Travel Advisory AgroLatam",
     "general": "- [2024-03-16] A local’s travel guide to Washington DC: what to eat, see and do in three days\n  Top sights in Washington include Capitol Hill Books, the Black Cat music venue and a top-rated Filipino restaurant From phone chargers to podcasts, th"
   },
   "sources": {
@@ -477,5 +477,5 @@
     "provinces": 24
   },
   "policy_change": null,
-  "official_state_checked_at": "2026-11-14T03:26:06.269359+00:00"
+  "official_state_checked_at": "2026-11-14T14:23:09.121412+00:00"
 }
