@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "last_updated": "2026-11-13T15:33:30.097377+00:00",
-  "last_updated_date": "2026-11-13",
+  "last_updated": "2026-11-14T03:26:06.269157+00:00",
+  "last_updated_date": "2026-11-14",
   "total_items": 40,
   "digest": {
     "visa_policy": [
@@ -9,7 +9,7 @@
         "title": "中国240小时过境免签“朋友圈”扩展至57国",
         "summary": "From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)",
         "url": "https://www.gov.cn/lianbo/202608/content_7078699.htm",
-        "date": "2026-11-13",
+        "date": "2026-11-14",
         "source": "State Council 57-country notice",
         "category": "visa_policy",
         "type": "policy_page",
@@ -71,17 +71,6 @@
         "_hash": "191a9b20c91f"
       },
       {
-        "title": "China tightens travel restrictions for citizens - BBC",
-        "summary": "China tightens travel restrictions for citizens BBC",
-        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5HN2R0OGJtZHhZNXdSNnZQNGtKcGgyTGpJY1JxWEZWckNfQ0NIX1J5Y0lFNkZnV3lncXEzZFhEY1Q2aGJpMEcyVVIwdENwTWwtcl9JRTIzQ2lGek0?oc=5",
-        "date": "2026-09-15",
-        "source": "Google News RSS",
-        "source_query": "China+passport+policy+update",
-        "category": "visa_policy",
-        "type": "news",
-        "_hash": "a670e57dd7ee"
-      },
-      {
         "title": "China's 240-hour visa-free transit policy - English.gov.cn",
         "summary": "China's 240-hour visa-free transit policy English.gov.cn",
         "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxONVB0Yk1udXR1NU5WTGpJMVNscHlVdnpJbGJzWDQ0ZmxuZHhfRVVBcVVvVVIxakdlVmxLUUNPRjk5MWtkcmpYS3VkNjU0ZXg2cUZQLWlyZXpkWEVqbDFJbEhBNWFOVWFUdHY1RlotYU5HMnBINERocWdlZFV2aHpRX2gzbWR0OTVxRHBLOVBSSkFyN21ndTdLTm9R?oc=5",
@@ -104,6 +93,17 @@
         "_hash": "fa00ba262d24"
       },
       {
+        "title": "China Issues New Regulations on Exit and Entry Administration - Newland Chase",
+        "summary": "China Issues New Regulations on Exit and Entry Administration Newland Chase",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPNFJYbmlYX19xLVBDcVpmRElGQ2V5a3RSZmk4dGRUT3B2TTVRaWd0Um9zYmdlZnpIckctcm1sbzBDclNLM096MF9IUlEwWjNKSks2QnQ4M0NLZ1hqLWhMZlR3OFRJUUV3VmhSNnJ2eUhsLUdzRENfY3FBd0RyS2dpV0Y5TzdDbks0emNxMm5nWEc?oc=5",
+        "date": "2026-08-06",
+        "source": "Google News RSS",
+        "source_query": "China+passport+policy+update",
+        "category": "visa_policy",
+        "type": "news",
+        "_hash": "f6400329b9d7"
+      },
+      {
         "title": "China Visa-Free Travel - A Complete Guide - China Briefing",
         "summary": "China Visa-Free Travel - A Complete Guide China Briefing",
         "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUjZxM21tQ2ZnT055eHRGN04wTC1nUkJxRDVkUnFNXzdiYWZ6bk9KV3VnSnAxNFhRWWVmNF8weURrZHdqWC0ta1hkWmhINlFCYXJtN3lNMjhxRWpoMkdZMVl2dmR5WjhTMy12UDNKVV9WRUN5aC1RT0N1N0J5eWpHb2otb0tXZXI0Q2Rr?oc=5",
@@ -117,15 +117,15 @@
     ],
     "travel_industry": [
       {
-        "title": "Thai tourist arrivals in China surge 1,220% following visa-free travel - Khaosod English",
-        "summary": "Thai tourist arrivals in China surge 1,220% following visa-free travel Khaosod English",
-        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWjQ5YUtocUNibDl5RDhoSFhuZ2dUdXB2TUtJd1h2NWUzQXgzekVTeldWTTM2dVNHaFhXeWdEeFVRaXlUZS1QZjhNSDRPTTkwaklObS01VmhmU1NpclpCWG5Gc05PT1MyaHJTMFhYbUI0ZWdCQXlva2daTFg4WG4xMVEwMUl1ZjVTOTQ2OHB1dm1kZzFNZmhSMy1vOUFmVWNoVXhFQ2htTVFpQnZqMUdOSjNBZXpCcXBrcnA40gHAAUFVX3lxTE1rSkFITnRCSlRFVUl5T2FoRW5JbWtJQWd0T2t3a2c1RmluZ0lFWTU1UVNXQmk4QmxIZGRRM2pyV1RIQzhFSDJ4SVFZZ0I5M093V2MyZU9FUzk4UVV6VmFtdG9JakpWOTRQREp4REtIclZZUEhaanlETzZDdVdVa21hTVVpVWNpQU5CNTJRWFhOVmtrdDhEQUdNUDFjZWdkM2FwaTYtYld3RWlTQ1ZzNnhmNEV5THlPUnExaWtqSEtqQg?oc=5",
+        "title": "China pavilion turns heads at London event - The Independent",
+        "summary": "China pavilion turns heads at London event The Independent",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPUUdORHhKZVVDeUYyUVF4ZG5IYmdfX1ZBWkJFT2hLWTliRXhuQnBaOUM0ZjVZQ3UtdTBwYkl5X2Vab096eFVoYUs1QllOdUwxODdHZHlHZ25zLTdNNVRyeEQ3WmR1UlJZRW9kSlQxeVFMbXNPLXhFaS1QSFVMaVROZlhHTzFKNDh6R2ZtdXpJOUpsMmh0QVNvckZIOUJWd0RnSmEyZmdudFFUTllaVkFfdlU1eF9WQnpaV3RPc0xPSE1ueWZBNUE?oc=5",
         "date": "2026-11-13",
         "source": "Google News RSS",
-        "source_query": "China+tourism+news",
+        "source_query": "China+travel+industry+2026",
         "category": "travel_industry",
         "type": "news",
-        "_hash": "08eb6f83fdf0"
+        "_hash": "12bf119c310b"
       },
       {
         "title": "WTA reports highlight evolving global tourism trends, China's market outlook - China Daily",
@@ -150,15 +150,15 @@
         "_hash": "ab42aa4c326a"
       },
       {
-        "title": "China Rips Taiwan Over Tourist Told to Back Island’s Sovereignty - Bloomberg.com",
-        "summary": "China Rips Taiwan Over Tourist Told to Back Island’s Sovereignty Bloomberg.com",
+        "title": "China Rips Taiwan Over Tourist Told to Back Island’s Sovereignty - Bloomberg",
+        "summary": "China Rips Taiwan Over Tourist Told to Back Island’s Sovereignty Bloomberg",
         "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNcTQxLXM4ZUk2T29iMF9oQXZrQzNHSFJSQjVlRGZtZ2tXTWNLYVJZZ2VnRk5INDJnUUgweGxrT0J3Z1NwdmpLT2U0SnBuVkR6ejJCZmpQNl92UWlnZV9GaWZEbFVqU0E4SGt0dTQwSkxlLVM1aEJvOFRVd3BEbHZ5NmZfeWVPQ2dKb2R0Tm5CdXhrS0t2NGF5NHpRcEE0ZGRRd3RoZkp5ZjZPc1RMdlh1ZmlGQ3hLQQ?oc=5",
         "date": "2026-11-11",
         "source": "Google News RSS",
         "source_query": "China+tourism+news",
         "category": "travel_industry",
         "type": "news",
-        "_hash": "9e124def9890"
+        "_hash": "7dc2a5549dd1"
       },
       {
         "title": "China’s Inbound Tourism Revenue Could Reach $470 Billion by 2040, UBS Says - Caixin Global",
@@ -240,17 +240,6 @@
         "_hash": "674370f4f9ce"
       },
       {
-        "title": "BEST PLACES TO VISIT IN 2027 REVEALED AS CHINA, MALTA AND SLOVENIA TOP FORA TRAVEL’S HOT LIST! - Verge Magazine",
-        "summary": "BEST PLACES TO VISIT IN 2027 REVEALED AS CHINA, MALTA AND SLOVENIA TOP FORA TRAVEL’S HOT LIST! Verge Magazine",
-        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOT1V2RlNQVFpfTERZT3F5UHpBaDZVbS12UzgzcmFFMkxrcHBOSS05ZkoxYm10a2FLYl9oYzFwc0o3djJ3QXVIRVQ3VXZqTlZNLWlRaEZLQzFtZUNSNVVrcVJjNGUwTVZHY21sM1JXWTZWdW5qUEdMclI0aHZLa0tVUU90OW5rNXRFS1ZYbjVaamV1amJvSDVKbzQwNjMyLXluUjh5M0NLMXBENjBkVFhJR01YVVNXbF9GdFBWaw?oc=5",
-        "date": "2026-11-12",
-        "source": "Google News RSS",
-        "source_query": "China+travel+destination+news",
-        "category": "destination_news",
-        "type": "news",
-        "_hash": "4b5fd992e91b"
-      },
-      {
         "title": "Nearly 1,400 cultural relics from National Museum of China go on display in Shenzhen ahead of APEC - Global Times",
         "summary": "Nearly 1,400 cultural relics from National Museum of China go on display in Shenzhen ahead of APEC Global Times",
         "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFB0SkFKTmR1bW12dG0xbC04N2R2SEtROUlaTUhzM2EtcjZ1c0hOVllUR2U4NGhNb0hSVXdIaXBsbTBJaHZHQXo3bGpIVjN2bVd4cEd1ZTZKbUdsV0YtdUxoenN3?oc=5",
@@ -282,6 +271,28 @@
         "category": "destination_news",
         "type": "news",
         "_hash": "6fe72a77cb3a"
+      },
+      {
+        "title": "Hasbro unveils new immersive attractions and brand experiences across the world - blooloop",
+        "summary": "Hasbro unveils new immersive attractions and brand experiences across the world blooloop",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBxMDBFRkVyNkZXYUF1ODE2Sm5xSUpLM1J5eTNwcC16RDJXZ3cwVWw1TE5HbzV1ZEtUQnlNTHFBaFpvWXlJcHJyM3JYS2RvSDRFS2ktamlHdUozYktZOHpSOTRiZEQtUm1JTnBZYQ?oc=5",
+        "date": "2026-10-08",
+        "source": "Google News RSS",
+        "source_query": "China+new+attractions+open",
+        "category": "destination_news",
+        "type": "news",
+        "_hash": "adc3442d439b"
+      },
+      {
+        "title": "China's travel landscape enters new era - chinadailyhk",
+        "summary": "China's travel landscape enters new era chinadailyhk",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5pRUZmamoyVFd3eVk2bTZKanFuN3pJUW1nQnhjSlBEaHZ4X0pYM2gxcElzUmF2WC05X0dKdDJYTW9iOU5LcjJVbVZMRk9MTzRPLUs2LXgzNmpEdw?oc=5",
+        "date": "2026-09-30",
+        "source": "Google News RSS",
+        "source_query": "China+travel+destination+news",
+        "category": "destination_news",
+        "type": "news",
+        "_hash": "6e414a6e2f97"
       },
       {
         "title": "China Travel News Highlights Emerging Destinations Attracting More Visitors - RESIDENT™ | A Luxury Lifestyle Magazine",
@@ -326,53 +337,9 @@
         "category": "destination_news",
         "type": "news",
         "_hash": "94aac9bc0109"
-      },
-      {
-        "title": "2-Week China Essence and Panda Tour - China Highlights",
-        "summary": "2-Week China Essence and Panda Tour China Highlights",
-        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE52V2dXa2tnRVVlWm9kNzR5OTE3Y1JBNGxyaU9Wa0dLeDAwV1ZDMWVMTTd4QzFlR1RWcEVlX2QxLVp1ZHJKZF9VSzA5OFBPZzVjY3pCcGNmSWpJaEZpLVpmMnkyOUpBbWF4QlV2UjBnSlJCZDlkUnpYOFJUalE?oc=5",
-        "date": "2026-01-14",
-        "source": "Google News RSS",
-        "source_query": "Chengdu+Shanghai+Beijing+Xian+travel",
-        "category": "destination_news",
-        "type": "news",
-        "_hash": "be082795835f"
       }
     ],
     "safety_alerts": [
-      {
-        "title": "China's Mazu early weather warning box makes global debut - Global Times",
-        "summary": "China's Mazu early weather warning box makes global debut Global Times",
-        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5JMG13eTJYWlVxMTluS0JvaWZ6X3VaQzROcjdBeWdQWmFuaWxsY2ZxTXI1aFJBUzlKN2NQZlQ3MWNfYnlOU0F1ZGVvUjlqbUE3SHRzSmswU09HVEthSS1kWEhR?oc=5",
-        "date": "2026-11-12",
-        "source": "Google News RSS",
-        "source_query": "China+weather+warning+travel",
-        "category": "safety_alerts",
-        "type": "news",
-        "_hash": "f9d9fe092b1c"
-      },
-      {
-        "title": "China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan - Libya Update News - Libya Update News",
-        "summary": "China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan Libya Update News - Libya Update News",
-        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbnROODBlM2NRb3BXb3A2Q1A5LVh4OF9KSGt2cDZEY2RYZUZVREp4MGFRelVGQTNmWnRMQmt3ZzA3TFZxVlVrUThWZlA5Z1Z6RVRzbjFSQUZ1NjNoN0NXcllCem5RcDA5elZUd05mdzJxVHV5TWhuOWprY2FKN1pwbndaOHhEcGVNYjdUcUZwRVZXTjI1eV9zS185U1B5RW94T0JyOGRMaE5NMWIySC1vNnNMUVgwN0R5d2tTV2xhbw?oc=5",
-        "date": "2026-11-09",
-        "source": "Google News RSS",
-        "source_query": "China+transportation+update",
-        "category": "safety_alerts",
-        "type": "news",
-        "_hash": "8f537a18c6a9"
-      },
-      {
-        "title": "Mercedes readies 2030 strategy update with China at its core - Reuters",
-        "summary": "Mercedes readies 2030 strategy update with China at its core Reuters",
-        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPb3RXanRCZVNUand6bVBsaVdRS29UeGlGQ240NnhocVYyQ0pBdUdCZkhWM2F3RDhiZlIwdXNRb0tJbVpmQ1oxTy1Gel9EMFhzWU8xWXc1dnBXSzdkTjdDcjZ3YVFVSnR4TWROYXpUVlpjWEVUVWVHay1wcUhwNHgzOFNXcV8wUFZxczZXT0cwZTl2TUJ5SmlhUWQ2ZzNnMldGaVNaX2ZOUTFlajdoRkxoMkM4WWpPRmh3Wk51Y0hIZV8?oc=5",
-        "date": "2026-10-28",
-        "source": "Google News RSS",
-        "source_query": "China+transportation+update",
-        "category": "safety_alerts",
-        "type": "news",
-        "_hash": "e848ebb2cc94"
-      },
       {
         "title": "U.S. Adds Wrongful Detention Warning to China Travel Advisory - AgroLatam",
         "summary": "U.S. Adds Wrongful Detention Warning to China Travel Advisory AgroLatam",
@@ -407,6 +374,28 @@
         "_hash": "38c86176c05c"
       },
       {
+        "title": "Update: China's railway passenger trips hit record single-day high - Xinhua",
+        "summary": "Update: China's railway passenger trips hit record single-day high Xinhua",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE43NXJrZzVQaDlGRXhYNW4xempHNWVLLW1PSnZLWmQtMnZOUElHVmJFUUFsamRFUUF2TmI0RmpfRnYxT2dOTUpvbUcxQ1VQb0Itb1lRYkgtblB2VElFVS1hMUdwbVhERnFzNnBjaEsyUG12R2hiaE95YXNSeUE?oc=5",
+        "date": "2026-10-02",
+        "source": "Google News RSS",
+        "source_query": "China+transportation+update",
+        "category": "safety_alerts",
+        "type": "news",
+        "_hash": "bd15056e0d37"
+      },
+      {
+        "title": "China's 240-hour visa-free transit policy - English.gov.cn",
+        "summary": "China's 240-hour visa-free transit policy English.gov.cn",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxONVB0Yk1udXR1NU5WTGpJMVNscHlVdnpJbGJzWDQ0ZmxuZHhfRVVBcVVvVVIxakdlVmxLUUNPRjk5MWtkcmpYS3VkNjU0ZXg2cUZQLWlyZXpkWEVqbDFJbEhBNWFOVWFUdHY1RlotYU5HMnBINERocWdlZFV2aHpRX2gzbWR0OTVxRHBLOVBSSkFyN21ndTdLTm9R?oc=5",
+        "date": "2026-08-21",
+        "source": "Google News RSS",
+        "source_query": "China+transportation+update",
+        "category": "safety_alerts",
+        "type": "news",
+        "_hash": "007efa1b5d47"
+      },
+      {
         "title": "Storm weakens, but disrupts travel in China - Taipei Times",
         "summary": "Storm weakens, but disrupts travel in China Taipei Times",
         "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1qaGEyc0FLaWhlWlBsejJ1ajdRTEZBcEZaTVRESFNqTUhGeTZzcE9PbW12N3ZLd1FyRGhsY1RRbXFVR3lsczU1RXE0ejV5N21WcGJGbHY4Y3VhYmtfZ0N0ZXNhMkppaGZJRG5tMVRYSExTUGZXdUFBMw?oc=5",
@@ -427,6 +416,17 @@
         "category": "safety_alerts",
         "type": "news",
         "_hash": "dc0c52f4626a"
+      },
+      {
+        "title": "Weather Alert: Potential Severe Weather in Central China, July 11-13 - U.S. Embassy & Consulates in China",
+        "summary": "Weather Alert: Potential Severe Weather in Central China, July 11-13 U.S. Embassy & Consulates in China",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPOXV3R3BUUTNMSmpUQVV4MldFRndNM0ptNWRFWFZZd1BaUF9TY0V5a0czRHBmbVB1UE1jMkxmODZGSnB2c19CZXFZYUFPZWdrb0ZldWRqc3NZMjFZdFpSZng5M0hkY3FzQllXQXVRcWtaUEVNV09ieXh6YkNOZUJYTWsyZ1JuTW5RRU11bmxzQjJDem5rUmFXNlFObkRDdWRvbDU1WjNqSQ?oc=5",
+        "date": "2026-07-10",
+        "source": "Google News RSS",
+        "source_query": "China+weather+warning+travel",
+        "category": "safety_alerts",
+        "type": "news",
+        "_hash": "fff1ec053e6c"
       },
       {
         "title": "Zero-emission medium- and heavy-duty vehicle market in China: A 2025 update - International Council on Clean Transportation",
@@ -454,10 +454,10 @@
     ]
   },
   "llm_summary": {
-    "visa_policy": "- [2026-11-13] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-11-12] Could China extend its 30-day visa-free policy through 2027? - VisasNews\n  Could China extend its 30-day visa-free policy through 2027? VisasNews\n- [2026-11-11] China visa rules: 6 documents Indian applicants need to keep ready - The Indian Express\n  China visa rules: 6 documents Indian applicants need to keep ready The Indian Express",
-    "travel_industry": "- [2026-11-13] Thai tourist arrivals in China surge 1,220% following visa-free travel - Khaosod English\n  Thai tourist arrivals in China surge 1,220% following visa-free travel Khaosod English\n- [2026-11-13] WTA reports highlight evolving global tourism trends, China's market outlook - China Daily\n  WTA reports highlight evolving global tourism trends, China's market outlook China Daily\n- [2026-11-11] Outcry after Taiwan asks mainland Chinese tourist to sign independence statement - South China Morning Post\n  Outcry after Taiwan asks mainland Chinese tourist to sign independence statement South China Morning Post",
-    "destination_news": "- [2026-11-13] Modernization rooted in Chinese cultural heritage - China Daily\n  Modernization rooted in Chinese cultural heritage China Daily\n- [2026-11-12] BEST PLACES TO VISIT IN 2027 REVEALED AS CHINA, MALTA AND SLOVENIA TOP FORA TRAVEL’S HOT LIST! - Verge Magazine\n  BEST PLACES TO VISIT IN 2027 REVEALED AS CHINA, MALTA AND SLOVENIA TOP FORA TRAVEL’S HOT LIST! Verge Magazine\n- [2026-11-12] Nearly 1,400 cultural relics from National Museum of China go on display in Shenzhen ahead of APEC - Global Times\n  Nearly 1,400 cultural relics from National Museum of China go on display in Shenzhen ahead of APEC Global Times",
-    "safety_alerts": "- [2026-11-12] China's Mazu early weather warning box makes global debut - Global Times\n  China's Mazu early weather warning box makes global debut Global Times\n- [2026-11-09] China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan - Libya Update News - Libya Update News\n  China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan Libya Update News - Libya Update News\n- [2026-10-28] Mercedes readies 2030 strategy update with China at its core - Reuters\n  Mercedes readies 2030 strategy update with China at its core Reuters",
+    "visa_policy": "- [2026-11-14] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-11-12] Could China extend its 30-day visa-free policy through 2027? - VisasNews\n  Could China extend its 30-day visa-free policy through 2027? VisasNews\n- [2026-11-11] China visa rules: 6 documents Indian applicants need to keep ready - The Indian Express\n  China visa rules: 6 documents Indian applicants need to keep ready The Indian Express",
+    "travel_industry": "- [2026-11-13] China pavilion turns heads at London event - The Independent\n  China pavilion turns heads at London event The Independent\n- [2026-11-13] WTA reports highlight evolving global tourism trends, China's market outlook - China Daily\n  WTA reports highlight evolving global tourism trends, China's market outlook China Daily\n- [2026-11-11] Outcry after Taiwan asks mainland Chinese tourist to sign independence statement - South China Morning Post\n  Outcry after Taiwan asks mainland Chinese tourist to sign independence statement South China Morning Post",
+    "destination_news": "- [2026-11-13] Modernization rooted in Chinese cultural heritage - China Daily\n  Modernization rooted in Chinese cultural heritage China Daily\n- [2026-11-12] Nearly 1,400 cultural relics from National Museum of China go on display in Shenzhen ahead of APEC - Global Times\n  Nearly 1,400 cultural relics from National Museum of China go on display in Shenzhen ahead of APEC Global Times\n- [2026-11-11] Written in bone: China bets on ancient scripts for modern soft power - South China Morning Post\n  Written in bone: China bets on ancient scripts for modern soft power South China Morning Post",
+    "safety_alerts": "- [2026-10-22] U.S. Adds Wrongful Detention Warning to China Travel Advisory - AgroLatam\n  U.S. Adds Wrongful Detention Warning to China Travel Advisory AgroLatam\n- [2026-10-21] US adds wrongful detention warning to China travel advisory - VOA - Voice of America English News\n  US adds wrongful detention warning to China travel advisory VOA - Voice of America English News\n- [2026-10-20] US adds ‘wrongful detention’ warning for Americans travelling to China - South China Morning Post\n  US adds ‘wrongful detention’ warning for Americans travelling to China South China Morning Post",
     "general": "- [2024-03-16] A local’s travel guide to Washington DC: what to eat, see and do in three days\n  Top sights in Washington include Capitol Hill Books, the Black Cat music venue and a top-rated Filipino restaurant From phone chargers to podcasts, th"
   },
   "sources": {
@@ -477,5 +477,5 @@
     "provinces": 24
   },
   "policy_change": null,
-  "official_state_checked_at": "2026-11-13T15:33:30.097569+00:00"
+  "official_state_checked_at": "2026-11-14T03:26:06.269359+00:00"
 }
