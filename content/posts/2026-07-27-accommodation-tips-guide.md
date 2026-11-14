@@ -236,6 +236,8 @@ Here are some related articles on chinaboundtravel.com that you might find inter
 
 - [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
 
+- [China Remote Work Guide: Digital Nomad Tips](/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)
+
 ## FAQ
 
 ### What should I know about sichuan travel accommodation recommendations?

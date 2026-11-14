@@ -105,3 +105,5 @@ Where you stay shapes a city trip. Comparing hotel options across platforms help
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
 
 - [How to Order Food Delivery in China: Meituan & Ele.me Guide for Foreigners (2026)](/posts/chinese-food-delivery-meituan-eleme-guide/)
+
+- [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)

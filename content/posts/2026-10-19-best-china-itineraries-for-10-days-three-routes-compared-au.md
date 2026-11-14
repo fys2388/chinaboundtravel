@@ -131,3 +131,5 @@ This itinerary takes you through three of China's most beautiful cities: Beijing
 - [Traveling To China For Business: Meetings, Dining &](/posts/china-business-travel-guide-meetings-dining-and-networking/)
 
 - [China Travel Guide August 2026: Latest Visa Rules & Updates](/posts/chinabound-travel-guide-2026-08-monthly-update/)
+
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
