@@ -26,7 +26,7 @@
     },
     "38c86176c05c": {
       "title": "US adds ‘wrongful detention’ warning for Americans travellin",
-      "posted_at": "2026-10-29T06:51:08.267794+00:00",
+      "posted_at": "2026-11-14T07:28:26.159249+00:00",
       "platforms": [
         "x"
       ],
@@ -98,7 +98,7 @@
     },
     "e3aa35ed5a33": {
       "title": "A local’s travel guide to Washington DC: what to eat, see an",
-      "posted_at": "2026-11-12T08:04:35.864071+00:00",
+      "posted_at": "2026-11-14T07:28:27.914861+00:00",
       "platforms": [
         "x"
       ],
@@ -234,7 +234,7 @@
     },
     "fa31abf1d061": {
       "title": "U.S. Adds Wrongful Detention Warning to China Travel Advisor",
-      "posted_at": "2026-11-06T07:48:18.664771+00:00",
+      "posted_at": "2026-11-14T07:28:25.301757+00:00",
       "platforms": [
         "x"
       ],
@@ -562,11 +562,11 @@
     },
     "18966a9cd38e": {
       "title": "US adds wrongful detention warning to China travel advisory ",
-      "posted_at": "2026-11-02T07:29:40.430839+00:00",
+      "posted_at": "2026-11-14T07:28:25.755770+00:00",
       "platforms": [
         "x"
       ],
-      "success": true
+      "success": false
     },
     "d6a4d05a3cd4": {
       "title": "China Tourism Group Duty Free: Q3 profit and margins improve",
@@ -818,11 +818,11 @@
     },
     "d35a146c4b77": {
       "title": "中国240小时过境免签“朋友圈”扩展至57国",
-      "posted_at": "2026-11-07T06:54:58.671636+00:00",
+      "posted_at": "2026-11-14T07:28:22.964858+00:00",
       "platforms": [
         "x"
       ],
-      "success": true
+      "success": false
     },
     "ceef66b0fa4a": {
       "title": "India eases passport and visa rules for select foreigners, i",
@@ -1207,9 +1207,25 @@
         "x"
       ],
       "success": true
+    },
+    "965c1cefd5f0": {
+      "title": "Could China extend its 30-day visa-free policy through 2027?",
+      "posted_at": "2026-11-14T07:28:24.839497+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "12bf119c310b": {
+      "title": "China pavilion turns heads at London event - The Independent",
+      "posted_at": "2026-11-14T07:28:27.395498+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
     }
   },
-  "last_run": "2026-11-13T07:42:08.718597+00:00",
-  "total_posts": 132,
-  "total_failures": 72
+  "last_run": "2026-11-14T07:28:27.914881+00:00",
+  "total_posts": 134,
+  "total_failures": 77
 }
