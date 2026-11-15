@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-11-15_content",
   "created_at": "2026-11-15T01:00:38.950791+00:00",
-  "updated_at": "2026-11-15T08:30:41.568456",
+  "updated_at": "2026-11-15T08:44:15.938531",
   "target_date": "2026-11-15",
   "issue_count": 15,
   "severity_summary": {
@@ -40,7 +40,7 @@
       "description": "内容质量验证(P0乱码)未通过",
       "page": "content/posts",
       "file": "content/posts",
-      "evidence": "content_quality_validator.py exit code=1; run_id=42463063032",
+      "evidence": "content_quality_validator.py exit code=1; run_id=43695858623",
       "recommended_action": "修复报告中的乱码、编码、front matter 或媒体合规问题后重跑内容质量巡检。",
       "severity": "critical",
       "agent": "content",
@@ -114,7 +114,7 @@
       "detected_at": "2026-11-15T01:00:38.950206+00:00"
     },
     {
-      "id": "site_health-3b3617a8e76a4f55",
+      "id": "site_health-7aa25e5b4e14d6d3",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -131,10 +131,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-15T08:30:41.351546+00:00"
+      "detected_at": "2026-11-15T08:44:15.670258+00:00"
     },
     {
-      "id": "site_health-2f5d3251517763ab",
+      "id": "site_health-3b75bea283b68f9e",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -151,7 +151,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-15T08:30:41.351542+00:00"
+      "detected_at": "2026-11-15T08:44:15.670252+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -274,7 +274,7 @@
       "detected_at": "2026-11-15T03:53:17.828865"
     },
     {
-      "id": "site_health-29ae539801c3c240",
+      "id": "site_health-146222d560f7cb8",
       "type": "ai_forbidden_word",
       "title": "ai_forbidden_word",
       "description": "ai_forbidden_word",
@@ -291,7 +291,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-15T08:30:41.351595+00:00"
+      "detected_at": "2026-11-15T08:44:15.670316+00:00"
     },
     {
       "id": "issue_ba9f2f59289f",
