@@ -1,25 +1,18 @@
 {
   "source": "gsc_api",
-  "pull_time": "2026-11-14T12:39:50.895005",
-  "data_date": "2026-11-11",
+  "pull_time": "2026-11-15T06:55:30.458683",
+  "data_date": "2026-11-12",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "impressions": 735,
+    "impressions": 808,
     "clicks": 1,
-    "ctr": 0.14,
-    "average_position": 62.8,
+    "ctr": 0.12,
+    "average_position": 62.5,
     "sitemap_count": 1,
     "sitemap_last_submitted": "2026-09-08T00:57:40.422Z"
   },
   "daily": [
-    {
-      "date": "2026-10-15",
-      "impressions": 39,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 32.9
-    },
     {
       "date": "2026-10-16",
       "impressions": 27,
@@ -201,15 +194,29 @@
       "clicks": 1,
       "ctr": 0.01,
       "position": 38.8
+    },
+    {
+      "date": "2026-11-11",
+      "impressions": 100,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 45.6
+    },
+    {
+      "date": "2026-11-12",
+      "impressions": 90,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 26.7
     }
   ],
   "top_queries": [
     {
       "query": "chinese visa itinerary template",
-      "impressions": 9,
+      "impressions": 14,
       "clicks": 1,
-      "ctr": 0.11,
-      "position": 8.4
+      "ctr": 0.07,
+      "position": 7.9
     },
     {
       "query": "\"wechat accepted\"",
@@ -334,17 +341,17 @@
   "top_pages": [
     {
       "page": "https://www.chinaboundtravel.com/free-itinerary/",
-      "impressions": 60,
+      "impressions": 63,
       "clicks": 2,
       "ctr": 0.03,
-      "position": 13.2
+      "position": 12.9
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary/",
-      "impressions": 137,
+      "impressions": 156,
       "clicks": 2,
       "ctr": 0.01,
-      "position": 16.5
+      "position": 15.8
     },
     {
       "page": "https://www.chinaboundtravel.com/",
@@ -355,17 +362,17 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
-      "impressions": 63,
+      "impressions": 67,
       "clicks": 1,
-      "ctr": 0.02,
-      "position": 10.9
+      "ctr": 0.01,
+      "position": 10.8
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/",
-      "impressions": 9,
+      "impressions": 8,
       "clicks": 1,
-      "ctr": 0.11,
-      "position": 7.9
+      "ctr": 0.12,
+      "position": 8.2
     },
     {
       "page": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
@@ -383,10 +390,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/about/",
-      "impressions": 6,
+      "impressions": 8,
       "clicks": 0,
       "ctr": 0,
-      "position": 7.2
+      "position": 6
     },
     {
       "page": "https://www.chinaboundtravel.com/affiliate-disclosure/",
@@ -425,17 +432,17 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/",
-      "impressions": 5,
+      "impressions": 6,
       "clicks": 0,
       "ctr": 0,
-      "position": 4
+      "position": 4.7
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/beijing/",
-      "impressions": 5,
+      "impressions": 6,
       "clicks": 0,
       "ctr": 0,
-      "position": 13.4
+      "position": 11.3
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/chengdu/",
@@ -446,31 +453,31 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/guilin/",
-      "impressions": 10,
+      "impressions": 11,
       "clicks": 0,
       "ctr": 0,
-      "position": 51.9
+      "position": 54.4
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/western-sichuan/",
-      "impressions": 30,
+      "impressions": 36,
       "clicks": 0,
       "ctr": 0,
-      "position": 17.3
+      "position": 17
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/yangshuo/",
-      "impressions": 12,
+      "impressions": 14,
       "clicks": 0,
       "ctr": 0,
-      "position": 16
+      "position": 15.3
     },
     {
       "page": "https://www.chinaboundtravel.com/contact/",
-      "impressions": 10,
+      "impressions": 9,
       "clicks": 0,
       "ctr": 0,
-      "position": 29.3
+      "position": 32.1
     }
   ],
   "raw_source": "Google Search Console REST API v3",
@@ -480,7 +487,7 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 3,
-    "data_date": "2026-11-11"
+    "data_date": "2026-11-12"
   },
   "prompt_noise_filtered": 2
 }
