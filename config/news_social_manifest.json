@@ -98,7 +98,7 @@
     },
     "e3aa35ed5a33": {
       "title": "A local’s travel guide to Washington DC: what to eat, see an",
-      "posted_at": "2026-11-14T07:28:27.914861+00:00",
+      "posted_at": "2026-11-15T07:40:57.907093+00:00",
       "platforms": [
         "x"
       ],
@@ -818,7 +818,7 @@
     },
     "d35a146c4b77": {
       "title": "中国240小时过境免签“朋友圈”扩展至57国",
-      "posted_at": "2026-11-14T07:28:22.964858+00:00",
+      "posted_at": "2026-11-15T07:40:50.869673+00:00",
       "platforms": [
         "x"
       ],
@@ -1223,9 +1223,33 @@
         "x"
       ],
       "success": true
+    },
+    "86de96827a43": {
+      "title": "How tourism is creating new livelihoods in China's rural vil",
+      "posted_at": "2026-11-15T07:40:52.537512+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "cc3c9d420780": {
+      "title": "Art exhibition showcases Chinese and Pakistani cultural heri",
+      "posted_at": "2026-11-15T07:40:54.871216+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "c545d2b74bb9": {
+      "title": "UNESCO–Africa–China Workshop strengthens World Heritage capa",
+      "posted_at": "2026-11-15T07:40:57.338866+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
     }
   },
-  "last_run": "2026-11-14T07:28:27.914881+00:00",
-  "total_posts": 134,
-  "total_failures": 77
+  "last_run": "2026-11-15T07:40:57.907114+00:00",
+  "total_posts": 137,
+  "total_failures": 79
 }
