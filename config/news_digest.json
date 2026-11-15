@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-11-15T02:54:33.214753+00:00",
+  "last_updated": "2026-11-15T14:53:27.996518+00:00",
   "last_updated_date": "2026-11-15",
   "total_items": 40,
   "digest": {
@@ -117,6 +117,28 @@
     ],
     "travel_industry": [
       {
+        "title": "Visa-free policies, rising outbound demand fuel China’s global tourism rise: ETOA chief - 巴士的報",
+        "summary": "Visa-free policies, rising outbound demand fuel China’s global tourism rise: ETOA chief 巴士的報",
+        "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPRzRRNFNLQ2hxUlhYQ25vazBiRUJnUXlzal9lM0VjRlFTcmlXX1ZXRW5KSzg3VkVuNzc0cllUNzZ3Z2RBLU55dmVRS0V5NXhRRmdMcFlmX1BhRVpGYUtZaVhQVFY1a3NEa3EyT3plU0JkX2M2MW9sQXdoNTRQZEQySFJmcjJVRW9GN1NmR2JfQkN4aXg2VUk5dlVIRlZuQ3Zvd2xtMFVEUGNXZmxTVHM0dlFTNWtVajdGZldwME0yQjBkWDd4QzMwSkRkeUxfZnJETXc?oc=5",
+        "date": "2026-11-15",
+        "source": "Google News RSS",
+        "source_query": "China+tourism+news",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "523a8efe3ea8"
+      },
+      {
+        "title": "China's inbound tourism surges on visa-free policies, word-of-mouth recommendation, ETOA chief says - 巴士的報",
+        "summary": "China's inbound tourism surges on visa-free policies, word-of-mouth recommendation, ETOA chief says 巴士的報",
+        "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOS2pXc181aGlpLVdTX1BvVjR3S3JYX21meGtnbmtTMTB6a2tHRnN5a1pCYlFpNFR0Yy12N0Q5b1BxVHA0eVJYMjhKXzlhdlpUMHAzMmUwVkZoUU0wdVlQaVNQQWR4UlRSS0RLMEF3OFhDajZURjE3d2hvU0FtZkNfOW9sa0lOeVBBdzF0NXczVkdvMmNSWmZNRGhRUWd2TVA4VndFbFRPNHVHRVl6dFNoUW1sT1kwUG5NSkE1eXUzaFNOSXlqTFpGSUZuMUZHUFdjRWVtWm5LNlpDbFBwZk10eTdB?oc=5",
+        "date": "2026-11-15",
+        "source": "Google News RSS",
+        "source_query": "China+inbound+tourism",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "92053275faa1"
+      },
+      {
         "title": "How tourism is creating new livelihoods in China's rural villages - CGTN",
         "summary": "How tourism is creating new livelihoods in China's rural villages CGTN",
         "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOalc0YTlka0lUcXpjVG55UXlQa0NLeEJac2xSY01uVlhISnlBU0RfUHVsT1RuSlVLODZHbkJBZ0lCdHZyUnlNNWlNcFZkanBrZ2trd2pybnlZVkU4REdkRGFVM0dPMzU2RTMzUDF4Ujh6YndXbktHVW1GeEtBdzJFdEp4UTQtX1AtOUFsdHlhaVFQWjQ1UjBzSGN6WENCLWFOOXR6dDdFS2swQmE0ZG1WTW8wb3hsVjBZS3VRcXh2aw?oc=5",
@@ -126,28 +148,6 @@
         "category": "travel_industry",
         "type": "news",
         "_hash": "86de96827a43"
-      },
-      {
-        "title": "WTA reports highlight evolving global tourism trends, China's market outlook - China Daily",
-        "summary": "WTA reports highlight evolving global tourism trends, China's market outlook China Daily",
-        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFA4eXZhRzVpUlZoVXBHTnNZWV9ySzhiaEdIVnQtWjZQb0I5Z3hucVFmNm1PUlVDOC03eUY0OWhFdEZ4UVpEVHhsMC1KU3haLXFGUTBpRGhuM1A1MkhiWUV4TG40NUwzaVdpRlpwcW1PeHoxTC1HelNyc3lZdlBGQQ?oc=5",
-        "date": "2026-11-13",
-        "source": "Google News RSS",
-        "source_query": "China+inbound+tourism",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "bb3487633139"
-      },
-      {
-        "title": "Tourism puts visitor experience first - China Daily",
-        "summary": "Tourism puts visitor experience first China Daily",
-        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9JUWpZbldEVzUwNmdVUkNjZ1hqSkdub2t6X0V5WnlEVDU5ZENIR25QcEhqcS1jc08wYkZuQmd4WWtsS2pKVlBMX053djVsSDJTcFFackVJYVA?oc=5",
-        "date": "2026-11-12",
-        "source": "Google News RSS",
-        "source_query": "China+tourism+news",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "41cb15a1105a"
       },
       {
         "title": "Outcry after Taiwan asks mainland Chinese tourist to sign independence statement - South China Morning Post",
@@ -194,17 +194,6 @@
         "_hash": "f9c470f71dbe"
       },
       {
-        "title": "China's Golden Week travel surge masks cautious consumer spending - Reuters",
-        "summary": "China's Golden Week travel surge masks cautious consumer spending Reuters",
-        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNdm9HZjg0WXpHcEN4R21wd3ZZOFVJNmRMTVRNWUhRQl96TEVVWG1HQnB5UTZvU3JyaWswRUtaRlh5Q2dQMzJqY1U2UFdCRjJRcEY2eDVXenZsU1RWX3R3T1ZLSmlSeXREemhST0FCMEdsbnE3ZDE5MjlwRW9QWTl1VVFmWG5tQ0YyREZ4d2RuZ25PYmNVV2NLRW1YODA5R3FNMHFDa29udTEzTHhTQndvZ2lDeFBvdEdYWEVJ?oc=5",
-        "date": "2026-09-29",
-        "source": "Google News RSS",
-        "source_query": "China+travel+industry+2026",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "094bc273bc7a"
-      },
-      {
         "title": "China tightens travel restrictions for citizens - BBC",
         "summary": "China tightens travel restrictions for citizens BBC",
         "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5HN2R0OGJtZHhZNXdSNnZQNGtKcGgyTGpJY1JxWEZWckNfQ0NIX1J5Y0lFNkZnV3lncXEzZFhEY1Q2aGJpMEcyVVIwdENwTWwtcl9JRTIzQ2lGek0?oc=5",
@@ -225,6 +214,17 @@
         "category": "travel_industry",
         "type": "news",
         "_hash": "47da71bd3f02"
+      },
+      {
+        "title": "China Issues New Regulations on Exit and Entry Administration - Newland Chase",
+        "summary": "China Issues New Regulations on Exit and Entry Administration Newland Chase",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPNFJYbmlYX19xLVBDcVpmRElGQ2V5a3RSZmk4dGRUT3B2TTVRaWd0Um9zYmdlZnpIckctcm1sbzBDclNLM096MF9IUlEwWjNKSks2QnQ4M0NLZ1hqLWhMZlR3OFRJUUV3VmhSNnJ2eUhsLUdzRENfY3FBd0RyS2dpV0Y5TzdDbks0emNxMm5nWEc?oc=5",
+        "date": "2026-08-06",
+        "source": "Google News RSS",
+        "source_query": "China+travel+restrictions+update",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "f6400329b9d7"
       }
     ],
     "destination_news": [
@@ -352,17 +352,6 @@
         "_hash": "f9d9fe092b1c"
       },
       {
-        "title": "Thick fog disrupts UK travel as another weather warning issued - BBC",
-        "summary": "Thick fog disrupts UK travel as another weather warning issued BBC",
-        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE50Uzh5QnhoUHZHd25OT1NOQTJtRTZmUm5KbmsyNHZ0WFJLQVdTWDVlc01QN3MyaHZ5Y3hCQ1c4Y29fSnJlRUI3RHZfWUw2WmxQaWQ4NFJWcE1pQ2c?oc=5",
-        "date": "2026-11-09",
-        "source": "Google News RSS",
-        "source_query": "China+weather+warning+travel",
-        "category": "safety_alerts",
-        "type": "news",
-        "_hash": "6acbc3239a6f"
-      },
-      {
         "title": "China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan - Libya Update News - Libya Update News",
         "summary": "China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan Libya Update News - Libya Update News",
         "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbnROODBlM2NRb3BXb3A2Q1A5LVh4OF9KSGt2cDZEY2RYZUZVREp4MGFRelVGQTNmWnRMQmt3ZzA3TFZxVlVrUThWZlA5Z1Z6RVRzbjFSQUZ1NjNoN0NXcllCem5RcDA5elZUd05mdzJxVHV5TWhuOWprY2FKN1pwbndaOHhEcGVNYjdUcUZwRVZXTjI1eV9zS185U1B5RW94T0JyOGRMaE5NMWIySC1vNnNMUVgwN0R5d2tTV2xhbw?oc=5",
@@ -418,6 +407,17 @@
         "_hash": "007efa1b5d47"
       },
       {
+        "title": "Storm weakens, but disrupts travel in China - Taipei Times",
+        "summary": "Storm weakens, but disrupts travel in China Taipei Times",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1qaGEyc0FLaWhlWlBsejJ1ajdRTEZBcEZaTVRESFNqTUhGeTZzcE9PbW12N3ZLd1FyRGhsY1RRbXFVR3lsczU1RXE0ejV5N21WcGJGbHY4Y3VhYmtfZ0N0ZXNhMkppaGZJRG5tMVRYSExTUGZXdUFBMw?oc=5",
+        "date": "2026-08-11",
+        "source": "Google News RSS",
+        "source_query": "China+weather+warning+travel",
+        "category": "safety_alerts",
+        "type": "news",
+        "_hash": "cb324ec34cae"
+      },
+      {
         "title": "Weather Alert: Typhoon Dolphin - U.S. Embassy & Consulates in China",
         "summary": "Weather Alert: Typhoon Dolphin U.S. Embassy & Consulates in China",
         "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1yV3hGMHA1WU54b3BGVEpYeGFhMVJueXlyMHV4blV1STJBb1dVeFY2NmZJWDlrVGFwdURYQ2hTMmN4V2tyMzl4Vko2S3Rmc21mUHBVX0lMWW9kQlZ0MHZnWXh4RGctZWp6WGJmSDAzMjBUQi1jVGc?oc=5",
@@ -455,9 +455,9 @@
   },
   "llm_summary": {
     "visa_policy": "- [2026-11-15] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-11-12] Could China extend its 30-day visa-free policy through 2027? - VisasNews\n  Could China extend its 30-day visa-free policy through 2027? VisasNews\n- [2026-11-11] China visa rules: 6 documents Indian applicants need to keep ready - The Indian Express\n  China visa rules: 6 documents Indian applicants need to keep ready The Indian Express",
-    "travel_industry": "- [2026-11-14] How tourism is creating new livelihoods in China's rural villages - CGTN\n  How tourism is creating new livelihoods in China's rural villages CGTN\n- [2026-11-13] WTA reports highlight evolving global tourism trends, China's market outlook - China Daily\n  WTA reports highlight evolving global tourism trends, China's market outlook China Daily\n- [2026-11-12] Tourism puts visitor experience first - China Daily\n  Tourism puts visitor experience first China Daily",
+    "travel_industry": "- [2026-11-15] Visa-free policies, rising outbound demand fuel China’s global tourism rise: ETOA chief - 巴士的報\n  Visa-free policies, rising outbound demand fuel China’s global tourism rise: ETOA chief 巴士的報\n- [2026-11-15] China's inbound tourism surges on visa-free policies, word-of-mouth recommendation, ETOA chief says - 巴士的報\n  China's inbound tourism surges on visa-free policies, word-of-mouth recommendation, ETOA chief says 巴士的報\n- [2026-11-14] How tourism is creating new livelihoods in China's rural villages - CGTN\n  How tourism is creating new livelihoods in China's rural villages CGTN",
     "destination_news": "- [2026-11-14] Art exhibition showcases Chinese and Pakistani cultural heritage, deepening friendship - Global Times\n  Art exhibition showcases Chinese and Pakistani cultural heritage, deepening friendship Global Times\n- [2026-11-13] Modernization rooted in Chinese cultural heritage - China Daily\n  Modernization rooted in Chinese cultural heritage China Daily\n- [2026-11-09] UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou - UNESCO World Heritage Centre\n  UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou UNESCO World Heritage Centre",
-    "safety_alerts": "- [2026-11-12] China's Mazu early weather warning box makes global debut - Global Times\n  China's Mazu early weather warning box makes global debut Global Times\n- [2026-11-09] Thick fog disrupts UK travel as another weather warning issued - BBC\n  Thick fog disrupts UK travel as another weather warning issued BBC\n- [2026-11-09] China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan - Libya Update News - Libya Update News\n  China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan Libya Update News - Libya Update News",
+    "safety_alerts": "- [2026-11-12] China's Mazu early weather warning box makes global debut - Global Times\n  China's Mazu early weather warning box makes global debut Global Times\n- [2026-11-09] China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan - Libya Update News - Libya Update News\n  China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan Libya Update News - Libya Update News\n- [2026-10-22] U.S. Adds Wrongful Detention Warning to China Travel Advisory - AgroLatam\n  U.S. Adds Wrongful Detention Warning to China Travel Advisory AgroLatam",
     "general": "- [2024-03-16] A local’s travel guide to Washington DC: what to eat, see and do in three days\n  Top sights in Washington include Capitol Hill Books, the Black Cat music venue and a top-rated Filipino restaurant From phone chargers to podcasts, th"
   },
   "sources": {
@@ -477,5 +477,5 @@
     "provinces": 24
   },
   "policy_change": null,
-  "official_state_checked_at": "2026-11-15T02:54:33.214938+00:00"
+  "official_state_checked_at": "2026-11-15T14:53:27.996698+00:00"
 }
