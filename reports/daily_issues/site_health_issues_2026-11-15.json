@@ -1,22 +1,7 @@
 {
-  "timestamp": "2026-11-15T03:53:15.606749+00:00",
+  "timestamp": "2026-11-15T18:24:59.828053+00:00",
   "source": "site_health_agent",
   "issues": [
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
-      "message": "AI禁用词: cheapest",
-      "auto_fixable": false,
-      "agent": "content",
-      "assigned": false,
-      "assigned_to": "content",
-      "assigned_at": "2026-11-15T03:53:17.830473",
-      "status": "need_manual",
-      "resolved_by": "content_agent",
-      "resolution_note": "无替换表: ai_forbidden_word",
-      "updated_at": "2026-11-15T08:45:04.335077"
-    },
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
@@ -26,11 +11,34 @@
       "agent": "content",
       "assigned": false,
       "assigned_to": "content",
-      "assigned_at": "2026-11-15T03:53:17.830475",
+      "assigned_at": "2026-11-15T18:25:02.071600",
       "status": "need_manual",
       "resolved_by": "content_agent",
       "resolution_note": "无替换表: cheapest",
-      "updated_at": "2026-11-15T08:45:04.335760"
+      "updated_at": "2026-11-15T18:25:02.417640"
+    },
+    {
+      "type": "ai_forbidden_word",
+      "severity": "medium",
+      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "message": "AI禁用词: cheapest",
+      "auto_fixable": false,
+      "agent": "content",
+      "assigned": false,
+      "assigned_to": "content",
+      "assigned_at": "2026-11-15T18:25:02.071602",
+      "status": "need_manual",
+      "resolved_by": "content_agent",
+      "resolution_note": "无替换表: ai_forbidden_word",
+      "updated_at": "2026-11-15T18:25:02.417100"
+    },
+    {
+      "type": "meta_description_too_long",
+      "severity": "low",
+      "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+      "message": "Meta description过长(182字符)",
+      "auto_fixable": false,
+      "agent": "seo"
     },
     {
       "type": "title_too_long",
@@ -45,16 +53,8 @@
       "fix_message": "无 front matter",
       "assigned": true,
       "assigned_to": "seo",
-      "assigned_at": "2026-11-15T03:53:17.830477",
+      "assigned_at": "2026-11-15T18:25:02.071603",
       "status": "assigned"
-    },
-    {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
-      "message": "Meta description过长(182字符)",
-      "auto_fixable": false,
-      "agent": "seo"
     }
   ]
 }
