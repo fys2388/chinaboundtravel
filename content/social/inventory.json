@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-14T18:41:40",
+  "updated_at": "2026-11-15T07:42:52",
   "items": [
     {
       "id": "soc-000001",
@@ -1718,7 +1718,7 @@
       "source_title": "China Food Guide: Must-Try Dishes &",
       "platform": "x",
       "type": "story",
-      "caption": "What travelers discover about Food — lessons from the ground. → https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261108&utm_content=x_v1 #ChinaTravel",
+      "caption": "What travelers discover about Food — lessons from the ground. → https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261115&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional story social graphic for 'China Food Guide: Must-Try Dishes &' (platform x). Scene: Chinese street food: dumplings, noodles, night market. Style: wide landscape 16:9, evocative storytelling, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Must-try Chinese dishes and restaurant recommendations for international travelers, with authentic picks researched and verified by our edit.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/a-gastronomic-adventure-in-china-food-re-x-story-55a44ef5.jpg",
       "utm_params": {
@@ -1726,8 +1726,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-11-08",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -1736,8 +1736,8 @@
         "platform": "x"
       },
       "_sig": "f221fb16a744",
-      "recycled_at": "2026-11-08",
-      "recycle_count": 8,
+      "recycled_at": "2026-11-15",
+      "recycle_count": 9,
       "image_generated": true
     },
     {
@@ -2740,7 +2740,7 @@
       "source_title": "Where to Stay in China: Complete 2026 Guide",
       "platform": "pinterest",
       "type": "tip",
-      "caption": "Where to Stay in China: Complete 2026 Guide | Essential China travel tips most first-time visitors miss.\n\nWhere to Stay in China: Complete 2026 Guide\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/accommodation-tips-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261108&utm_content=pinterest_v1\n\n📌 Save for later",
+      "caption": "Where to Stay in China: Complete 2026 Guide | Essential China travel tips most first-time visitors miss.\n\nWhere to Stay in China: Complete 2026 Guide\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/accommodation-tips-guide/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261115&utm_content=pinterest_v1\n\n📌 Save for later",
       "image_prompt": "Professional tip social graphic for 'Where to Stay in China: Complete 2026 Guide' (platform pinterest). Scene: cozy Chinese boutique hotel room. Style: vertical 2:3, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China accommodation guide 2026: hotels, hostels, guesthouses, and homestays, with budget breakdowns and booking strategies.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/accommodation-tips-guide-pinterest-tip-1103da56.jpg",
       "utm_params": {
@@ -2748,8 +2748,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260910"
       },
-      "status": "已发布",
-      "publish_date": "2026-11-08",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -2758,8 +2758,8 @@
         "platform": "pinterest"
       },
       "_sig": "278534b0e8a7",
-      "recycled_at": "2026-11-08",
-      "recycle_count": 8,
+      "recycled_at": "2026-11-15",
+      "recycle_count": 9,
       "image_generated": true
     },
     {
@@ -5082,7 +5082,7 @@
       "source_title": "China 144 Hour Transit Visa: Complete Guide",
       "platform": "ig",
       "type": "conversion",
-      "caption": "Everything you need to know about Visa — in one practical guide.\n\n· China 144 Hour Transit Visa: Complete Guide\n\nRead the full guide: https://www.chinaboundtravel.com/144-hour-visa-free-transit-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261108&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "Everything you need to know about Visa — in one practical guide.\n\n· China 144 Hour Transit Visa: Complete Guide\n\nRead the full guide: https://www.chinaboundtravel.com/144-hour-visa-free-transit-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261115&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional conversion social graphic for 'China 144 Hour Transit Visa: Complete Guide' (platform ig). Scene: Chinese visa passport and travel documents. Style: vertical 4:5, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Keeping your phone connected in China is easier with.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/144-hour-visa-free-transit-guide-ig-conversion-b54d6acd.jpg",
       "utm_params": {
@@ -5091,7 +5091,7 @@
         "utm_campaign": "cbt_social_20260913"
       },
       "status": "已发布",
-      "publish_date": "2026-11-08",
+      "publish_date": "2026-11-15",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -5100,8 +5100,8 @@
         "platform": "ig"
       },
       "_sig": "348abd2c360d",
-      "recycled_at": "2026-11-08",
-      "recycle_count": 8,
+      "recycled_at": "2026-11-15",
+      "recycle_count": 9,
       "image_generated": true
     },
     {
@@ -5762,7 +5762,7 @@
       "source_title": "China Food Guide for European Travelers",
       "platform": "x",
       "type": "knowledge",
-      "caption": "Research-backed facts about Food. → https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261108&utm_content=x_v1 #ChinaTravel",
+      "caption": "Research-backed facts about Food. → https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261115&utm_content=x_v1 #ChinaTravel",
       "image_prompt": "Professional knowledge social graphic for 'China Food Guide for European Travelers' (platform x). Scene: Chinese street food: dumplings, noodles, night market. Style: wide landscape 16:9, educational, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: China food guide for European travelers: 8 regional cuisines, must-try dishes, restaurant picks, and ordering tips.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/a-gastronomic-adventure-in-china-a-foodi-x-knowledge-18539e15.jpg",
       "utm_params": {
@@ -5771,7 +5771,7 @@
         "utm_campaign": "cbt_social_20260913"
       },
       "status": "已发布",
-      "publish_date": "2026-11-08",
+      "publish_date": "2026-11-15",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -5780,8 +5780,8 @@
         "platform": "x"
       },
       "_sig": "251fba834d2a",
-      "recycled_at": "2026-11-08",
-      "recycle_count": 8,
+      "recycled_at": "2026-11-15",
+      "recycle_count": 9,
       "image_generated": true
     },
     {
@@ -6282,7 +6282,7 @@
       "source_title": "How to Use Alipay & WeChat Pay in China 2026",
       "platform": "ig",
       "type": "conversion",
-      "caption": "Everything you need to know about Alipay — in one practical guide.\n\n· How to Use Alipay & WeChat Pay in China 2026\n\nRead the full guide: https://www.chinaboundtravel.com/alipay-wechat-pay-foreigners-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261102&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "Everything you need to know about Alipay — in one practical guide.\n\n· How to Use Alipay & WeChat Pay in China 2026\n\nRead the full guide: https://www.chinaboundtravel.com/alipay-wechat-pay-foreigners-guide/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261115&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional conversion social graphic for 'How to Use Alipay & WeChat Pay in China 2026' (platform ig). Scene: smartphone showing mobile payment at a shop. Style: vertical 4:5, inviting click-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Use Alipay and WeChat Pay in China without a bank account: bind foreign cards, top up your wallet, and pay anywhere with ease.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/alipay-wechat-pay-foreigners-guide-ig-conversion-18d8f965.jpg",
       "utm_params": {
@@ -6290,8 +6290,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20260915"
       },
-      "status": "已发布",
-      "publish_date": "2026-11-08",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6300,8 +6300,8 @@
         "platform": "ig"
       },
       "_sig": "528946edea6a",
-      "recycled_at": "2026-11-02",
-      "recycle_count": 6,
+      "recycled_at": "2026-11-15",
+      "recycle_count": 7,
       "image_generated": true
     },
     {
@@ -6664,7 +6664,7 @@
       "source_title": "Is China Safe for Tourists in 2026? Honest",
       "platform": "ig",
       "type": "visual",
-      "caption": "Visual guide to China travel: what to see and capture.\n\nRead the full guide: https://www.chinaboundtravel.com/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261108&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
+      "caption": "Visual guide to China travel: what to see and capture.\n\nRead the full guide: https://www.chinaboundtravel.com/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/?utm_source=ig&utm_medium=social&utm_campaign=cbt_social_20261115&utm_content=ig_v1\n\n#ChinaTravel #VisitChina #ChinaTrip\n\n👉 link in bio",
       "image_prompt": "Professional visual social graphic for 'Is China Safe for Tourists in 2026? Honest' (platform ig). Scene: iconic China travel scene, landmarks and culture. Style: vertical 4:5, striking instagram-worthy, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Is China safe for tourists in 2026? Honest assessment of crime, scams, food safety, healthcare, and emergency contacts — with practical safe.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/2026-05-26-is-china-safe-for-tourists-20-ig-visual-3e3ade17.jpg",
       "utm_params": {
@@ -6673,7 +6673,7 @@
         "utm_campaign": "cbt_social_20260917"
       },
       "status": "已发布",
-      "publish_date": "2026-11-08",
+      "publish_date": "2026-11-15",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6682,8 +6682,8 @@
         "platform": "ig"
       },
       "_sig": "937ced66e707",
-      "recycled_at": "2026-11-08",
-      "recycle_count": 7,
+      "recycled_at": "2026-11-15",
+      "recycle_count": 8,
       "image_generated": true
     },
     {
@@ -6748,7 +6748,7 @@
       "source_title": "Chinese Train Stations: Survival Guide for",
       "platform": "pinterest",
       "type": "tip",
-      "caption": "Chinese Train Stations: Survival Guide for | Essential Train tips most first-time visitors miss.\n\nChinese Train Stations: Survival Guide for | Keywords: train\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/2026-05-27-how-to-survive-chinese-train-station/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261108&utm_content=pinterest_v1\n\n📌 Save for later",
+      "caption": "Chinese Train Stations: Survival Guide for | Essential Train tips most first-time visitors miss.\n\nChinese Train Stations: Survival Guide for | Keywords: train\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/2026-05-27-how-to-survive-chinese-train-station/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261115&utm_content=pinterest_v1\n\n📌 Save for later",
       "image_prompt": "Professional tip social graphic for 'Chinese Train Stations: Survival Guide for' (platform pinterest). Scene: iconic China travel scene, landmarks and culture. Style: vertical 2:3, clean and practical, bright natural light, photorealistic, vibrant. No people, no faces, no text, no words, no watermark, no logo. Key elements: Chinese train stations are bigger than airports, and more confusing. Buy tickets and find your platform without a meltdown.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/2026-05-27-how-to-survive-chinese-train--pinterest-tip-5b7022cb.jpg",
       "utm_params": {
@@ -6757,7 +6757,7 @@
         "utm_campaign": "cbt_social_20260918"
       },
       "status": "已发布",
-      "publish_date": "2026-11-08",
+      "publish_date": "2026-11-15",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -6766,8 +6766,8 @@
         "platform": "pinterest"
       },
       "_sig": "bb5c366e110e",
-      "recycled_at": "2026-11-08",
-      "recycle_count": 7,
+      "recycled_at": "2026-11-15",
+      "recycle_count": 8,
       "image_generated": true
     },
     {
@@ -8318,7 +8318,7 @@
       "source_title": "Top-rated China Itineraries for 10 Days: Three Routes Compared",
       "platform": "pinterest",
       "type": "tip",
-      "caption": "Top-rated China Itineraries for 10 Days: Three Routes | Essential China travel tips most first-time visitors miss.\n\nTop-rated China Itineraries for 10 Days: Three Routes Compared\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/best-china-itineraries-for-10-days-three-routes-compared/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261106&utm_content=pinterest_v1\n\n📌 Save for later",
+      "caption": "Top-rated China Itineraries for 10 Days: Three Routes | Essential China travel tips most first-time visitors miss.\n\nTop-rated China Itineraries for 10 Days: Three Routes Compared\n\n📌 Save this for your China trip planning.\n\nFull guide: https://www.chinaboundtravel.com/best-china-itineraries-for-10-days-three-routes-compared/?utm_source=pinterest&utm_medium=social&utm_campaign=cbt_social_20261115&utm_content=pinterest_v1\n\n📌 Save for later",
       "image_prompt": "Ultra-detailed professional travel photography of iconic China travel scene, landmarks and culture, for social media 'Top-rated China Itineraries for 10 Days: Three Routes Compared'. vertical 2:3 composition composition, clean and practical style, natural lighting, vibrant natural colors, photorealistic, 8k resolution, sharp focus, award-winning travel magazine quality, no text, no watermark, realistic photography only, no abstract, no illustration, no cartoon, no vector, no 3d render, no digital art, no minimalism, ZERO people, ZERO persons, ZERO faces, ZERO portraits, ZERO human figures, ZERO humans, ZERO crowd, ZERO tourists, ZERO man woman child, empty scene, pure architecture landscape food objects only, absolutely no human beings whatsoever Key elements: for travelers visiting China. research-based essential guide for travelers based on official s.",
       "image_url": "https://www.chinaboundtravel.com/img/china-dest/social/best-china-itineraries-for-10-days-three-pinterest-tip-7bec4536.jpg",
       "utm_params": {
@@ -8326,8 +8326,8 @@
         "utm_medium": "social",
         "utm_campaign": "cbt_social_20261020"
       },
-      "status": "已发布",
-      "publish_date": "2026-11-08",
+      "status": "待审核",
+      "publish_date": "",
       "metrics": {
         "impressions": 0,
         "clicks": 0,
@@ -8337,8 +8337,8 @@
       },
       "_sig": "7ec271976558",
       "image_generated": true,
-      "recycled_at": "2026-11-06",
-      "recycle_count": 2
+      "recycled_at": "2026-11-15",
+      "recycle_count": 3
     },
     {
       "id": "soc-000313",
