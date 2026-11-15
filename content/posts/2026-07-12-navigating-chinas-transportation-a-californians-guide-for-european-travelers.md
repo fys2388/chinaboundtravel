@@ -161,6 +161,8 @@ For more information on China travel, check out these articles:
 
 - [China Remote Work Guide: Digital Nomad Tips](/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)
 
+- [China Photography Guide: Best Spots, Gear & Tips from a China Pro](/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/)
+
 ## FAQ
 
 ### How do I book how to take train in china?

@@ -104,6 +104,8 @@ If you're interested in learning more about Kung Fu and martial arts in China, b
 
 - [Can Foreigners Use WeChat Pay in China? 2026](/posts/how-to-use-wechat-pay-as-a-foreigner/)
 
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
+
 ## Related Reading
 
 - [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)
