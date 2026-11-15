@@ -1,13 +1,13 @@
 {
   "source": "content_analytics",
-  "pull_time": "2026-11-14T12:39:53.063737",
-  "data_date": "2026-11-14",
+  "pull_time": "2026-11-15T13:05:47.011551",
+  "data_date": "2026-11-15",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_articles": 73,
     "articles_this_week": 0,
-    "avg_word_count": 2246,
+    "avg_word_count": 2247,
     "articles_with_affiliate_links": 39,
     "articles_with_internal_links": 72
   },

@@ -1,10 +1,10 @@
 {
   "orchestrator_version": "1.0",
-  "run_time": "2026-11-14T12:39:53.684693",
+  "run_time": "2026-11-15T13:05:47.469525",
   "strategies_loaded": {
     "seo": {
-      "version": "2.0-20261114_123953",
-      "last_updated": "2026-11-14T12:39:53.483779",
+      "version": "2.0-20261115_130547",
+      "last_updated": "2026-11-15T13:05:47.318828",
       "keyword_rules": {
         "target_difficulty": "low_medium",
         "min_search_volume": 100,
@@ -42,15 +42,15 @@
           "impressions": 8
         },
         {
-          "keyword": "chinese visa itinerary template",
-          "ctr": 0.11,
-          "position": 8.4,
-          "impressions": 9
-        },
-        {
           "keyword": "https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/",
           "ctr": 0.07,
           "position": 8.4,
+          "impressions": 14
+        },
+        {
+          "keyword": "chinese visa itinerary template",
+          "ctr": 0.07,
+          "position": 7.9,
           "impressions": 14
         },
         {
@@ -107,9 +107,9 @@
           "position": 2.2
         },
         {
-          "keyword": "https://www.chinaboundtravel.com/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/",
-          "traffic_potential": 2.6,
-          "position": 3.5
+          "keyword": "chinese visa itinerary template",
+          "traffic_potential": 2.9399999999999995,
+          "position": 7.9
         }
       ],
       "learning_insights": [
@@ -136,14 +136,21 @@
           "field": "best_keywords",
           "reason": "基于GSC数据分析，更新最佳关键词排名",
           "version": "2.1",
-          "timestamp": "2026-11-14T12:39:53.469468",
+          "timestamp": "2026-11-15T13:05:47.308544",
+          "evidence": "based on performance data analysis"
+        },
+        {
+          "field": "high_priority_keywords",
+          "reason": "基于流量潜力分析，更新高优先级关键词",
+          "version": "2.1",
+          "timestamp": "2026-11-15T13:05:47.308544",
           "evidence": "based on performance data analysis"
         }
       ]
     },
     "revenue": {
-      "version": "2.0-20261114_123953",
-      "last_updated": "2026-11-14T12:39:53.570611",
+      "version": "2.0-20261115_130547",
+      "last_updated": "2026-11-15T13:05:47.383176",
       "product_rules": {
         "priority_products": [
           "hotels",
@@ -226,8 +233,8 @@
       "strategy_changes": []
     },
     "conversion": {
-      "version": "2.0-20261114_123953",
-      "last_updated": "2026-11-14T12:39:53.428992",
+      "version": "2.0-20261115_130547",
+      "last_updated": "2026-11-15T13:05:47.279943",
       "cta_rules": {
         "positions": [
           "article_middle",
@@ -311,8 +318,8 @@
       "strategy_changes": []
     },
     "content": {
-      "version": "2.0-20261114_123953",
-      "last_updated": "2026-11-14T12:39:53.392918",
+      "version": "2.0-20261115_130547",
+      "last_updated": "2026-11-15T13:05:47.252269",
       "content_rules": {
         "min_word_count": 1500,
         "target_word_count": 2000,
@@ -407,8 +414,8 @@
       "strategy_changes": []
     },
     "social": {
-      "version": "2.1-20261114_123953_quality_gated",
-      "last_updated": "2026-11-14T12:39:53.336449",
+      "version": "2.1-20261115_130547_quality_gated",
+      "last_updated": "2026-11-15T13:05:47.210263",
       "platforms": {
         "pinterest": {
           "best_times": [
@@ -517,7 +524,7 @@
       "learning_insights": [
         {
           "pattern": "高CTR帖子特征",
-          "description": "Top 20%帖子平均CTR 23.20%，比Bottom 20%高 23.20个百分点",
+          "description": "Top 20%帖子平均CTR 22.90%，比Bottom 20%高 22.90个百分点",
           "common_hooks": [],
           "best_times": [
             "22:00",
@@ -529,8 +536,8 @@
       "strategy_changes": []
     },
     "user": {
-      "version": "2.0-20261114_123953",
-      "last_updated": "2026-11-14T12:39:53.520023",
+      "version": "2.0-20261115_130547",
+      "last_updated": "2026-11-15T13:05:47.345464",
       "segmentation_rules": {
         "new_user": "首次访问，无历史记录",
         "returning_user": "7天内再次访问",
@@ -661,77 +668,77 @@
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/', 'traffic_potential': 12.240000000000002, 'position': 7.6}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261114_123953"
+      "strategy_version": "2.0-20261115_130547"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/free-itinerary/', 'traffic_potential': 5.5, 'position': 4.5}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261114_123953"
+      "strategy_version": "2.0-20261115_130547"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/', 'traffic_potential': 3.2, 'position': 3.6}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261114_123953"
+      "strategy_version": "2.0-20261115_130547"
     },
     {
       "domain": "seo",
       "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/affiliate-disclosure/', 'traffic_potential': 3.12, 'position': 2.2}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261114_123953"
+      "strategy_version": "2.0-20261115_130547"
     },
     {
       "domain": "seo",
-      "action": "优先优化关键词/页面: {'keyword': 'https://www.chinaboundtravel.com/posts/2026-05-26-hangzhou-west-lake-tea-culture-g20-guide/', 'traffic_potential': 2.6, 'position': 3.5}",
+      "action": "优先优化关键词/页面: {'keyword': 'chinese visa itinerary template', 'traffic_potential': 2.9399999999999995, 'position': 7.9}",
       "priority_score": 0.7200000000000001,
       "source": "seo_strategy.high_priority_keywords",
-      "strategy_version": "2.0-20261114_123953"
+      "strategy_version": "2.0-20261115_130547"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: positions = ['article_middle', 'article_bottom', 'sidebar']",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20261114_123953"
+      "strategy_version": "2.0-20261115_130547"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: types = ['text_link', 'button', 'banner', 'product_card']",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20261114_123953"
+      "strategy_version": "2.0-20261115_130547"
     },
     {
       "domain": "conversion",
       "action": "CTA优化: best_practices = {'button_text': 'Check prices', 'min_ctas_per_article': 2, '",
       "priority_score": 0.7200000000000001,
       "source": "conversion_strategy.cta_rules",
-      "strategy_version": "2.0-20261114_123953"
+      "strategy_version": "2.0-20261115_130547"
     },
     {
       "domain": "seo",
       "action": "页面优化: title_length",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20261114_123953"
+      "strategy_version": "2.0-20261115_130547"
     },
     {
       "domain": "seo",
       "action": "页面优化: meta_description_length",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20261114_123953"
+      "strategy_version": "2.0-20261115_130547"
     },
     {
       "domain": "seo",
       "action": "页面优化: heading_structure",
       "priority_score": 0.5599999999999999,
       "source": "seo_strategy.on_page_rules",
-      "strategy_version": "2.0-20261114_123953"
+      "strategy_version": "2.0-20261115_130547"
     }
   ],
   "domain_summary": {
