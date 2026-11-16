@@ -160,8 +160,8 @@ For more information on China travel, check out these articles:
 - [Chinese Tea Culture: History, Types, and Tea Ceremony Guide](https://www.chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/)
 - [Shanghai Beyond the Bund: Hidden Neighborhoods and Local Culture](https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/)
 - [The History And Culture Of The Great Wall: Beyond The Tourist Trail Guide](https://www.chinaboundtravel.com/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/)
-- [Dude, Where's My Panda? A Beijing Guy's Guide to the Chengdu Panda Base](https://www.chinaboundtravel.com/posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
-- [Ultimate Guide to China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/)
+- [Dude, Where's My Panda? A Beijing Guy's Guide to the Chengdu Panda Base](https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
+- [Ultimate Guide to China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/)
 - [China Extends 240-hour Visa-free Transit Policy to More Countries](https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 - [Western Sichuan Overland Camping Route: My 7-Day Adventure Through China''s](https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/)
 - [PayPal Now Accepts Alipay and WeChat Pay  Finally, Right?](

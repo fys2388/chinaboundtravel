@@ -33,7 +33,7 @@ China in winter is a land of extreme contrasts, a place where the north is a won
 ### Australian Passport Holders
 If you're an Australian passport holder, you're in for a bit of a mixed bag when it comes to visa requirements. You do qualify for 240-hour visa-free transit in China, but this is only applicable if you're traveling through certain ports of entry and have a confirmed onward ticket within the 240-hour period. For a more extended stay, you'll need to apply for a tourist visa. The process can be a bit like navigating a maze, but it's well worth it in the end. Make sure to have all your documents in order, including a valid passport, a completed visa application form, and a recent passport-sized photo. You can apply through the Chinese embassy or consulate in Australia.
 
-It's important to note that the visa application process can take some time, so it's advisable to start early. You might also want to check out our [Ultimate Guide to China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/) for more in-depth information on the various types of visas available and the application process.
+It's important to note that the visa application process can take some time, so it's advisable to start early. You might also want to check out our [Ultimate Guide to China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/) for more in-depth information on the various types of visas available and the application process.
 
 ### Other Nationalities
 For travelers from other countries, the visa requirements can vary. It's crucial to check with the Chinese embassy or consulate in your home country well in advance. Some countries may have special agreements or visa-free arrangements for short-term visits. However, for most, a tourist visa will be necessary. The application process generally involves providing similar documents as for Australian passport holders, but there could be additional requirements depending on your nationality.
@@ -59,7 +59,7 @@ Chengdu is known for its delicious food and laid-back atmosphere, and winter is 
 #### Chengdu Panda Base
 And if you're a panda lover, the Chengdu Panda Base is a must-visit. The pandas are just as cute in the winter as they are in any other season. They might be a bit more sluggish in the cold, but that just makes them even more adorable as they munch on their bamboo.
 
-Actionable tip: When visiting the panda base, try to go in the morning when the pandas are more active. And don't forget to check out our [Dude, Where's My Panda? A Beijing Guy's Guide to the Chengdu Panda Base](https://www.chinaboundtravel.com/posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/) for more in-depth information on the best times to visit, where to find the pandas, and some fun facts about them.
+Actionable tip: When visiting the panda base, try to go in the morning when the pandas are more active. And don't forget to check out our [Dude, Where's My Panda? A Beijing Guy's Guide to the Chengdu Panda Base](https://www.chinaboundtravel.com/posts/dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/) for more in-depth information on the best times to visit, where to find the pandas, and some fun facts about them.
 
 ### Shanghai
 #### The Bund
@@ -106,7 +106,7 @@ Actionable tip: If you're traveling with a laptop, make sure to bring a proper c
 #### Booking Process
 China has an extensive high-speed rail network that can take you to many of the major cities. Booking tickets can be a bit tricky, but there are a few ways to do it. You can book through Trip.com or 12306. When booking, make sure to understand the train numbers and classes.
 
-Actionable tip: If you're not familiar with the Chinese train system, check out our [China's High-Speed Rail: How to Book Tickets Like a Local](https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/) article for a step-by - step guide. It will also give you some tips on how to find the best seats and what to expect on the train.
+Actionable tip: If you're not familiar with the Chinese train system, check out our [China's High-Speed Rail: How to Book Tickets Like a Local](https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/) article for a step-by - step guide. It will also give you some tips on how to find the best seats and what to expect on the train.
 
 #### At the Station
 And when you're at the station, make sure to follow the signs to find your platform.
