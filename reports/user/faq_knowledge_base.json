@@ -1,5 +1,5 @@
 {
-  "built_at": "2026-11-02T04:51:08.481547",
+  "built_at": "2026-11-16T05:13:05.138427",
   "total_faqs": 12,
   "categories": {
     "visa": 1,
@@ -27,7 +27,7 @@
     {
       "id": "faq_001",
       "question": "Do I need a visa to visit China?",
-      "answer": "It depends on your nationality. Many countries qualify for visa-free transit (24/72/144 hours) or visa-free entry for up to 30 days. Check our complete visa guide for your specific situation.",
+      "answer": "It depends on your nationality. Many countries qualify for visa-free transit (240 hours) or visa-free entry for up to 30 days. Check our complete visa guide for your specific situation.",
       "category": "visa",
       "keywords": [
         "visa",

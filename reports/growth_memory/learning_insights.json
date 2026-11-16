@@ -1,9 +1,9 @@
 {
   "records": [],
-  "last_updated": "2026-11-02T04:54:47.864787",
+  "last_updated": "2026-11-16T05:16:05.138635",
   "version": "1.0",
   "latest": {
-    "generated_at": "2026-11-02T04:54:47.864774",
+    "generated_at": "2026-11-16T05:16:05.138619",
     "top_content": [],
     "top_social_posts": [],
     "best_cta_types": [],
@@ -127,6 +127,13 @@
     },
     {
       "generated_at": "2026-11-02T04:54:47.864774",
+      "top_content_count": 0,
+      "top_social_count": 0,
+      "pattern_count": 0,
+      "recommendation_count": 1
+    },
+    {
+      "generated_at": "2026-11-16T05:16:05.138619",
       "top_content_count": 0,
       "top_social_count": 0,
       "pattern_count": 0,
