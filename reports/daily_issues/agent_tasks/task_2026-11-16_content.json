@@ -3,13 +3,13 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-11-16_content",
   "created_at": "2026-11-16T01:01:04.203250+00:00",
-  "updated_at": "2026-11-16T14:31:02.484533",
+  "updated_at": "2026-11-16T14:58:17.240323",
   "target_date": "2026-11-16",
-  "issue_count": 13,
+  "issue_count": 15,
   "severity_summary": {
     "critical": 2,
     "high": 5,
-    "medium": 6,
+    "medium": 8,
     "low": 0
   },
   "issues": [
@@ -114,7 +114,7 @@
       "detected_at": "2026-11-16T01:01:04.202938+00:00"
     },
     {
-      "id": "site_health-5d769e70f421544f",
+      "id": "site_health-4546dedf4b169d1a",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -131,10 +131,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-16T14:31:01.794453+00:00"
+      "detected_at": "2026-11-16T14:58:16.952883+00:00"
     },
     {
-      "id": "site_health-44defea2cbf9df7",
+      "id": "site_health-a1e5c4f7a7d50af",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -151,7 +151,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-16T14:31:01.794448+00:00"
+      "detected_at": "2026-11-16T14:58:16.952880+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -254,7 +254,47 @@
       "detected_at": "2026-11-16T01:01:04.202974+00:00"
     },
     {
-      "id": "site_health-535028a1e9db738c",
+      "id": "issue_0d0c0cf770e2",
+      "type": "ai_forbidden_word",
+      "title": "AI禁用词: cheapest",
+      "description": "AI禁用词: cheapest",
+      "page": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "evidence": "AI禁用词: cheapest",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "medium",
+      "agent": "content",
+      "action": "safe_normalize",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-11-16.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-11-16T14:58:16.904074"
+    },
+    {
+      "id": "issue_0d0c0cf770e2",
+      "type": "ai_forbidden_word",
+      "title": "AI禁用词: cheapest",
+      "description": "AI禁用词: cheapest",
+      "page": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+      "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+      "evidence": "AI禁用词: cheapest",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "medium",
+      "agent": "content",
+      "action": "safe_normalize",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-11-16.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-11-16T14:58:16.904078"
+    },
+    {
+      "id": "site_health-6afbe97b6139ea80",
       "type": "ai_forbidden_word",
       "title": "ai_forbidden_word",
       "description": "ai_forbidden_word",
@@ -271,7 +311,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-16T14:31:01.794510+00:00"
+      "detected_at": "2026-11-16T14:58:16.952921+00:00"
     }
   ],
   "priority_issue": {
@@ -295,13 +335,14 @@
     "detected_at": "2026-11-16T01:01:04.202925+00:00"
   },
   "expected_actions": [
-    "manual_review"
+    "manual_review",
+    "safe_normalize"
   ],
   "status": "partial",
   "execution": {
     "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=6, failed=0"
+    "note": "resolved=0, need_manual=8, failed=0"
   }
 }
