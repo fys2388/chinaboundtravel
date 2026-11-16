@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-11-16_content",
   "created_at": "2026-11-16T01:01:04.203250+00:00",
-  "updated_at": "2026-11-16T15:01:08.062099",
+  "updated_at": "2026-11-16T15:22:11.542311",
   "target_date": "2026-11-16",
   "issue_count": 15,
   "severity_summary": {
@@ -114,7 +114,7 @@
       "detected_at": "2026-11-16T01:01:04.202938+00:00"
     },
     {
-      "id": "site_health-25ff9d196fc6b58b",
+      "id": "site_health-7504b9bcd4569599",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -131,10 +131,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-16T15:01:07.533677+00:00"
+      "detected_at": "2026-11-16T15:22:11.312177+00:00"
     },
     {
-      "id": "site_health-37e22da907f2c40e",
+      "id": "site_health-20f117d51f88b677",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -151,7 +151,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-16T15:01:07.533671+00:00"
+      "detected_at": "2026-11-16T15:22:11.312173+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -271,10 +271,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-16T14:58:16.904074"
+      "detected_at": "2026-11-16T14:58:16.904078"
     },
     {
-      "id": "site_health-4911b0b24b9dcb33",
+      "id": "site_health-1411483ad1097c4b",
       "type": "ai_forbidden_word",
       "title": "ai_forbidden_word",
       "description": "ai_forbidden_word",
@@ -291,7 +291,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-16T15:01:07.533734+00:00"
+      "detected_at": "2026-11-16T15:22:11.312225+00:00"
     },
     {
       "id": "issue_0d0c0cf770e2",
