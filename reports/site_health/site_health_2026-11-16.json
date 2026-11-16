@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-16T15:22:08.006388+00:00",
+  "timestamp": "2026-11-16T21:32:50.758425+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
@@ -13,7 +13,7 @@
     "resolved": 19,
     "inherited_resolved": 24,
     "in_progress": 0,
-    "last_updated": "2026-11-16T15:22:11.541403"
+    "last_updated": "2026-11-16T21:32:54.280029"
   },
   "issues": [
     {
