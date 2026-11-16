@@ -391,6 +391,25 @@ class DailyIssueRouter:
             except (json.JSONDecodeError, KeyError):
                 pass
 
+        # 2026-11-16 新增：外链零突破（#9）-> external_links_zero（认领给 social agent，自动铺 Reddit/Quora）
+        perf_hist = REPORTS_DIR / "content" / "content_performance_history.json"
+        if perf_hist.exists():
+            try:
+                ph = json.loads(perf_hist.read_text(encoding="utf-8"))
+                entries = ph if isinstance(ph, list) else (ph.get("history") or ph.get("entries") or [])
+                ext_total = 0
+                if entries:
+                    last = entries[-1] if isinstance(entries[-1], dict) else {}
+                    ext_total = int(last.get("external_links", 0) or 0)
+                if ext_total == 0:
+                    issues.append(self._create_issue(
+                        "external_links_zero",
+                        "有效外链 0 条（冷启动基建 0%），需铺设 Reddit/Quora 问答外链实现零突破",
+                        source_file="content_performance_history.json",
+                    ))
+            except (json.JSONDecodeError, KeyError):
+                pass
+
         # 检查社媒审计报告
         audit_file = social_dir / "social_audit_report.json"
         if audit_file.exists():
@@ -476,6 +495,23 @@ class DailyIssueRouter:
             except (json.JSONDecodeError, KeyError):
                 pass
 
+        # 2026-11-16 新增：扫博客生成事件日志，连续 content_quality_failed/未发布 -> blog_generation_failed（认领给 content agent）
+        gen_events = REPORTS_DIR / "content_generation" / "generation_events.jsonl"
+        if gen_events.exists():
+            try:
+                lines = [l for l in gen_events.read_text(encoding="utf-8").splitlines() if l.strip()]
+                recent = [json.loads(l) for l in lines[-3:]]
+                recent_outcomes = [e.get("outcome") for e in recent]
+                if any(o in ("all_attempts_failed", "unexpected_error") for o in recent_outcomes):
+                    last_fail = next((e for e in reversed(recent) if e.get("outcome") in ("all_attempts_failed", "unexpected_error")), {})
+                    issues.append(self._create_issue(
+                        "blog_generation_failed",
+                        f"博客生成最近失败（{last_fail.get('outcome')}，reason={last_fail.get('reason','')}，{str(last_fail.get('ts',''))[:10]}），需诊断并重试/放宽质量门控",
+                        source_file="generation_events.jsonl",
+                    ))
+            except (json.JSONDecodeError, KeyError):
+                pass
+
         return issues
 
     def _scan_revenue_reports(self) -> list:
@@ -487,13 +523,32 @@ class DailyIssueRouter:
         for f in revenue_dir.glob("*funnel*"):
             if f.is_file():
                 content = f.read_text(encoding="utf-8", errors="ignore")
-                if "0" in content and ("conversion" in content.lower() or "转化" in content):
+                if "0" in content and ("conversion" in content.lower() or "转化" in content or "affiliate" in content.lower()):
                     issues.append(self._create_issue(
                         "affiliate_zero_conversion",
                         f"联盟转化漏斗存在0转化环节，需分析 {f.name}",
                         source_file=f.name,
                     ))
                     break
+
+        # 2026-11-16 新增：扫 agent_kpi revenue（affiliate_revenue=0 且已测量 -> affiliate_zero_conversion，比 funnel CSV 更准确）
+        kpi_dir = REPORTS_DIR / "agent_kpi"
+        for kf in sorted(kpi_dir.glob("agent_kpi_*.json"), reverse=True):
+            try:
+                kdata = json.loads(kf.read_text(encoding="utf-8"))
+                agents = kdata.get("agents", []) if isinstance(kdata, dict) else []
+                for ag in agents:
+                    if ag.get("agent_id") == "revenue":
+                        for kpi in ag.get("kpi_results", []):
+                            if kpi.get("id") == "affiliate_revenue" and kpi.get("status") == "measured" and float(kpi.get("actual") or 0) == 0:
+                                issues.append(self._create_issue(
+                                    "affiliate_zero_conversion",
+                                    f"营收 Agent 联盟佣金营收=0（已测量，{kf.name}），需破零 0 转化",
+                                    source_file=kf.name,
+                                ))
+                        break  # 只扫最新月 agent_kpi，避免重复
+            except (json.JSONDecodeError, KeyError):
+                pass
 
         return issues
 
@@ -525,6 +580,24 @@ class DailyIssueRouter:
                                 ))
                 except (json.JSONDecodeError, KeyError):
                     pass
+
+        # 2026-11-16 新增：订阅零增长/无 Lead Magnet（#14）-> 读 subscription_health 的 mailerlite 状态
+        # MailerLite 未配置/未连接（API token 缺失）是根因（非"缺诱饵"，诱饵模板已在 config/lead_magnet_templates.json）
+        sub_dir = REPORTS_DIR / "subscription_health"
+        sub_files = sorted(sub_dir.glob("subscription_health_*.json"), reverse=True)
+        if sub_files:
+            try:
+                sub = json.loads(sub_files[0].read_text(encoding="utf-8"))
+                ml = sub.get("mailerlite") or {}
+                if isinstance(ml, dict) and (ml.get("configured") is False or ml.get("connected") is False):
+                    err = str(ml.get("error") or "")[:40]
+                    issues.append(self._create_issue(
+                        "mailerlite_not_configured",
+                        f"MailerLite 未配置/未连接（{err or 'API token 缺失'}），邮件订阅无法收集；需人工补 MailerLite API token（密钥，agent 不自动补）",
+                        source_file=sub_files[0].name,
+                    ))
+            except (json.JSONDecodeError, KeyError):
+                pass
 
         return issues
 

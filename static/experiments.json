@@ -1,6 +1,12 @@
 {
   "version": "1.0",
-  "updated_at": "2026-10-21",
+  "updated_at": "2026-11-16",
+  "cta_auto_adjust": {
+    "enabled": true,
+    "authorized_by": "human 2026-11-16",
+    "excluded_patterns": ["/posts/.*food.*", "/posts/.*meal.*", "/posts/.*restaurant.*"],
+    "note": "REV001 (food/meal/restaurant CTA 实验) 仍在 RUNNING，保持冻结不动；其余页面的联盟/变现 CTA 已授权变现 agent 自动调整以破零 0 转化（#13 联盟 38 点击 0 转化）。REV002 已 RETIRED（终态）。CTA 自动调整仅限文案/位置/联盟位小改，禁止新增 partner/UTM/tracking。"
+  },
   "experiments": [
     {
       "id": "REV001",
