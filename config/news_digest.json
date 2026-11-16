@@ -1,15 +1,15 @@
 {
   "version": "1.0",
-  "last_updated": "2026-11-15T20:28:08.740178+00:00",
-  "last_updated_date": "2026-11-15",
-  "total_items": 38,
+  "last_updated": "2026-11-16T02:55:20.553567+00:00",
+  "last_updated_date": "2026-11-16",
+  "total_items": 39,
   "digest": {
     "visa_policy": [
       {
         "title": "中国240小时过境免签“朋友圈”扩展至57国",
         "summary": "From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)",
         "url": "https://www.gov.cn/lianbo/202608/content_7078699.htm",
-        "date": "2026-11-15",
+        "date": "2026-11-16",
         "source": "State Council 57-country notice",
         "category": "visa_policy",
         "type": "policy_page",
@@ -49,6 +49,28 @@
         "_hash": "7fcd3edbe304"
       },
       {
+        "title": "Visa-free foreign entries rise 24.1% in Q3 as ‘China Haul’ reflects appeal of Chinese innovation, experiences - Global Times",
+        "summary": "Visa-free foreign entries rise 24.1% in Q3 as ‘China Haul’ reflects appeal of Chinese innovation, experiences Global Times",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5HNi1VcnlnLTI5OTVBWVNJLXowRTVSRmt6bXg0akJjdWptOUxMNEEtQno0cFdkc1dkUGh6d3dldDM5SUZGMHlfTkw2emRwb0hLbWJIT09Oa21mU0VsQjBFRXhB?oc=5",
+        "date": "2026-10-20",
+        "source": "Google News RSS",
+        "source_query": "China+entry+policy+foreign+travelers",
+        "category": "visa_policy",
+        "type": "news",
+        "_hash": "191a9b20c91f"
+      },
+      {
+        "title": "China tightens travel restrictions for citizens - BBC",
+        "summary": "China tightens travel restrictions for citizens BBC",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5HN2R0OGJtZHhZNXdSNnZQNGtKcGgyTGpJY1JxWEZWckNfQ0NIX1J5Y0lFNkZnV3lncXEzZFhEY1Q2aGJpMEcyVVIwdENwTWwtcl9JRTIzQ2lGek0?oc=5",
+        "date": "2026-09-15",
+        "source": "Google News RSS",
+        "source_query": "China+passport+policy+update",
+        "category": "visa_policy",
+        "type": "news",
+        "_hash": "a670e57dd7ee"
+      },
+      {
         "title": "China's 240-hour visa-free transit policy - English.gov.cn",
         "summary": "China's 240-hour visa-free transit policy English.gov.cn",
         "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxONVB0Yk1udXR1NU5WTGpJMVNscHlVdnpJbGJzWDQ0ZmxuZHhfRVVBcVVvVVIxakdlVmxLUUNPRjk5MWtkcmpYS3VkNjU0ZXg2cUZQLWlyZXpkWEVqbDFJbEhBNWFOVWFUdHY1RlotYU5HMnBINERocWdlZFV2aHpRX2gzbWR0OTVxRHBLOVBSSkFyN21ndTdLTm9R?oc=5",
@@ -80,20 +102,20 @@
         "category": "visa_policy",
         "type": "news",
         "_hash": "f6400329b9d7"
-      },
-      {
-        "title": "China Visa-Free Travel - A Complete Guide - China Briefing",
-        "summary": "China Visa-Free Travel - A Complete Guide China Briefing",
-        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUjZxM21tQ2ZnT055eHRGN04wTC1nUkJxRDVkUnFNXzdiYWZ6bk9KV3VnSnAxNFhRWWVmNF8weURrZHdqWC0ta1hkWmhINlFCYXJtN3lNMjhxRWpoMkdZMVl2dmR5WjhTMy12UDNKVV9WRUN5aC1RT0N1N0J5eWpHb2otb0tXZXI0Q2Rr?oc=5",
-        "date": "2026-03-27",
-        "source": "Google News RSS",
-        "source_query": "China+entry+policy+foreign+travelers",
-        "category": "visa_policy",
-        "type": "news",
-        "_hash": "98bb2ff433bf"
       }
     ],
     "travel_industry": [
+      {
+        "title": "China leads in seamless digital travel experiences: European Tourism Association chief - 巴士的報",
+        "summary": "China leads in seamless digital travel experiences: European Tourism Association chief 巴士的報",
+        "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQNW94QUllUFZpUnMxUTZYZDFvRVNqejRQcHBTM3dHTVVLNHQ4RnNHdXdLT3haQlR4V3ozeURpYTFVTzAyT2FkV2dZWUxpNkozRGE3b0ZWWWJkMTBMbXNmbWh3WE12cEktQUVEX1BweDBMOXFiXy1iUV9uZGhqZnJsNmpwU3VIalZkR09KeEhoM2F0ODUtb2QtTjRyandQQUJwT2FqVXAtanNKRVN6RlZXb2NVUlVlR2dZQU9mUlJGc05jbDhOS3VabkNnNEZPaG1ESFow?oc=5",
+        "date": "2026-11-15",
+        "source": "Google News RSS",
+        "source_query": "China+tourism+news",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "ebf2f8ea0257"
+      },
       {
         "title": "Visa-free policies, rising outbound demand fuel China’s global tourism rise: ETOA chief - 巴士的報",
         "summary": "Visa-free policies, rising outbound demand fuel China’s global tourism rise: ETOA chief 巴士的報",
@@ -117,28 +139,6 @@
         "_hash": "92053275faa1"
       },
       {
-        "title": "How tourism is creating new livelihoods in China's rural villages - CGTN",
-        "summary": "How tourism is creating new livelihoods in China's rural villages CGTN",
-        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOalc0YTlka0lUcXpjVG55UXlQa0NLeEJac2xSY01uVlhISnlBU0RfUHVsT1RuSlVLODZHbkJBZ0lCdHZyUnlNNWlNcFZkanBrZ2trd2pybnlZVkU4REdkRGFVM0dPMzU2RTMzUDF4Ujh6YndXbktHVW1GeEtBdzJFdEp4UTQtX1AtOUFsdHlhaVFQWjQ1UjBzSGN6WENCLWFOOXR6dDdFS2swQmE0ZG1WTW8wb3hsVjBZS3VRcXh2aw?oc=5",
-        "date": "2026-11-14",
-        "source": "Google News RSS",
-        "source_query": "China+tourism+news",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "86de96827a43"
-      },
-      {
-        "title": "Outcry after Taiwan asks mainland Chinese tourist to sign independence statement - South China Morning Post",
-        "summary": "Outcry after Taiwan asks mainland Chinese tourist to sign independence statement South China Morning Post",
-        "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOR3BXTTN0bE4ybUo1RmF2N3BHb1ZIT1dpUVJwaWg1RWF3NTAwaWgwdnVFa1pKWURCcFZUMVRfX05fUTVfODhSdGNsalc4MjhvSnlEdnQ2cW9rVHl4RWRUcnFSNzZ6VjVxZnV3WmVwdEVxSmFyVWluSWsxMDN4QlNEVmMxWGN6dXRMZld0REk2UmhFN19hdTB4Ym5jM2VOc2lreVVXRmRocUMyTWc5SEIwQ0JaWEtHazYyT2Vkem5hMV9XalZObWgwa3hyd01ZR3PSAc8BQVVfeXFMT0MwWENsNGhXYWp4Wm5XWnhjQ1pLeGxyazVsWmRhaEtaY2JwYWFiYTNSZ2hpc1Rtb0N6QzhUN21hYVRUVzlBeFVNenAzSDdyQ3NaRFNTamQ1RjZ6ZEZ3WEpqVmJVMk53RWZmYUZScG1ZQWRNTkk3UmJpS1FMTEVRYmV3NGZrek42dFFTSGdGdWNOVHFraERKeUNSNE01WTg4M19hbjlTQnlHc1BlMFFrc0w2bXNoYldZSy1oQkx4V1ZvbEpJWTlRV25WbDB6T2NF?oc=5",
-        "date": "2026-11-11",
-        "source": "Google News RSS",
-        "source_query": "China+tourism+news",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "ab42aa4c326a"
-      },
-      {
         "title": "China’s Inbound Tourism Revenue Could Reach $470 Billion by 2040, UBS Says - Caixin Global",
         "summary": "China’s Inbound Tourism Revenue Could Reach $470 Billion by 2040, UBS Says Caixin Global",
         "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPOUxOQTVmNGNMU05QNHFiVVAxenhqSTVsVW9PREQ4ODFYMXRaSlNTWWNXeS1iaUFlcjMxU1F0c0JMd0doWlBCTURGYlpYTTFiSlhxZzJibEVIVUJmMmQyUGNNcjJlb3pCTHdmQmNZMUhObFpsY1VZQnMxRnFXb1VVMlYwenhLRjA0UEYtMmlzQTdhSHBsWENoZVdUN3p0bF9kcTdhWTIzN0RJM1JHNlJkOU5HVUZLR0k2YkZDR0RXRXpIeHFa?oc=5",
@@ -159,6 +159,17 @@
         "category": "travel_industry",
         "type": "news",
         "_hash": "61b92f242338"
+      },
+      {
+        "title": "Americans could be detained for years in popular travel destination, officials warn - Fox News",
+        "summary": "Americans could be detained for years in popular travel destination, officials warn Fox News",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNREkwZEZOV0xpUG9ubFphM3dsbFBYTU9ZcXFrTDAyMGxsbDI5MUhqU0o0TGNaWGlKTlA5dC1USlhYZWVBTTVCNDRGeXVfMjFyeW0xNmNaM0c0ZDk2bmR1RU1FNmhCUGJ1eFFxVV9rVm5kajlPSy16YUltX3p4eFhWNzFENF9pWjhfTmJQQjB6Zmx4UdIBlwFBVV95cUxPQktOT0hNOEh6YWRxcDVEa0ozQ0twZ1pqVUJCbkd1ODJwREIyb3RxTjlJYndLcXVlWU5sZWJGQmhNck5jeVlkMTl0OVY2eGZhVXlMaDZsWURUQlc1UzRPZXhPV1VrV3Etak9TVVJWYTNpaVE1RHFsNFdPOVZiRzhXSko4V2M1LXpGWkZlNkY3WUlIVWVVZE9N?oc=5",
+        "date": "2026-10-22",
+        "source": "Google News RSS",
+        "source_query": "China+tourism+news",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "6fe72a77cb3a"
       },
       {
         "title": "Tourism Economics Insights Featured in ITB China Travel Trends Report 2026/27 - Tourism Economics",
@@ -206,17 +217,6 @@
       }
     ],
     "destination_news": [
-      {
-        "title": "Chinese musical heritage takes centre stage in Nairobi concert - Capital FM Africa",
-        "summary": "Chinese musical heritage takes centre stage in Nairobi concert Capital FM Africa",
-        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOM20xMTdRWlpSUU9tM01aSjJOaXpuREJkbVdYczFGem9oWEVNT3BLLVlBMzR5Z0tES09KdzY2QTRVb0luSWJmN2ZtYXNSR0tpd2ZUMG9mQ1NsZzFTendzaERkbkVXakNjYWRsbUZ3SnRoSHNvbFYxRGl4UU9wQlR6dzFoREQ2UVpPbWZmMXZOcDhsQQ?oc=5",
-        "date": "2026-11-15",
-        "source": "Google News RSS",
-        "source_query": "China+cultural+heritage+news",
-        "category": "destination_news",
-        "type": "news",
-        "_hash": "3f29a25e136f"
-      },
       {
         "title": "Art exhibition showcases Chinese and Pakistani cultural heritage, deepening friendship - Global Times",
         "summary": "Art exhibition showcases Chinese and Pakistani cultural heritage, deepening friendship Global Times",
@@ -271,6 +271,17 @@
         "category": "destination_news",
         "type": "news",
         "_hash": "6e414a6e2f97"
+      },
+      {
+        "title": "ICE repatriates 58 objects of cultural heritage to the People’s Republic of China - ICE | U.S. Immigration and Customs Enforcement (.gov)",
+        "summary": "ICE repatriates 58 objects of cultural heritage to the People’s Republic of China ICE | U.S. Immigration and Customs Enforcement (.gov)",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNWkJFSVlqejhUaTZUank3TWMxVzM2Y0h0d3RnTXB3MlVFV28wS3JTa3BHalEtTDVJaEdRalpHYTV6bXhDaGpVdFpuNDM2LUtnQnRiLTFCVjdBVGFmbW9xNmFXZWJPcWtwRTk5WHVuNzVKeFpDYmJEd1IxTkswV1hDWU0tV2lfMjFtRlplX29IbVpaemMyOWxQRVZZN3g0VjNHZWxV?oc=5",
+        "date": "2026-09-30",
+        "source": "Google News RSS",
+        "source_query": "China+cultural+heritage+news",
+        "category": "destination_news",
+        "type": "news",
+        "_hash": "a7e960271e22"
       },
       {
         "title": "China Travel News Highlights Emerging Destinations Attracting More Visitors - RESIDENT™ | A Luxury Lifestyle Magazine",
@@ -432,15 +443,15 @@
     ]
   },
   "llm_summary": {
-    "visa_policy": "- [2026-11-15] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-11-12] Could China extend its 30-day visa-free policy through 2027? - VisasNews\n  Could China extend its 30-day visa-free policy through 2027? VisasNews\n- [2026-11-11] China visa rules: 6 documents Indian applicants need to keep ready - The Indian Express\n  China visa rules: 6 documents Indian applicants need to keep ready The Indian Express",
-    "travel_industry": "- [2026-11-15] Visa-free policies, rising outbound demand fuel China’s global tourism rise: ETOA chief - 巴士的報\n  Visa-free policies, rising outbound demand fuel China’s global tourism rise: ETOA chief 巴士的報\n- [2026-11-15] China's inbound tourism surges on visa-free policies, word-of-mouth recommendation, ETOA chief says - 巴士的報\n  China's inbound tourism surges on visa-free policies, word-of-mouth recommendation, ETOA chief says 巴士的報\n- [2026-11-14] How tourism is creating new livelihoods in China's rural villages - CGTN\n  How tourism is creating new livelihoods in China's rural villages CGTN",
-    "destination_news": "- [2026-11-15] Chinese musical heritage takes centre stage in Nairobi concert - Capital FM Africa\n  Chinese musical heritage takes centre stage in Nairobi concert Capital FM Africa\n- [2026-11-14] Art exhibition showcases Chinese and Pakistani cultural heritage, deepening friendship - Global Times\n  Art exhibition showcases Chinese and Pakistani cultural heritage, deepening friendship Global Times\n- [2026-11-09] UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou - UNESCO World Heritage Centre\n  UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou UNESCO World Heritage Centre",
+    "visa_policy": "- [2026-11-16] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-11-12] Could China extend its 30-day visa-free policy through 2027? - VisasNews\n  Could China extend its 30-day visa-free policy through 2027? VisasNews\n- [2026-11-11] China visa rules: 6 documents Indian applicants need to keep ready - The Indian Express\n  China visa rules: 6 documents Indian applicants need to keep ready The Indian Express",
+    "travel_industry": "- [2026-11-15] China leads in seamless digital travel experiences: European Tourism Association chief - 巴士的報\n  China leads in seamless digital travel experiences: European Tourism Association chief 巴士的報\n- [2026-11-15] Visa-free policies, rising outbound demand fuel China’s global tourism rise: ETOA chief - 巴士的報\n  Visa-free policies, rising outbound demand fuel China’s global tourism rise: ETOA chief 巴士的報\n- [2026-11-15] China's inbound tourism surges on visa-free policies, word-of-mouth recommendation, ETOA chief says - 巴士的報\n  China's inbound tourism surges on visa-free policies, word-of-mouth recommendation, ETOA chief says 巴士的報",
+    "destination_news": "- [2026-11-14] Art exhibition showcases Chinese and Pakistani cultural heritage, deepening friendship - Global Times\n  Art exhibition showcases Chinese and Pakistani cultural heritage, deepening friendship Global Times\n- [2026-11-09] UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou - UNESCO World Heritage Centre\n  UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou UNESCO World Heritage Centre\n- [2026-10-26] 15 of the best China tours - The Times\n  15 of the best China tours The Times",
     "safety_alerts": "- [2026-11-12] China's Mazu early weather warning box makes global debut - Global Times\n  China's Mazu early weather warning box makes global debut Global Times\n- [2026-11-09] China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan - Libya Update News - Libya Update News\n  China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan Libya Update News - Libya Update News\n- [2026-10-22] U.S. Adds Wrongful Detention Warning to China Travel Advisory - AgroLatam\n  U.S. Adds Wrongful Detention Warning to China Travel Advisory AgroLatam",
     "general": "- [2024-03-16] A local’s travel guide to Washington DC: what to eat, see and do in three days\n  Top sights in Washington include Capitol Hill Books, the Black Cat music venue and a top-rated Filipino restaurant From phone chargers to podcasts, th"
   },
   "sources": {
     "State Council 57-country notice": 1,
-    "Google News RSS": 36,
+    "Google News RSS": 37,
     "Travel | The Guardian": 1
   },
   "source_config": {
@@ -455,5 +466,5 @@
     "provinces": 24
   },
   "policy_change": null,
-  "official_state_checked_at": "2026-11-15T20:28:08.740395+00:00"
+  "official_state_checked_at": "2026-11-16T02:55:20.553765+00:00"
 }
