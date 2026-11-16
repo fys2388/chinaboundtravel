@@ -2182,10 +2182,10 @@ class BlogGenerator:
         # ===== 2.1 内容质量强门控：把 validate_content_quality（1500词/4H2/3内链/2图）接入发布路径 =====
         q_passed, q_issues = self.validate_content_quality(content, title, topic)
         q_fix = 0
-        while not q_passed and q_fix < 2:
+        while not q_passed and q_fix < 3:
             q_fix += 1
             issue_summary = "; ".join(q_issues[:5])
-            self.notifier.send_notification("📝 内容质量未达标，启动AI扩写", f"文章《{title}》质量门控未过({q_fix}/2)\n\n{issue_summary}")
+            self.notifier.send_notification("📝 内容质量未达标，启动AI扩写", f"文章《{title}》质量门控未过({q_fix}/3)\n\n{issue_summary}")
             try:
                 # 把具体失败原因传给重写，让AI针对性修复
                 content = self.ai_engine.rewrite_post(content, topic, geo_region, quality_issues=q_issues)
