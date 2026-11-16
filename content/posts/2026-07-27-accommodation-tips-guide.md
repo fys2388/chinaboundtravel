@@ -238,6 +238,8 @@ Here are some related articles on chinaboundtravel.com that you might find inter
 
 - [China Remote Work Guide: Digital Nomad Tips](/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)
 
+- [China Photography Guide: Best Spots, Gear & Tips from a China Pro](/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/)
+
 ## FAQ
 
 ### What should I know about sichuan travel accommodation recommendations?

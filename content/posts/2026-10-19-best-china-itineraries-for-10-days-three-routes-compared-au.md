@@ -133,3 +133,5 @@ This itinerary takes you through three of China's most beautiful cities: Beijing
 - [China Travel Guide August 2026: Latest Visa Rules & Updates](/posts/chinabound-travel-guide-2026-08-monthly-update/)
 
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
+
+- [How to Order Food Delivery in China: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
