@@ -503,8 +503,22 @@
       "metadata": {},
       "calculated": {},
       "segment": ""
+    },
+    {
+      "type": "page_engagement",
+      "page": "/best-china-itineraries-for-10-days-three-routes-compared/",
+      "title": "404 Page not found | ChinaBound Travel",
+      "date": "2026-11-15",
+      "metrics": {
+        "pageviews": 5,
+        "sessions": 5,
+        "users": 0
+      },
+      "metadata": {},
+      "calculated": {},
+      "segment": ""
     }
   ],
   "version": "1.0",
-  "last_updated": "2026-11-09T05:20:29.229531"
+  "last_updated": "2026-11-16T05:30:22.759108"
 }

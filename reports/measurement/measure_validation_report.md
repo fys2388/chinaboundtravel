@@ -1,9 +1,9 @@
 # Measure验证报告（前后对照）
 
-**验证时间**: 2026-11-09 05:20:29
+**验证时间**: 2026-11-16 05:30:22
 **基线日期**: 2026-08-31
-**当前日期**: 2026-11-09
-**整体评分**: 60.7/100
+**当前日期**: 2026-11-16
+**整体评分**: 67.9/100
 **学习有效**: ✅ 是
 
 ---
@@ -17,7 +17,7 @@
 | TRAFFIC | 8 | 0 | 0 | 100.0% |
 | CONTENT | 4 | 0 | 1 | 80.0% |
 | SOCIAL | 2 | 0 | 5 | 28.6% |
-| SEO | 3 | 0 | 5 | 37.5% |
+| SEO | 5 | 0 | 3 | 62.5% |
 
 ---
 
@@ -27,49 +27,49 @@
 
 | 指标 | 基线(Before) | 当前(After) | 变化 | 变化率 | 趋势 |
 |------|-------------|------------|------|--------|------|
-| engagementRate | 0 | 0.6590909090909091 | +0.66 | +0.0% | 📈 improved |
-| bounceRate | 0 | 0.3409090909090909 | +0.34 | +0.0% | 📈 improved |
-| sessions | 0 | 176 | +176.00 | +0.0% | 📈 improved |
-| activeUsers | 0 | 163 | +163.00 | +0.0% | 📈 improved |
-| screenPageViews | 0 | 196 | +196.00 | +0.0% | 📈 improved |
-| newUsers | 0 | 161 | +161.00 | +0.0% | 📈 improved |
-| averageSessionDuration | 0 | 57.60662219886364 | +57.61 | +0.0% | 📈 improved |
-| engagedSessions | 0 | 116 | +116.00 | +0.0% | 📈 improved |
+| averageSessionDuration | 0 | 47.24245579629629 | +47.24 | +0.0% | 📈 improved |
+| engagementRate | 0 | 0.5277777777777778 | +0.53 | +0.0% | 📈 improved |
+| newUsers | 0 | 202 | +202.00 | +0.0% | 📈 improved |
+| engagedSessions | 0 | 114 | +114.00 | +0.0% | 📈 improved |
+| sessions | 0 | 216 | +216.00 | +0.0% | 📈 improved |
+| activeUsers | 0 | 204 | +204.00 | +0.0% | 📈 improved |
+| bounceRate | 0 | 0.4722222222222222 | +0.47 | +0.0% | 📈 improved |
+| screenPageViews | 0 | 238 | +238.00 | +0.0% | 📈 improved |
 
 ### CONTENT
 
 | 指标 | 基线(Before) | 当前(After) | 变化 | 变化率 | 趋势 |
 |------|-------------|------------|------|--------|------|
-| articles_with_affiliate_links | 4 | 39 | +35.00 | +875.0% | 📈 improved |
-| articles_this_week | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| avg_word_count | 1928 | 2234 | +306.00 | +15.9% | 📈 improved |
-| articles_with_internal_links | 10 | 72 | +62.00 | +620.0% | 📈 improved |
+| avg_word_count | 1928 | 2247 | +319.00 | +16.6% | 📈 improved |
 | total_articles | 59 | 73 | +14.00 | +23.7% | 📈 improved |
+| articles_with_internal_links | 10 | 72 | +62.00 | +620.0% | 📈 improved |
+| articles_this_week | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| articles_with_affiliate_links | 4 | 39 | +35.00 | +875.0% | 📈 improved |
 
 ### SOCIAL
 
 | 指标 | 基线(Before) | 当前(After) | 变化 | 变化率 | 趋势 |
 |------|-------------|------------|------|--------|------|
-| avg_engagement_rate | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| total_shares | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| total_comments | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| total_posts | 0 | 20 | +20.00 | +0.0% | 📈 improved |
-| total_impressions | 0 | 27 | +27.00 | +0.0% | 📈 improved |
-| total_clicks | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 | total_likes | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| total_shares | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| total_clicks | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| total_posts | 0 | 20 | +20.00 | +0.0% | 📈 improved |
+| avg_engagement_rate | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| total_comments | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| total_impressions | 0 | 5 | +5.00 | +0.0% | 📈 improved |
 
 ### SEO
 
 | 指标 | 基线(Before) | 当前(After) | 变化 | 变化率 | 趋势 |
 |------|-------------|------------|------|--------|------|
 | sitemap_pages | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| impressions | 0 | 639 | +639.00 | +0.0% | 📈 improved |
-| average_position | 0 | 62.9 | +62.90 | +0.0% | 📈 improved |
+| ctr | 0 | 0.12 | +0.12 | +0.0% | 📈 improved |
+| clicks | 0 | 1 | +1.00 | +0.0% | 📈 improved |
+| average_position | 0 | 62.7 | +62.70 | +0.0% | 📈 improved |
 | index_errors | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
-| clicks | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
 | sitemap_count | 0 | 1 | +1.00 | +0.0% | 📈 improved |
-| ctr | 0 | 0.0 | +0.00 | +0.0% | ➖ unchanged |
 | indexed_pages | 0 | 0 | +0.00 | +0.0% | ➖ unchanged |
+| impressions | 0 | 844 | +844.00 | +0.0% | 📈 improved |
 
 
 ---
@@ -78,6 +78,7 @@
 
 - **TRAFFIC**: 改善率 100.0% (8/8 指标改善)
 - **CONTENT**: 改善率 80.0% (4/5 指标改善)
+- **SEO**: 改善率 62.5% (5/8 指标改善)
 
 ---
 
@@ -112,4 +113,4 @@
 ---
 
 *报告由Measure验证引擎自动生成*
-*生成时间: 2026-11-09 05:20:29*
+*生成时间: 2026-11-16 05:30:22*

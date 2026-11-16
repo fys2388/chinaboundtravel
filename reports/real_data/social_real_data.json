@@ -1,12 +1,12 @@
 {
   "source": "buffer_api",
-  "pull_time": "2026-11-15T13:05:44.153535",
-  "data_date": "2026-11-15",
+  "pull_time": "2026-11-16T05:30:20.903248",
+  "data_date": "2026-11-16",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_posts": 20,
-    "total_impressions": 6,
+    "total_impressions": 5,
     "total_clicks": 0,
     "total_likes": 0,
     "total_comments": 0,
@@ -14,14 +14,46 @@
   },
   "posts": [
     {
+      "id": "6afa05a1ee359588b549a6f3",
+      "text": "Everything you need to know about Alipay — in one practical guide.\n\n· How to Use Alipay & WeChat Pay in China 2026\n\nRead the full guide: https://www.chinaboundtravel.com/alipay-wechat-pay-foreigners-g",
+      "platform": "instagram",
+      "channel_name": "chinaboundtravel",
+      "published_at": "2026-11-15T21:19:10.850Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6afa0597e5a113497a0aa169",
+      "text": "What travelers discover about Food — lessons from the ground. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/?utm_so",
+      "platform": "twitter",
+      "channel_name": "fys2388",
+      "published_at": "2026-11-15T21:19:02.719Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
       "id": "6af96275e5a113497ad2b80f",
       "text": "Visual guide to China travel: what to see and capture.\n\nRead the full guide: https://www.chinaboundtravel.com/2026-05-26-is-china-safe-for-tourists-2026-honest-assessment/?utm_source=ig&utm_medium=soc",
       "platform": "instagram",
       "channel_name": "chinaboundtravel",
       "published_at": "2026-11-15T09:43:08.667Z",
       "status": "sent",
-      "metrics_available": false,
-      "has_impression_metric": false,
+      "metrics_available": true,
+      "has_impression_metric": true,
       "likes": 0,
       "comments": 0,
       "shares": 0,
@@ -52,8 +84,8 @@
       "channel_name": "chinaboundtravel",
       "published_at": "2026-11-15T09:42:54.383Z",
       "status": "sent",
-      "metrics_available": false,
-      "has_impression_metric": false,
+      "metrics_available": true,
+      "has_impression_metric": true,
       "likes": 0,
       "comments": 0,
       "shares": 0,
@@ -142,27 +174,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6af8ab5ae86a5789a6c5cde5",
-      "text": "Research-backed facts about China travel every traveler should know.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/china-airport-transfer-g",
-      "platform": "facebook",
-      "channel_name": "ChinaBound Travel",
-      "published_at": "2026-11-14T20:41:51.939Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6af80df5d16af15d4dfcc9ba",
-      "text": "Research-backed facts about Train every traveler should know.\n\nRead the full guide: https://www.chinaboundtravel.com/2026-05-27-how-to-survive-chinese-train-station/?utm_source=ig&utm_medium=social&ut",
-      "platform": "instagram",
-      "channel_name": "chinaboundtravel",
-      "published_at": "2026-11-14T09:30:27.279Z",
+      "id": "6af96279c5b364e0623fb0ba",
+      "text": "Chinese Train Stations: Survival Guide for | Essential Train tips most first-time visitors miss.\n\nChinese Train Stations: Survival Guide for\n\n📌 Save this for your China trip planning.\n\nFull guide: htt",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-11-15T20:43:02.372Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -316,22 +332,6 @@
       "clicks": 0,
       "impressions": 1,
       "engagement_rate": 0.0
-    },
-    {
-      "id": "6af2d151223aa16048fada2f",
-      "text": "China 144 Hour Transit Visa: Complete Guide | Essential Visa tips most first-time visitors miss.\n\nChina 144 Hour Transit Visa: Complete Guide\n\n📌 Save this for your China trip planning.\n\nFull guide: ht",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-11-10T21:10:05.381Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 1,
-      "engagement_rate": 0.0
     }
   ],
   "by_platform": {
@@ -342,20 +342,20 @@
       "likes": 0
     },
     "twitter": {
-      "posts": 4,
+      "posts": 5,
       "impressions": 2,
       "clicks": 0,
       "likes": 0
     },
     "facebook": {
-      "posts": 2,
+      "posts": 1,
       "impressions": 0,
       "clicks": 0,
       "likes": 0
     },
     "pinterest": {
       "posts": 10,
-      "impressions": 4,
+      "impressions": 3,
       "clicks": 0,
       "likes": 0
     }
@@ -363,12 +363,12 @@
   "raw_source": "Buffer GraphQL API",
   "status": "OK",
   "error": null,
-  "metrics_available_count": 18,
-  "impression_metric_count": 18,
+  "metrics_available_count": 20,
+  "impression_metric_count": 20,
   "freshness_info": {
     "fresh": true,
     "reason": "Fresh",
     "age_days": 0,
-    "data_date": "2026-11-15"
+    "data_date": "2026-11-16"
   }
 }

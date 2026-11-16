@@ -1,6 +1,6 @@
 {
-  "validation_time": "2026-11-09T05:20:29.727422",
-  "overall_score": 60.7,
+  "validation_time": "2026-11-16T05:30:22.969661",
+  "overall_score": 67.9,
   "is_effective": true,
   "effective_strategies": [
     {
@@ -14,6 +14,12 @@
       "improve_rate": 80.0,
       "improved": 4,
       "total": 5
+    },
+    {
+      "category": "seo",
+      "improve_rate": 62.5,
+      "improved": 5,
+      "total": 8
     }
   ],
   "ineffective_strategies": [
