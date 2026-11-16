@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-15T14:12:40+00:00",
+  "generated_at": "2026-11-16T16:15:57+00:00",
   "counts": {
     "collected": 1350,
-    "failed": 27,
-    "passed": 1323,
+    "failed": 26,
+    "passed": 1324,
     "skipped": 0,
     "baseline": 16,
-    "new_failures": 12,
+    "new_failures": 11,
     "fixed_failures": 1
   },
   "new_failures": [
@@ -44,14 +44,6 @@
     },
     {
       "node_id": "tests.test_okr_and_experiment_semantics.TestCiWindow::test_success_and_failure_are_unaffected_by_window",
-      "likely_stale_test": false,
-      "file": "",
-      "commit": "",
-      "author": "",
-      "subject": ""
-    },
-    {
-      "node_id": "tests.test_okr_and_experiment_semantics.TestExperimentPhantom::test_registry_age_days_detects_stale",
       "likely_stale_test": false,
       "file": "",
       "commit": "",
@@ -123,7 +115,6 @@
     "tests.test_internal_links::test_markdown_audit_clean",
     "tests.test_okr_and_experiment_semantics.TestCiWindow::test_success_and_failure_are_unaffected_by_window",
     "tests.test_okr_and_experiment_semantics.TestDaysSinceLastPost::test_counts_quoted_dates",
-    "tests.test_okr_and_experiment_semantics.TestExperimentPhantom::test_registry_age_days_detects_stale",
     "tests.test_okr_and_experiment_semantics.TestExperimentPhantom::test_running_in_snapshot_but_planned_in_config_is_not_started",
     "tests.test_okr_and_experiment_semantics.TestOkrFakeGreen::test_note_is_rendered_into_the_table",
     "tests.test_okr_and_experiment_semantics.TestZeroRunEscalation::test_content_new_escalates_when_overdue",

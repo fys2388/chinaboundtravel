@@ -1,10 +1,10 @@
 # 测试回归报告
 
-生成时间: 2026-11-15T14:12:40
+生成时间: 2026-11-16T16:15:57
 
-- 本次运行: 1350 collected, 27 failed
+- 本次运行: 1350 collected, 26 failed
 - 基线存量失败: 16
-- **新增失败: 12**（阻断条件）
+- **新增失败: 11**（阻断条件）
 - 已修复的基线失败: 1（建议 --update-baseline 收敛）
 
 ## 新增失败（需要处理）
@@ -18,8 +18,6 @@
 - `tests.test_internal_links::test_markdown_audit_clean`
 
 - `tests.test_okr_and_experiment_semantics.TestCiWindow::test_success_and_failure_are_unaffected_by_window`
-
-- `tests.test_okr_and_experiment_semantics.TestExperimentPhantom::test_registry_age_days_detects_stale`
 
 - `tests.test_okr_and_experiment_semantics.TestExperimentPhantom::test_running_in_snapshot_but_planned_in_config_is_not_started`
 
