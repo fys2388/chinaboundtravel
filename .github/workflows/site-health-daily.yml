@@ -93,6 +93,22 @@ jobs:
       - name: (5/6) Regenerate Dashboard (看板更新)
         if: success()
         id: dashboard
+        # 2026-10-28 修复：看板采集 collect_data.py 依赖 GA4/GSC 等 secrets，
+        # 但此前本步骤无 env 映射，导致每次 NOT_CONFIGURED + 零值（凭据分散）。
+        # 与 ops-dashboard-hourly.yml 的 Collect dashboard data 步骤保持一致，
+        # 使 site-health 闭环同样能访问真实 GA4/GSC 数据源。
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GA4_SERVICE_ACCOUNT_JSON: ${{ secrets.GA4_SERVICE_ACCOUNT_JSON }}
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+          TRAVELPAYOUTS_API_TOKEN: ${{ secrets.TRAVELPAYOUTS_API_TOKEN }}
+          MAILERLITE_API_TOKEN: ${{ secrets.MAILERLITE_API_TOKEN }}
+          BUFFER_API_TOKEN_A: ${{ secrets.BUFFER_API_TOKEN_A }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          NORDVPN_API_KEY: ${{ secrets.NORDVPN_API_KEY }}
         run: |
           echo "Regenerating ops dashboard..."
           DASH_FAIL=0
@@ -151,7 +167,13 @@ jobs:
             reports/quality/ \
             static/ops-dashboard/ \
             static/ops/
-          if git diff --cached --quiet; then
+                               # 2026-11-16 补：agent 自动认领入队产物（executor step 3 写 config/ 的 3 个队列，需 commit 落盘）
+           # 否则「入队」只存在于 CI 本地工作区、不进 origin/main。精准条件 add，敏感文件由 .gitignore 保护。
+           for q in config/affiliate_cta_adjust_queue.json config/social_external_link_queue.json config/blog_generation_retry_queue.json; do
+             [ -f "$q" ] && git add "$q"
+           done
+           if git diff --cached --quiet; then
+
             echo "No changes to commit"
           else
             git commit -m "fix(closed-loop): auto detect→assign→execute→audit by Site Health Agent [skip ci]"
