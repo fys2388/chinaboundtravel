@@ -1,10 +1,21 @@
 {
   "version": "1.0",
-  "last_updated": "2026-11-17T05:10:01.592279+00:00",
+  "last_updated": "2026-11-17T16:59:16.579883+00:00",
   "last_updated_date": "2026-11-17",
-  "total_items": 39,
+  "total_items": 40,
   "digest": {
     "visa_policy": [
+      {
+        "title": "China is examining relevant policies on visa-free extension: spokesman - 巴士的報",
+        "summary": "China is examining relevant policies on visa-free extension: spokesman 巴士的報",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPMjZITS1NdzJqcHg5cTh4V05BMEh1ZllpODYtNmdwOVRjQmhXNGxheXRub2RMNlB5dEV2a1dPZ3pQVjExc01QenNjSlp2cXhudDZEZmM5WFBlR1l4OUJFUS10TlJKNjFablg1Mmotdm1xLUFNd25jb1JkUlNtOXhfZ2JuS3c0Nms5SW1xQVhzZlZQeGcxOTNHcHFaX3pXaWpxUV9hLXhyN1phcFdob2lLOWszZWFBU3diMXNzMmdR?oc=5",
+        "date": "2026-11-17",
+        "source": "Google News RSS",
+        "source_query": "China+passport+policy+update",
+        "category": "visa_policy",
+        "type": "news",
+        "_hash": "229c911180d6"
+      },
       {
         "title": "中国240小时过境免签“朋友圈”扩展至57国",
         "summary": "From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)",
@@ -16,17 +27,6 @@
         "_hash": "d35a146c4b77"
       },
       {
-        "title": "Could China extend its 30-day visa-free policy through 2027? - VisasNews",
-        "summary": "Could China extend its 30-day visa-free policy through 2027? VisasNews",
-        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPR0Yyc01BRmh3Y3FWVG82NHIyRUh5X2VGb3hkM2RzRk5zVktWUkdXTmlLS1pLZTlmOHZuaDhRM2ZOMm1Ld1hpd0VJSzVpUk5GbklFN2pYSV9TdV96ay1KQXd6M3lkeFJTXzZlU1kwcWc5MWlWZ3A1aUc3MzNBMW90eU90RmJ5QzRhRkxCQnhR?oc=5",
-        "date": "2026-11-12",
-        "source": "Google News RSS",
-        "source_query": "China+entry+policy+foreign+travelers",
-        "category": "visa_policy",
-        "type": "news",
-        "_hash": "965c1cefd5f0"
-      },
-      {
         "title": "I Visited China as an American Without a Visa—Here’s How You Can Do It Too - Condé Nast Traveler",
         "summary": "I Visited China as an American Without a Visa—Here’s How You Can Do It Too Condé Nast Traveler",
         "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcEFZeVA5azlWWTNHUDh5U296a2p5T2VwbWExcnB5Q3lSWDF3UTVjN25jTVV5ZWo4N1NONzV6UDBhS0pXM1NqOS1wMGp1VnBJSEJVam1iUFBZdGJDVVpnQXBRSDlKUzVZRmpIZm5sVHNUcVVnZXBDUGI4bjhkeWFCU183dG9JMWpBekhZVmhTR3dJSXg0cnFGUGFXaHJabTJWSkJlSzBHMWJBQQ?oc=5",
@@ -36,17 +36,6 @@
         "category": "visa_policy",
         "type": "news",
         "_hash": "7fcd3edbe304"
-      },
-      {
-        "title": "India-China visa update: What changes for Indian passport holders? - Gulf News",
-        "summary": "India-China visa update: What changes for Indian passport holders? Gulf News",
-        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNMV9pMkkwbGJkLWwzYUhNR08zMnAwV0o3MTYwZzdULTFwdGtVQV9EbDJiMGVuUzdmYWstM2dxTTk5X0NDWFhIRmdvTmJRdlhDZjNBdnl4UWo3MUJNR3dVOTc2N1Y0WEtLQVlwWlJHU0J6c0ZObFVmblhlSWowTFAzUHhFNFlIZUhMb1h6Z0dVUWlyWUlycVNlSGV0d0JjaVFRWXkyT0pxekJNVm9tNDdwc3k3ZTTSAcoBQVVfeXFMT3dyc2tCdnVSekdBc2g5WFo5TmNhbU9jMkpBYmdlbWZrX1dmQUNkWnEzbTBRU0g3Y2k2RXVMdXp6LUh0aWthZDlJTUxTeUNDZnRfTjVlVmRIWWMzVmg3TFhaQXVuME5ZZVpFM1VoM1VDSlZ0dU5uVm1adThMcTgtZElaOEJiLUpscFQzTVk1Q0tUUmVKZk9HSXF2VXRWQ0VSVTg0ZFF1eTUtWkl2bUhMaG95MloyVjg4MHptdnhOTFZudno1OVMwT3g4QQ?oc=5",
-        "date": "2026-10-27",
-        "source": "Google News RSS",
-        "source_query": "China+passport+policy+update",
-        "category": "visa_policy",
-        "type": "news",
-        "_hash": "f194ce6dfb7d"
       },
       {
         "title": "China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends - South China Morning Post",
@@ -69,6 +58,17 @@
         "category": "visa_policy",
         "type": "news",
         "_hash": "a670e57dd7ee"
+      },
+      {
+        "title": "China’s Tourism Industry Gains Momentum Thanks to Visa-Free Policies - The Diplomat – Asia-Pacific Current Affairs Magazine",
+        "summary": "China’s Tourism Industry Gains Momentum Thanks to Visa-Free Policies The Diplomat – Asia-Pacific Current Affairs Magazine",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNR19ZY3B3QnFuLUlmTTFYdEtaUl9rYmh4clU4VHBTa0lGd0FNTkY4aElQeFNzZlAteHlzZ0kycHNPazE2cllUYlJTWlVWYXlla1FPenYyRU1IYUxjcjFMSzRxdzlMRUlyNkZmLWhadXBYdl9KYUREYURZc0d5bWxudFgyUFlnaFR5X19JdDAyOUgydnJSX3BQQ2lxSHU5OEZ4eEE?oc=5",
+        "date": "2026-08-28",
+        "source": "Google News RSS",
+        "source_query": "China+entry+policy+foreign+travelers",
+        "category": "visa_policy",
+        "type": "news",
+        "_hash": "b8786e439cef"
       },
       {
         "title": "China's 240-hour visa-free transit policy - English.gov.cn",
@@ -150,6 +150,39 @@
         "_hash": "51640cdb0ce8"
       },
       {
+        "title": "China's inbound tourism surges on visa-free policies, word-of-mouth recommendation, ETOA chief says - 巴士的報",
+        "summary": "China's inbound tourism surges on visa-free policies, word-of-mouth recommendation, ETOA chief says 巴士的報",
+        "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOS2pXc181aGlpLVdTX1BvVjR3S3JYX21meGtnbmtTMTB6a2tHRnN5a1pCYlFpNFR0Yy12N0Q5b1BxVHA0eVJYMjhKXzlhdlpUMHAzMmUwVkZoUU0wdVlQaVNQQWR4UlRSS0RLMEF3OFhDajZURjE3d2hvU0FtZkNfOW9sa0lOeVBBdzF0NXczVkdvMmNSWmZNRGhRUWd2TVA4VndFbFRPNHVHRVl6dFNoUW1sT1kwUG5NSkE1eXUzaFNOSXlqTFpGSUZuMUZHUFdjRWVtWm5LNlpDbFBwZk10eTdB?oc=5",
+        "date": "2026-11-15",
+        "source": "Google News RSS",
+        "source_query": "China+inbound+tourism",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "92053275faa1"
+      },
+      {
+        "title": "China’s Inbound Tourism Revenue Could Reach $470 Billion by 2040, UBS Says - Caixin Global",
+        "summary": "China’s Inbound Tourism Revenue Could Reach $470 Billion by 2040, UBS Says Caixin Global",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPOUxOQTVmNGNMU05QNHFiVVAxenhqSTVsVW9PREQ4ODFYMXRaSlNTWWNXeS1iaUFlcjMxU1F0c0JMd0doWlBCTURGYlpYTTFiSlhxZzJibEVIVUJmMmQyUGNNcjJlb3pCTHdmQmNZMUhObFpsY1VZQnMxRnFXb1VVMlYwenhLRjA0UEYtMmlzQTdhSHBsWENoZVdUN3p0bF9kcTdhWTIzN0RJM1JHNlJkOU5HVUZLR0k2YkZDR0RXRXpIeHFa?oc=5",
+        "date": "2026-11-10",
+        "source": "Google News RSS",
+        "source_query": "China+inbound+tourism",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "d3d07df73ba9"
+      },
+      {
+        "title": "Chinese Ambassador to Ireland Zhao Xiyuan Introduces China’s Inbound Tourism Facilitation Policies in Irish Media - 中华人民共和国外交部",
+        "summary": "Chinese Ambassador to Ireland Zhao Xiyuan Introduces China’s Inbound Tourism Facilitation Policies in Irish Media 中华人民共和国外交部",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9URzdWMmJDd1V4V3JDTUU5bVR0QVJ4ZThpSmVJWnN4WUZQMDNwUTdJVlpJMktzaHJwNFV2elpCZkRGZlhfWXM2VHJDR0IzTkl4ZXRHM1hkNnR0eFJ0bDBMLUN6ZUdKOGkxWnBBbXZYQ1NYNGhNN2NuN0cxNA?oc=5",
+        "date": "2026-11-05",
+        "source": "Google News RSS",
+        "source_query": "China+inbound+tourism",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "61b92f242338"
+      },
+      {
         "title": "Tourism Economics Insights Featured in ITB China Travel Trends Report 2026/27 - Tourism Economics",
         "summary": "Tourism Economics Insights Featured in ITB China Travel Trends Report 2026/27 Tourism Economics",
         "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPbjhjMFZ6bzFFWDJ1UDhCWjA2UEhic3hPWWhYNmpHM0FoVk5iRmNBUlVTRzhENDd1dXphNkZkZ3I0d3hBS09saWNxaUNpZEZiV25TbXZnY05NMjZHanI3dUF1NkVYU1IwT0YtQjB5a2otQlZyME9OeFR1WWthZzVuZll6T05VVDd6eDkzOTV0NmUzczF5dnhBejBOWEpDcm5vaWd0VFhybENIVllFWHgyOEhvZ3JNVE9Bcm1xQQ?oc=5",
@@ -192,52 +225,19 @@
         "category": "travel_industry",
         "type": "news",
         "_hash": "47da71bd3f02"
-      },
-      {
-        "title": "China Issues New Regulations on Exit and Entry Administration - Newland Chase",
-        "summary": "China Issues New Regulations on Exit and Entry Administration Newland Chase",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPNFJYbmlYX19xLVBDcVpmRElGQ2V5a3RSZmk4dGRUT3B2TTVRaWd0Um9zYmdlZnpIckctcm1sbzBDclNLM096MF9IUlEwWjNKSks2QnQ4M0NLZ1hqLWhMZlR3OFRJUUV3VmhSNnJ2eUhsLUdzRENfY3FBd0RyS2dpV0Y5TzdDbks0emNxMm5nWEc?oc=5",
-        "date": "2026-08-06",
-        "source": "Google News RSS",
-        "source_query": "China+travel+restrictions+update",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "f6400329b9d7"
-      },
-      {
-        "title": "Tourism price wars threaten to dim a rare bright spot in China's consumer spending - CNBC",
-        "summary": "Tourism price wars threaten to dim a rare bright spot in China's consumer spending CNBC",
-        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1kb1drUGRfck50RDRjbU92Y1JWT1JURnRreWxpQzFLOC1keC1Mc3Y1TTNEX3lfVjlKQUFnYnNSY3JaTHozZks3T2FUaGppcXd5Ykp1eGZhdzllaUNpZ0toNEE4NldBZl9vSjIwU0pySFpjOTNoRnNUM9IBfkFVX3lxTE8yQVpTWi1qeGh2UFlqcDZ2aTVwbnVPdXJ5amtURHkwTS1ucVpoeEc1ZHk0VlJ2RVJkbHNCOEZHTEQ2eDZFNE1kNEhRWEQycDZWWVI2RTZHY0o0VkRHYUVVOGctRWp5SEQ1NHFZZzUtdzM4X3NZb3NZcTcwZXU1dw?oc=5",
-        "date": "2026-08-03",
-        "source": "Google News RSS",
-        "source_query": "China+travel+industry+2026",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "f482eab2b3d4"
       }
     ],
     "destination_news": [
       {
-        "title": "More than 200 cultural heritage works on display in Shenzhen - Ecns.cn",
-        "summary": "More than 200 cultural heritage works on display in Shenzhen Ecns.cn",
-        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFB3QlN5Sm9ueEtURmF4bGxkNFhtbDFwUGJuQVd2VWRneExkcEsyZ0V4ejlTWURkaWh1ZU9DT3B5S1lmYmNqTHBWazhoZlFsZDQteWRnZTJrWkt5VndWV2ZLdDVDMWc2Z3M1NFlNZ3puX256cGhBRXpnNlNn?oc=5",
+        "title": "Shenzhen exhibition showcases Chinese intangible cultural heritage during APEC week - 巴士的報",
+        "summary": "Shenzhen exhibition showcases Chinese intangible cultural heritage during APEC week 巴士的報",
+        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQd2ZrMmFLWVR6cl84SFE2LUlsb0xMakVuRW9PcVpvbUpKMHhvLVVrYk1fOXdiWk1XYU55UGQwV3lUVHUydThvSkNtZVc5TFpkTmd2Z2NUTnBCWkhBdTluWG9nT3doWmZOajZ0MDcwSkQ1TFRwUkZvUEVZMVNSMHpQMjdwQzhQaDViQTU5U0czTllfbHpSZDU0Mi1DYUpxV3VZZVpvcXFjbVFKU29JQ0d2WDJaLXl1eDFGQ1dTSjQzcUpWNktaSk8wZHNWYUlBdmJD?oc=5",
         "date": "2026-11-16",
         "source": "Google News RSS",
         "source_query": "China+cultural+heritage+news",
         "category": "destination_news",
         "type": "news",
-        "_hash": "88cf0363eb93"
-      },
-      {
-        "title": "Asia-Pacific Community: Art exhibition showcases Chinese and Pakistani cultural heritage, deepening friendship - Belt and Road Portal",
-        "summary": "Asia-Pacific Community: Art exhibition showcases Chinese and Pakistani cultural heritage, deepening friendship Belt and Road Portal",
-        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE56VHMxVjNHNzBmbFNnM21zeFViZ2luUU9JUkFLeFpUbmhJUnlvZ2prNVp0V0hWc18zUWFhRzBxN080ckdibzFiUG8wYlpZWW54b010dU1Ybw?oc=5",
-        "date": "2026-11-16",
-        "source": "Google News RSS",
-        "source_query": "China+cultural+heritage+news",
-        "category": "destination_news",
-        "type": "news",
-        "_hash": "b66ea600ea0f"
+        "_hash": "a0bd4480ce0d"
       },
       {
         "title": "UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou - UNESCO World Heritage Centre",
@@ -282,6 +282,17 @@
         "category": "destination_news",
         "type": "news",
         "_hash": "6e414a6e2f97"
+      },
+      {
+        "title": "ICE repatriates 58 objects of cultural heritage to the People’s Republic of China - ICE | U.S. Immigration and Customs Enforcement (.gov)",
+        "summary": "ICE repatriates 58 objects of cultural heritage to the People’s Republic of China ICE | U.S. Immigration and Customs Enforcement (.gov)",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNWkJFSVlqejhUaTZUank3TWMxVzM2Y0h0d3RnTXB3MlVFV28wS3JTa3BHalEtTDVJaEdRalpHYTV6bXhDaGpVdFpuNDM2LUtnQnRiLTFCVjdBVGFmbW9xNmFXZWJPcWtwRTk5WHVuNzVKeFpDYmJEd1IxTkswV1hDWU0tV2lfMjFtRlplX29IbVpaemMyOWxQRVZZN3g0VjNHZWxV?oc=5",
+        "date": "2026-09-30",
+        "source": "Google News RSS",
+        "source_query": "China+cultural+heritage+news",
+        "category": "destination_news",
+        "type": "news",
+        "_hash": "a7e960271e22"
       },
       {
         "title": "China Travel News Highlights Emerging Destinations Attracting More Visitors - RESIDENT™ | A Luxury Lifestyle Magazine",
@@ -443,15 +454,15 @@
     ]
   },
   "llm_summary": {
-    "visa_policy": "- [2026-11-17] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-11-12] Could China extend its 30-day visa-free policy through 2027? - VisasNews\n  Could China extend its 30-day visa-free policy through 2027? VisasNews\n- [2026-11-10] I Visited China as an American Without a Visa—Here’s How You Can Do It Too - Condé Nast Traveler\n  I Visited China as an American Without a Visa—Here’s How You Can Do It Too Condé Nast Traveler",
+    "visa_policy": "- [2026-11-17] China is examining relevant policies on visa-free extension: spokesman - 巴士的報\n  China is examining relevant policies on visa-free extension: spokesman 巴士的報\n- [2026-11-17] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-11-10] I Visited China as an American Without a Visa—Here’s How You Can Do It Too - Condé Nast Traveler\n  I Visited China as an American Without a Visa—Here’s How You Can Do It Too Condé Nast Traveler",
     "travel_industry": "- [2026-11-17] Kim Jong Un visits new ski resort on China border, calls for more tourism - NK News\n  Kim Jong Un visits new ski resort on China border, calls for more tourism NK News\n- [2026-11-17] Video showing snow shortage at China's tourist attraction draws attention as winter approaches - VnExpress International\n  Video showing snow shortage at China's tourist attraction draws attention as winter approaches VnExpress International\n- [2026-11-16] North Korea's Kim inspects Samjiyon tourism zone amid speculation over China trip - Reuters\n  North Korea's Kim inspects Samjiyon tourism zone amid speculation over China trip Reuters",
-    "destination_news": "- [2026-11-16] More than 200 cultural heritage works on display in Shenzhen - Ecns.cn\n  More than 200 cultural heritage works on display in Shenzhen Ecns.cn\n- [2026-11-16] Asia-Pacific Community: Art exhibition showcases Chinese and Pakistani cultural heritage, deepening friendship - Belt and Road Portal\n  Asia-Pacific Community: Art exhibition showcases Chinese and Pakistani cultural heritage, deepening friendship Belt and Road Portal\n- [2026-11-09] UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou - UNESCO World Heritage Centre\n  UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou UNESCO World Heritage Centre",
+    "destination_news": "- [2026-11-16] Shenzhen exhibition showcases Chinese intangible cultural heritage during APEC week - 巴士的報\n  Shenzhen exhibition showcases Chinese intangible cultural heritage during APEC week 巴士的報\n- [2026-11-09] UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou - UNESCO World Heritage Centre\n  UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou UNESCO World Heritage Centre\n- [2026-10-26] 15 of the best China tours - The Times\n  15 of the best China tours The Times",
     "safety_alerts": "- [2026-10-22] U.S. Adds Wrongful Detention Warning to China Travel Advisory - AgroLatam\n  U.S. Adds Wrongful Detention Warning to China Travel Advisory AgroLatam\n- [2026-10-21] US adds wrongful detention warning to China travel advisory - Voice of America English News\n  US adds wrongful detention warning to China travel advisory Voice of America English News\n- [2026-10-20] US adds ‘wrongful detention’ warning for Americans travelling to China - South China Morning Post\n  US adds ‘wrongful detention’ warning for Americans travelling to China South China Morning Post",
     "general": "- [2024-03-16] A local’s travel guide to Washington DC: what to eat, see and do in three days\n  Top sights in Washington include Capitol Hill Books, the Black Cat music venue and a top-rated Filipino restaurant From phone chargers to podcasts, th"
   },
   "sources": {
+    "Google News RSS": 38,
     "State Council 57-country notice": 1,
-    "Google News RSS": 37,
     "Travel | The Guardian": 1
   },
   "source_config": {
@@ -466,5 +477,5 @@
     "provinces": 24
   },
   "policy_change": null,
-  "official_state_checked_at": "2026-11-17T05:10:01.592481+00:00"
+  "official_state_checked_at": "2026-11-17T16:59:16.580071+00:00"
 }
