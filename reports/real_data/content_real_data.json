@@ -1,13 +1,13 @@
 {
   "source": "content_analytics",
-  "pull_time": "2026-11-16T14:12:40.935802",
-  "data_date": "2026-11-16",
+  "pull_time": "2026-11-17T15:05:32.533915",
+  "data_date": "2026-11-17",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_articles": 73,
     "articles_this_week": 0,
-    "avg_word_count": 2250,
+    "avg_word_count": 2251,
     "articles_with_affiliate_links": 39,
     "articles_with_internal_links": 72
   },
@@ -26,7 +26,7 @@
     },
     {
       "slug": "2026-05-22-how-to-use-wechat-pay-as-a-foreigner",
-      "word_count": 1888,
+      "word_count": 1895,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
