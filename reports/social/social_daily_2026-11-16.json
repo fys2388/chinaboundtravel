@@ -1,8 +1,8 @@
 {
   "date": "2026-11-16",
   "total_published": 8,
-  "total_impressions": 81,
-  "total_clicks": 1,
+  "total_impressions": 26,
+  "total_clicks": 0,
   "total_uv": 0,
   "by_platform": {
     "ig": {
@@ -19,13 +19,13 @@
     },
     "x": {
       "published": 5,
-      "impressions": 81,
-      "clicks": 1,
+      "impressions": 23,
+      "clicks": 0,
       "uv": 0
     },
     "fb": {
       "published": 1,
-      "impressions": 0,
+      "impressions": 3,
       "clicks": 0,
       "uv": 0
     }
@@ -33,5 +33,5 @@
   "analytics_status": "ok",
   "analytics_source": "buffer_api",
   "analytics_reason": "",
-  "analytics_post_count": 10
+  "analytics_post_count": 5
 }
