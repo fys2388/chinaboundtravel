@@ -3,13 +3,13 @@
   "agent_name": "SEO Intelligent Agent (SEO智能优化)",
   "task_id": "task_2026-11-17_seo",
   "created_at": "2026-11-17T01:00:39.155288+00:00",
-  "updated_at": "2026-11-17T05:30:33.945963",
+  "updated_at": "2026-11-17T05:46:04.481420",
   "target_date": "2026-11-17",
-  "issue_count": 3,
+  "issue_count": 4,
   "severity_summary": {
     "critical": 0,
     "high": 0,
-    "medium": 3,
+    "medium": 4,
     "low": 0
   },
   "issues": [
@@ -34,7 +34,27 @@
       "detected_at": "2026-11-17T01:00:39.154368+00:00"
     },
     {
-      "id": "site_health-574935ce5e906d8b",
+      "id": "issue_0ad6a501f5e7",
+      "type": "title_too_long",
+      "title": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
+      "description": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
+      "page": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "evidence": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "optimize_title",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-11-17.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-11-17T05:46:03.947251"
+    },
+    {
+      "id": "site_health-701d7922d11eb6f1",
       "type": "title_too_long",
       "title": "title_too_long",
       "description": "title_too_long",
@@ -51,10 +71,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-11-17T05:30:33.732872+00:00"
+      "detected_at": "2026-11-17T05:46:04.005851+00:00"
     },
     {
-      "id": "site_health-84896fc289fbc40",
+      "id": "site_health-27bff11ec2e67ba1",
       "type": "meta_description_too_long",
       "title": "meta_description_too_long",
       "description": "meta_description_too_long",
@@ -71,7 +91,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-11-17T05:30:33.732869+00:00"
+      "detected_at": "2026-11-17T05:46:04.005847+00:00"
     }
   ],
   "priority_issue": {
@@ -95,13 +115,14 @@
     "detected_at": "2026-11-17T01:00:39.154368+00:00"
   },
   "expected_actions": [
-    "manual_review"
+    "manual_review",
+    "optimize_title"
   ],
   "status": "partial",
   "execution": {
     "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=1, failed=0"
+    "note": "resolved=0, need_manual=2, failed=0"
   }
 }
