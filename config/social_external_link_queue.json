@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "page": "/posts/7-day-china-itinerary",
+      "platforms": [
+        "reddit",
+        "quora"
+      ],
+      "angle": "China travel Q&A (visa/transport/food/safety) with helpful, non-spam answers linking to chinaboundtravel.com",
+      "status": "pending_review",
+      "generated_at": "auto social agent claim 2026-11-16"
+    },
+    {
+      "page": "/posts/food-recommendations-guide",
+      "platforms": [
+        "reddit",
+        "quora"
+      ],
+      "angle": "China travel Q&A (visa/transport/food/safety) with helpful, non-spam answers linking to chinaboundtravel.com",
+      "status": "pending_review",
+      "generated_at": "auto social agent claim 2026-11-16"
+    }
+  ]
+}

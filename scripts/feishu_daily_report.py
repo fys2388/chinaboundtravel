@@ -2969,6 +2969,33 @@ class FeishuDailyReporter:
                     result[f"gh_{kind}_conclusion"] = conclusion
                     result[f"gh_{kind}_run_time"] = latest.get("created_at", "")
                     result[f"gh_{kind}_display_title"] = latest.get("display_title", "N/A")
+                    # 假绿灯修复（2026-11-16）：blog workflow 跑完 exit 0 不等于"生成成功"。
+                    # weekly-blog-update 在 content_quality_failed / unexpected_error（网络）时
+                    # 仍可能 workflow 结论=success（生成器 catch 后 exit 0）。
+                    # 交叉校验 generation_events.outcome：只有 outcome=success 才 ✅，
+                    # 否则降为 🔴 并暴露真实生成结果（杜绝「workflow 成功但 0 篇产出」假绿）。
+                    if kind == "blog":
+                        try:
+                            import json as _json, os as _os
+                            from pathlib import Path as _Path
+                            _gen = _Path("reports/content_generation/generation_events.jsonl")
+                            _gen_outcome, _gen_reason = None, None
+                            if _gen.exists():
+                                for _l in _gen.read_text(encoding="utf-8").splitlines()[:0] or []:
+                                    pass
+                                for _l in reversed([x for x in _gen.read_text(encoding="utf-8").splitlines() if x.strip()][:5]):
+                                    _e = _json.loads(_l)
+                                    _gen_outcome = _e.get("outcome")
+                                    _gen_reason = _e.get("reason") or _e.get("error_message") or ""
+                                    break
+                            if _gen_outcome and _gen_outcome != "success":
+                                result[f"gh_{kind}_success"] = False
+                                result[f"gh_{kind}_state"] = "failure"
+                                result[f"gh_{kind}_conclusion"] = f"failure({_gen_outcome})"
+                                result[f"gh_{kind}_gen_outcome"] = _gen_outcome
+                                result[f"gh_{kind}_gen_reason"] = str(_gen_reason)[:120]
+                        except Exception:
+                            pass  # 交叉校验失败不影响主状态（保持 workflow 结论）
                 else:
                     result[f"gh_{kind}_success"] = None
                     result[f"gh_{kind}_state"] = "no_runs"

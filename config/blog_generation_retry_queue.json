@@ -1,0 +1,15 @@
+{
+  "items": [
+    {
+      "page": "blog-generation",
+      "status": "pending_review",
+      "last_event": {
+        "ts": "2026-11-16T04:22:17.833775+00:00",
+        "outcome": "unexpected_error",
+        "error_message": "RetryError[<Future at 0x7aec01902ae0 state=finished raised ConnectionError>]"
+      },
+      "authorized": "human 2026-11-16",
+      "action": "诊断最近生成失败（content_quality_failed/密钥），CI 持 AI 密钥重跑 weekly-blog-update；质量门控 q_fix 已 2->3、timeout 45min。若仍 content_quality_failed，需查 GH run 日志取 P0 明细并修提示词/模型。"
+    }
+  ]
+}

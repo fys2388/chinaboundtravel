@@ -5,6 +5,8 @@ report_advice.py - 报表自动运营建议生成器
 规则口径：实事求是，问题→动作，每条一行
 """
 import sys
+import json
+from pathlib import Path
 sys.stdout.reconfigure(encoding="utf-8")
 
 # 各报表周期 → 数据字段别名（data.get 多别名兜底）
@@ -158,8 +160,34 @@ def generate_advice(data: dict, scope: str) -> list:
 
     # 4) 变现
     if tp_clicks > 0 and tp_orders == 0:
+        # CTA 破零建议：动态读 experiments.json（REV001 RUNNING 冻结 / REV002 RETIRED 不冻结）
+        # + CTA 自动调整队列（11-16 人工解冻，已入队 3 slot 待 CI 执行）。REV002 已 RETIRED，
+        # 不再列进「冻结范围」（旧文案硬编码 REV001/REV002 会误导：REV002 是终态）。
+        frozen = []
+        try:
+            _exp = json.loads((Path("static/experiments.json")).read_text(encoding="utf-8"))
+            for _ex in _exp.get("experiments", []):
+                if _ex.get("status") == "RUNNING":
+                    frozen.append(_ex.get("id", "?"))
+        except Exception:
+            frozen = ["REV001"]
+        cta_queued = False
+        try:
+            _q = json.loads((Path("config/affiliate_cta_adjust_queue.json")).read_text(encoding="utf-8"))
+            cta_queued = len(_q.get("cta_adjust", [])) > 0
+        except Exception:
+            cta_queued = False
+        _frozen_str = "、".join(frozen) if frozen else "无在跑实验"
+        if cta_queued:
+            detail = (f"链路已被触达：CTA 破零已解冻并入队 affiliate_cta_adjust_queue.json"
+                      f"（{len(_q.get('cta_adjust', []))} 个 CTA slot，pending_review），"
+                      f"由 CI 社媒密钥执行；仅 {_frozen_str} 实验页保持冻结（REV002 已 RETIRED 不在范围），"
+                      f"禁新增 partner/UTM/tracking")
+        else:
+            detail = (f"链路已被触达：确认点击来自哪个联盟位；CTA 位置变更属 {_frozen_str} 在跑实验冻结范围"
+                      f"（REV002 已 RETIRED 不在冻结范围），需人工复核后评估")
         advice.append({"icon": "🟡", "title": f"联盟 {tp_clicks:.0f} 次点击 / 0 转化",
-                       "detail": "链路已被触达：确认点击来自哪个联盟位；CTA 位置变更属 REV001/REV002 冻结范围，需人工复核后评估"})
+                       "detail": detail})
     elif tp_clicks == 0 and users >= 10:
         advice.append({"icon": "🟠", "title": "高流量但联盟零点击",
                        "detail": "联盟入口不可见：在高流量页评估 CTA 位置是否可见（需人工复核）"})
