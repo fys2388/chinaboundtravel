@@ -170,6 +170,8 @@ Another thing to keep in mind when visiting the Chengdu Panda Base is the crowds
 
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
 
+- [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
+
 ## FAQ
 
 ### What should I know about dos and donts in china?

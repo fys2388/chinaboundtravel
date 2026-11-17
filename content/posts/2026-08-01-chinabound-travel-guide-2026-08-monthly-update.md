@@ -213,6 +213,8 @@ If you have topics you'd like to see covered in a future update, reply to any of
 
 - [China Remote Work Guide: Digital Nomad Tips](/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)
 
+- [China Photography Guide: Best Spots, Gear & Tips from a China Pro](/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/)
+
 ## FAQ
 
 ### Do I need a visa for China?

@@ -161,3 +161,5 @@ Keeping your phone connected in China is easier with an eSIM, which avoids a phy
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
 
 - [China Remote Work Guide: Digital Nomad Tips](/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)
+
+- [China Photography Guide: Best Spots, Gear & Tips from a China Pro](/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/)

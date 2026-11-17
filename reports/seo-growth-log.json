@@ -11417,6 +11417,192 @@
       "target": "https://www.chinaboundtravel.com/posts/china-airport-transfer-guide/",
       "detail": "OK: Indexing API notified: ok",
       "timestamp": "2026-11-16T10:49:12.053689"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "'Traveling To China For Business: Meetings, Dining &' -> 'Traveling To China For Business: Meetings, Dining &' (keyword: traveling to china for business)",
+      "timestamp": "2026-11-17T11:36:20.086422"
+    },
+    {
+      "type": "internal_link",
+      "target": "transportation-guide -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=1",
+      "timestamp": "2026-11-17T11:36:20.843666"
+    },
+    {
+      "type": "internal_link",
+      "target": "food-recommendations-guide -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=1",
+      "timestamp": "2026-11-17T11:36:21.584878"
+    },
+    {
+      "type": "internal_link",
+      "target": "cultural-etiquette-guide -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=1",
+      "timestamp": "2026-11-17T11:36:22.306328"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-solo-travel-guide-safety-hostels-and-making-friends -> chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls",
+      "detail": "score=2",
+      "timestamp": "2026-11-17T11:36:23.032107"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-transportation-card-guide -> chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls",
+      "detail": "score=2",
+      "timestamp": "2026-11-17T11:36:23.751705"
+    },
+    {
+      "type": "internal_link",
+      "target": "how-to-use-wechat-pay-as-a-foreigner -> chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls",
+      "detail": "score=1",
+      "timestamp": "2026-11-17T11:36:24.477430"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-insurance-do-you-really-need-it-and-how-to-choose -> yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide",
+      "detail": "score=1",
+      "timestamp": "2026-11-17T11:36:25.202702"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-insurance-do-you-really-need-it-and-how-to-choose -> china-airport-transfer-guide",
+      "detail": "score=1",
+      "timestamp": "2026-11-17T11:36:25.923671"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-insurance-do-you-really-need-it-and-how-to-choose -> china-business-travel-guide-meetings-dining-and-networking",
+      "detail": "score=1",
+      "timestamp": "2026-11-17T11:36:26.654202"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-insurance-do-you-really-need-it-and-how-to-choose -> chinabound-travel-guide-2026-08-monthly-update",
+      "detail": "score=2",
+      "timestamp": "2026-11-17T11:36:27.916630"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-08-monthly-update -> china-photography-guide-capturing-the-wonders-of-the-middle-kingdom",
+      "detail": "score=2",
+      "timestamp": "2026-11-17T11:36:29.770013"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-family-travel-tips-a-californians-guide -> china-photography-guide-capturing-the-wonders-of-the-middle-kingdom",
+      "detail": "score=2",
+      "timestamp": "2026-11-17T11:36:30.576550"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-09-monthly-update -> china-photography-guide-capturing-the-wonders-of-the-middle-kingdom",
+      "detail": "score=2",
+      "timestamp": "2026-11-17T11:36:31.523634"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-winter-travel-guide-where-to-go-and-how-to-pack-au -> china-remote-work-guide-a-californians-5-year-chengdu-experience",
+      "detail": "score=2",
+      "timestamp": "2026-11-17T11:36:32.257840"
+    },
+    {
+      "type": "internal_link",
+      "target": "alipay-for-foreigners-guide -> china-remote-work-guide-a-californians-5-year-chengdu-experience",
+      "detail": "score=2",
+      "timestamp": "2026-11-17T11:36:32.999648"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-airport-transfer-guide -> china-remote-work-guide-a-californians-5-year-chengdu-experience",
+      "detail": "score=2",
+      "timestamp": "2026-11-17T11:36:33.715413"
+    },
+    {
+      "type": "internal_link",
+      "target": "cultural-etiquette-guide -> 7-day-china-itinerary",
+      "detail": "score=1",
+      "timestamp": "2026-11-17T11:36:34.461769"
+    },
+    {
+      "type": "internal_link",
+      "target": "foodies-guide-to-china-a-gastronomic-adventure -> 7-day-china-itinerary",
+      "detail": "score=1",
+      "timestamp": "2026-11-17T11:36:35.195503"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-remote-work-guide-a-californians-5-year-chengdu-experience -> 7-day-china-itinerary",
+      "detail": "score=1",
+      "timestamp": "2026-11-17T11:36:35.915480"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-insurance-do-you-really-need-it-and-how-to-choose -> chinese-food-delivery-meituan-eleme-guide",
+      "detail": "score=1",
+      "timestamp": "2026-11-17T11:36:36.591341"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-transportation-card-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-17T11:36:37.087373"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-17T11:36:37.442178"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-17T11:36:37.805393"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-winter-travel-guide-where-to-go-and-how-to-pack-au/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-17T11:36:38.184877"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-17T11:36:38.511392"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-17T11:36:38.855046"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-airport-transfer-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-17T11:36:39.234292"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-family-travel-tips-a-californians-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-17T11:36:39.567780"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-17T11:36:39.916547"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/food-recommendations-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-17T11:36:40.293668"
     }
   ]
 }
