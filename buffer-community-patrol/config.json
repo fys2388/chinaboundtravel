@@ -1,0 +1,11 @@
+{
+  "communityUrl": "https://publish.buffer.com/channels/6a202882c687a22dd45735b6/community/",
+  "channelId": "6a202882c687a22dd45735b6",
+  "loginUrl": "https://publish.buffer.com/",
+  "brandVoice": "ChinaBound Travel (Joran) — 面向欧美首次到访中国的旅行者的英文旅行指南品牌。回复语气：友好、专业、有实用价值，贴合旅行语境。",
+  "brandContext": "网站 chinaboundtravel.com；主打中国行程/美食/交通指南。回复须是英文，控制在280字符内，语气自然友好，可对评论表达感谢或补充实用信息。",
+  "maxRepliesPerRun": 10,
+  "replyCharLimit": 280,
+  "navTimeoutMs": 30000,
+  "actionTimeoutMs": 15000
+}

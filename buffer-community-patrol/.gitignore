@@ -1,0 +1,8 @@
+# 敏感文件：登录态 Cookie，绝不提交
+.storage-state.json
+# 处理记录（含评论内容），不提交
+processed.json
+# 依赖
+node_modules/
+# 日志
+*.log

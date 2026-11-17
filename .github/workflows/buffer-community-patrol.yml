@@ -1,0 +1,72 @@
+name: Buffer Community Patrol
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (detect only, no reply)"
+        required: false
+        default: false
+        type: boolean
+  schedule:
+    # 每日两次：UTC 02:00 / 14:00 = 北京时间 10:00 / 22:00（覆盖早/晚评论高峰后）
+    - cron: "0 2,14 * * *"
+
+concurrency:
+  group: buffer-community-patrol
+  cancel-in-progress: false
+
+jobs:
+  patrol:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: |
+          cd buffer-community-patrol
+          npm ci || npm install --no-audit --no-fund
+
+      - name: Install Chromium (Playwright)
+        run: |
+          cd buffer-community-patrol
+          npx playwright install chromium --with-deps
+
+      - name: Restore Buffer storage state
+        env:
+          BUFFER_STORAGE_STATE: ${{ secrets.BUFFER_STORAGE_STATE }}
+        run: |
+          if [ -z "$BUFFER_STORAGE_STATE" ]; then
+            echo "::warning::BUFFER_STORAGE_STATE secret 未配置，跳过（需先 node patrol.mjs --login 并 base64 后填入 secret）"
+            exit 0
+          fi
+          echo "$BUFFER_STORAGE_STATE" | base64 -d > buffer-community-patrol/.storage-state.json
+          echo "storage state restored"
+
+      - name: Run patrol
+        env:
+          SENSENOVA_API_KEY: ${{ secrets.SENSENOVA_API_KEY }}
+        run: |
+          cd buffer-community-patrol
+          DRY_RUN="${{ github.event.inputs.dry_run || 'false' }}"
+          if [ "$DRY_RUN" = "true" ]; then
+            node patrol.mjs --dry-run
+          else
+            node patrol.mjs
+          fi
+
+      - name: Report summary
+        if: always()
+        run: |
+          echo "## Buffer Community Patrol"
+          echo "Dry run: ${{ github.event.inputs.dry_run || 'false' }}"
