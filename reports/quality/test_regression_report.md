@@ -1,10 +1,10 @@
 # 测试回归报告
 
-生成时间: 2026-11-17T16:21:49
+生成时间: 2026-11-18T15:54:16
 
-- 本次运行: 1350 collected, 26 failed
+- 本次运行: 1350 collected, 30 failed
 - 基线存量失败: 16
-- **新增失败: 11**（阻断条件）
+- **新增失败: 15**（阻断条件）
 - 已修复的基线失败: 1（建议 --update-baseline 收敛）
 
 ## 新增失败（需要处理）
@@ -15,7 +15,15 @@
 
 - `tests.test_growth12_revenue_experiment::test_title_and_content_id_locked`
 
+- `tests.test_growth15_commercial_conversion::test_transportation_guide_in_top3`
+
+- `tests.test_growth16_commercial_expansion::test_transportation_high_risk_detected`
+
+- `tests.test_growth21_payment_cluster::test_inventory_contains_wechat_weak`
+
 - `tests.test_internal_links::test_markdown_audit_clean`
+
+- `tests.test_okr_and_experiment_semantics.TestCanonicalVerification::test_queue_is_parsed`
 
 - `tests.test_okr_and_experiment_semantics.TestCiWindow::test_success_and_failure_are_unaffected_by_window`
 
