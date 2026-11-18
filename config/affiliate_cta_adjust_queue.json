@@ -12,7 +12,37 @@
           "/posts/.*restaurant.*"
         ],
         "note": "自动调 CTA 文案/位置以破零（C_HIGH_IMPRESSION_ZERO_CLICK 高曝光 0 点击页，107 曝光 0 点击）；禁止新增 partner/UTM/tracking；REV001 实验页保持冻结。"
-      }
+      },
+      "cta_actions": [
+        {
+          "id": "cta-tc-01",
+          "type": "add_primary_cta_button",
+          "partner": "trip.com",
+          "where": "正文 'How to Buy Tickets: Trip.com vs 12306' 章节之后（当前仅 e15 弱文字链 'Compare Train Tickets on Trip.com'）",
+          "copy": "🚄 Book Train Tickets on Trip.com — English interface, live G/D/C schedules, international cards accepted",
+          "button_style": "primary, 高对比色, 全宽（移动端）",
+          "rationale": "本页核心主题=火车票，Trip.com 是文中已推荐的预订工具；当前 107 曝光 0 点击因 CTA 无主从（9+ 联盟位平铺无 1 个主按钮）。提炼 1 个 Trip.com 主 CTA 直接破零。",
+          "constraint": "复用现有 Trip.com 联盟链接（不新增 partner/UTM/tracking）；不改标题（政策页 GROWTH05 RETIRED 纪律不适用本页，本页非 144 政策页）"
+        },
+        {
+          "id": "cta-tc-02",
+          "type": "merge_duplicate_blocks",
+          "where": "底部 '🛒 Travel Essentials for Your China Trip'（e55-e58 4 联盟位）+ '🗺️ Plan Your China Trip With Joran'（e62-e66 5 联盟位）两区块功能重叠（都列 eSIM/VPN/Hotel/Tours）",
+          "copy": "合并为 1 组 'Your China Trip Essentials'（5 联盟位去重：eSIM/VPN/Hotel/Tours/Insurance）",
+          "button_style": "次级 CTA（非主），弱化",
+          "rationale": "两区块重叠分散注意力，主 CTA 被稀释。合并 1 组 + 主 CTA 单独突出。",
+          "constraint": "不删除联盟位（仅合并去重），tracking 不变"
+        },
+        {
+          "id": "cta-tc-03",
+          "type": "upgrade_inline_to_button",
+          "where": "正文 'See eSIM options →'（e10，airalo，弱文字链）",
+          "copy": "📱 Get Your China eSIM →",
+          "button_style": "次级 CTA（非主）",
+          "rationale": "正文 eSIM 文字链视觉权重低，升级次级按钮提升点击。",
+          "constraint": "airalo 联盟链接不变，仅样式/文案"
+        }
+      ]
     },
     {
       "page": "/posts/144-hour-visa-free-transit-guide/",
@@ -26,7 +56,28 @@
           "/posts/.*restaurant.*"
         ],
         "note": "自动调 CTA 文案/位置以破零（C_HIGH_IMPRESSION_ZERO_CLICK 高曝光 0 点击页，107 曝光 0 点击；GROWTH05-CTR-001 已 RETIRED，仅调 CTA 位置不改标题）；禁止新增 partner/UTM/tracking；REV001 实验页保持冻结。"
-      }
+      },
+      "cta_actions": [
+        {
+          "id": "cta-144-01",
+          "type": "add_primary_cta_button",
+          "partner": "klook",
+          "where": "正文 144 小时过境免签说明之后（当前 CTA 平铺无主从，同型第一页）",
+          "copy": "🎫 Book China Tours & Skip-the-Line Tickets on Klook →",
+          "button_style": "primary, 高对比色, 全宽（移动端）",
+          "rationale": "144 小时过境免签 = 游客来中国短途游，Klook 攻略/门票是自然 CTA；当前 107 曝光 0 点击因 CTA 无主从。提炼 Klook 主 CTA 直接破零。",
+          "constraint": "复用现有 Klook 联盟链接（不新增 partner/UTM/tracking）；不改标题/政策内容（GROWTH05-CTR-001 RETIRED 纪律：144 政策页 title/meta 冻结，仅调 CTA 位置/文案）"
+        },
+        {
+          "id": "cta-144-02",
+          "type": "merge_duplicate_blocks",
+          "where": "底部 'Travel Essentials' + 'Plan With Joran' 重叠区块（同型第一页）",
+          "copy": "合并 1 组去重（eSIM/VPN/Hotel/Tours/Insurance）",
+          "button_style": "次级 CTA，弱化",
+          "rationale": "两区块重叠稀释主 CTA，合并突出主 CTA。",
+          "constraint": "不删除联盟位，tracking 不变"
+        }
+      ]
     }
   ],
   "subscription_magnet": []
