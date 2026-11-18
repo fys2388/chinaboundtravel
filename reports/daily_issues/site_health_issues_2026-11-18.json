@@ -1,22 +1,7 @@
 {
-  "timestamp": "2026-11-18T05:12:01.599354+00:00",
+  "timestamp": "2026-11-18T19:52:43.276811+00:00",
   "source": "site_health_agent",
   "issues": [
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
-      "message": "AI禁用词: cheapest",
-      "auto_fixable": false,
-      "agent": "content",
-      "assigned": false,
-      "assigned_to": "content",
-      "assigned_at": "2026-11-18T05:12:03.709016",
-      "status": "need_manual",
-      "resolved_by": "content_agent",
-      "resolution_note": "无替换表: cheapest",
-      "updated_at": "2026-11-18T05:12:04.264564"
-    },
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
@@ -26,19 +11,26 @@
       "agent": "content",
       "assigned": false,
       "assigned_to": "content",
-      "assigned_at": "2026-11-18T05:12:03.709018",
+      "assigned_at": "2026-11-18T19:52:47.104927",
+      "status": "need_manual",
+      "resolved_by": "content_agent",
+      "resolution_note": "无替换表: cheapest",
+      "updated_at": "2026-11-18T19:52:47.318661"
+    },
+    {
+      "type": "ai_forbidden_word",
+      "severity": "medium",
+      "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+      "message": "AI禁用词: cheapest",
+      "auto_fixable": false,
+      "agent": "content",
+      "assigned": false,
+      "assigned_to": "content",
+      "assigned_at": "2026-11-18T19:52:47.104928",
       "status": "need_manual",
       "resolved_by": "content_agent",
       "resolution_note": "无替换表: ai_forbidden_word",
-      "updated_at": "2026-11-18T05:12:04.263998"
-    },
-    {
-      "type": "meta_description_too_long",
-      "severity": "low",
-      "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
-      "message": "Meta description过长(182字符)",
-      "auto_fixable": false,
-      "agent": "seo"
+      "updated_at": "2026-11-18T19:52:47.322070"
     },
     {
       "type": "title_too_long",
@@ -53,8 +45,16 @@
       "fix_message": "无 front matter",
       "assigned": true,
       "assigned_to": "seo",
-      "assigned_at": "2026-11-18T05:12:03.709020",
+      "assigned_at": "2026-11-18T19:52:47.104930",
       "status": "assigned"
+    },
+    {
+      "type": "meta_description_too_long",
+      "severity": "low",
+      "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+      "message": "Meta description过长(182字符)",
+      "auto_fixable": false,
+      "agent": "seo"
     }
   ]
 }
