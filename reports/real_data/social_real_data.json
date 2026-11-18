@@ -1,7 +1,7 @@
 {
   "source": "buffer_api",
-  "pull_time": "2026-11-17T15:05:27.599497",
-  "data_date": "2026-11-17",
+  "pull_time": "2026-11-18T14:44:47.270222",
+  "data_date": "2026-11-18",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
@@ -14,11 +14,27 @@
   },
   "posts": [
     {
-      "id": "6afc170299aa510fba4795e5",
-      "text": "Visual guide to Train: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/2026-05-27-how-to-survive-chinese-train-stati",
+      "id": "6afd607a1da11ba01798b5d3",
+      "text": "Everything you need to know about Itinerary — in one practical guide.\n\n· 7-Day China Itinerary: Beijing, Xi'an & Shanghai 2026\n\nRead the full guide: https://www.chinaboundtravel.com/7-day-china-itiner",
+      "platform": "instagram",
+      "channel_name": "chinaboundtravel",
+      "published_at": "2026-11-18T10:23:40.552Z",
+      "status": "sent",
+      "metrics_available": false,
+      "has_impression_metric": false,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6afd6072d015b337f13aed34",
+      "text": "Visual guide to Visa: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/144-hour-visa-free-transit-guide/?utm_source=f",
       "platform": "facebook",
       "channel_name": "ChinaBound Travel",
-      "published_at": "2026-11-17T10:57:48.362Z",
+      "published_at": "2026-11-18T10:23:20.044Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -30,11 +46,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6afc16fedfcbde96ef70c7ca",
-      "text": "Essential Food tips most first-time visitors miss.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-a-foodies",
+      "id": "6afd606e45783105f438099c",
+      "text": "Essential Alipay tips most first-time visitors miss.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/alipay-for-foreigners-guide/?utm_source=",
       "platform": "facebook",
       "channel_name": "ChinaBound Travel",
-      "published_at": "2026-11-17T10:57:49.106Z",
+      "published_at": "2026-11-18T10:23:19.310Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -46,27 +62,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6afc16f898f5cdd9f251d08c",
-      "text": "Visual guide to China travel: what to see and capture.\n\nWhat's your biggest China travel question? Drop it below. 👇\n\nFull guide: https://www.chinaboundtravel.com/accommodation-tips-guide/?utm_source=f",
-      "platform": "facebook",
-      "channel_name": "ChinaBound Travel",
-      "published_at": "2026-11-17T10:57:34.494Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6afc16aa99aa510fba477c7a",
-      "text": "🗺️ DESTINATION UPDATE\n\nAsia-Pacific Community: Art exhibition showcases Chinese and Pakistani cultural heritage, deepening...\n\nAsia-Pacific Community: Art exhibition showcases Chinese and Pakistani cu",
+      "id": "6afd5fd9805b2f3bff3f5947",
+      "text": "🗺️ DESTINATION UPDATE\n\nShenzhen exhibition showcases Chinese intangible cultural heritage during APEC week - 巴士的報\n\nShenzhen exhibition showcases Chinese intangible cultural heritage during APEC week 巴",
       "platform": "twitter",
       "channel_name": "fys2388",
-      "published_at": "2026-11-17T10:56:16.387Z",
+      "published_at": "2026-11-18T10:20:46.604Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -78,11 +78,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6afc16a798f5cdd9f251bcba",
-      "text": "📊 INDUSTRY NEWS\n\nNorth Korea's Kim inspects Samjiyon tourism zone amid speculation over China trip - Reuters\n\nNorth Korea's Kim inspects Samjiyon tourism zone amid speculation over China trip Reuters\n",
+      "id": "6afd5fd745783105f437ceee",
+      "text": "📊 INDUSTRY NEWS\n\nKim Jong Un smokes cigarette, watches daughter ski from armchair at North Korea resort - New York...\n\nKim Jong Un smokes cigarette, watches daughter ski from armchair at North Korea r",
       "platform": "twitter",
       "channel_name": "fys2388",
-      "published_at": "2026-11-17T10:56:16.331Z",
+      "published_at": "2026-11-18T10:20:46.769Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -94,11 +94,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6afc16a57974b48056392faa",
-      "text": "📊 INDUSTRY NEWS\n\nVideo showing snow shortage at China's tourist attraction draws attention as winter approaches -...\n\nVideo showing snow shortage at China's tourist attraction draws attention as winte",
+      "id": "6afd5fd51da11ba01798793e",
+      "text": "📋 VISAS UPDATE\n\nIMPORTANT: China is examining relevant policies on visa-free extension: spokesman - 巴士的報\n\nChina is examining relevant policies on visa-free extension: spokesman 巴士的報\n\nSource: Google Ne",
       "platform": "twitter",
       "channel_name": "fys2388",
-      "published_at": "2026-11-17T10:56:16.508Z",
+      "published_at": "2026-11-18T10:20:46.872Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -110,11 +110,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6afc16a398f5cdd9f251bba6",
-      "text": "📊 INDUSTRY NEWS\n\nKim Jong Un visits new ski resort on China border, calls for more tourism - NK News\n\nKim Jong Un visits new ski resort on China border, calls for more tourism NK News\n\nSource: Google ",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-11-17T10:56:16.470Z",
+      "id": "6afcc95c49939c25efa153a5",
+      "text": "What travelers discover about Food — practical lessons from the ground.\n\nRead the full guide: https://www.chinaboundtravel.com/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/?",
+      "platform": "instagram",
+      "channel_name": "chinaboundtravel",
+      "published_at": "2026-11-17T23:38:56.730Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -126,11 +126,11 @@
       "engagement_rate": 0.0
     },
     {
-      "id": "6afc16a1101362236254548d",
-      "text": "⚠️ SAFETY ADVISORY\n\nURGENT: US adds wrongful detention warning to China travel advisory - Voice of America English News\n\nUS adds wrongful detention warning to China travel advisory Voice of America En",
+      "id": "6afcc958f83492639b690748",
+      "text": "What travelers discover about Visa — lessons from the ground. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/144-hour-visa-free-transit-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_",
       "platform": "twitter",
       "channel_name": "fys2388",
-      "published_at": "2026-11-17T10:56:16.406Z",
+      "published_at": "2026-11-17T23:38:46.245Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -138,31 +138,15 @@
       "comments": 0,
       "shares": 0,
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 1,
       "engagement_rate": 0.0
     },
     {
-      "id": "6afc169e1013622362545424",
-      "text": "📋 VISAS UPDATE\n\nIMPORTANT: I Visited China as an American Without a Visa—Here’s How You Can Do It Too - Condé Nast Traveler\n\nI Visited China as an American Without a Visa—Here’s How You Can Do It Too ",
+      "id": "6afcc954b51116a3116401c7",
+      "text": "Research-backed facts about Alipay. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/alipay-for-foreigners-guide/?utm_source=x&utm_medium=social&utm_campaign=cbt_social_20261117&utm_content=x_v1",
       "platform": "twitter",
       "channel_name": "fys2388",
-      "published_at": "2026-11-17T10:56:02.231Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 0,
-      "engagement_rate": 0.0
-    },
-    {
-      "id": "6afb887b3e42cd001e360fb5",
-      "text": "What travelers discover about China travel — lessons from the ground. → #ChinaTravel\n\nhttps://www.chinaboundtravel.com/best-china-itineraries-for-10-days-three-routes-compared/?utm_source=x&utm_medium",
-      "platform": "twitter",
-      "channel_name": "fys2388",
-      "published_at": "2026-11-17T00:49:47.508Z",
+      "published_at": "2026-11-17T23:38:31.862Z",
       "status": "sent",
       "metrics_available": true,
       "has_impression_metric": true,
@@ -171,6 +155,38 @@
       "shares": 0,
       "clicks": 0,
       "impressions": 4,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6afcc94f953f4c1b18c181e1",
+      "text": "Everything you need to know about Alipay — in one practical guide.\n\n· Alipay vs WeChat Pay: Which Payment App\n\nRead the full guide: https://www.chinaboundtravel.com/alipay-vs-wechat-pay-which-tourists",
+      "platform": "instagram",
+      "channel_name": "chinaboundtravel",
+      "published_at": "2026-11-17T23:38:41.419Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "engagement_rate": 0.0
+    },
+    {
+      "id": "6afc16fb7974b48056394247",
+      "text": "China 144 Hour Transit Visa: Complete Guide | Essential Visa tips most first-time visitors miss.\n\nChina 144 Hour Transit Visa: Complete Guide\n\n📌 Save this for your China trip planning.\n\nFull guide: ht",
+      "platform": "pinterest",
+      "channel_name": "Joranchinatravel",
+      "published_at": "2026-11-17T21:57:46.689Z",
+      "status": "sent",
+      "metrics_available": true,
+      "has_impression_metric": true,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "clicks": 0,
+      "impressions": 0,
       "engagement_rate": 0.0
     },
     {
@@ -316,40 +332,30 @@
       "clicks": 0,
       "impressions": 0,
       "engagement_rate": 0.0
-    },
-    {
-      "id": "6af573cf15999d2da11e108e",
-      "text": "Is China Safe for Tourists in 2026? Honest | Everything you need to know about China travel — in one practical guide.\n\nIs China Safe for Tourists in 2026? Honest\n\n📌 Save this for your China trip plann",
-      "platform": "pinterest",
-      "channel_name": "Joranchinatravel",
-      "published_at": "2026-11-12T21:07:46.648Z",
-      "status": "sent",
-      "metrics_available": true,
-      "has_impression_metric": true,
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "clicks": 0,
-      "impressions": 1,
-      "engagement_rate": 0.0
     }
   ],
   "by_platform": {
-    "facebook": {
+    "instagram": {
       "posts": 3,
       "impressions": 0,
       "clicks": 0,
       "likes": 0
     },
+    "facebook": {
+      "posts": 2,
+      "impressions": 0,
+      "clicks": 0,
+      "likes": 0
+    },
     "twitter": {
-      "posts": 7,
-      "impressions": 4,
+      "posts": 5,
+      "impressions": 5,
       "clicks": 0,
       "likes": 0
     },
     "pinterest": {
       "posts": 10,
-      "impressions": 1,
+      "impressions": 0,
       "clicks": 0,
       "likes": 0
     }
@@ -357,12 +363,12 @@
   "raw_source": "Buffer GraphQL API",
   "status": "OK",
   "error": null,
-  "metrics_available_count": 20,
-  "impression_metric_count": 20,
+  "metrics_available_count": 19,
+  "impression_metric_count": 19,
   "freshness_info": {
     "fresh": true,
     "reason": "Fresh",
     "age_days": 0,
-    "data_date": "2026-11-17"
+    "data_date": "2026-11-18"
   }
 }

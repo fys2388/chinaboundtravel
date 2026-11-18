@@ -1,13 +1,13 @@
 {
   "source": "content_analytics",
-  "pull_time": "2026-11-17T15:05:32.533915",
-  "data_date": "2026-11-17",
+  "pull_time": "2026-11-18T14:44:50.507923",
+  "data_date": "2026-11-18",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_articles": 73,
     "articles_this_week": 0,
-    "avg_word_count": 2251,
+    "avg_word_count": 2253,
     "articles_with_affiliate_links": 39,
     "articles_with_internal_links": 72
   },
@@ -26,7 +26,7 @@
     },
     {
       "slug": "2026-05-22-how-to-use-wechat-pay-as-a-foreigner",
-      "word_count": 1895,
+      "word_count": 1903,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
@@ -38,13 +38,13 @@
     },
     {
       "slug": "2026-05-25-shanghai-bund-french-concession-2-day-guide",
-      "word_count": 1470,
+      "word_count": 1477,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
     {
       "slug": "2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers",
-      "word_count": 2164,
+      "word_count": 2171,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
@@ -74,7 +74,7 @@
     },
     {
       "slug": "2026-05-29-paypal-alipay-wechat-pay-qr-code-support",
-      "word_count": 1566,
+      "word_count": 1573,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
