@@ -902,6 +902,13 @@
       "fixed_by": "auto_error_router:orchestrator",
       "fix_note": "已创建Issue: https://github.com/fys2388/chinaboundtravel/issues/129",
       "fixed_at": "2026-11-17T17:46:06.701798"
+    },
+    {
+      "workflow": "Test Regression Gate (回归闸门)",
+      "status": "needs_manual",
+      "fixed_by": "auto_error_router:orchestrator",
+      "fix_note": "已创建Issue: https://github.com/fys2388/chinaboundtravel/issues/130",
+      "fixed_at": "2026-11-18T15:54:50.816459"
     }
   ]
 }
