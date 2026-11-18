@@ -1,0 +1,419 @@
+{
+  "router_version": "1.0",
+  "generated_at": "2026-11-18T05:12:03.707175",
+  "target_date": "2026-11-18",
+  "total_issues": 11,
+  "total_assignments": 4,
+  "issues": [
+    {
+      "id": "issue_7d7f58693487",
+      "type": "social_no_traffic",
+      "description": "社媒曝光26但点击为0，需检查帖子链接和CTA",
+      "severity": "high",
+      "agent": "social",
+      "action": "audit_links_and_cta",
+      "source_file": "social_daily_2026-11-16.json",
+      "detected_at": "2026-11-18T05:12:03.703748",
+      "status": "new",
+      "assigned": false,
+      "auto_fixable": false
+    },
+    {
+      "id": "issue_ffceb4d9d3e0",
+      "type": "external_links_zero",
+      "description": "有效外链 0 条（冷启动基建 0%），需铺设 Reddit/Quora 问答外链实现零突破",
+      "severity": "high",
+      "agent": "ops",
+      "action": "diagnose_and_fix",
+      "source_file": "content_performance_history.json",
+      "detected_at": "2026-11-18T05:12:03.703829",
+      "status": "new",
+      "assigned": true,
+      "auto_fixable": true,
+      "assigned_to": "ops"
+    },
+    {
+      "id": "issue_2f4041114cca",
+      "type": "blog_generation_failed",
+      "description": "博客生成最近失败（unexpected_error，reason=，2026-11-16），需诊断并重试/放宽质量门控",
+      "severity": "high",
+      "agent": "ops",
+      "action": "diagnose_and_fix",
+      "source_file": "generation_events.jsonl",
+      "detected_at": "2026-11-18T05:12:03.705778",
+      "status": "new",
+      "assigned": true,
+      "auto_fixable": true,
+      "assigned_to": "ops"
+    },
+    {
+      "id": "issue_0aeaff7ce153",
+      "type": "affiliate_zero_conversion",
+      "description": "营收 Agent 联盟佣金营收=0（已测量，agent_kpi_2026-11.json），需破零 0 转化",
+      "severity": "medium",
+      "agent": "revenue",
+      "action": "analyze_funnel_and_optimize",
+      "source_file": "agent_kpi_2026-11.json",
+      "detected_at": "2026-11-18T05:12:03.706212",
+      "status": "new",
+      "assigned": true,
+      "auto_fixable": true,
+      "assigned_to": "revenue"
+    },
+    {
+      "id": "issue_53bc25e6a9ff",
+      "type": "affiliate_zero_conversion",
+      "description": "营收 Agent 联盟佣金营收=0（已测量，agent_kpi_2026-10.json），需破零 0 转化",
+      "severity": "medium",
+      "agent": "revenue",
+      "action": "analyze_funnel_and_optimize",
+      "source_file": "agent_kpi_2026-10.json",
+      "detected_at": "2026-11-18T05:12:03.706371",
+      "status": "new",
+      "assigned": true,
+      "auto_fixable": true,
+      "assigned_to": "revenue"
+    },
+    {
+      "id": "issue_b476f4cd4de5",
+      "type": "affiliate_zero_conversion",
+      "description": "营收 Agent 联盟佣金营收=0（已测量，agent_kpi_2026-09.json），需破零 0 转化",
+      "severity": "medium",
+      "agent": "revenue",
+      "action": "analyze_funnel_and_optimize",
+      "source_file": "agent_kpi_2026-09.json",
+      "detected_at": "2026-11-18T05:12:03.706546",
+      "status": "new",
+      "assigned": true,
+      "auto_fixable": true,
+      "assigned_to": "revenue"
+    },
+    {
+      "id": "issue_4f1522e59b4e",
+      "type": "mailerlite_not_configured",
+      "description": "MailerLite 未配置/未连接（MAILERLITE_API_TOKEN 未配置），邮件订阅无法收集；需人工补 MailerLite API token（密钥，agent 不自动补）",
+      "severity": "high",
+      "agent": "ops",
+      "action": "diagnose_and_fix",
+      "source_file": "subscription_health_20261019_210005.json",
+      "detected_at": "2026-11-18T05:12:03.706872",
+      "status": "new",
+      "assigned": false,
+      "auto_fixable": false
+    },
+    {
+      "id": "issue_ec9ce0f6f07b",
+      "type": "ai_forbidden_word",
+      "description": "AI禁用词: cheapest",
+      "severity": "medium",
+      "agent": "content",
+      "action": "safe_normalize",
+      "source_file": "site_health_issues_2026-11-18.json",
+      "detected_at": "2026-11-18T05:12:03.707082",
+      "status": "new",
+      "assigned": true,
+      "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+      "auto_fixable": true,
+      "assigned_to": "content"
+    },
+    {
+      "id": "issue_ec9ce0f6f07b",
+      "type": "ai_forbidden_word",
+      "description": "AI禁用词: cheapest",
+      "severity": "medium",
+      "agent": "content",
+      "action": "safe_normalize",
+      "source_file": "site_health_issues_2026-11-18.json",
+      "detected_at": "2026-11-18T05:12:03.707087",
+      "status": "new",
+      "assigned": true,
+      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "auto_fixable": true,
+      "assigned_to": "content"
+    },
+    {
+      "id": "issue_56f7dd27adcf",
+      "type": "meta_description_too_long",
+      "description": "Meta description过长(182字符)",
+      "severity": "low",
+      "agent": "seo",
+      "action": "optimize_meta",
+      "source_file": "site_health_issues_2026-11-18.json",
+      "detected_at": "2026-11-18T05:12:03.707090",
+      "status": "new",
+      "assigned": false,
+      "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+      "auto_fixable": false
+    },
+    {
+      "id": "issue_8b82fc825283",
+      "type": "title_too_long",
+      "description": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "optimize_title",
+      "source_file": "site_health_issues_2026-11-18.json",
+      "detected_at": "2026-11-18T05:12:03.707093",
+      "status": "new",
+      "assigned": true,
+      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "auto_fixable": true,
+      "assigned_to": "seo"
+    }
+  ],
+  "assignments": [
+    {
+      "agent": "revenue",
+      "agent_name": "Revenue Analytics Engine (收入分析引擎)",
+      "task_id": "task_2026-11-18_revenue",
+      "created_at": "2026-11-18T05:12:03.707162",
+      "target_date": "2026-11-18",
+      "issue_count": 3,
+      "severity_summary": {
+        "critical": 0,
+        "high": 0,
+        "medium": 3,
+        "low": 0
+      },
+      "issues": [
+        {
+          "id": "issue_0aeaff7ce153",
+          "type": "affiliate_zero_conversion",
+          "description": "营收 Agent 联盟佣金营收=0（已测量，agent_kpi_2026-11.json），需破零 0 转化",
+          "severity": "medium",
+          "agent": "revenue",
+          "action": "analyze_funnel_and_optimize",
+          "source_file": "agent_kpi_2026-11.json",
+          "detected_at": "2026-11-18T05:12:03.706212",
+          "status": "new",
+          "assigned": true,
+          "auto_fixable": true,
+          "assigned_to": "revenue"
+        },
+        {
+          "id": "issue_53bc25e6a9ff",
+          "type": "affiliate_zero_conversion",
+          "description": "营收 Agent 联盟佣金营收=0（已测量，agent_kpi_2026-10.json），需破零 0 转化",
+          "severity": "medium",
+          "agent": "revenue",
+          "action": "analyze_funnel_and_optimize",
+          "source_file": "agent_kpi_2026-10.json",
+          "detected_at": "2026-11-18T05:12:03.706371",
+          "status": "new",
+          "assigned": true,
+          "auto_fixable": true,
+          "assigned_to": "revenue"
+        },
+        {
+          "id": "issue_b476f4cd4de5",
+          "type": "affiliate_zero_conversion",
+          "description": "营收 Agent 联盟佣金营收=0（已测量，agent_kpi_2026-09.json），需破零 0 转化",
+          "severity": "medium",
+          "agent": "revenue",
+          "action": "analyze_funnel_and_optimize",
+          "source_file": "agent_kpi_2026-09.json",
+          "detected_at": "2026-11-18T05:12:03.706546",
+          "status": "new",
+          "assigned": true,
+          "auto_fixable": true,
+          "assigned_to": "revenue"
+        }
+      ],
+      "priority_issue": {
+        "id": "issue_0aeaff7ce153",
+        "type": "affiliate_zero_conversion",
+        "description": "营收 Agent 联盟佣金营收=0（已测量，agent_kpi_2026-11.json），需破零 0 转化",
+        "severity": "medium",
+        "agent": "revenue",
+        "action": "analyze_funnel_and_optimize",
+        "source_file": "agent_kpi_2026-11.json",
+        "detected_at": "2026-11-18T05:12:03.706212",
+        "status": "new",
+        "assigned": true,
+        "auto_fixable": true,
+        "assigned_to": "revenue"
+      },
+      "expected_actions": [
+        "analyze_funnel_and_optimize"
+      ],
+      "status": "pending"
+    },
+    {
+      "agent": "ops",
+      "agent_name": "Growth Orchestrator / Ops (增长编排/运维)",
+      "task_id": "task_2026-11-18_ops",
+      "created_at": "2026-11-18T05:12:03.707155",
+      "target_date": "2026-11-18",
+      "issue_count": 2,
+      "severity_summary": {
+        "critical": 0,
+        "high": 2,
+        "medium": 0,
+        "low": 0
+      },
+      "issues": [
+        {
+          "id": "issue_ffceb4d9d3e0",
+          "type": "external_links_zero",
+          "description": "有效外链 0 条（冷启动基建 0%），需铺设 Reddit/Quora 问答外链实现零突破",
+          "severity": "high",
+          "agent": "ops",
+          "action": "diagnose_and_fix",
+          "source_file": "content_performance_history.json",
+          "detected_at": "2026-11-18T05:12:03.703829",
+          "status": "new",
+          "assigned": true,
+          "auto_fixable": true,
+          "assigned_to": "ops"
+        },
+        {
+          "id": "issue_2f4041114cca",
+          "type": "blog_generation_failed",
+          "description": "博客生成最近失败（unexpected_error，reason=，2026-11-16），需诊断并重试/放宽质量门控",
+          "severity": "high",
+          "agent": "ops",
+          "action": "diagnose_and_fix",
+          "source_file": "generation_events.jsonl",
+          "detected_at": "2026-11-18T05:12:03.705778",
+          "status": "new",
+          "assigned": true,
+          "auto_fixable": true,
+          "assigned_to": "ops"
+        }
+      ],
+      "priority_issue": {
+        "id": "issue_ffceb4d9d3e0",
+        "type": "external_links_zero",
+        "description": "有效外链 0 条（冷启动基建 0%），需铺设 Reddit/Quora 问答外链实现零突破",
+        "severity": "high",
+        "agent": "ops",
+        "action": "diagnose_and_fix",
+        "source_file": "content_performance_history.json",
+        "detected_at": "2026-11-18T05:12:03.703829",
+        "status": "new",
+        "assigned": true,
+        "auto_fixable": true,
+        "assigned_to": "ops"
+      },
+      "expected_actions": [
+        "diagnose_and_fix"
+      ],
+      "status": "pending"
+    },
+    {
+      "agent": "content",
+      "agent_name": "Content Intelligence Agent (内容智能优化)",
+      "task_id": "task_2026-11-18_content",
+      "created_at": "2026-11-18T05:12:03.707166",
+      "target_date": "2026-11-18",
+      "issue_count": 2,
+      "severity_summary": {
+        "critical": 0,
+        "high": 0,
+        "medium": 2,
+        "low": 0
+      },
+      "issues": [
+        {
+          "id": "issue_ec9ce0f6f07b",
+          "type": "ai_forbidden_word",
+          "description": "AI禁用词: cheapest",
+          "severity": "medium",
+          "agent": "content",
+          "action": "safe_normalize",
+          "source_file": "site_health_issues_2026-11-18.json",
+          "detected_at": "2026-11-18T05:12:03.707082",
+          "status": "new",
+          "assigned": true,
+          "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+          "auto_fixable": true,
+          "assigned_to": "content"
+        },
+        {
+          "id": "issue_ec9ce0f6f07b",
+          "type": "ai_forbidden_word",
+          "description": "AI禁用词: cheapest",
+          "severity": "medium",
+          "agent": "content",
+          "action": "safe_normalize",
+          "source_file": "site_health_issues_2026-11-18.json",
+          "detected_at": "2026-11-18T05:12:03.707087",
+          "status": "new",
+          "assigned": true,
+          "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+          "auto_fixable": true,
+          "assigned_to": "content"
+        }
+      ],
+      "priority_issue": {
+        "id": "issue_ec9ce0f6f07b",
+        "type": "ai_forbidden_word",
+        "description": "AI禁用词: cheapest",
+        "severity": "medium",
+        "agent": "content",
+        "action": "safe_normalize",
+        "source_file": "site_health_issues_2026-11-18.json",
+        "detected_at": "2026-11-18T05:12:03.707082",
+        "status": "new",
+        "assigned": true,
+        "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+        "auto_fixable": true,
+        "assigned_to": "content"
+      },
+      "expected_actions": [
+        "safe_normalize"
+      ],
+      "status": "pending"
+    },
+    {
+      "agent": "seo",
+      "agent_name": "SEO Intelligent Agent (SEO智能优化)",
+      "task_id": "task_2026-11-18_seo",
+      "created_at": "2026-11-18T05:12:03.707170",
+      "target_date": "2026-11-18",
+      "issue_count": 1,
+      "severity_summary": {
+        "critical": 0,
+        "high": 0,
+        "medium": 1,
+        "low": 0
+      },
+      "issues": [
+        {
+          "id": "issue_8b82fc825283",
+          "type": "title_too_long",
+          "description": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
+          "severity": "medium",
+          "agent": "seo",
+          "action": "optimize_title",
+          "source_file": "site_health_issues_2026-11-18.json",
+          "detected_at": "2026-11-18T05:12:03.707093",
+          "status": "new",
+          "assigned": true,
+          "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+          "auto_fixable": true,
+          "assigned_to": "seo"
+        }
+      ],
+      "priority_issue": {
+        "id": "issue_8b82fc825283",
+        "type": "title_too_long",
+        "description": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
+        "severity": "medium",
+        "agent": "seo",
+        "action": "optimize_title",
+        "source_file": "site_health_issues_2026-11-18.json",
+        "detected_at": "2026-11-18T05:12:03.707093",
+        "status": "new",
+        "assigned": true,
+        "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+        "auto_fixable": true,
+        "assigned_to": "seo"
+      },
+      "expected_actions": [
+        "optimize_title"
+      ],
+      "status": "pending"
+    }
+  ]
+}
