@@ -495,38 +495,75 @@ def execute_generic(task: dict, dry_run: bool = False) -> dict:
         itype = issue.get("type")
         if itype in ("affiliate_zero_conversion", "subscription_magnet_missing"):
             # 2026-11-16 人工授权：revenue/user agent 自动认领并生成待办队列（CI 自动执行，破零/上诱饵）
-            page = issue.get("page") or issue.get("file") or "unknown"
+            # 2026-11-17 修复：① 幂等（入队前查 queue 已含该 issue 的 page 则跳过，避免每次 CI 重复追加）
+            #              ② 真实页（affiliate 从 AFFILIATE_GAPS_DETAIL.csv 定位 C_HIGH_IMPRESSION_ZERO_CLICK 高曝光 0 点击页，替代 unknown）
+            page = issue.get("page") or issue.get("file") or ""
             queue = {"cta_adjust": [], "subscription_magnet": []}
             try:
                 if cta_queue_path.exists():
                     queue = _json.loads(cta_queue_path.read_text(encoding="utf-8"))
             except Exception:
                 pass
-            entry = {"page": page, "status": "pending_review", "authorized": "human 2026-11-16"}
+            cta_list = queue.setdefault("cta_adjust", [])
+            sub_list = queue.setdefault("subscription_magnet", [])
+
             if itype == "affiliate_zero_conversion":
-                # 读 cta_auto_adjust 配置：排除 REV001 实验页，其余页 CTA 可自动调（文案/位置，禁新增 partner/UTM）
+                # 定位真实 C 类页（高曝光 0 点击 = CTA 无效，调 CTA 文案/位置直接破零；排除 REV001 food）
+                real_pages = []
+                if not page or page == "unknown":
+                    try:
+                        import csv
+                        gaps = BASE_DIR / "reports" / "revenue" / "AFFILIATE_GAPS_DETAIL.csv"
+                        if gaps.exists():
+                            for row in csv.DictReader(gaps.open(encoding="utf-8", errors="ignore")):
+                                if row.get("type") == "C_HIGH_IMPRESSION_ZERO_CLICK":
+                                    url = row.get("url", "")
+                                    slug = url.rstrip("/").split("/")[-1] if url else ""
+                                    if slug and "food" not in slug:  # 排除 REV001 food 实验页
+                                        real_pages.append(f"/posts/{slug}/")
+                    except Exception:
+                        real_pages = []
+                # 幂等：已入队的 page 不再重复追加
+                queued_pages = {e.get("page") for e in cta_list}
+                targets = [p for p in (real_pages or [page]) if p and p not in queued_pages]
+                if not targets:
+                    results["details"].append(f"affiliate_zero_conversion: CTA 队列已含全部目标页（{len(queued_pages)} 页），跳过（幂等）")
+                    continue
                 exp = {}
                 try:
                     exp = _json.loads((BASE_DIR / "static" / "experiments.json").read_text(encoding="utf-8"))
                 except Exception:
                     pass
                 excluded = exp.get("cta_auto_adjust", {}).get("excluded_patterns", [])
-                entry["cta_auto_adjust"] = {
-                    "enabled": exp.get("cta_auto_adjust", {}).get("enabled", False),
-                    "excluded_patterns": excluded,
-                    "note": "自动调 CTA 文案/位置以破零；禁止新增 partner/UTM/tracking；REV001 实验页保持冻结。",
-                }
-                queue.setdefault("cta_adjust", []).append(entry)
-                detail = f"affiliate_zero_conversion: {page} CTA 自动调整已入队 (cta_auto_adjust={cta_queue_path.name})，CI 自动调 CTA 破零"
+                for p in targets:
+                    cta_list.append({
+                        "page": p,
+                        "status": "pending_review",
+                        "authorized": "human 2026-11-16",
+                        "cta_auto_adjust": {
+                            "enabled": exp.get("cta_auto_adjust", {}).get("enabled", False),
+                            "excluded_patterns": excluded,
+                            "note": "自动调 CTA 文案/位置以破零（C_HIGH_IMPRESSION_ZERO_CLICK 高曝光 0 点击页）；禁止新增 partner/UTM/tracking；REV001 实验页保持冻结。",
+                        },
+                    })
+                detail = f"affiliate_zero_conversion: 已入队 {len(targets)} 个 CTA 调整目标页（{', '.join(targets)}），CI 自动调 CTA 破零"
+                results["resolved"] += 1
+                results["details"].append(detail)
+                if not dry_run:
+                    _writeback_issue(task, issue, "resolved", "generic_agent", detail)
             else:
-                queue.setdefault("subscription_magnet", []).append(entry)
+                # subscription_magnet_missing（幂等：已入队则跳过）
+                if any(e.get("page") == page for e in sub_list):
+                    results["details"].append(f"subscription_magnet_missing: 已入队（幂等跳过）")
+                    continue
+                sub_list.append({"page": page, "status": "pending_review", "authorized": "human 2026-11-16"})
                 detail = f"subscription_magnet_missing: {page} 7天行程 Lead Magnet 已入队，CI 自动上线诱饵"
+                results["resolved"] += 1
+                results["details"].append(detail)
+                if not dry_run:
+                    _writeback_issue(task, issue, "resolved", "generic_agent", detail)
             cta_queue_path.parent.mkdir(parents=True, exist_ok=True)
             cta_queue_path.write_text(_json.dumps(queue, ensure_ascii=False, indent=2), encoding="utf-8")
-            results["resolved"] += 1
-            results["details"].append(detail)
-            if not dry_run:
-                _writeback_issue(task, issue, "resolved", "generic_agent", detail)
             continue
         results["need_manual"] += 1
         page = issue.get("page") or issue.get("file") or "unknown"

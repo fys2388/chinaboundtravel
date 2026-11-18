@@ -1,7 +1,7 @@
 {
   "cta_adjust": [
     {
-      "page": "unknown",
+      "page": "/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/",
       "status": "pending_review",
       "authorized": "human 2026-11-16",
       "cta_auto_adjust": {
@@ -11,11 +11,11 @@
           "/posts/.*meal.*",
           "/posts/.*restaurant.*"
         ],
-        "note": "自动调 CTA 文案/位置以破零；禁止新增 partner/UTM/tracking；REV001 实验页保持冻结。"
+        "note": "自动调 CTA 文案/位置以破零（C_HIGH_IMPRESSION_ZERO_CLICK 高曝光 0 点击页，107 曝光 0 点击）；禁止新增 partner/UTM/tracking；REV001 实验页保持冻结。"
       }
     },
     {
-      "page": "unknown",
+      "page": "/posts/144-hour-visa-free-transit-guide/",
       "status": "pending_review",
       "authorized": "human 2026-11-16",
       "cta_auto_adjust": {
@@ -25,63 +25,7 @@
           "/posts/.*meal.*",
           "/posts/.*restaurant.*"
         ],
-        "note": "自动调 CTA 文案/位置以破零；禁止新增 partner/UTM/tracking；REV001 实验页保持冻结。"
-      }
-    },
-    {
-      "page": "unknown",
-      "status": "pending_review",
-      "authorized": "human 2026-11-16",
-      "cta_auto_adjust": {
-        "enabled": true,
-        "excluded_patterns": [
-          "/posts/.*food.*",
-          "/posts/.*meal.*",
-          "/posts/.*restaurant.*"
-        ],
-        "note": "自动调 CTA 文案/位置以破零；禁止新增 partner/UTM/tracking；REV001 实验页保持冻结。"
-      }
-    },
-    {
-      "page": "unknown",
-      "status": "pending_review",
-      "authorized": "human 2026-11-16",
-      "cta_auto_adjust": {
-        "enabled": true,
-        "excluded_patterns": [
-          "/posts/.*food.*",
-          "/posts/.*meal.*",
-          "/posts/.*restaurant.*"
-        ],
-        "note": "自动调 CTA 文案/位置以破零；禁止新增 partner/UTM/tracking；REV001 实验页保持冻结。"
-      }
-    },
-    {
-      "page": "unknown",
-      "status": "pending_review",
-      "authorized": "human 2026-11-16",
-      "cta_auto_adjust": {
-        "enabled": true,
-        "excluded_patterns": [
-          "/posts/.*food.*",
-          "/posts/.*meal.*",
-          "/posts/.*restaurant.*"
-        ],
-        "note": "自动调 CTA 文案/位置以破零；禁止新增 partner/UTM/tracking；REV001 实验页保持冻结。"
-      }
-    },
-    {
-      "page": "unknown",
-      "status": "pending_review",
-      "authorized": "human 2026-11-16",
-      "cta_auto_adjust": {
-        "enabled": true,
-        "excluded_patterns": [
-          "/posts/.*food.*",
-          "/posts/.*meal.*",
-          "/posts/.*restaurant.*"
-        ],
-        "note": "自动调 CTA 文案/位置以破零；禁止新增 partner/UTM/tracking；REV001 实验页保持冻结。"
+        "note": "自动调 CTA 文案/位置以破零（C_HIGH_IMPRESSION_ZERO_CLICK 高曝光 0 点击页，107 曝光 0 点击；GROWTH05-CTR-001 已 RETIRED，仅调 CTA 位置不改标题）；禁止新增 partner/UTM/tracking；REV001 实验页保持冻结。"
       }
     }
   ],
