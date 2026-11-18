@@ -172,6 +172,8 @@ If you're looking for more information on traveling to China, be sure to check o
 
 - [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
 
+- [China Remote Work Guide: Digital Nomad Tips](/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)
+
 ## Related Reading
 
 - [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)

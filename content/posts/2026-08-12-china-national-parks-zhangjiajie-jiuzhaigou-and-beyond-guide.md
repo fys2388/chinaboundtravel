@@ -135,3 +135,5 @@ Keeping your phone connected in China is easier with an eSIM, which avoids a phy
 - [Best China Itineraries for 10 Days: Three Routes Compared](/posts/best-china-itineraries-for-10-days-three-routes-compared-au/)
 
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
+
+- [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)

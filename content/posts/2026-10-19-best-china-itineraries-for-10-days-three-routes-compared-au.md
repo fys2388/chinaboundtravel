@@ -135,3 +135,5 @@ This itinerary takes you through three of China's most beautiful cities: Beijing
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
 
 - [How to Order Food Delivery in China: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
+
+- [China Photography Guide: Best Spots, Gear & Tips from a China Pro](/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/)

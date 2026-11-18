@@ -228,6 +228,8 @@ Safe travels, and zhu nǐ lǚxíng yúkuài — ! (Have a great trip!)
 
 - [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
 
+- [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
+
 ## FAQ
 
 ### Is this guide up to date for 2026?
