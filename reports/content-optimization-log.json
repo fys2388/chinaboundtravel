@@ -1829,6 +1829,34 @@
         "position": 8.4
       },
       "result": "pending"
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/",
+      "file": "content/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
+      "actions": [
+        "first_paragraph_intent_flagged"
+      ],
+      "timestamp": "2026-11-18T09:19:50.405479",
+      "metrics_before": {
+        "impressions": 371,
+        "clicks": 0,
+        "position": 73.6
+      },
+      "result": "pending"
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/",
+      "file": "content/posts/2026-08-09-china-packing-list-2026-what-to-bring-and-what-to-leave-at-home.md",
+      "actions": [
+        "first_paragraph_intent_flagged"
+      ],
+      "timestamp": "2026-11-18T09:19:51.037879",
+      "metrics_before": {
+        "impressions": 361,
+        "clicks": 0,
+        "position": 8.2
+      },
+      "result": "pending"
     }
   ]
 }
