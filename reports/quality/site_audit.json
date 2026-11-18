@@ -1,62 +1,17 @@
 {
-  "generated_at": "2026-11-17T20:58:47.869454+00:00",
+  "generated_at": "2026-11-18T07:33:56.950684+00:00",
   "base_url": "https://www.chinaboundtravel.com/",
   "sitemap": "https://www.chinaboundtravel.com/sitemap.xml",
   "summary": {
     "pages": 116,
     "images_checked": 414,
     "links_checked": 3254,
-    "issues": 6,
+    "issues": 1,
     "P0": 0,
-    "P1": 5,
+    "P1": 0,
     "P2": 1
   },
   "issues": [
-    {
-      "id": "a24bb565147473c3",
-      "severity": "P1",
-      "source": "site",
-      "type": "broken_internal_link",
-      "page": "/",
-      "evidence": "https://www.chinaboundtravel.com/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train/: HTTP ERR ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-      "recommended_action": "Update the link to a live route or add a redirect."
-    },
-    {
-      "id": "4be40209319f2b9c",
-      "severity": "P1",
-      "source": "site",
-      "type": "broken_internal_link",
-      "page": "/categories/cities/",
-      "evidence": "https://www.chinaboundtravel.com/posts/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/: HTTP ERR ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-      "recommended_action": "Update the link to a live route or add a redirect."
-    },
-    {
-      "id": "f4d08eb2d1fa1fdf",
-      "severity": "P1",
-      "source": "site",
-      "type": "broken_internal_link",
-      "page": "/categories/cities/",
-      "evidence": "https://www.chinaboundtravel.com/posts/accommodation-tips-guide/: HTTP ERR ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
-      "recommended_action": "Update the link to a live route or add a redirect."
-    },
-    {
-      "id": "27ed6cff01f15906",
-      "severity": "P1",
-      "source": "site",
-      "type": "broken_internal_link",
-      "page": "/categories/food/",
-      "evidence": "https://www.chinaboundtravel.com/posts/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/: HTTP ERR ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-      "recommended_action": "Update the link to a live route or add a redirect."
-    },
-    {
-      "id": "61ebf382879abf83",
-      "severity": "P1",
-      "source": "site",
-      "type": "broken_internal_link",
-      "page": "/posts/alipay-for-foreigners-guide/",
-      "evidence": "https://www.chinaboundtravel.com/tags/alipay/: HTTP ERR ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
-      "recommended_action": "Update the link to a live route or add a redirect."
-    },
     {
       "id": "f88a5fe66eae891f",
       "severity": "P2",
