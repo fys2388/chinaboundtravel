@@ -1335,9 +1335,33 @@
         "x"
       ],
       "success": true
+    },
+    "229c911180d6": {
+      "title": "China is examining relevant policies on visa-free extension:",
+      "posted_at": "2026-11-18T08:20:38.781316+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "6c97e1314d58": {
+      "title": "Kim Jong Un smokes cigarette, watches daughter ski from armc",
+      "posted_at": "2026-11-18T08:20:40.644293+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "a0bd4480ce0d": {
+      "title": "Shenzhen exhibition showcases Chinese intangible cultural he",
+      "posted_at": "2026-11-18T08:20:42.508668+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
     }
   },
-  "last_run": "2026-11-17T08:56:11.903747+00:00",
-  "total_posts": 147,
+  "last_run": "2026-11-18T08:20:42.508689+00:00",
+  "total_posts": 150,
   "total_failures": 87
 }
