@@ -41,6 +41,44 @@ jobs:
             echo "::warning::GSC 快照采集失败（引擎会保持 INSUFFICIENT_BASELINE，不阻塞）"
           }
 
+      # 2026-11-17：把旧 CONTENT_SEO_INVENTORY.csv 机制接入每日刷新（#17 数据源 93 天陈旧根因）。
+      # 旧 inventory csv join raw_pages_28d.csv + url_inspection_results.json（均 08-16/08-24 停），
+      # 而 gsc_index_snapshot 每日拉页面级 28d（新机制）。此处从最新 snapshot 导出旧 2 文件 +
+      # 跑 build_content_seo_inventory 刷新 inventory csv，使日报 indexed_pages 不再 93 天陈旧。
+      # index status 用 snapshot 的「pages_with_data」（impressions>0 = 索引可见代理，见 doc L26-28）。
+      - name: Refresh legacy CONTENT_SEO_INVENTORY.csv (join latest GSC snapshot)
+        id: build_inventory
+        run: |
+          python -c "
+          import json, csv, glob, os
+          from pathlib import Path
+          snap_dir = Path('reports/seo/gsc_page_snapshots')
+          snaps = sorted(snap_dir.glob('INDEX_PAGE_SNAPSHOT_*.json'))
+          if not snaps:
+              print('无 GSC 快照，跳过 inventory 刷新'); raise SystemExit(0)
+          latest = json.loads(snaps[-1].read_text(encoding='utf-8'))
+          pages = latest.get('pages', {})
+          # 导出 raw_pages_28d.csv（旧 build 脚本输入格式）
+          out_csv = Path('reports/seo/raw_pages_28d.csv')
+          out_csv.parent.mkdir(parents=True, exist_ok=True)
+          with open(out_csv, 'w', newline='', encoding='utf-8') as f:
+              w = csv.writer(f)
+              w.writerow(['keys','clicks','impressions','ctr','position'])
+              for url, d in pages.items():
+                  imp = d.get('impressions',0); clk = d.get('clicks',0)
+                  ctr = round(clk/imp,6) if imp else 0.0
+                  w.writerow([url, clk, imp, ctr, d.get('position',0)])
+          # 导出 url_inspection_results.json（index status = 有 impressions 的页代理 INDEXED）
+          out_json = Path('reports/seo/url_inspection_results.json')
+          insp = {u: {'coverage_state': ('Submitted and indexed' if d.get('impressions',0)>0 else 'Unknown to Google')} for u,d in pages.items()}
+          out_json.write_text(json.dumps(insp, ensure_ascii=False, indent=2), encoding='utf-8')
+          print('refreshed', out_csv.name, '+', out_json.name, 'from', snaps[-1].name)
+          "
+          # 用刷新后的旧 2 文件重建 inventory csv
+          python scripts/build_content_seo_inventory.py || {
+            echo "::warning::CONTENT_SEO_INVENTORY.csv 重建失败（保持旧值，不阻塞）"
+          }
+
       # 2026-09-22 (AUDIT-OPS-003)：在生成 REPORTING_SNAPSHOT 之前先刷一次
       # reports/real_data/gsc_real_data.json（query 级 28d GSC 数据）。
       # reporting_kpi_engine.build_seo_gsc() 从此文件读取 GSC query 级 KPI，
@@ -74,7 +112,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add reports/management/REPORTING_SNAPSHOT.json reports/management/snapshots/ reports/seo/gsc_page_snapshots/ reports/real_data/gsc_real_data.json 2>/dev/null || true
+          git add reports/management/REPORTING_SNAPSHOT.json reports/management/snapshots/ reports/seo/gsc_page_snapshots/ reports/real_data/gsc_real_data.json reports/seo/CONTENT_SEO_INVENTORY.csv reports/seo/raw_pages_28d.csv reports/seo/url_inspection_results.json 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "无待提交变更（数据未变化）"
           else
