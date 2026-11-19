@@ -1,10 +1,11 @@
-"""V6-2: avatar WebP optimization.
+"""V6-2: avatar WebP asset preservation.
 
 Ensures:
   - the WebP asset exists, is smaller than the source PNG, and is 256x256
-  - display templates (sidebar, about hero, profile mode) prefer WebP
   - the PNG source asset is preserved
-  - JSON-LD / schema still carries the avatar image (not broken)
+
+注：模板引用断言已随品牌视觉改版移除——站点头像已从 Joran 照片迁移到 logo 系
+资产，模板不再引用 joran-avatar。这里只保留资产本身的保留性校验。
 """
 import struct
 from pathlib import Path
@@ -14,11 +15,6 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 STATIC_IMAGES = REPO_ROOT / "static" / "images"
 PNG = STATIC_IMAGES / "joran-avatar.png"
 WEBP = STATIC_IMAGES / "joran-avatar.webp"
-
-SIDEBAR = (REPO_ROOT / "layouts" / "partials" / "sidebar-author.html").read_text(encoding="utf-8")
-ABOUT = (REPO_ROOT / "content" / "about" / "_index.md").read_text(encoding="utf-8")
-HUGO_TOML = (REPO_ROOT / "hugo.toml").read_text(encoding="utf-8")
-SCHEMA = (REPO_ROOT / "layouts" / "partials" / "templates" / "schema_json.html").read_text(encoding="utf-8")
 
 
 def webp_dimensions(path):
@@ -51,26 +47,11 @@ def test_webp_dimensions_256():
     assert webp_dimensions(WEBP) == (256, 256)
 
 
-def test_sidebar_prefers_webp():
-    assert "joran-avatar.webp" in SIDEBAR
-    assert SIDEBAR.index("joran-avatar.webp") < SIDEBAR.index("joran-avatar.png")
-    assert '<source srcset="/images/joran-avatar.webp" type="image/webp">' in SIDEBAR
-
-
-def test_about_hero_prefers_webp():
-    assert "joran-avatar.webp" in ABOUT
-    assert ABOUT.index("joran-avatar.webp") < ABOUT.index("joran-avatar.png")
-    assert '<source srcset="/images/joran-avatar.webp" type="image/webp">' in ABOUT
-
-
-def test_profile_mode_uses_webp():
-    assert 'imageUrl = "images/joran-avatar.webp"' in HUGO_TOML
-
-
 def test_png_source_preserved():
     assert PNG.exists()
 
-
-def test_schema_json_still_has_avatar():
-    # JSON-LD image must not be broken by the optimization
-    assert "images/joran-avatar.png" in SCHEMA
+# 注：以下 4 个断言模板引用 joran-avatar（sidebar/about/profile-mode/schema）的测试
+# 已随品牌视觉改版删除——站点已从「Joran 照片头像」迁移到 logo 系资产
+# （sidebar/about 用 logo-avatar.svg，schema/hugo.toml 用 favicon.svg），
+# 模板不再引用 joran-avatar，断言其存在会永久失败。
+# joran-avatar.png / .webp 资产本身仍保留在 static/images/（见上方两个 asset 测试）。

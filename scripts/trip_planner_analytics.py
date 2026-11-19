@@ -35,8 +35,10 @@ if sys.platform == 'win32':
 PROJECT_ROOT = Path(__file__).parent.parent
 REPORTS_DIR = PROJECT_ROOT / "reports" / "trip-planner"
 KV_ENDPOINT = os.environ.get("CF_KV_ENDPOINT", "https://api.cloudflare.com/client/v4")
-KV_ACCOUNT_ID = os.environ.get("CF_ACCOUNT_ID")
-KV_API_TOKEN = os.environ.get("CF_API_TOKEN")
+# 官方 secret 命名契约：使用 CLOUDFLARE_*（见 tests/test_secret_name_contract.py），
+# 不再使用禁用缩写。
+KV_ACCOUNT_ID = os.environ.get("CLOUDFLARE_ACCOUNT_ID")
+KV_API_TOKEN = os.environ.get("CLOUDFLARE_API_TOKEN")
 KV_NAMESPACE_ID = "a20785ef5e594755ba1d21850de25593"
 
 # ============ 主函数 ============

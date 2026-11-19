@@ -110,8 +110,11 @@ def test_daily_report_values_are_real_measurements():
         assert metrics["revenue"]["affiliate_revenue"] == daily["affiliate_revenue"]
     if daily.get("engagement_rate") is not None:
         assert metrics["social"]["engagement_rate"] == daily["engagement_rate"]
-    if daily.get("ml_new_subscribers") is not None:
-        assert metrics["user"]["email_list_growth"] == daily["ml_new_subscribers"]
+
+    # 注：email_list_growth 不在此处断言 == ml_new_subscribers。2026-09-18 起其口径
+    # 已从「每日新增绝对数」改为「用 ml_total_subscribers 快照算环比增长率(%)」
+    # （绝对数喂进「环比增长≥10%」目标语义不匹配）。该新口径由
+    # tests/test_email_list_growth_audit.py 专门覆盖，此处不再重复锁死旧口径。
 
     # 站点可用性不得从 site_up 接入：CI runner 网络瞬时失败会把 uptime 打成 0 分，
     # 那是给考核注入新的假扣分。
