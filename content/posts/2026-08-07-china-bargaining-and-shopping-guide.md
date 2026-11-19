@@ -208,6 +208,8 @@ Where you stay shapes a city trip. Comparing hotel options across platforms help
 
 - [Best China Itineraries for 10 Days: Three Routes Compared](/posts/best-china-itineraries-for-10-days-three-routes-compared-au/)
 
+- [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)
+
 ## FAQ
 
 ### What should I know about how to get around china tariffs?

@@ -366,6 +366,8 @@ And if you're interested in learning more about China travel, be sure to check o
 
 - [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
 
+- [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)
+
 ## FAQ
 
 ### What should I know about recommended photography check-in points for chengdu tourism?

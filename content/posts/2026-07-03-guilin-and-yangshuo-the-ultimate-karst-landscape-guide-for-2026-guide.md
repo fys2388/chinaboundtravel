@@ -228,3 +228,5 @@ If you're planning a nature-focused China trip, [Zhangjiajie's Avatar Mountains]
 - [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)
 
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
+
+- [WeChat Pay Setup Guide for Foreigners (2026)](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/)
