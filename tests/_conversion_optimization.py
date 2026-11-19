@@ -18,6 +18,14 @@ the "prevent future unintended edits" intent is preserved.
 """
 
 CONVERSION_OPT_AUTHORIZED = {
+    # --- authorized internal-link / dead-link repair (Test Regression Gate, issue #130) ---
+    # These 3 posts had genuinely broken internal links: truncated markdown links
+    # (missing closing paren / cut-off URL) and links pointing at 301 redirect
+    # sources. Fixed to point at the live canonical URLs. No content_id/canonical/
+    # date/slug changed; no affiliate URLs touched.
+    "content/posts/2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
+    "content/posts/2026-10-31-china-winter-travel-guide-where-to-go-and-how-to-pack.md",
+    "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
     # --- affiliate soft-recommend + category normalization (all 60 posts touched) ---
     "content/posts/144-hour-visa-free-transit-guide.md",
     "content/posts/2026-05-20-china-just-made-it-way-easier-to-visit-my-mother-i.md",

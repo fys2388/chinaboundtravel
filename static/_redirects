@@ -153,7 +153,7 @@ https://chinaboundtravel.com/* https://www.chinaboundtravel.com/:splat 301!
 # 现有 _redirects 只挡 /posts/日期-slug/，未挡根级 /slug/。逐条补 8 条根级 301。
 /alipay-for-foreigners-guide/ /posts/alipay-for-foreigners-guide/ 301
 /alipay-wechat-pay-foreigners-guide/ /posts/alipay-wechat-pay-foreigners-guide/ 301
-/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/ /posts/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/ 301
+/a-gastronomic-adventure-in-china-food-recommendations-for-international-travelers/ /posts/food-recommendations-guide/ 301
 /accommodation-tips-guide/ /posts/accommodation-tips-guide/ 301
 /alipay-vs-wechat-pay-which-tourists-should-use-china-2026/ /posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/ 301
 /7-day-china-itinerary-beijing-xian-shanghai-first-timers/ /posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/ 301

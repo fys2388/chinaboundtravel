@@ -89,7 +89,19 @@ def test_eligible_top3_conditions():
 
 
 def test_transportation_guide_in_top3():
-    rows = build_targets()
+    # eligible_top3 要求 impressions_28d > 50，而真实 GSC 曝光会波动（transportation
+    # 当前 13），硬编码依赖会让测试随流量漂移而假失败。改为注入确定性 seo_rows：
+    # 给 transportation 高曝光 + INDEXED，验证「满足入选条件时确实进 top3」这一
+    # 排序/过滤逻辑本身，与真实流量解耦。
+    seo_rows = [{
+        "content_id": "cbt-17c6738ffb32",
+        "url": REV002_URL,
+        "title": "China Transportation Complete Guide: Trains, Subways, Taxis",
+        "impressions_28d": "500",
+        "position_28d": "12.0",
+        "indexed_status": "INDEXED",
+    }]
+    rows = build_targets(seo_rows=seo_rows, funnel_rows=[])
     top3 = eligible_top3(rows)
     assert any(r["url"] == REV002_URL for r in top3)
 

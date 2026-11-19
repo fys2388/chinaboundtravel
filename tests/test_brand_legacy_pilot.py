@@ -88,7 +88,7 @@ PILOT_POSTS = {
     "content/posts/2026-06-23-sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance.md": {
         "content_id": "cbt-550a6e3e929c",
         "canonical": SITE + "/posts/sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance/",
-        "title": "Sichuan Hotpot: History & Best Restaurants",
+        "title": "Sichuan Hotpot 2026: History & Best Restaurants",
         "h2": [
             "## History of Sichuan Hotpot",
             "## Cultural Significance of Sichuan Hotpot",

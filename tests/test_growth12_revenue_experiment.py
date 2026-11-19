@@ -133,10 +133,11 @@ def test_content_id_unchanged():
     assert f'content_id: "{CONTENT_ID}"' in POST_TEXT
 
 
-def test_title_and_content_id_locked():
-    # 标题由深度优化任务改写过；标题本身可编辑，真正锁定实验计量完整性的是
-    # content_id（GA4 归因依赖它）与 canonical。
-    assert EXPECTED_TITLE in POST_TEXT
+def test_content_id_locked():
+    # 标题由深度优化任务改写过（可编辑，如加/去年份后缀），真正锁定实验计量
+    # 完整性的是 content_id（GA4 归因依赖它）与 canonical（见 test_canonical_unchanged）。
+    # 原先还断言 EXPECTED_TITLE 字面量，与「标题可编辑」矛盾，标题改写后即失败，
+    # 故去掉标题字面量断言，只保留 content_id 锁定。
     assert f'content_id: "{CONTENT_ID}"' in POST_TEXT or f'content_id = "{CONTENT_ID}"' in POST_TEXT
 
 

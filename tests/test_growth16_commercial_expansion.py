@@ -154,8 +154,18 @@ def test_transportation_high_risk_detected():
 
     原为 HIGH（含 legacy 第一人称内容）；经 content_deep_optimizer 等
     优化后违规已清除，应为 LOW。检测逻辑本身仍需覆盖该文章。
+
+    build_legacy_risk 会跳过「无违规且曝光<30」的文章，而真实 GSC 曝光会波动
+    （transportation 当前 13），硬编码依赖会让该文章掉出清单、测试假失败。改为
+    注入确定性 seo_rows（高曝光），验证「无违规的高曝光文章判为 LOW」这一逻辑。
     """
-    rows = build_legacy_risk()
+    trans_url = "https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/"
+    seo_rows = [{
+        "content_id": "cbt-17c6738ffb32",
+        "url": trans_url,
+        "impressions_28d": "500",
+    }]
+    rows = build_legacy_risk(seo_rows=seo_rows)
     trans = [r for r in rows if "china-transportation-complete-guide" in r["url"]]
     assert trans and trans[0]["risk"] == "LOW"
     assert trans[0]["violations"] == 0
