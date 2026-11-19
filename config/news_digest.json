@@ -1,30 +1,19 @@
 {
   "version": "1.0",
-  "last_updated": "2026-11-18T16:38:23.708872+00:00",
-  "last_updated_date": "2026-11-18",
-  "total_items": 39,
+  "last_updated": "2026-11-19T04:19:13.524213+00:00",
+  "last_updated_date": "2026-11-19",
+  "total_items": 37,
   "digest": {
     "visa_policy": [
       {
         "title": "中国240小时过境免签“朋友圈”扩展至57国",
         "summary": "From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)",
         "url": "https://www.gov.cn/lianbo/202608/content_7078699.htm",
-        "date": "2026-11-18",
+        "date": "2026-11-19",
         "source": "State Council 57-country notice",
         "category": "visa_policy",
         "type": "policy_page",
         "_hash": "d35a146c4b77"
-      },
-      {
-        "title": "China is examining relevant policies on visa-free extension: spokesman - 巴士的報",
-        "summary": "China is examining relevant policies on visa-free extension: spokesman 巴士的報",
-        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPMjZITS1NdzJqcHg5cTh4V05BMEh1ZllpODYtNmdwOVRjQmhXNGxheXRub2RMNlB5dEV2a1dPZ3pQVjExc01QenNjSlp2cXhudDZEZmM5WFBlR1l4OUJFUS10TlJKNjFablg1Mmotdm1xLUFNd25jb1JkUlNtOXhfZ2JuS3c0Nms5SW1xQVhzZlZQeGcxOTNHcHFaX3pXaWpxUV9hLXhyN1phcFdob2lLOWszZWFBU3diMXNzMmdR?oc=5",
-        "date": "2026-11-17",
-        "source": "Google News RSS",
-        "source_query": "China+passport+policy+update",
-        "category": "visa_policy",
-        "type": "news",
-        "_hash": "229c911180d6"
       },
       {
         "title": "I Visited China as an American Without a Visa—Here’s How You Can Do It Too - Condé Nast Traveler",
@@ -60,15 +49,15 @@
         "_hash": "454c6d010498"
       },
       {
-        "title": "China’s Tourism Industry Gains Momentum Thanks to Visa-Free Policies - The Diplomat – Asia-Pacific Current Affairs Magazine",
-        "summary": "China’s Tourism Industry Gains Momentum Thanks to Visa-Free Policies The Diplomat – Asia-Pacific Current Affairs Magazine",
-        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNR19ZY3B3QnFuLUlmTTFYdEtaUl9rYmh4clU4VHBTa0lGd0FNTkY4aElQeFNzZlAteHlzZ0kycHNPazE2cllUYlJTWlVWYXlla1FPenYyRU1IYUxjcjFMSzRxdzlMRUlyNkZmLWhadXBYdl9KYUREYURZc0d5bWxudFgyUFlnaFR5X19JdDAyOUgydnJSX3BQQ2lxSHU5OEZ4eEE?oc=5",
-        "date": "2026-08-28",
+        "title": "Visa-free foreign entries rise 24.1% in Q3 as ‘China Haul’ reflects appeal of Chinese innovation, experiences - Global Times",
+        "summary": "Visa-free foreign entries rise 24.1% in Q3 as ‘China Haul’ reflects appeal of Chinese innovation, experiences Global Times",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5HNi1VcnlnLTI5OTVBWVNJLXowRTVSRmt6bXg0akJjdWptOUxMNEEtQno0cFdkc1dkUGh6d3dldDM5SUZGMHlfTkw2emRwb0hLbWJIT09Oa21mU0VsQjBFRXhB?oc=5",
+        "date": "2026-10-20",
         "source": "Google News RSS",
         "source_query": "China+entry+policy+foreign+travelers",
         "category": "visa_policy",
         "type": "news",
-        "_hash": "b8786e439cef"
+        "_hash": "191a9b20c91f"
       },
       {
         "title": "China's 240-hour visa-free transit policy - English.gov.cn",
@@ -93,12 +82,23 @@
         "_hash": "fa00ba262d24"
       },
       {
+        "title": "Clamping down: China tightens exit rules - France 24",
+        "summary": "Clamping down: China tightens exit rules France 24",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNbmJGY2FwdUpSbHNOVG9tMXk0SGMxMWNIanVJVV9mZEUxZW9RU19Sd2dZa1FlTWxQdGxuZEdZV19RcVk1MTY0c2lBNWJyQWtqdmZ2VkMzVEVySlNscnhHRFBVNFFBOER0WGZIS1NqRkltNThpQ2tlVEhQaklKRG9MNTQyNGZiMGRXUlRUenpDRlIxU1E?oc=5",
+        "date": "2026-08-18",
+        "source": "Google News RSS",
+        "source_query": "China+passport+policy+update",
+        "category": "visa_policy",
+        "type": "news",
+        "_hash": "6b1da85b4b26"
+      },
+      {
         "title": "China Issues New Regulations on Exit and Entry Administration - Newland Chase",
         "summary": "China Issues New Regulations on Exit and Entry Administration Newland Chase",
         "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPNFJYbmlYX19xLVBDcVpmRElGQ2V5a3RSZmk4dGRUT3B2TTVRaWd0Um9zYmdlZnpIckctcm1sbzBDclNLM096MF9IUlEwWjNKSks2QnQ4M0NLZ1hqLWhMZlR3OFRJUUV3VmhSNnJ2eUhsLUdzRENfY3FBd0RyS2dpV0Y5TzdDbks0emNxMm5nWEc?oc=5",
         "date": "2026-08-06",
         "source": "Google News RSS",
-        "source_query": "China+visa+policy+2026",
+        "source_query": "China+entry+policy+foreign+travelers",
         "category": "visa_policy",
         "type": "news",
         "_hash": "f6400329b9d7"
@@ -117,17 +117,6 @@
     ],
     "travel_industry": [
       {
-        "title": "WEBUY GLOBAL LTD. Launches WeTrip App on ChatGPT for China Travel - Quantisnow",
-        "summary": "WEBUY GLOBAL LTD. Launches WeTrip App on ChatGPT for China Travel Quantisnow",
-        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNaFhYMzVhTWtDcGxlY0dxLVpCSmtYMi11bHNZT2dtbE15Z2Vfalhnb3VWOV8yQVl2U1JtZDZ0elJ4aDdXazFocnZsS1VjU1hzNmFFVjJYemFIQ25kemxwMDZGSXFkRW53Uk9SaEhnajJPc2otWVktR2ZvZ1p4dFpvaFBoNjdvakRxUUQyTjNOVXFyZG5pcVk3VDRFb3lTRzJRdWc?oc=5",
-        "date": "2026-11-18",
-        "source": "Google News RSS",
-        "source_query": "China+travel+industry+2026",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "a3625d7fb8fa"
-      },
-      {
         "title": "South Korea says China trade agreement to boost tourism, entertainment sectors - Reuters",
         "summary": "South Korea says China trade agreement to boost tourism, entertainment sectors Reuters",
         "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQa2cyUmpJMG9YanZfOGk4eUVBT0NfTEVSYjloblMwcUxYdGNsN3hrMFozbHdzdU0yMVdnVnFxeE5NVGJuTDdCeGtjdDFsaHhyWm5DQUMxVm1RWnRuOFBqRHloYk0zNW5BbHJDZC0wbkNIb0wzUUJlczk5ZDE5VlpsdFVhRzBNSWZqUkhrbW1aWkU1TFVpa1RGS01YUk13NUdGVS1peWJuY09RSmJFOEFSRVhMSmNBazQ?oc=5",
@@ -139,15 +128,15 @@
         "_hash": "ab6b647286b4"
       },
       {
-        "title": "Korea-China FTA breakthrough opens door for entertainment, tourism, investment ties - Korea JoongAng Daily",
-        "summary": "Korea-China FTA breakthrough opens door for entertainment, tourism, investment ties Korea JoongAng Daily",
-        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPVlRzUU5HSi1YeGpmMzdNcEFSaFNQdF9uaXE5UFZSLVZjWVBJaDkybjlCdkppLURsdmtjUzAweGtSb2ZENGx3MGExQ0czaWNWcUVxVjdXVDJPNGQ2LVlMTEZyNnV5U2tVbml2TjgwMkxveTdOY0c1SVM1Sk82NGJyM2NvVkFqOFJKdHROanJLZi1QWW8wVnhSVHAyRnN2MTVKU3VHNFBuY1BMTHVzYlJSaW9TRWkzUkpRRlFGaEhVS0tSUW5vdnZpTS13?oc=5",
-        "date": "2026-11-18",
+        "title": "Kim Jong Un visits new ski resort on China border, calls for more tourism - NK News",
+        "summary": "Kim Jong Un visits new ski resort on China border, calls for more tourism NK News",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPdnFtbFozdE1BS05RT0ZsTFhUcGdFUGtDb1pTTXpGS0hzb19ZTGNfcmFXSEp1cndySXRFOEVYdkxmV25JTGJsUDlnYmRWSkRyWWFsWVlHcXJYVE9SMFZNYzJMMGtqUWw3N2NXTHJ3aGpuWFJ0a1BHQnpoS2xnX2J4US1lQnZWQW5aNGFER2EzYlRSdURtRzJzQlFnOVpVTDRHZFBWbTJraw?oc=5",
+        "date": "2026-11-17",
         "source": "Google News RSS",
         "source_query": "China+tourism+news",
         "category": "travel_industry",
         "type": "news",
-        "_hash": "250088830eb3"
+        "_hash": "c492075c17b6"
       },
       {
         "title": "Kim Jong Un smokes cigarette, watches daughter ski from armchair at North Korea resort - New York Post",
@@ -159,28 +148,6 @@
         "category": "travel_industry",
         "type": "news",
         "_hash": "6c97e1314d58"
-      },
-      {
-        "title": "Shenzhen braces for influx of inbound tourists with upgraded services - 巴士的報",
-        "summary": "Shenzhen braces for influx of inbound tourists with upgraded services 巴士的報",
-        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQbzdtUTYzLVJWTTRNZ0RCLVNEN2NvNFZEdnZ4Sk5RZ1ljalU1ZVc0dEI5YkJ1XzN0OGhtM0RpQjdRQnRzcFU5M2QzZVd1djRmYWlxWTh4cUg4ZmN6ZU8yMmhCNTI0VFFXalJzTUVaNXRCQ0JlWFkzeWdHT1k4ZDROam0yZFZCV1Y1WThNa1lRMG1LdHM0NHVDc1V5Q1FMRTFReFdicUtFc21weWRDNE9RaS00UlNTLThmWUs0X0FB?oc=5",
-        "date": "2026-11-17",
-        "source": "Google News RSS",
-        "source_query": "China+inbound+tourism",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "1a171ae8c071"
-      },
-      {
-        "title": "Chinese arrivals to Thailand could fall 20% in final two months of 2026 - Nation Thailand",
-        "summary": "Chinese arrivals to Thailand could fall 20% in final two months of 2026 Nation Thailand",
-        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBIeTlValJZNnVhLWFCUHpJelhrQTlfb0loQ2YyQ3IzSFZfcjVjMEV3cjlLblRrRkppXzNVNkRZY2FzYlczQ3kzSkxLdjFYcTFTbUZQOGk5eGp2Y2toUVJ4U213?oc=5",
-        "date": "2026-11-05",
-        "source": "Google News RSS",
-        "source_query": "China+travel+industry+2026",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "fcf282964ebf"
       },
       {
         "title": "Chinese Ambassador to Ireland Zhao Xiyuan Introduces China’s Inbound Tourism Facilitation Policies in Irish Media - 中华人民共和国外交部",
@@ -216,6 +183,17 @@
         "_hash": "f9c470f71dbe"
       },
       {
+        "title": "China's Golden Week travel surge masks cautious consumer spending - Reuters",
+        "summary": "China's Golden Week travel surge masks cautious consumer spending Reuters",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNdm9HZjg0WXpHcEN4R21wd3ZZOFVJNmRMTVRNWUhRQl96TEVVWG1HQnB5UTZvU3JyaWswRUtaRlh5Q2dQMzJqY1U2UFdCRjJRcEY2eDVXenZsU1RWX3R3T1ZLSmlSeXREemhST0FCMEdsbnE3ZDE5MjlwRW9QWTl1VVFmWG5tQ0YyREZ4d2RuZ25PYmNVV2NLRW1YODA5R3FNMHFDa29udTEzTHhTQndvZ2lDeFBvdEdYWEVJ?oc=5",
+        "date": "2026-09-29",
+        "source": "Google News RSS",
+        "source_query": "China+travel+industry+2026",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "094bc273bc7a"
+      },
+      {
         "title": "China tightens travel restrictions for citizens - BBC",
         "summary": "China tightens travel restrictions for citizens BBC",
         "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5HN2R0OGJtZHhZNXdSNnZQNGtKcGgyTGpJY1JxWEZWckNfQ0NIX1J5Y0lFNkZnV3lncXEzZFhEY1Q2aGJpMEcyVVIwdENwTWwtcl9JRTIzQ2lGek0?oc=5",
@@ -225,6 +203,28 @@
         "category": "travel_industry",
         "type": "news",
         "_hash": "a670e57dd7ee"
+      },
+      {
+        "title": "China’s visa-free boom is rewriting inbound tourism - Asia Times",
+        "summary": "China’s visa-free boom is rewriting inbound tourism Asia Times",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcG53eE4yN3QwRjFPWTJtdmMwZ1I3aTVPT0JMRENkMzhvQVA0SEJ6aVRzMVZrR3phbFk2dTlGOHhLRFZydUltWDR2Nk5QTk1FQmh2SDN1dUN3QVk0U2twXzlkNjBhMGNpd0l6ZWpQLXlqWm56elpqU0w4Z1BNUkE4MXloek5YNzl2?oc=5",
+        "date": "2026-08-31",
+        "source": "Google News RSS",
+        "source_query": "China+inbound+tourism",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "9440552d7b82"
+      },
+      {
+        "title": "China Tightens Entry And Exit Rules From Sept 15 - Migrant Times",
+        "summary": "China Tightens Entry And Exit Rules From Sept 15 Migrant Times",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxObS1uWjBXeVJwRzV5Ui13N3BLbHhQM202X2lWRS00blc3b24zQk9NVVRmMXBFaFVPU2pBY3NVUlRibUQ4RFhIR3ZoNzNYX3dKVHhENmJ2UENxdl9wWkRIaWM4bmhVWHhyN09lSExTT21MdkdjeWpQZXQ3bFNZYm1WWXJKc2hXMkJoc0o1bGNnQ244Y092WlBJR2RBX1QxcFY1a2c?oc=5",
+        "date": "2026-08-15",
+        "source": "Google News RSS",
+        "source_query": "China+travel+restrictions+update",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "47da71bd3f02"
       }
     ],
     "destination_news": [
@@ -385,17 +385,6 @@
         "_hash": "a1f1f9e17564"
       },
       {
-        "title": "China's 240-hour visa-free transit policy - English.gov.cn",
-        "summary": "China's 240-hour visa-free transit policy English.gov.cn",
-        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxONVB0Yk1udXR1NU5WTGpJMVNscHlVdnpJbGJzWDQ0ZmxuZHhfRVVBcVVvVVIxakdlVmxLUUNPRjk5MWtkcmpYS3VkNjU0ZXg2cUZQLWlyZXpkWEVqbDFJbEhBNWFOVWFUdHY1RlotYU5HMnBINERocWdlZFV2aHpRX2gzbWR0OTVxRHBLOVBSSkFyN21ndTdLTm9R?oc=5",
-        "date": "2026-08-21",
-        "source": "Google News RSS",
-        "source_query": "China+transportation+update",
-        "category": "safety_alerts",
-        "type": "news",
-        "_hash": "007efa1b5d47"
-      },
-      {
         "title": "Storm weakens, but disrupts travel in China - Taipei Times",
         "summary": "Storm weakens, but disrupts travel in China Taipei Times",
         "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1qaGEyc0FLaWhlWlBsejJ1ajdRTEZBcEZaTVRESFNqTUhGeTZzcE9PbW12N3ZLd1FyRGhsY1RRbXFVR3lsczU1RXE0ejV5N21WcGJGbHY4Y3VhYmtfZ0N0ZXNhMkppaGZJRG5tMVRYSExTUGZXdUFBMw?oc=5",
@@ -416,40 +405,32 @@
         "category": "safety_alerts",
         "type": "news",
         "_hash": "dc0c52f4626a"
-      },
+      }
+    ],
+    "general": [
       {
-        "title": "Zero-emission medium- and heavy-duty vehicle market in China: A 2025 update - International Council on Clean Transportation",
-        "summary": "Zero-emission medium- and heavy-duty vehicle market in China: A 2025 update International Council on Clean Transportation",
-        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNTTZHWkprYXE0MTBiLUhseXdZYlFJZlFJVTV1TzBGV0NWaXJCMG5zazRqR0ZicW5qQkVfTm1RcXRDZ0ZzWUVvcHhkeVh3MTllQjdGUXp1TEhZbmZOX0dWRWV4ekFjblNKTXh4Rl83TnZSbTJBQi1Rc1dYcjRhbmM0NnhkTGo2SzhUZzBhcll6R0lHSzNMaWROVzdwamlVdmNrQ0QzZE5rdWtaUExFODJUdEp3?oc=5",
-        "date": "2026-06-16",
-        "source": "Google News RSS",
-        "source_query": "China+transportation+update",
-        "category": "safety_alerts",
+        "title": "A local’s travel guide to Washington DC: what to eat, see and do in three days",
+        "summary": "Top sights in Washington include Capitol Hill Books, the Black Cat music venue and a top-rated Filipino restaurant From phone chargers to podcasts, the best road trip accessories make the miles fly by People love to be rude about Washington DC because it’s full of so many politicians, feds, and...",
+        "url": "https://www.theguardian.com/travel/2024/mar/16/washington-dc-three-day-travel-guide",
+        "date": "2024-03-16",
+        "source": "Travel | The Guardian",
+        "category": "general",
         "type": "news",
-        "_hash": "a08c0d17a4a0"
-      },
-      {
-        "title": "China Public Transport Operation Network Dataset (CPTOND-2025):National-Scale Bus-Metro Vector Dataset - Nature",
-        "summary": "China Public Transport Operation Network Dataset (CPTOND-2025):National-Scale Bus-Metro Vector Dataset Nature",
-        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1mcW1HdExnNmc3M0p6aHpsYV9ISmV6enpjNWNSR01ZVGJ6dk5xNFVDWDE3YllFN19wM0lVQUMzZ3Y4eHQ4b1BCWmthZmk2UVp0eUhoQmVyVnBMcm95VVNB?oc=5",
-        "date": "2026-01-13",
-        "source": "Google News RSS",
-        "source_query": "China+transportation+update",
-        "category": "safety_alerts",
-        "type": "news",
-        "_hash": "5533317268c5"
+        "_hash": "e3aa35ed5a33"
       }
     ]
   },
   "llm_summary": {
-    "visa_policy": "- [2026-11-18] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-11-17] China is examining relevant policies on visa-free extension: spokesman - 巴士的報\n  China is examining relevant policies on visa-free extension: spokesman 巴士的報\n- [2026-11-10] I Visited China as an American Without a Visa—Here’s How You Can Do It Too - Condé Nast Traveler\n  I Visited China as an American Without a Visa—Here’s How You Can Do It Too Condé Nast Traveler",
-    "travel_industry": "- [2026-11-18] WEBUY GLOBAL LTD. Launches WeTrip App on ChatGPT for China Travel - Quantisnow\n  WEBUY GLOBAL LTD. Launches WeTrip App on ChatGPT for China Travel Quantisnow\n- [2026-11-18] South Korea says China trade agreement to boost tourism, entertainment sectors - Reuters\n  South Korea says China trade agreement to boost tourism, entertainment sectors Reuters\n- [2026-11-18] Korea-China FTA breakthrough opens door for entertainment, tourism, investment ties - Korea JoongAng Daily\n  Korea-China FTA breakthrough opens door for entertainment, tourism, investment ties Korea JoongAng Daily",
+    "visa_policy": "- [2026-11-19] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-11-10] I Visited China as an American Without a Visa—Here’s How You Can Do It Too - Condé Nast Traveler\n  I Visited China as an American Without a Visa—Here’s How You Can Do It Too Condé Nast Traveler\n- [2026-10-27] India-China visa update: What changes for Indian passport holders? - Gulf News\n  India-China visa update: What changes for Indian passport holders? Gulf News",
+    "travel_industry": "- [2026-11-18] South Korea says China trade agreement to boost tourism, entertainment sectors - Reuters\n  South Korea says China trade agreement to boost tourism, entertainment sectors Reuters\n- [2026-11-17] Kim Jong Un visits new ski resort on China border, calls for more tourism - NK News\n  Kim Jong Un visits new ski resort on China border, calls for more tourism NK News\n- [2026-11-17] Kim Jong Un smokes cigarette, watches daughter ski from armchair at North Korea resort - New York Post\n  Kim Jong Un smokes cigarette, watches daughter ski from armchair at North Korea resort New York Post",
     "destination_news": "- [2026-11-18] United Airlines ranks No. 1 globally for destinations served; China’s Big Three make top 10 - China Travel News\n  United Airlines ranks No. 1 globally for destinations served; China’s Big Three make top 10 China Travel News\n- [2026-11-18] Inside APEC Media Center: Chinese intangible cultural heritage, tech, and robots - The Standard (HK)\n  Inside APEC Media Center: Chinese intangible cultural heritage, tech, and robots The Standard (HK)\n- [2026-10-26] 15 of the best China tours - The Times\n  15 of the best China tours The Times",
-    "safety_alerts": "- [2026-10-22] U.S. Adds Wrongful Detention Warning to China Travel Advisory - AgroLatam\n  U.S. Adds Wrongful Detention Warning to China Travel Advisory AgroLatam\n- [2026-10-22] Is it safe to go to China right now? What the U.S. State Department travel advisory warns about wrongful detentions - Clarin.com\n  Is it safe to go to China right now? What the U.S. State Department travel advisory warns about wrongful detentions Clarin.com\n- [2026-10-21] US adds wrongful detention warning to China travel advisory - Voice of America English News\n  US adds wrongful detention warning to China travel advisory Voice of America English News"
+    "safety_alerts": "- [2026-10-22] U.S. Adds Wrongful Detention Warning to China Travel Advisory - AgroLatam\n  U.S. Adds Wrongful Detention Warning to China Travel Advisory AgroLatam\n- [2026-10-22] Is it safe to go to China right now? What the U.S. State Department travel advisory warns about wrongful detentions - Clarin.com\n  Is it safe to go to China right now? What the U.S. State Department travel advisory warns about wrongful detentions Clarin.com\n- [2026-10-21] US adds wrongful detention warning to China travel advisory - Voice of America English News\n  US adds wrongful detention warning to China travel advisory Voice of America English News",
+    "general": "- [2024-03-16] A local’s travel guide to Washington DC: what to eat, see and do in three days\n  Top sights in Washington include Capitol Hill Books, the Black Cat music venue and a top-rated Filipino restaurant From phone chargers to podcasts, th"
   },
   "sources": {
     "State Council 57-country notice": 1,
-    "Google News RSS": 38
+    "Google News RSS": 35,
+    "Travel | The Guardian": 1
   },
   "source_config": {
     "google_news_queries": 15,
@@ -463,5 +444,5 @@
     "provinces": 24
   },
   "policy_change": null,
-  "official_state_checked_at": "2026-11-18T16:38:23.709062+00:00"
+  "official_state_checked_at": "2026-11-19T04:19:13.524371+00:00"
 }
