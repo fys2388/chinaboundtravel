@@ -332,17 +332,21 @@ def test_auditor_no_longer_reads_findings_only():
 
 
 def test_record_check_failure_is_wired_into_all_network_checks():
-    """修一处漏一处的风险：六个网络检查必须都接上了。
+    """修一处漏一处的风险：所有网络检查必须都接上了。
 
-    数 8 空格缩进的调用行，不含函数定义行（定义是 0 缩进的 `def`）。"""
+    数 8 空格缩进的调用行，不含函数定义行（定义是 0 缩进的 `def`）。
+    现有 7 处：security_headers、csp_allowlist、mixed_content、
+    analytics_measurement_ids（GA4 双计，后加）、og_tags、ssl_certificate、
+    structured_data。新增网络检查时应同步 +1。"""
     import re
     src = (Path(__file__).resolve().parent.parent / "scripts"
            / "site_health_agent.py").read_text(encoding="utf-8")
     for check_id in ("security_headers", "csp_allowlist", "mixed_content",
-                     "og_tags", "ssl_certificate", "structured_data"):
+                     "og_tags", "ssl_certificate", "structured_data",
+                     "analytics_measurement_ids"):
         assert f'"{check_id}"' in src, f"{check_id} 的检查失败没有留痕"
     calls = re.findall(r"^ {8}record_check_failure\(all_issues,", src, re.M)
-    assert len(calls) == 6, f"应有 6 处调用（含 12b CSP 放行检查），实际 {len(calls)}"
+    assert len(calls) == 7, f"应有 7 处调用（6 项基础网络检查 + GA4 双计），实际 {len(calls)}"
 
 
 # ── 6. CSP 放行检查（12b） ──────────────────────────────────

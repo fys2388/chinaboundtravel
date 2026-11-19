@@ -30,8 +30,10 @@ jobs:
 
       - name: Pull analytics data
         env:
-          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
-          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          # 使用官方 secret 命名契约（CLOUDFLARE_*，见 tests/test_secret_name_contract.py）。
+          # 旧代码用禁用缩写 CF_*；现统一为官方名，脚本侧官方名优先、回退 CF_* 别名以兼容本地运行。
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           SENSENOVA_API_KEY: ${{ secrets.SENSENOVA_API_KEY }}
         run: |
           python scripts/setup_analytics.py --days 7

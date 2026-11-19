@@ -234,5 +234,8 @@ def test_brand_commit_step_is_non_fatal():
     wf = (Path(__file__).resolve().parent.parent
           / ".github/workflows/deploy-cloudflare-pages.yml").read_text(encoding="utf-8")
     seg = wf.split("Commit brand identity audit report back to repo", 1)[-1]
-    assert "|| echo" in seg, "push 失败必须非致命"
+    # 非致命机制：旧实现用 `|| echo` 吞掉 push 失败；现升级为 step 级
+    # `continue-on-error: true`（push 失败走 `|| { echo "::error..."; exit 1; }`
+    # 让失败可见，但 step 不阻断部署）。断言跟随新机制。
+    assert "continue-on-error: true" in seg, "push 失败必须非致命（continue-on-error）"
     assert "if: always()" in seg, "必须始终运行，否则失败的部署不刷新报告"

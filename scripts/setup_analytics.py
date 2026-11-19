@@ -34,8 +34,11 @@ REPORTS_DIR = PROJECT_ROOT / "reports" / "trip-planner"
 CACHE_FILE = REPORTS_DIR / "usage_cache.json"
 
 # Cloudflare API 配置
-CF_ACCOUNT_ID = os.environ.get("CF_ACCOUNT_ID", "032a874de4e89298d9f492590b08ecba")
-CF_API_TOKEN = os.environ.get("CF_API_TOKEN")
+# 官方 secret 命名契约：使用 CLOUDFLARE_*（见 tests/test_secret_name_contract.py），
+# 不再使用禁用缩写。account id 保留原有开发默认值。
+CLOUDFLARE_ACCOUNT_ID = (os.environ.get("CLOUDFLARE_ACCOUNT_ID")
+                         or "032a874de4e89298d9f492590b08ecba")
+CLOUDFLARE_API_TOKEN = os.environ.get("CLOUDFLARE_API_TOKEN")
 KV_NAMESPACE_ID = "a20785ef5e594755ba1d21850de25593"
 KV_ENDPOINT = "https://api.cloudflare.com/client/v4"
 
@@ -74,9 +77,9 @@ def main():
 
 def fetch_cf_data(days=30):
     """从 CF KV 拉取数据"""
-    if not CF_API_TOKEN:
-        print("   ⚠️  CF_API_TOKEN 未设置，跳过 CF 拉取")
-        print("   设置方法: $env:CF_API_TOKEN = 'your-token'")
+    if not CLOUDFLARE_API_TOKEN:
+        print("   ⚠️  CLOUDFLARE_API_TOKEN 未设置，跳过 CF 拉取")
+        print("   设置方法: $env:CLOUDFLARE_API_TOKEN = 'your-token'")
         return []
     
     import urllib.request
@@ -90,9 +93,9 @@ def fetch_cf_data(days=30):
         key = f"trip-plan:{date_str}"
         
         try:
-            url = f"{KV_ENDPOINT}/accounts/{CF_ACCOUNT_ID}/kv/namespaces/{KV_NAMESPACE_ID}/values/{key}"
+            url = f"{KV_ENDPOINT}/accounts/{CLOUDFLARE_ACCOUNT_ID}/kv/namespaces/{KV_NAMESPACE_ID}/values/{key}"
             req = urllib.request.Request(url, headers={
-                'Authorization': f'Bearer {CF_API_TOKEN}',
+                'Authorization': f'Bearer {CLOUDFLARE_API_TOKEN}',
                 'Content-Type': 'application/json'
             })
             

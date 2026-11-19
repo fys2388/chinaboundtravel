@@ -11,7 +11,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from agent_task_queue import enqueue_issues  # noqa: E402
 import agent_task_executor  # noqa: E402
-from agent_task_executor import execute_frontend, execute_ops  # noqa: E402
+from agent_task_executor import execute_frontend, execute_generic, execute_ops  # noqa: E402
 from auto_error_router import enqueue_workflow_failure  # noqa: E402
 
 
@@ -253,6 +253,42 @@ class AgentTaskQueueTests(unittest.TestCase):
 
         self.assertEqual(1, results["resolved"])
         self.assertEqual(0, results["need_manual"])
+
+    def test_regression_gate_failure_gets_structured_triage(self):
+        """回归闸门失败须产出结构化诊断（抽取失败测试 + 模式分类 + 修复路径）。
+
+        2026-11-19 人工授权下放的是「结构化诊断」，不是自动改代码——逐个诊断
+        10 条存量失败后确认它们都需判断「改产品 vs 改测试」，盲目自动改测试会
+        迁就真缺陷。所以本 handler 保持 need_manual，但 note 必须给出可执行的
+        下一步（失败测试名 + 模式 + 修复路径），不再是笼统的 recommended_action。
+        """
+        task = {
+            "issues": [
+                {
+                    "id": "workflow-44340759705-unknown",
+                    "type": "unknown",
+                    "source": "workflow_failure",
+                    "page": "Test Regression Gate (回归闸门)",
+                    "evidence": (
+                        "FAILED tests/test_social_analytics_metrics.py::"
+                        "test_posts_query_uses_current_buffer_input_contract "
+                        "- assert 0 == 1"
+                    ),
+                }
+            ]
+        }
+        results = execute_generic(task, dry_run=True)
+        self.assertEqual(1, results["need_manual"])
+        detail = results["details"][0]
+        # 诊断必须抽出失败测试节点名，并给出模式/修复路径指引
+        self.assertIn(
+            "test_posts_query_uses_current_buffer_input_contract", detail
+        )
+        self.assertTrue(
+            ("改产品" in detail and "改测试" in detail)
+            or "疑似过时断言" in detail,
+            f"诊断应含『改产品 vs 改测试』分类指引，实际: {detail}",
+        )
 
     def test_legacy_daily_issues_are_migrated_without_duplicates(self):
         legacy_issue = {

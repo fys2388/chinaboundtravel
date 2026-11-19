@@ -41,7 +41,9 @@ def test_regen_step_does_not_swallow_script_failures():
 
 def test_regen_step_surfaces_failures():
     run = _regen_step_run()
-    # 失败必须至少通过 workflow 注解 + step summary 显性暴露
-    assert "::warning" in run, "脚本失败必须产生 ::warning 注解（Actions UI 可见）"
+    # 失败必须显性暴露：::error 注解（Actions UI 红色可见）+ step summary + 失败计数。
+    # 注：原为 ::warning，后升级为 ::error（红色标注，比 warning 更强），并让
+    # DASH_FAIL != 0 时 exit 1 让 job conclusion=failed，消除「SUCCESS 但看板没刷新」假绿灯。
+    assert "::error" in run, "脚本失败必须产生 ::error 注解（Actions UI 红色可见）"
     assert "GITHUB_STEP_SUMMARY" in run, "脚本失败必须写入 $GITHUB_STEP_SUMMARY"
     assert "DASH_FAIL" in run, "需要记录失败计数的变量"

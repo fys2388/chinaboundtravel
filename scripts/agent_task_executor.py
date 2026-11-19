@@ -486,6 +486,59 @@ def execute_social(task: dict, dry_run: bool = False) -> dict:
     return results
 
 
+def _triage_regression_failure(issue: dict) -> str:
+    """回归闸门失败的诊断分诊：抽取失败测试、按模式分类、给出修复路径建议。
+
+    背景（issue #130 / AUDIT-OPS-002）：回归闸门失败经 auto_error_router 以
+    category=unknown 入队（owner=orchestrator → execute_generic），因 unknown 不在
+    AUTO_FIXABLE_TYPES，历史上一律 need_manual 且 note 只有笼统的 recommended_action，
+    等于「分配了但没给可执行的下一步」。
+
+    本函数不下放自动改代码。2026-11-19 逐个诊断 10 条存量失败后的结论是：它们没有
+    一个属于可盲目自动修的类别——每条都要判断「该改产品还是该改测试」（avatar/OKR/
+    social/brand 是过时断言，secret/kpi 触及产品语义）。盲目自动改测试会迁就真缺陷。
+    所以这里只做**结构化诊断**，把失败测试名抽出来、按模式分类、指向修复路径，
+    最终决定权留给人工。未来若要下放某一安全类（如纯硬编码日期漂移），必须走
+    人工授权 + 加入 AUTO_FIXABLE_TYPES + 写确定性 handler，与 affiliate_zero_conversion
+    同款流程。
+    """
+    import re
+
+    blob = " ".join(
+        str(issue.get(k, "")) for k in ("evidence", "description", "title", "page")
+    )
+    # 抽取 pytest 失败节点（FAILED tests/xxx.py::test_yyy 或 node id 形式）
+    failing = re.findall(r"([\w./-]+\.py::\w+)", blob)
+    seen, tests = set(), []
+    for t in failing:
+        if t not in seen:
+            seen.add(t)
+            tests.append(t)
+
+    lines = []
+    if tests:
+        lines.append(f"失败测试 {len(tests)} 个: " + ", ".join(tests))
+    else:
+        lines.append("未能从证据抽取具体失败测试名（可能整 workflow 崩溃/依赖失败），需看完整日志")
+
+    blob_l = blob.lower()
+    if "::warning" in blob or "exit 1" in blob or "continue-on-error" in blob:
+        lines.append("模式→workflow 断言过时: workflow shell 语义已演进(如 ::warning→::error、|| echo→continue-on-error)，"
+                     "改测试断言对齐新机制，勿改 workflow。")
+    elif "secret" in blob_l or "token" in blob_l or "forbidden synonym" in blob_l:
+        lines.append("模式→可能是 secret 命名契约/真实密钥问题: 先 gh secret list 核对官方名是否存在，"
+                     "禁止把真密钥写进代码或测试。涉生产配置，人工确认。")
+    elif "==" in blob and ("assert" in blob_l or "assertionerror" in blob_l):
+        lines.append("模式→疑似过时断言或数据漂移: 失败值 vs 期望值都拿到后判断——"
+                     "产品语义演进则改测试，数值仍是错的则改产品。禁止无脑改断言迁就 bug。")
+    else:
+        lines.append("模式→需深挖: 读该测试源码 + 相关产品代码，判断真缺陷还是契约过时。")
+
+    lines.append("处置: 保持人工审查——先分类(改产品 vs 改测试)再动手；修复后本地跑 "
+                 "`python scripts/test_regression_gate.py` 确认新增失败=0。")
+    return " | ".join(lines)
+
+
 def execute_generic(task: dict, dry_run: bool = False) -> dict:
     """通用 Agent 处理器（user/revenue等）"""
     results = {"resolved": 0, "failed": 0, "false_positive": 0, "need_manual": 0, "details": []}
@@ -568,7 +621,22 @@ def execute_generic(task: dict, dry_run: bool = False) -> dict:
         results["need_manual"] += 1
         page = issue.get("page") or issue.get("file") or "unknown"
         action = issue.get("recommended_action", "需人工处理")
-        results["details"].append(f"{itype}: {page} - {action}")
+        # 回归闸门失败（source=workflow_failure，或证据含 pytest 失败节点）走结构化
+        # 诊断分诊：抽取失败测试 + 模式分类 + 修复路径建议。仍记 need_manual——
+        # 不自动改代码（见 _triage_regression_failure 的 docstring 说明为何不下放）。
+        evidence_blob = " ".join(
+            str(issue.get(k, "")) for k in ("evidence", "description", "title")
+        )
+        is_regression = (
+            issue.get("source") == "workflow_failure"
+            or ".py::" in evidence_blob
+            or "FAILED tests" in evidence_blob
+        )
+        if is_regression:
+            detail = f"{itype}: {page} - {_triage_regression_failure(issue)}"
+        else:
+            detail = f"{itype}: {page} - {action}"
+        results["details"].append(detail)
     return results
 
 
