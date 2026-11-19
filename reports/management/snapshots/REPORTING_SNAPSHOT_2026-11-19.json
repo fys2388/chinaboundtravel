@@ -672,7 +672,7 @@
           "unit": "issues",
           "update_frequency": "weekly",
           "valid_period": "2026-08-26",
-          "value": 1354
+          "value": 1360
         },
         {
           "baseline": 534,
@@ -690,7 +690,7 @@
           "unit": "issues",
           "update_frequency": "weekly",
           "valid_period": "2026-08-26",
-          "value": 822
+          "value": 831
         },
         {
           "baseline": 420,
@@ -708,7 +708,7 @@
           "unit": "issues",
           "update_frequency": "weekly",
           "valid_period": "2026-08-26",
-          "value": 532
+          "value": 529
         },
         {
           "baseline": null,
@@ -727,10 +727,10 @@
           "update_frequency": "weekly",
           "valid_period": "2026-08-26",
           "value": {
-            "AI幻觉": 389,
+            "AI幻觉": 398,
             "SEO问题": 9,
             "中文残留": 8,
-            "事实风险": 523,
+            "事实风险": 520,
             "品牌风险": 425
           }
         },
@@ -768,7 +768,7 @@
           "unit": "issues",
           "update_frequency": "weekly",
           "valid_period": "2026-08-26",
-          "value": 609
+          "value": 604
         },
         {
           "baseline": 480,
@@ -786,7 +786,7 @@
           "unit": "issues",
           "update_frequency": "weekly",
           "valid_period": "2026-08-26",
-          "value": 745
+          "value": 756
         }
       ],
       "source_artifacts": [
