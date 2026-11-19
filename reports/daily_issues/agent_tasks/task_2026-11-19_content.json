@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-11-19_content",
   "created_at": "2026-11-19T01:00:52.040973+00:00",
-  "updated_at": "2026-11-19T05:05:55.888908",
+  "updated_at": "2026-11-19T05:30:58.439883",
   "target_date": "2026-11-19",
   "issue_count": 16,
   "severity_summary": {
@@ -134,7 +134,7 @@
       "detected_at": "2026-11-19T01:00:52.040664+00:00"
     },
     {
-      "id": "site_health-788064a8013d1107",
+      "id": "site_health-2a8e48bef09baa29",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -151,10 +151,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-19T05:05:55.597545+00:00"
+      "detected_at": "2026-11-19T05:30:57.634682+00:00"
     },
     {
-      "id": "site_health-1a1a712e4df6cd77",
+      "id": "site_health-726ec4dbd25edd62",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -171,7 +171,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-19T05:05:55.597542+00:00"
+      "detected_at": "2026-11-19T05:30:57.634676+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -294,26 +294,6 @@
       "detected_at": "2026-11-19T05:05:55.550141"
     },
     {
-      "id": "site_health-52a536d137dd87c7",
-      "type": "ai_forbidden_word",
-      "title": "ai_forbidden_word",
-      "description": "ai_forbidden_word",
-      "page": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
-      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
-      "evidence": "AI禁用词: cheapest",
-      "recommended_action": "无替换表: cheapest",
-      "severity": "medium",
-      "agent": "content",
-      "action": "manual_review",
-      "source": "site_health",
-      "source_file": "",
-      "task_source": "quality_gate",
-      "status": "new",
-      "assigned": true,
-      "assigned_to": "content",
-      "detected_at": "2026-11-19T05:05:55.597582+00:00"
-    },
-    {
       "id": "issue_006a89c1304c",
       "type": "ai_forbidden_word",
       "title": "AI禁用词: cheapest",
@@ -332,6 +312,26 @@
       "assigned": true,
       "assigned_to": "content",
       "detected_at": "2026-11-19T05:05:55.550136"
+    },
+    {
+      "id": "site_health-109849cceae1eee4",
+      "type": "ai_forbidden_word",
+      "title": "ai_forbidden_word",
+      "description": "ai_forbidden_word",
+      "page": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+      "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+      "evidence": "AI禁用词: cheapest",
+      "recommended_action": "无替换表: cheapest",
+      "severity": "medium",
+      "agent": "content",
+      "action": "manual_review",
+      "source": "site_health",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-11-19T05:30:57.634744+00:00"
     }
   ],
   "priority_issue": {
