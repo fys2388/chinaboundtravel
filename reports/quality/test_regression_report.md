@@ -1,44 +1,8 @@
 # 测试回归报告
 
-生成时间: 2026-11-18T15:54:16
+生成时间: 2026-11-19T15:58:18
 
-- 本次运行: 1350 collected, 30 failed
-- 基线存量失败: 16
-- **新增失败: 15**（阻断条件）
-- 已修复的基线失败: 1（建议 --update-baseline 收敛）
-
-## 新增失败（需要处理）
-
-- `tests.test_brand_legacy_pilot::test_internal_links_audit_clean_for_pilots`
-
-- `tests.test_brand_legacy_pilot::test_title_and_h2_structure_retained`
-
-- `tests.test_growth12_revenue_experiment::test_title_and_content_id_locked`
-
-- `tests.test_growth15_commercial_conversion::test_transportation_guide_in_top3`
-
-- `tests.test_growth16_commercial_expansion::test_transportation_high_risk_detected`
-
-- `tests.test_growth21_payment_cluster::test_inventory_contains_wechat_weak`
-
-- `tests.test_internal_links::test_markdown_audit_clean`
-
-- `tests.test_okr_and_experiment_semantics.TestCanonicalVerification::test_queue_is_parsed`
-
-- `tests.test_okr_and_experiment_semantics.TestCiWindow::test_success_and_failure_are_unaffected_by_window`
-
-- `tests.test_okr_and_experiment_semantics.TestExperimentPhantom::test_running_in_snapshot_but_planned_in_config_is_not_started`
-
-- `tests.test_okr_and_experiment_semantics.TestZeroRunEscalation::test_content_new_within_cadence_stays_green`
-
-- `tests.test_okr_and_experiment_semantics.TestZeroRunEscalation::test_unresolvable_date_keeps_original_icon`
-
-- `tests.test_redirect_chains::test_finals_are_not_redirect_sources`
-
-- `tests.test_redirect_chains::test_no_redirect_chains`
-
-- `tests.test_social_content_agent::test_image_prompt_present`
-
-## 已修复的基线失败（更新基线可收敛）
-
-- `tests.test_okr_and_experiment_semantics.TestOkrFakeGreen::test_zero_new_content_is_not_green`
+- 本次运行: 1347 collected, 0 failed
+- 基线存量失败: 0
+- **新增失败: 0**（阻断条件）
+- 已修复的基线失败: 0（建议 --update-baseline 收敛）
