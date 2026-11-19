@@ -725,16 +725,23 @@ class FeishuDailyReporter:
             if tp_inits_unreported:
                 tp_quality_note = (
                     "\n> 📊 数据质量：Travelpayouts API 的 inits_count 字段系统性未上报，"
-                    "「INITS_UNAVAILABLE」表示字段本身不可得（非零展示、非样本不足）。"
-                    "点击、订单、佣金为同源有效数据。"
-                    "CTR 因缺分母不可算，标为 INSUFFICIENT_SAMPLE"
+                    "「INITS_UNAVAILABLE」表示分母不可得（非零展示、非样本不足）。"
+                    "点击、订单、佣金为同源有效数据；CTR 需以站点侧联盟位点击计数（GA4 事件）为分母才能计算，"
+                    "Travelpayouts 自身不回传 inits，故此处 CTR 不可算。"
                 )
             tp_display = {"inits": inits_display, "searches": f"{data.get('tp_searches', 0):,}",
                           "clicks": f"{data.get('tp_clicks', 0)}", "bookings": f"{data.get('tp_bookings', 0)}",
                           "revenue": f"${data.get('tp_revenue', 0):.2f}"}
             # P1-GROWTH-28A: 同源口径校准 - 点击率只使用 TP 同源数据 (clicks/inits)
-            tp_ctr = f"{_tp_clicks / _tp_inits * 100:.2f}%" if _tp_inits > 0 else "INSUFFICIENT_SAMPLE"
-            tp_ctr_note = "同源 clicks/inits"
+            # 2026-11-18: inits 系统性缺时 CTR 标 INITS_UNAVAILABLE（根因明确），
+            # 而非笼统 INSUFFICIENT_SAMPLE（后者是转化率样本不足，与分母不可得性质不同）。
+            # 真正可算 CTR 需站点侧联盟位点击计数（GA4 事件）作分母。
+            if tp_inits_unreported:
+                tp_ctr = "INITS_UNAVAILABLE（inits 系统性缺，CTR 需 GA4 事件分母）"
+                tp_ctr_note = "分母不可得（Travelpayouts 不回传 inits）"
+            else:
+                tp_ctr = f"{_tp_clicks / _tp_inits * 100:.2f}%" if _tp_inits > 0 else "INSUFFICIENT_SAMPLE"
+                tp_ctr_note = "同源 clicks/inits"
         else:
             tp_display = {"inits": "未配置", "searches": "未配置", "clicks": "未配置",
                           "bookings": "未配置", "revenue": "未配置"}
@@ -951,8 +958,12 @@ class FeishuDailyReporter:
         # 缓存口径：28 天快照窗口独立成行，绝不冒充"昨日"（真实性修复）
         _snap = data.get("reporting_snapshot") or {}
         _cached_imp = _snap.get("gsc_impressions_28d")
-        gsc_cache_imp_str = f"{_cached_imp:,.0f} 次" if _cached_imp is not None else "—"
-        gsc_cache_clk_str = f"{(_snap.get('gsc_clicks_28d') or 0):,.0f} 次" if _cached_imp is not None else "—"
+        # 2026-11-18 优化：28 天缓存窗口是独立数据源（来自不同查询周期/未刷新时与 7 天窗口
+        # 口径不一致），不再作为「事实行」与 7 天窗口并列（此前导致日报每天重复报
+        # 「缓存点击 < 7天窗口」告警）。降级为独立参考注脚：只在 28 天窗口数据异常时提示，
+        # 不再把缓存点击/曝光写进搜索表现表的事实行。
+        gsc_cache_imp_str = f"{_cached_imp:,.0f} 次（28天独立窗口，仅参考）" if _cached_imp is not None else "—"
+        gsc_cache_clk_str = f"{(_snap.get('gsc_clicks_28d') or 0):,.0f} 次（28天独立窗口，仅参考）" if _cached_imp is not None else "—"
         # 缓存窗口一致性校验：28 天窗口 ⊇ 7 天窗口（[D-9,D-3] ⊂ 近 28 天），
         # 点击数与曝光数都不可能更少。若 28 天 < 7 天，两个数来自不同查询周期
         # （28 天缓存未刷新/口径不同），不能并列为事实，必须标注数据源异常。
@@ -969,9 +980,8 @@ class FeishuDailyReporter:
                 if _c28_imp < _c7_imp:
                     _bits.append(f"缓存曝光 {_c28_imp:g} < 7天窗口 {_c7_imp:g}")
                 gsc_cache_anomaly = ("；".join(_bits)
-                                     + "——28 天窗口 ⊇ 7 天窗口，数值不可能更少，"
-                                     "判为数据源异常（28 天缓存很可能来自不同查询周期/未刷新），"
-                                     "不要与 7 天窗口并列为事实，以 7 天窗口为准")
+                                     + "——28 天缓存窗口是独立数据源（查询周期/刷新口径不同），与 7 天窗口不并列；"
+                                     "上表缓存行仅参考，搜索表现以 7 天窗口为准")
         # A2 修复：真实索引页数来自快照的 GSC UI 快照，与 sitemap_count 不是一回事。
         # 原先日报只显示 sitemap 条数却命名 indexed_pages，读者会把它当索引页数。
         _snap_idx = _snap.get("gsc_indexed_pages")
