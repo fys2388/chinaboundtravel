@@ -106,6 +106,21 @@ def http_post(url, payload, headers=None):
         return 0, str(e)
 
 
+def http_get(url, headers=None):
+    """用标准库发 GET 请求，返回 (status, body)。与 http_post 同风格。"""
+    req = urllib.request.Request(url, method="GET")
+    if headers:
+        for k, v in headers.items():
+            req.add_header(k, v)
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            return resp.status, resp.read().decode("utf-8", errors="ignore")
+    except urllib.error.HTTPError as e:
+        return e.code, e.read().decode("utf-8", errors="ignore")
+    except Exception as e:
+        return 0, str(e)
+
+
 def run_gh(args):
     try:
         result = subprocess.run(
@@ -443,10 +458,69 @@ def send_feishu_alert(
     return status == 200
 
 
+def find_open_issue_by_title(workflow_name, category):
+    """查找同 workflow+category 的 OPEN issue，返回 (number, html_url) 或 None。
+
+    同一 workflow 反复失败时，router 每天用确定性标题建新 issue，导致飞书每天
+    重复轰炸、issue 无限堆积（issue #130 连续 10 天各建一个）。建新前先查重，
+    复用已有 OPEN issue 追加最新运行，才能让「分配」真正收敛到一个可跟踪的线程。
+    """
+    if not GITHUB_TOKEN:
+        return None
+    issue_title = f"⚠️ [自动创建] {workflow_name} 失败 - {category}"
+    url = (f"https://api.github.com/repos/{REPO}/issues"
+           f"?state=open&per_page=50")
+    status, body = http_get(url, {"Authorization": f"Bearer {GITHUB_TOKEN}",
+                                  "Accept": "application/vnd.github.v3+json"})
+    if status != 200:
+        return None
+    try:
+        issues = json.loads(body)
+    except Exception:
+        return None
+    for it in issues:
+        # 跳过 PR（GitHub issues API 会连带返回 PR）
+        if "pull_request" in it:
+            continue
+        if it.get("title") == issue_title:
+            return it.get("number"), it.get("html_url")
+    return None
+
+
+def comment_on_issue(issue_number, run_id, category, error_snippet):
+    """在已有 OPEN issue 上追加最新一次失败的运行信息，返回评论 url 或 None。"""
+    if not GITHUB_TOKEN:
+        return None
+    url = f"https://api.github.com/repos/{REPO}/issues/{issue_number}/comments"
+    body = (f"## 再次失败（自动追加）\n"
+            f"- **运行ID**: [{run_id}](https://github.com/{REPO}/actions/runs/{run_id})\n"
+            f"- **失败时间**: {datetime.now().isoformat()}\n\n"
+            f"```\n{error_snippet[:600]}\n```\n\n"
+            f"同一工作流重复失败，合并到本 issue 跟踪，避免每天新建重复 issue。")
+    status, resp = http_post(url, {"body": body},
+                             {"Authorization": f"Bearer {GITHUB_TOKEN}",
+                              "Accept": "application/vnd.github.v3+json"})
+    if status == 201:
+        try:
+            return json.loads(resp).get("html_url")
+        except Exception:
+            return None
+    return None
+
+
 def create_github_issue(workflow_name, run_id, category, error_snippet):
     if not GITHUB_TOKEN:
         print("[Issue] GITHUB_TOKEN not set, skip issue creation")
         return None
+
+    # 查重：同 workflow+category 已有 OPEN issue 时追加评论，不再新建
+    existing = find_open_issue_by_title(workflow_name, category)
+    if existing:
+        num, url = existing
+        comment_url = comment_on_issue(num, run_id, category, error_snippet)
+        print(f"[Issue] 已存在 OPEN issue #{num}，追加最新运行（去重），comment={comment_url}")
+        return url
+
     route = ERROR_ROUTES.get(category, ERROR_ROUTES["unknown"])
     agent = AGENT_CONTACT.get(route["agent"], "未知")
     issue_title = f"⚠️ [自动创建] {workflow_name} 失败 - {category}"

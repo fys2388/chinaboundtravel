@@ -11,7 +11,7 @@
 4 个从未启动的实验显示「在跑」。
 """
 import json
-from datetime import datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 import pytest
@@ -41,12 +41,39 @@ def test_new_helpers_exist():
 # 1. OKR 连续零值
 # ---------------------------------------------------------------------------
 
+def _newest_post_ref():
+    """动态参照日 = 最新文章日期 + 1 天（dslp 恒为 1）。
+
+    内容持续增长，写死历史参照日会让 _days_since_last_post 算出负数（参照日
+    早于最新文章），永远落不进升级分支。改为跟随最新文章，使日期相关测试
+    不随内容增长而漂移。
+    """
+    import re as _re
+    posts_dir = okr_utils.BLOG_ROOT / "content" / "posts"
+    newest_date = None
+    for f in posts_dir.glob("*.md"):
+        head = f.read_text(encoding="utf-8", errors="replace")[:4000]
+        m = _re.match(r"^---\n(.*?)\n---", head, _re.S)
+        if not m:
+            continue
+        dm = _re.search(r"^date:\s*['\"]?(\d{4}-\d{2}-\d{2})", m.group(1), _re.M)
+        if dm and (newest_date is None or dm.group(1) > newest_date):
+            newest_date = dm.group(1)
+    assert newest_date is not None, "content/posts 下应至少有一篇带 date 的文章"
+    return date.fromisoformat(newest_date) + timedelta(days=1)
+
+
 class TestDaysSinceLastPost:
     def test_counts_quoted_dates(self):
-        """48/60 篇文章的 date 带引号；早先的正则漏掉它们，把断更算成 18 天。"""
-        n = okr_utils._days_since_last_post(datetime(2026, 9, 19))
+        """48/60 篇文章的 date 带引号；早先的正则漏掉它们，把断更算成 18 天。
+
+        参照日动态取「最新文章日期 + 1 天」，断更天数恒为 1，与引用格式无关地
+        验证正则确实统计到了带引号的 date。
+        """
+        ref = _newest_post_ref()
+        n = okr_utils._days_since_last_post(datetime(ref.year, ref.month, ref.day))
         assert n is not None
-        assert 0 <= n <= 40, f"断更天数异常: {n}"
+        assert n == 1, f"参照日=最新文章+1天，断更应为 1 天，实际 {n}"
 
     def test_reference_date_matters(self):
         # 报告日之前 -> 负数；之后 -> 正数
@@ -62,18 +89,24 @@ class TestDaysSinceLastPost:
 
 class TestZeroRunEscalation:
     def _row(self, source, name):
-        return okr_utils._zero_run_icon(source, name, 0.0, 0, datetime(2026, 9, 19))
+        # 参照日不写死：内容持续增长，写死历史日期会让 dslp 变负数、永远落不进
+        # 升级分支。改用「最新文章日期 + 1 天」= dslp 1，再由各测试按需 monkeypatch。
+        return okr_utils._zero_run_icon(source, name, 0.0, 0, _newest_post_ref())
 
-    def test_content_new_escalates_when_overdue(self):
+    def test_content_new_escalates_when_overdue(self, monkeypatch):
+        # dslp=20 超出周更节奏 2 倍 -> 🔴 生产中断
+        monkeypatch.setattr(okr_utils, "_days_since_last_post", lambda *a, **k: 20)
         icon, note = self._row("content_new", "日新增文章")
-        assert icon in ("🟠", "🔴")
-        assert "天未发布" in note
+        assert icon == "🔴"
+        assert "生产中断" in note
 
     def test_content_new_within_cadence_stays_green(self, monkeypatch):
         # 强制把「距上次发布」压到节奏内
         monkeypatch.setattr(okr_utils, "_days_since_last_post", lambda *a, **k: 2)
         icon, note = self._row("content_new", "日新增文章")
-        assert icon == "🟢"
+        # current=0 时 content_new 的既定中性图标是 🟡（0% 标绿是谎报，见
+        # build_okr_progress 注释；同文件 test_zero_new_content_is_not_green 锁定此语义）
+        assert icon == "🟡"
         assert "节奏内" in note
 
     def test_content_new_double_overdue_is_red(self, monkeypatch):
@@ -92,7 +125,8 @@ class TestZeroRunEscalation:
     def test_unresolvable_date_keeps_original_icon(self, monkeypatch):
         monkeypatch.setattr(okr_utils, "_days_since_last_post", lambda *a, **k: None)
         icon, note = self._row("content_new", "日新增文章")
-        assert icon == "🟢"
+        # 无法解析日期时保持中性 🟡（current=0 的既定 base_icon），不臆造升级也不标绿
+        assert icon == "🟡"
         assert note is None
 
 
@@ -128,7 +162,10 @@ class TestOkrFakeGreen:
         assert new
         assert new[0]["icon"] != "🟢", "连续多天 0 篇仍标绿，报警信号被隐藏"
 
-    def test_note_is_rendered_into_the_table(self):
+    def test_note_is_rendered_into_the_table(self, monkeypatch):
+        # 参照日写死会让 dslp 变负数、落进「节奏内」分支（note 不含报警词）。
+        # monkeypatch 成超期 18 天，验证升级 note（天未发布）确实渲染进表格。
+        monkeypatch.setattr(okr_utils, "_days_since_last_post", lambda *a, **k: 18)
         md = okr_utils.build_okr_section(_load_snapshot(), "daily", datetime(2026, 9, 19))
         assert "天未发布" in md or "自动成立" in md
 
@@ -198,12 +235,12 @@ class TestExperimentPhantom:
         assert len(cfg) >= 7  # 6 个真实验 + 1 个 __updated_at__ 元键
 
     def test_running_in_snapshot_but_planned_in_config_is_not_started(self):
-        cfg = fdr.load_experiment_config()
-        # AUDIT-RV-001 fix 2026-09-22: 原用 REV001 作 fixture 是因为它当时在
-        # config 里是 PLANNED；2026-09-22 三方登记表对齐后 REV001 已修正为
-        # RUNNING（start_date 2026-08-16），不再适合验证「快照 RUNNING 但
-        # config PLANNED」的漂移场景。改用 GROWTH05-CTR-001 —— 它是真 PLANNED
-        # 且 start_date:null 的实验，正是漂移检测要抓的目标。
+        # 原用真实 config 的 GROWTH05-CTR-001 作 fixture，但登记表会随时间漂移
+        # （该实验后来被登记为 RETIRED，而 RETIRED 是终态、优先级高于 PLANNED），
+        # 导致断言拿到 RETIRED。这里改为自包含 fixture，只验证「快照 RUNNING 但
+        # config PLANNED 且无 start_date → NOT_STARTED」这一漂移检测逻辑本身，
+        # 不再耦合真实登记表状态。
+        cfg = {"GROWTH05-CTR-001": {"status": "PLANNED", "start_date": None}}
         e = {"experiment_id": "GROWTH05-CTR-001", "status": "RUNNING"}
         assert fdr._effective_running(e, cfg) == "NOT_STARTED"
 
@@ -282,7 +319,9 @@ class TestCiWindow:
 
     def test_success_and_failure_are_unaffected_by_window(self):
         assert fdr._ci_state_str(True, False, True, "x", 0, 8) == "成功"
-        assert fdr._ci_state_str(False, False, True, "x", 0, 8) == "失败"
+        # 2.1 起 failure 升级为显式告警，会附「（N 天内 M 次失败…）」窗口标注；
+        # 断言核心状态词「失败」仍出现即可，不再要求纯「失败」两字。
+        assert "失败" in fdr._ci_state_str(False, False, True, "x", 0, 8)
 
     def test_api_failure_still_distinguishable(self):
         s = fdr._ci_state_str(None, False, False, "rate limited", 0, 8)
@@ -384,9 +423,27 @@ class TestCanonicalVerification:
     「canonical 冲突 6 处 HIGH」——实测 6/6 都已在源码解决。
     """
 
-    def test_queue_is_parsed(self):
+    def test_queue_is_parsed(self, monkeypatch, tmp_path):
+        """解析器能把队列的数据行解析出来。
+
+        原先直接读真实队列并断言 total>=1，但队列会随源码修复被清空（写时 6 条，
+        现已 0 条），断言随之失效。改为自包含 fixture：喂 2 行合成队列，验证解析器
+        能逐行计数——解析能力本身与真实队列当前是否有数据解耦。
+        """
+        seo = tmp_path / "seo"
+        seo.mkdir()
+        (tmp_path / "static").mkdir()
+        (tmp_path / "static" / "_redirects").write_text("", encoding="utf-8")
+        (tmp_path / "content" / "posts").mkdir(parents=True)
+        (seo / "CANONICAL_CONFLICT_QUEUE.md").write_text(
+            "| url | canonical | user_canonical | sitemap_status | indexed_status | severity | recommended_action |\n"
+            "|---|---|---|---|---|---|---|\n"
+            "| https://example.com/posts/a/ | https://example.com/posts/x/ | https://example.com/posts/a/ | SUBMITTED | INDEXED | HIGH | fix |\n"
+            "| https://example.com/posts/b/ | https://example.com/posts/y/ | https://example.com/posts/b/ | SUBMITTED | INDEXED | HIGH | fix |\n",
+            encoding="utf-8")
+        monkeypatch.setattr(rke, "SEO", seo)
         v = rke._canonical_conflicts_verified()
-        assert v["total"] >= 1, f"未解析出任何队列行: {v}"
+        assert v["total"] == 2, f"应解析出 2 行队列: {v}"
 
     def test_verdicts_are_exhaustive(self):
         v = rke._canonical_conflicts_verified()

@@ -65,9 +65,11 @@ def test_inventory_file_exists():
 
 
 def test_inventory_has_100_items_and_20_sources(inventory):
-    assert len(inventory["items"]) == 100
+    # 库存会随内容 bot 持续发帖增长（已 330 条），改为下界断言：
+    # 规模不低于初始基线（100 条 / 20 个来源），且来源保持充足多样性。
+    assert len(inventory["items"]) >= 100
     sources = {i["source_article"] for i in inventory["items"]}
-    assert len(sources) == 20
+    assert len(sources) >= 20
 
 
 def test_inventory_required_fields(inventory):
@@ -81,9 +83,13 @@ def test_inventory_platform_balance(inventory):
     by_platform = {}
     for i in inventory["items"]:
         by_platform[i["platform"]] = by_platform.get(i["platform"], 0) + 1
+    # 四平台齐全，且各自不低于初始基线（25）
     assert set(by_platform) == {"ig", "pinterest", "x", "fb"}
     for p, n in by_platform.items():
-        assert n == 25, f"{p}: {n}"
+        assert n >= 25, f"{p}: {n}"
+    # 相对均衡：最大平台不超过最小平台的 1.5 倍（防止某平台被偏废）
+    counts = sorted(by_platform.values())
+    assert counts[-1] <= counts[0] * 1.5, f"平台失衡: {by_platform}"
 
 
 def test_inventory_covers_all_types(inventory):
@@ -135,8 +141,12 @@ def test_validate_copy_rejects_first_person():
 
 
 def test_image_prompt_present(article):
+    # build_image_prompt 把 platform/ctype 映射成语义描述词（ig->竖构图 4:5，
+    # visual->striking instagram-worthy 风格），不再注入原始字面量。
+    # 断言映射产物存在，验证「平台比例 × 内容类型」差异化仍然生效。
     p = sga.build_image_prompt(article, "visual", "ig")
-    assert "visual" in p and "ig" in p
+    assert "vertical 4:5 composition" in p   # ig 平台构图
+    assert "striking instagram-worthy" in p  # visual 内容类型风格
 
 
 # ============================================================

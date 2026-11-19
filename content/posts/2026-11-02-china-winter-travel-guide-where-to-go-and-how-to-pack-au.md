@@ -164,7 +164,7 @@ For more information on China travel, check out these articles:
 - [Ultimate Guide to China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/ultimate-guide-to-china-visa-for-tourists/)
 - [China Extends 240-hour Visa-free Transit Policy to More Countries](https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 - [Western Sichuan Overland Camping Route: My 7-Day Adventure Through China''s](https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/)
-- [PayPal Now Accepts Alipay and WeChat Pay  Finally, Right?](
+- [PayPal Now Accepts Alipay and WeChat Pay  Finally, Right?](https://www.chinaboundtravel.com/posts/paypal-alipay-wechat-pay-qr-code-support/)
 
 ## Related Reading
 
