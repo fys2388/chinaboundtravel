@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-11-19_content",
   "created_at": "2026-11-19T01:00:52.040973+00:00",
-  "updated_at": "2026-11-19T18:00:34.065983",
+  "updated_at": "2026-11-19T19:52:51.785502",
   "target_date": "2026-11-19",
   "issue_count": 16,
   "severity_summary": {
@@ -134,7 +134,7 @@
       "detected_at": "2026-11-19T01:00:52.040664+00:00"
     },
     {
-      "id": "site_health-357e16fa61c842a4",
+      "id": "site_health-3ef3771a9f5ae970",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -151,10 +151,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-19T18:00:33.601442+00:00"
+      "detected_at": "2026-11-19T19:52:51.503286+00:00"
     },
     {
-      "id": "site_health-3d0134d924fb25a7",
+      "id": "site_health-45ffbea9b9b3424c",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -171,7 +171,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-19T18:00:33.601436+00:00"
+      "detected_at": "2026-11-19T19:52:51.503281+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -291,7 +291,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-19T05:05:55.550141"
+      "detected_at": "2026-11-19T05:05:55.550136"
     },
     {
       "id": "issue_006a89c1304c",
@@ -314,7 +314,7 @@
       "detected_at": "2026-11-19T05:05:55.550136"
     },
     {
-      "id": "site_health-14544e33c01acf52",
+      "id": "site_health-7b66da1e9ff7c7f7",
       "type": "ai_forbidden_word",
       "title": "ai_forbidden_word",
       "description": "ai_forbidden_word",
@@ -331,7 +331,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-19T18:00:33.601503+00:00"
+      "detected_at": "2026-11-19T19:52:51.503347+00:00"
     }
   ],
   "priority_issue": {
