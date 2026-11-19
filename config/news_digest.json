@@ -1,8 +1,8 @@
 {
   "version": "1.0",
-  "last_updated": "2026-11-19T04:19:13.524213+00:00",
+  "last_updated": "2026-11-19T16:41:19.837849+00:00",
   "last_updated_date": "2026-11-19",
-  "total_items": 37,
+  "total_items": 40,
   "digest": {
     "visa_policy": [
       {
@@ -117,6 +117,17 @@
     ],
     "travel_industry": [
       {
+        "title": "Upgraded FTA expected to boost Korea-China tourism ties, experts say - The Korea Times",
+        "summary": "Upgraded FTA expected to boost Korea-China tourism ties, experts say The Korea Times",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPa1lTeDVfT1hzWV9HWnJoelNwYl9Ta3hWUVlwM0NYRjhuMUFvdC04VXQ3R2cwSHVvZ0NBSDYxOV9Gdm1LTVJMdnlmbkdFLUUwWjVsUjlfYUtGblBRWFJkVGpta0Q4enZpcW1pTVlWNVdTNTdRSmNna1p3YkhQLUE3bkREaEswaDQ2a2xDTkpYRUZCLWM0UlF3NnBobFlOcFF1eWdRZlJlSFVvbFI3aFJoZHhyai1IbkZzX0hMUV9pb2MxWXNBOFHSAcsBQVVfeXFMTzRvYkhyWVhiQ05WZ0lPdUtMZ2tCejdocGVzT2d4bXMteGlQSkpCMGVnMjBIVWxGRFlnR2JzUmp3b19oMzZXWXdsNFZvVTFoeDV4RHRrNmc4blVZTW43aURTZVM2ZHRtVUJ6SUlURXRNLVkwT1pRX21sU0x6X0tYdGFFQWJoeGJkSDRFQ24xbUdraUQtZDJNTUt3b0dBZS1lMHFoYlpvY1ZXazVDNTM3UTRVUjFYeEhGQllSanBFVzZEU0NUZ2lIU0pyblk?oc=5",
+        "date": "2026-11-19",
+        "source": "Google News RSS",
+        "source_query": "China+tourism+news",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "6f4c24b192f0"
+      },
+      {
         "title": "South Korea says China trade agreement to boost tourism, entertainment sectors - Reuters",
         "summary": "South Korea says China trade agreement to boost tourism, entertainment sectors Reuters",
         "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQa2cyUmpJMG9YanZfOGk4eUVBT0NfTEVSYjloblMwcUxYdGNsN3hrMFozbHdzdU0yMVdnVnFxeE5NVGJuTDdCeGtjdDFsaHhyWm5DQUMxVm1RWnRuOFBqRHloYk0zNW5BbHJDZC0wbkNIb0wzUUJlczk5ZDE5VlpsdFVhRzBNSWZqUkhrbW1aWkU1TFVpa1RGS01YUk13NUdGVS1peWJuY09RSmJFOEFSRVhMSmNBazQ?oc=5",
@@ -139,15 +150,26 @@
         "_hash": "c492075c17b6"
       },
       {
-        "title": "Kim Jong Un smokes cigarette, watches daughter ski from armchair at North Korea resort - New York Post",
-        "summary": "Kim Jong Un smokes cigarette, watches daughter ski from armchair at North Korea resort New York Post",
-        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNbGhyQWMxVHJqTUd5UTRXUDQtWjM3MzZQZEUwUjRMWk15d3I1c3dISHo5cGNBMkJENDhWVDV2RlBjZVpUQktlMlAtSElxX3JRWW0xRVk1MHQwMV9nNnhFZHg5QllaRmJCMHRscGVBSURScTNKbWNEd0VmUHVVamFmUjBlNmVJdFpNUHVjcWc1dlhvbGdjZjlnaFhsbnVFd1ZNN2dMRUFnc1hYZ2FqVS1qYXBnRGpscnM?oc=5",
-        "date": "2026-11-17",
+        "title": "China's inbound tourism surges on visa-free policies, word-of-mouth recommendation, ETOA chief says - 巴士的報",
+        "summary": "China's inbound tourism surges on visa-free policies, word-of-mouth recommendation, ETOA chief says 巴士的報",
+        "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOS2pXc181aGlpLVdTX1BvVjR3S3JYX21meGtnbmtTMTB6a2tHRnN5a1pCYlFpNFR0Yy12N0Q5b1BxVHA0eVJYMjhKXzlhdlpUMHAzMmUwVkZoUU0wdVlQaVNQQWR4UlRSS0RLMEF3OFhDajZURjE3d2hvU0FtZkNfOW9sa0lOeVBBdzF0NXczVkdvMmNSWmZNRGhRUWd2TVA4VndFbFRPNHVHRVl6dFNoUW1sT1kwUG5NSkE1eXUzaFNOSXlqTFpGSUZuMUZHUFdjRWVtWm5LNlpDbFBwZk10eTdB?oc=5",
+        "date": "2026-11-15",
         "source": "Google News RSS",
-        "source_query": "China+tourism+news",
+        "source_query": "China+inbound+tourism",
         "category": "travel_industry",
         "type": "news",
-        "_hash": "6c97e1314d58"
+        "_hash": "92053275faa1"
+      },
+      {
+        "title": "China Visa-Free Push to Lift Inbound Tourism Revenue to $470 Billion by 2040 - Seoul Economic Daily",
+        "summary": "China Visa-Free Push to Lift Inbound Tourism Revenue to $470 Billion by 2040 Seoul Economic Daily",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPN3ZmRWRNTlFjWHU4bHQxaXA1WDJERlZWUVc2YmRnVXpsRWhSclhPT3JRMUxkek8xeF9zSWZXT0ZBWFdudlJEdURZNUtyZk83Q0I1QU5WZTZBcjVTQ1NabUpmV1lSRVo4N2pFNmtUS19lVHgwekYwMzB1YW1xWGloZVdwMHkxbk10RF9FZHpGVVlJRWQwYmdfWEFIeW41X254?oc=5",
+        "date": "2026-11-15",
+        "source": "Google News RSS",
+        "source_query": "China+inbound+tourism",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "bccd77cae9aa"
       },
       {
         "title": "Chinese Ambassador to Ireland Zhao Xiyuan Introduces China’s Inbound Tourism Facilitation Policies in Irish Media - 中华人民共和国外交部",
@@ -161,15 +183,15 @@
         "_hash": "61b92f242338"
       },
       {
-        "title": "How China turned inbound tourism into a growth engine - Hospitality Investor",
-        "summary": "How China turned inbound tourism into a growth engine Hospitality Investor",
-        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQNUpDaHdkaHhxMGFpa1VNb1BaRGFEUDVzVUdjcmg0OVcycGFDN1diTWdxZXpsUU1jWTRkMFJ1bjRyd08zdEJPNi1vbDdVTTU2TmpyN0NrOHNrLU9nR2pzMkwzUF95d0Jsblc1azJHYWVFRlotY2hGQTRNN3k5eEc1ZUN1Sm9aSlA1aG9jMml1ZnN2eGNoSHVaWA?oc=5",
-        "date": "2026-10-21",
+        "title": "Is it safe to go to China right now? What the U.S. State Department travel advisory warns about wrongful detentions - Clarin.com",
+        "summary": "Is it safe to go to China right now? What the U.S. State Department travel advisory warns about wrongful detentions Clarin.com",
+        "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOWlUyVHNPMHFWYkQxcVYxcHE3TDg2YmVCb2gybGxnaUtoVUwzVl9lUi1pUmsxVjg4YXI1QU5ndzFUR1NJZjhFZkpYMEhiZjE1bHJxdHd3SUJvaVk1OWstcHJMT3ZnZEIyRDZmUFNTVUZ2cXdFN29fSm9PbVo0Q0cyN29meVFlVDFvczZpUzJsNVlmTzJQN0VleG5yUDYtQk1NY0k4OEtYVjJteFMtSmV1RVUtVzdWUzRneUJwZDZEOEV1Q3IzWUhLbkd5eUhnUFN6SjNrdFczTkRHU3E3Qlg4SEphN0xBYlZWSWM4bzRuTGxnUmfSAfgBQVVfeXFMTUlYQ1V1QW9SSEg5LVdiWExkTmcxZW1EazYzZlBHbEc4U2o2UUEtZ2pid2o4NF9pMDJFdnJYaF8yOUZVWVZFZGIyNmFna1c1cGdWS21kcEtwT3hLT2o3c3FLY3d6X2ZudC1fOVd5Qm4wbHdGQXVDakFDVjZWanBXWDFWNG9EWnlxUEdmeTRsbFR5YlJiU3JvSDJrUjdqRzhtUDVZQWVRYmswbVRkam9uajE2Q2R4Y2t1Wmt3TUxvcWVRcXV1cjRGRmpFVjRuVTltUXNtekxsMEh1bkNNWFA1VUhuNm1wRkxZZzFZZHROQ2RrTEh5SXlPb3o?oc=5",
+        "date": "2026-10-22",
         "source": "Google News RSS",
-        "source_query": "China+inbound+tourism",
+        "source_query": "China+travel+restrictions+update",
         "category": "travel_industry",
         "type": "news",
-        "_hash": "24e164f507d2"
+        "_hash": "ee35e9a70e9e"
       },
       {
         "title": "Tourism Economics Insights Featured in ITB China Travel Trends Report 2026/27 - Tourism Economics",
@@ -183,17 +205,6 @@
         "_hash": "f9c470f71dbe"
       },
       {
-        "title": "China's Golden Week travel surge masks cautious consumer spending - Reuters",
-        "summary": "China's Golden Week travel surge masks cautious consumer spending Reuters",
-        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNdm9HZjg0WXpHcEN4R21wd3ZZOFVJNmRMTVRNWUhRQl96TEVVWG1HQnB5UTZvU3JyaWswRUtaRlh5Q2dQMzJqY1U2UFdCRjJRcEY2eDVXenZsU1RWX3R3T1ZLSmlSeXREemhST0FCMEdsbnE3ZDE5MjlwRW9QWTl1VVFmWG5tQ0YyREZ4d2RuZ25PYmNVV2NLRW1YODA5R3FNMHFDa29udTEzTHhTQndvZ2lDeFBvdEdYWEVJ?oc=5",
-        "date": "2026-09-29",
-        "source": "Google News RSS",
-        "source_query": "China+travel+industry+2026",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "094bc273bc7a"
-      },
-      {
         "title": "China tightens travel restrictions for citizens - BBC",
         "summary": "China tightens travel restrictions for citizens BBC",
         "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5HN2R0OGJtZHhZNXdSNnZQNGtKcGgyTGpJY1JxWEZWckNfQ0NIX1J5Y0lFNkZnV3lncXEzZFhEY1Q2aGJpMEcyVVIwdENwTWwtcl9JRTIzQ2lGek0?oc=5",
@@ -205,29 +216,51 @@
         "_hash": "a670e57dd7ee"
       },
       {
-        "title": "China’s visa-free boom is rewriting inbound tourism - Asia Times",
-        "summary": "China’s visa-free boom is rewriting inbound tourism Asia Times",
-        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcG53eE4yN3QwRjFPWTJtdmMwZ1I3aTVPT0JMRENkMzhvQVA0SEJ6aVRzMVZrR3phbFk2dTlGOHhLRFZydUltWDR2Nk5QTk1FQmh2SDN1dUN3QVk0U2twXzlkNjBhMGNpd0l6ZWpQLXlqWm56elpqU0w4Z1BNUkE4MXloek5YNzl2?oc=5",
-        "date": "2026-08-31",
-        "source": "Google News RSS",
-        "source_query": "China+inbound+tourism",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "9440552d7b82"
-      },
-      {
-        "title": "China Tightens Entry And Exit Rules From Sept 15 - Migrant Times",
-        "summary": "China Tightens Entry And Exit Rules From Sept 15 Migrant Times",
-        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxObS1uWjBXeVJwRzV5Ui13N3BLbHhQM202X2lWRS00blc3b24zQk9NVVRmMXBFaFVPU2pBY3NVUlRibUQ4RFhIR3ZoNzNYX3dKVHhENmJ2UENxdl9wWkRIaWM4bmhVWHhyN09lSExTT21MdkdjeWpQZXQ3bFNZYm1WWXJKc2hXMkJoc0o1bGNnQ244Y092WlBJR2RBX1QxcFY1a2c?oc=5",
-        "date": "2026-08-15",
+        "title": "US State Department updates China travel advisory, warning electronic communications surveillance - Digital Watch Observatory",
+        "summary": "US State Department updates China travel advisory, warning electronic communications surveillance Digital Watch Observatory",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBoeENnT1R0aXlzUnJKdDFlVTVTNkQ3aVR2aHgzZWNKNnZlamk0UU53NnZTLUZyNEVIUGJDbW9tODlZaExkNGM1RldqN1M4dm5uZl9SaHZaMTdKT2hJTng4Q2RJa29GR0FBUW1lc3dZRQ?oc=5",
+        "date": "2026-09-09",
         "source": "Google News RSS",
         "source_query": "China+travel+restrictions+update",
         "category": "travel_industry",
         "type": "news",
-        "_hash": "47da71bd3f02"
+        "_hash": "ef20aca264f6"
       }
     ],
     "destination_news": [
+      {
+        "title": "2026 World's Travel & Hotel Awards Gloriously Released in Hong Kong, China - Thailand Business News",
+        "summary": "2026 World's Travel & Hotel Awards Gloriously Released in Hong Kong, China Thailand Business News",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNWTZWOWtQNEJkN3dtdDVMWFNQUTVvSGlpdTB3b05EM293N1JHQmhkWW1XWlVMZ1Iyc2dxMWNZMzg0RW1LaVo1UjJXQmZjcEl5UGduQ3lpTHdDaUV3MVU4LTA0V3FxU2xTM2g0ZVZDci0tV19TVVpQUk5Teldabzg3SjdGNy1mdkNuNmlMQ0hGY0hERW1vS3JEX01MS29MMEhiTUtwMWhobEVCOHBQY2JVR3lkMm9Zemtl?oc=5",
+        "date": "2026-11-19",
+        "source": "Google News RSS",
+        "source_query": "China+travel+destination+news",
+        "category": "destination_news",
+        "type": "news",
+        "_hash": "f2404d973fed"
+      },
+      {
+        "title": "Inside APEC leaders' lounge: Advanced AI, intangible cultural heritage - CGTN",
+        "summary": "Inside APEC leaders' lounge: Advanced AI, intangible cultural heritage CGTN",
+        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQN3FITnp6VGRuZjJqNlhoTHRzMTVRLVhmSFBfcTAybm5LQkdxUVhUZzNxeGJPcUtHUTZOYnZSanpfRFhQbkFuXy1ORzVkUHFabS05QldkbHhGbUUwYjJIYVBLb2lER0FmMTU2TG5IQUh3cHBVUlZpY19CYUpKM1lVM0dUeFBOWXROd0VCXzZxRkllT3h0b1B2YVI0bU56MUI4SHJHU3J5WXRRMDAwdldNcFRUNUpOdTk3VHdTMUtRUy1YQQ?oc=5",
+        "date": "2026-11-19",
+        "source": "Google News RSS",
+        "source_query": "China+cultural+heritage+news",
+        "category": "destination_news",
+        "type": "news",
+        "_hash": "3db7c7ce2a7e"
+      },
+      {
+        "title": "Red and blue APEC scarves highlight Shenzhen's cultural heritage - Nation Thailand",
+        "summary": "Red and blue APEC scarves highlight Shenzhen's cultural heritage Nation Thailand",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5RQUdzbm04ZlM4ME5pRkRrTkh2bEdteF9zeU5LaVdGX29KRkZ5Sm5lM2ZZZ3k5QkJsc0tFNWNVY21UZGdNMEJGQkRKSmJKOTZiUmFVUUVmcm41UWhfR1F1VFdDSHdyV1U?oc=5",
+        "date": "2026-11-19",
+        "source": "Google News RSS",
+        "source_query": "China+cultural+heritage+news",
+        "category": "destination_news",
+        "type": "news",
+        "_hash": "cfdbdde1220f"
+      },
       {
         "title": "United Airlines ranks No. 1 globally for destinations served; China’s Big Three make top 10 - China Travel News",
         "summary": "United Airlines ranks No. 1 globally for destinations served; China’s Big Three make top 10 China Travel News",
@@ -264,46 +297,13 @@
       {
         "title": "Americans could be detained for years in popular travel destination, officials warn - Fox News",
         "summary": "Americans could be detained for years in popular travel destination, officials warn Fox News",
-        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNREkwZEZOV0xpUG9ubFphM3dsbFBYTU9ZcXFrTDAyMGxsbDI5MUhqU0o0TGNaWGlKTlA5dC1USlhYZWVBTTVCNDRGeXVfMjFyeW0xNmNaM0c0ZDk2bmR1RU1FNmhCUGJ1eFFxVV9rVm5kajlPSy16YUltX3p4eFhWNzFENF9pWjhfTmJQQjB6Zmx4UQ?oc=5",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNREkwZEZOV0xpUG9ubFphM3dsbFBYTU9ZcXFrTDAyMGxsbDI5MUhqU0o0TGNaWGlKTlA5dC1USlhYZWVBTTVCNDRGeXVfMjFyeW0xNmNaM0c0ZDk2bmR1RU1FNmhCUGJ1eFFxVV9rVm5kajlPSy16YUltX3p4eFhWNzFENF9pWjhfTmJQQjB6Zmx4UdIBlwFBVV95cUxPQktOT0hNOEh6YWRxcDVEa0ozQ0twZ1pqVUJCbkd1ODJwREIyb3RxTjlJYndLcXVlWU5sZWJGQmhNck5jeVlkMTl0OVY2eGZhVXlMaDZsWURUQlc1UzRPZXhPV1VrV3Etak9TVVJWYTNpaVE1RHFsNFdPOVZiRzhXSko4V2M1LXpGWkZlNkY3WUlIVWVVZE9N?oc=5",
         "date": "2026-10-22",
         "source": "Google News RSS",
         "source_query": "China+travel+destination+news",
         "category": "destination_news",
         "type": "news",
         "_hash": "6fe72a77cb3a"
-      },
-      {
-        "title": "UNESCO Intangible Cultural Heritage: 64 practices to be examined, as - UNESCO",
-        "summary": "UNESCO Intangible Cultural Heritage: 64 practices to be examined, as UNESCO",
-        "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQbng3eng0MHNva1RobTJ5TDJKN2dsQnpUejkwQVhPLU05Rkt2Q1dyek1RQlk0X3BFSHU0UFZpU3JXdmZialJKc2NnUmQ0LW05dWhXOV95VGNQZWlkdG5lNWhjZ01wUnZmWElVOTc1eWNvSW9pQU1yZHZwbDBrZXU5QU9kTTFuYnVNT0tEcVJkQllvQXczc2JMOWdaekp2UmlaVC1tS2tWZHhIbTIyS2xrMW5lcXI1Q2VKVWV0UEdQaVZtcTJ6ZGFqYWMtMHlESGc?oc=5",
-        "date": "2026-10-21",
-        "source": "Google News RSS",
-        "source_query": "China+cultural+heritage+news",
-        "category": "destination_news",
-        "type": "news",
-        "_hash": "dd5e2e4fda97"
-      },
-      {
-        "title": "ICE repatriates 58 objects of cultural heritage to the People’s Republic of China - ICE | U.S. Immigration and Customs Enforcement (.gov)",
-        "summary": "ICE repatriates 58 objects of cultural heritage to the People’s Republic of China ICE | U.S. Immigration and Customs Enforcement (.gov)",
-        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNWkJFSVlqejhUaTZUank3TWMxVzM2Y0h0d3RnTXB3MlVFV28wS3JTa3BHalEtTDVJaEdRalpHYTV6bXhDaGpVdFpuNDM2LUtnQnRiLTFCVjdBVGFmbW9xNmFXZWJPcWtwRTk5WHVuNzVKeFpDYmJEd1IxTkswV1hDWU0tV2lfMjFtRlplX29IbVpaemMyOWxQRVZZN3g0VjNHZWxV?oc=5",
-        "date": "2026-09-30",
-        "source": "Google News RSS",
-        "source_query": "China+cultural+heritage+news",
-        "category": "destination_news",
-        "type": "news",
-        "_hash": "a7e960271e22"
-      },
-      {
-        "title": "China Travel News Highlights Emerging Destinations Attracting More Visitors - RESIDENT™ | A Luxury Lifestyle Magazine",
-        "summary": "China Travel News Highlights Emerging Destinations Attracting More Visitors RESIDENT™ | A Luxury Lifestyle Magazine",
-        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQM2lXUElvTzlTQlR5Mmk4T1huV25XejlPZjFqWGUtRU1oVFU3SUd3WXY4Tm4zX2dpMXZ4SkVpbHFMQ2FGWE1FNU5aSmpjeVRoRV94Y0NuZHZvVWdFWHExQlZENnpWeXZPaFZ5VWJvLUdOYUE1RGZXRDNZeGh4eVBLODNjbXNUNUp2aTVqWjB1bHhPbWdLQm1kM254UGMtbC1kaFB3TUpMX0hwdkF5cXNfcGFsMnFvUzRIVlpMaTJjLWNwdw?oc=5",
-        "date": "2026-09-11",
-        "source": "Google News RSS",
-        "source_query": "China+travel+destination+news",
-        "category": "destination_news",
-        "type": "news",
-        "_hash": "69f48bf04a8c"
       },
       {
         "title": "2-Week China Itinerary for Families: Beijing, Luoyang, Xian, Chengdu and Shanghai - YouTube",
@@ -341,6 +341,17 @@
     ],
     "safety_alerts": [
       {
+        "title": "Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker - Anadolu Ajansı",
+        "summary": "Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker Anadolu Ajansı",
+        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQWDRKUmdWclVhZlpLVnFCNlJvSkl0NHJXVHJkQXQtWkdYNWtRMnBjRkRlT1Q4NlRlUTlSa3Y5eEU4LUFqNEZla1J6QXlRTlg3TGpickMtUGNRR1o4dkYtTml0Qzl2YW00UGVoZEo1NXNDZ3V5a045RXEzeU8yamVpLWptNFRnaVhvZEpsN1RGVHZyT3gwQ08zenJILUppY1JtZFRjQTV5TUJIVUlfbXhfYlhQSVpTVzJRM0pESHJVYnZBQ245MGM3M1FkQktIUQ?oc=5",
+        "date": "2026-11-03",
+        "source": "Google News RSS",
+        "source_query": "China+transportation+update",
+        "category": "safety_alerts",
+        "type": "news",
+        "_hash": "7a3227c9b470"
+      },
+      {
         "title": "U.S. Adds Wrongful Detention Warning to China Travel Advisory - AgroLatam",
         "summary": "U.S. Adds Wrongful Detention Warning to China Travel Advisory AgroLatam",
         "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPX1lBcl9RQ2hOUWdVQ2dhSmJnRm5WU3E5cE9lR2R0SUMzWExtNURXYVlOTzZWa0tqN3VZTVB2OFp1ei1UckpjamhqeF9DdEh4U2M3cjh0OGxWVW1XSGJVQ2lwYnQ5SW1WS0NqSHZ1anJ1RW1BV3VUZS00cDhIU2I4UlczbXZiX2VfLTdrLXBmcmhNZUF4dW5HSzNIMUxIU2dmc1FqbERSWlR1RjJNVkhudmVtZERaQndBM1F3dg?oc=5",
@@ -350,17 +361,6 @@
         "category": "safety_alerts",
         "type": "news",
         "_hash": "fa31abf1d061"
-      },
-      {
-        "title": "Is it safe to go to China right now? What the U.S. State Department travel advisory warns about wrongful detentions - Clarin.com",
-        "summary": "Is it safe to go to China right now? What the U.S. State Department travel advisory warns about wrongful detentions Clarin.com",
-        "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOWlUyVHNPMHFWYkQxcVYxcHE3TDg2YmVCb2gybGxnaUtoVUwzVl9lUi1pUmsxVjg4YXI1QU5ndzFUR1NJZjhFZkpYMEhiZjE1bHJxdHd3SUJvaVk1OWstcHJMT3ZnZEIyRDZmUFNTVUZ2cXdFN29fSm9PbVo0Q0cyN29meVFlVDFvczZpUzJsNVlmTzJQN0VleG5yUDYtQk1NY0k4OEtYVjJteFMtSmV1RVUtVzdWUzRneUJwZDZEOEV1Q3IzWUhLbkd5eUhnUFN6SjNrdFczTkRHU3E3Qlg4SEphN0xBYlZWSWM4bzRuTGxnUmfSAfgBQVVfeXFMTUlYQ1V1QW9SSEg5LVdiWExkTmcxZW1EazYzZlBHbEc4U2o2UUEtZ2pid2o4NF9pMDJFdnJYaF8yOUZVWVZFZGIyNmFna1c1cGdWS21kcEtwT3hLT2o3c3FLY3d6X2ZudC1fOVd5Qm4wbHdGQXVDakFDVjZWanBXWDFWNG9EWnlxUEdmeTRsbFR5YlJiU3JvSDJrUjdqRzhtUDVZQWVRYmswbVRkam9uajE2Q2R4Y2t1Wmt3TUxvcWVRcXV1cjRGRmpFVjRuVTltUXNtekxsMEh1bkNNWFA1VUhuNm1wRkxZZzFZZHROQ2RrTEh5SXlPb3o?oc=5",
-        "date": "2026-10-22",
-        "source": "Google News RSS",
-        "source_query": "China+travel+safety+alert",
-        "category": "safety_alerts",
-        "type": "news",
-        "_hash": "ee35e9a70e9e"
       },
       {
         "title": "US adds wrongful detention warning to China travel advisory - Voice of America English News",
@@ -374,6 +374,17 @@
         "_hash": "cf07478389df"
       },
       {
+        "title": "US adds ‘wrongful detention’ warning for Americans travelling to China - South China Morning Post",
+        "summary": "US adds ‘wrongful detention’ warning for Americans travelling to China South China Morning Post",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPbGVETjJPRS1DMEZHUmNsRU5uRFN3TlRnaFdNczR4S1NPejVscWFqQ1lHNzJwQzhLRWtqQ3Z2cEhENDk0MTBIaVdUTTBxWjRGakxCTnBmU1JWNG83M2dFQjFEYXVMRnZidWx6azZGYy0zSldLcDNkSE5TNnpuQmZjMGUwY1NWdWJGdC12aGotR1cwYXRjYzdoQ0NjN2g1YVhEd3FWNFNaQmRDb1d1Qjh5NGRVR0JMeEVXdVdN0gG7AUFVX3lxTE4zaEFHU19wX0VlWWdTZDNOekZXSmJIVjdnVWo5aUxuZ0VGZU9KMXpSVEtCLU5ra2RjeGNPbmxra0tESml6TDllUmVjYTZxSlBaSlhPNlQ2aGxUSTJUUXFUMlZuRU51WkNOX3N6blBNVnhxaU00WmZyVE1ZMHk5TFM4MVNkTXFJV2JNSjlXYUpyNUh6QzhDY3VTTW1qVGlXR3Faa1VKNnpKVElqRVB6OTM0QU1TOC1FanFpWTg?oc=5",
+        "date": "2026-10-20",
+        "source": "Google News RSS",
+        "source_query": "China+travel+safety+alert",
+        "category": "safety_alerts",
+        "type": "news",
+        "_hash": "38c86176c05c"
+      },
+      {
         "title": "Weather Alert: Typhoon Saudel - U.S. Embassy & Consulates in China",
         "summary": "Weather Alert: Typhoon Saudel U.S. Embassy & Consulates in China",
         "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9TalVib2lpSGdER1J1amRaaDBRdUt4TEdrTXJKLTVSbEhISXN4WElmdWJuWThTQ3JkRFp0SFIzNmtwWFhBdVdnWFVmOWNyTlNFMmJjSFV0Z2hfUlpHdUtjYlZsYm5pd1Y0Vkd4T1ZDUlBXc3pj?oc=5",
@@ -383,6 +394,17 @@
         "category": "safety_alerts",
         "type": "news",
         "_hash": "a1f1f9e17564"
+      },
+      {
+        "title": "China's 240-hour visa-free transit policy - English.gov.cn",
+        "summary": "China's 240-hour visa-free transit policy English.gov.cn",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxONVB0Yk1udXR1NU5WTGpJMVNscHlVdnpJbGJzWDQ0ZmxuZHhfRVVBcVVvVVIxakdlVmxLUUNPRjk5MWtkcmpYS3VkNjU0ZXg2cUZQLWlyZXpkWEVqbDFJbEhBNWFOVWFUdHY1RlotYU5HMnBINERocWdlZFV2aHpRX2gzbWR0OTVxRHBLOVBSSkFyN21ndTdLTm9R?oc=5",
+        "date": "2026-08-21",
+        "source": "Google News RSS",
+        "source_query": "China+transportation+update",
+        "category": "safety_alerts",
+        "type": "news",
+        "_hash": "007efa1b5d47"
       },
       {
         "title": "Storm weakens, but disrupts travel in China - Taipei Times",
@@ -405,6 +427,17 @@
         "category": "safety_alerts",
         "type": "news",
         "_hash": "dc0c52f4626a"
+      },
+      {
+        "title": "Zero-emission medium- and heavy-duty vehicle market in China: A 2025 update - International Council on Clean Transportation",
+        "summary": "Zero-emission medium- and heavy-duty vehicle market in China: A 2025 update International Council on Clean Transportation",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNTTZHWkprYXE0MTBiLUhseXdZYlFJZlFJVTV1TzBGV0NWaXJCMG5zazRqR0ZicW5qQkVfTm1RcXRDZ0ZzWUVvcHhkeVh3MTllQjdGUXp1TEhZbmZOX0dWRWV4ekFjblNKTXh4Rl83TnZSbTJBQi1Rc1dYcjRhbmM0NnhkTGo2SzhUZzBhcll6R0lHSzNMaWROVzdwamlVdmNrQ0QzZE5rdWtaUExFODJUdEp3?oc=5",
+        "date": "2026-06-16",
+        "source": "Google News RSS",
+        "source_query": "China+transportation+update",
+        "category": "safety_alerts",
+        "type": "news",
+        "_hash": "a08c0d17a4a0"
       }
     ],
     "general": [
@@ -422,14 +455,14 @@
   },
   "llm_summary": {
     "visa_policy": "- [2026-11-19] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-11-10] I Visited China as an American Without a Visa—Here’s How You Can Do It Too - Condé Nast Traveler\n  I Visited China as an American Without a Visa—Here’s How You Can Do It Too Condé Nast Traveler\n- [2026-10-27] India-China visa update: What changes for Indian passport holders? - Gulf News\n  India-China visa update: What changes for Indian passport holders? Gulf News",
-    "travel_industry": "- [2026-11-18] South Korea says China trade agreement to boost tourism, entertainment sectors - Reuters\n  South Korea says China trade agreement to boost tourism, entertainment sectors Reuters\n- [2026-11-17] Kim Jong Un visits new ski resort on China border, calls for more tourism - NK News\n  Kim Jong Un visits new ski resort on China border, calls for more tourism NK News\n- [2026-11-17] Kim Jong Un smokes cigarette, watches daughter ski from armchair at North Korea resort - New York Post\n  Kim Jong Un smokes cigarette, watches daughter ski from armchair at North Korea resort New York Post",
-    "destination_news": "- [2026-11-18] United Airlines ranks No. 1 globally for destinations served; China’s Big Three make top 10 - China Travel News\n  United Airlines ranks No. 1 globally for destinations served; China’s Big Three make top 10 China Travel News\n- [2026-11-18] Inside APEC Media Center: Chinese intangible cultural heritage, tech, and robots - The Standard (HK)\n  Inside APEC Media Center: Chinese intangible cultural heritage, tech, and robots The Standard (HK)\n- [2026-10-26] 15 of the best China tours - The Times\n  15 of the best China tours The Times",
-    "safety_alerts": "- [2026-10-22] U.S. Adds Wrongful Detention Warning to China Travel Advisory - AgroLatam\n  U.S. Adds Wrongful Detention Warning to China Travel Advisory AgroLatam\n- [2026-10-22] Is it safe to go to China right now? What the U.S. State Department travel advisory warns about wrongful detentions - Clarin.com\n  Is it safe to go to China right now? What the U.S. State Department travel advisory warns about wrongful detentions Clarin.com\n- [2026-10-21] US adds wrongful detention warning to China travel advisory - Voice of America English News\n  US adds wrongful detention warning to China travel advisory Voice of America English News",
+    "travel_industry": "- [2026-11-19] Upgraded FTA expected to boost Korea-China tourism ties, experts say - The Korea Times\n  Upgraded FTA expected to boost Korea-China tourism ties, experts say The Korea Times\n- [2026-11-18] South Korea says China trade agreement to boost tourism, entertainment sectors - Reuters\n  South Korea says China trade agreement to boost tourism, entertainment sectors Reuters\n- [2026-11-17] Kim Jong Un visits new ski resort on China border, calls for more tourism - NK News\n  Kim Jong Un visits new ski resort on China border, calls for more tourism NK News",
+    "destination_news": "- [2026-11-19] 2026 World's Travel & Hotel Awards Gloriously Released in Hong Kong, China - Thailand Business News\n  2026 World's Travel & Hotel Awards Gloriously Released in Hong Kong, China Thailand Business News\n- [2026-11-19] Inside APEC leaders' lounge: Advanced AI, intangible cultural heritage - CGTN\n  Inside APEC leaders' lounge: Advanced AI, intangible cultural heritage CGTN\n- [2026-11-19] Red and blue APEC scarves highlight Shenzhen's cultural heritage - Nation Thailand\n  Red and blue APEC scarves highlight Shenzhen's cultural heritage Nation Thailand",
+    "safety_alerts": "- [2026-11-03] Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker - Anadolu Ajansı\n  Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker Anadolu Ajansı\n- [2026-10-22] U.S. Adds Wrongful Detention Warning to China Travel Advisory - AgroLatam\n  U.S. Adds Wrongful Detention Warning to China Travel Advisory AgroLatam\n- [2026-10-21] US adds wrongful detention warning to China travel advisory - Voice of America English News\n  US adds wrongful detention warning to China travel advisory Voice of America English News",
     "general": "- [2024-03-16] A local’s travel guide to Washington DC: what to eat, see and do in three days\n  Top sights in Washington include Capitol Hill Books, the Black Cat music venue and a top-rated Filipino restaurant From phone chargers to podcasts, th"
   },
   "sources": {
     "State Council 57-country notice": 1,
-    "Google News RSS": 35,
+    "Google News RSS": 38,
     "Travel | The Guardian": 1
   },
   "source_config": {
@@ -444,5 +477,5 @@
     "provinces": 24
   },
   "policy_change": null,
-  "official_state_checked_at": "2026-11-19T04:19:13.524371+00:00"
+  "official_state_checked_at": "2026-11-19T16:41:19.838048+00:00"
 }
