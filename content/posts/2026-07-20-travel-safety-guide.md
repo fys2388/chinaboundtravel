@@ -321,6 +321,8 @@ Originally posted on ChinaBound Travel Blog
 
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
 
+- [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
+
 ## FAQ
 
 ### What should I know about how safe is china,travel & destinations,210,26,informational,0.0,/resources?

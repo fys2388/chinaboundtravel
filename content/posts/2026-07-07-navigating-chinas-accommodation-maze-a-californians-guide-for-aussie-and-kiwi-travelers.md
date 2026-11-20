@@ -168,6 +168,8 @@ Finding the well-suited accommodation in China can be a challenge, but with a li
 
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
 
+- [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
+
 ## FAQ
 
 ### What should I know about sichuan travel accommodation recommendations?

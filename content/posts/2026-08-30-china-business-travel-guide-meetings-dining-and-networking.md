@@ -24,7 +24,7 @@ TocOpen: "false"
 weight: "1"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/food/china-business-travel-guide-meetings-dining-and-networking.webp"
-last_updated: "2026-11-19"
+last_updated: "2026-11-20"
 aliases:
   - "/posts/china-business-travel-guide-meetings-dining-and-networking/"
 
@@ -174,6 +174,8 @@ International credit cards are accepted at major hotels, high-end restaurants, a
 - [Accommodation In China: Hotels & Budget](/posts/navigating-chinas-accommodation-maze-a-californians-guide-for-aussie-and-kiwi-travelers/)
 
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
+
+- [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)
 
 ## FAQ
 

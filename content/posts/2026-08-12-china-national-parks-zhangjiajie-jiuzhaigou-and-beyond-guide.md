@@ -137,3 +137,5 @@ Keeping your phone connected in China is easier with an eSIM, which avoids a phy
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
 
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
+
+- [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)

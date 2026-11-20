@@ -174,6 +174,8 @@ Another thing to keep in mind when visiting the Chengdu Panda Base is the crowds
 
 - [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)
 
+- [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
+
 ## FAQ
 
 ### What should I know about dos and donts in china?
