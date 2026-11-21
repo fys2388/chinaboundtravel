@@ -1,15 +1,15 @@
 {
   "source": "content_analytics",
-  "pull_time": "2026-11-20T14:32:35.047602",
-  "data_date": "2026-11-20",
+  "pull_time": "2026-11-21T13:51:29.298566",
+  "data_date": "2026-11-21",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "total_articles": 73,
+    "total_articles": 74,
     "articles_this_week": 0,
-    "avg_word_count": 2258,
+    "avg_word_count": 2243,
     "articles_with_affiliate_links": 39,
-    "articles_with_internal_links": 72
+    "articles_with_internal_links": 73
   },
   "top_articles": [
     {
@@ -26,7 +26,7 @@
     },
     {
       "slug": "2026-05-22-how-to-use-wechat-pay-as-a-foreigner",
-      "word_count": 1903,
+      "word_count": 1916,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
@@ -44,7 +44,7 @@
     },
     {
       "slug": "2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers",
-      "word_count": 2179,
+      "word_count": 2192,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
@@ -68,7 +68,7 @@
     },
     {
       "slug": "2026-05-28-chinese-food-delivery-meituan-eleme-guide",
-      "word_count": 1986,
+      "word_count": 1994,
       "has_affiliate_links": true,
       "has_internal_links": true
     },

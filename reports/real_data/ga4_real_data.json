@@ -1,26 +1,20 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-11-20T14:32:21.857711",
-  "data_date": "2026-11-19",
+  "pull_time": "2026-11-21T13:51:22.934516",
+  "data_date": "2026-11-20",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "activeUsers": 234,
-    "sessions": 254,
-    "screenPageViews": 278,
+    "activeUsers": 252,
+    "sessions": 273,
+    "screenPageViews": 299,
     "engagedSessions": 124,
-    "bounceRate": 0.5118110236220472,
-    "averageSessionDuration": 43.333687440944885,
-    "engagementRate": 0.4881889763779528,
-    "newUsers": 232
+    "bounceRate": 0.5457875457875457,
+    "averageSessionDuration": 40.215017875457875,
+    "engagementRate": 0.4542124542124542,
+    "newUsers": 251
   },
   "daily": [
-    {
-      "date": "2026-10-24",
-      "sessions": 10,
-      "activeUsers": 10,
-      "pageviews": 10
-    },
     {
       "date": "2026-10-25",
       "sessions": 4,
@@ -173,17 +167,23 @@
     },
     {
       "date": "2026-11-20",
-      "sessions": 13,
-      "activeUsers": 13,
-      "pageviews": 14
+      "sessions": 20,
+      "activeUsers": 20,
+      "pageviews": 21
+    },
+    {
+      "date": "2026-11-21",
+      "sessions": 33,
+      "activeUsers": 33,
+      "pageviews": 33
     }
   ],
   "top_pages": [
     {
       "path": "/",
       "title": "ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners",
-      "pageviews": 32,
-      "sessions": 32
+      "pageviews": 33,
+      "sessions": 33
     },
     {
       "path": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
@@ -206,8 +206,8 @@
     {
       "path": "/posts/food-recommendations-guide/",
       "title": "China Food Guide 2026: What to Eat & Where",
-      "pageviews": 12,
-      "sessions": 12
+      "pageviews": 13,
+      "sessions": 13
     },
     {
       "path": "/best-china-itineraries-for-10-days-three-routes-compared/",
@@ -220,6 +220,12 @@
       "title": "ChinaBound Travel · 智能运营中心 v4.0",
       "pageviews": 11,
       "sessions": 7
+    },
+    {
+      "path": "/posts/7-day-china-itinerary/",
+      "title": "Free 7-Day China Itinerary Template (2026)",
+      "pageviews": 10,
+      "sessions": 8
     },
     {
       "path": "/posts/alipay-wechat-pay-foreigners-guide/",
@@ -237,19 +243,13 @@
       "path": "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
       "title": "Alipay vs WeChat Pay: Which Payment App | ChinaBound Travel",
       "pageviews": 9,
-      "sessions": 9
+      "sessions": 8
     },
     {
       "path": "/2026-05-27-how-to-survive-chinese-train-station/",
       "title": "404 Page not found | ChinaBound Travel",
       "pageviews": 8,
       "sessions": 10
-    },
-    {
-      "path": "/posts/7-day-china-itinerary/",
-      "title": "Free 7-Day China Itinerary Template (2026)",
-      "pageviews": 8,
-      "sessions": 6
     },
     {
       "path": "/china-airport-transfer-guide/",
@@ -264,30 +264,30 @@
       "sessions": 6
     },
     {
-      "path": "/posts/144-hour-visa-free-transit-guide/",
-      "title": "China 144 Hour Transit Visa: Complete Guide",
-      "pageviews": 5,
-      "sessions": 5
+      "path": "/posts/alipay-for-foreigners-guide/",
+      "title": "Alipay in China: Setup & Payment Tips (2026)",
+      "pageviews": 6,
+      "sessions": 6
     }
   ],
   "traffic_sources": [
     {
       "channel": "Organic Social",
-      "sessions": 131,
-      "activeUsers": 121,
-      "engagementRate": 0.8702
+      "sessions": 130,
+      "activeUsers": 120,
+      "engagementRate": 0.8692
     },
     {
       "channel": "Direct",
-      "sessions": 85,
-      "activeUsers": 82,
-      "engagementRate": 0.0471
+      "sessions": 102,
+      "activeUsers": 99,
+      "engagementRate": 0.0392
     },
     {
       "channel": "Organic Search",
-      "sessions": 28,
-      "activeUsers": 28,
-      "engagementRate": 0.1429
+      "sessions": 31,
+      "activeUsers": 30,
+      "engagementRate": 0.1613
     },
     {
       "channel": "Unassigned",
@@ -309,6 +309,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 1,
-    "data_date": "2026-11-19"
+    "data_date": "2026-11-20"
   }
 }
