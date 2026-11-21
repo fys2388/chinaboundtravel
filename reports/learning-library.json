@@ -1631,6 +1631,30 @@
         "position": 73.8
       },
       "metrics_after": {}
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/",
+      "action": "first_paragraph_intent_flagged",
+      "date": "2026-11-21T08:54:26.056264",
+      "result": "pending",
+      "metrics_before": {
+        "impressions": 397,
+        "clicks": 0,
+        "position": 7.9
+      },
+      "metrics_after": {}
+    },
+    {
+      "page": "https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/",
+      "action": "first_paragraph_intent_flagged",
+      "date": "2026-11-21T08:54:27.605934",
+      "result": "pending",
+      "metrics_before": {
+        "impressions": 351,
+        "clicks": 0,
+        "position": 74.0
+      },
+      "metrics_after": {}
     }
   ]
 }
