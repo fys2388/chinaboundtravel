@@ -872,6 +872,18 @@
       "source": "news_monitor",
       "created_at": "2026-11-21T00:00:00",
       "depth": "news"
+    },
+    {
+      "id": "news-6e08d89a",
+      "title": "China's new travel curbs to prevent key talent from leaving unsettles tech firms and workers",
+      "category": "visa",
+      "geo": "US",
+      "keywords": [],
+      "priority": 3,
+      "status": "pending",
+      "source": "news_monitor",
+      "created_at": "2026-11-21T00:00:00",
+      "depth": "news"
     }
   ],
   "used_topics": [],
@@ -879,6 +891,7 @@
   "news_ingested_hashes": [
     "007efa1b5d47",
     "396e9dab6af2",
+    "6e08d89a0e7d",
     "9b41db697c57",
     "cfb17fbd81b2",
     "d5bb78f10bff",
