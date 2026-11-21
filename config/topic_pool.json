@@ -800,8 +800,88 @@
       "source": "gsc",
       "created_at": "2026-11-21T00:00:00",
       "depth": "deep"
+    },
+    {
+      "id": "news-396e9dab",
+      "title": "China visa-free entry after 31 December: what travellers need to know",
+      "category": "visa",
+      "geo": "US",
+      "keywords": [],
+      "priority": 3,
+      "status": "pending",
+      "source": "news_monitor",
+      "created_at": "2026-11-21T00:00:00",
+      "depth": "news"
+    },
+    {
+      "id": "news-007efa1b",
+      "title": "China's 240-hour visa-free transit policy",
+      "category": "visa",
+      "geo": "US",
+      "keywords": [],
+      "priority": 3,
+      "status": "pending",
+      "source": "news_monitor",
+      "created_at": "2026-11-21T00:00:00",
+      "depth": "news"
+    },
+    {
+      "id": "news-f2404d97",
+      "title": "2026 World's Travel & Hotel Awards Gloriously Released in Hong Kong, China",
+      "category": "travel",
+      "geo": "AU",
+      "keywords": [],
+      "priority": 3,
+      "status": "pending",
+      "source": "news_monitor",
+      "created_at": "2026-11-21T00:00:00",
+      "depth": "news"
+    },
+    {
+      "id": "news-9b41db69",
+      "title": "Traditional celebrations, immersive cultural experiences bring international tourists closer to China’s folk heritage",
+      "category": "travel",
+      "geo": "AU",
+      "keywords": [],
+      "priority": 3,
+      "status": "pending",
+      "source": "news_monitor",
+      "created_at": "2026-11-21T00:00:00",
+      "depth": "news"
+    },
+    {
+      "id": "news-cfb17fbd",
+      "title": "Trip.com steps up efforts to attract international tourists to China",
+      "category": "budget",
+      "geo": "EU",
+      "keywords": [],
+      "priority": 3,
+      "status": "pending",
+      "source": "news_monitor",
+      "created_at": "2026-11-21T00:00:00",
+      "depth": "news"
+    },
+    {
+      "id": "news-d5bb78f1",
+      "title": "China’s Inbound Tourism Has Room to Grow, Trip.com CEO Says",
+      "category": "budget",
+      "geo": "EU",
+      "keywords": [],
+      "priority": 3,
+      "status": "pending",
+      "source": "news_monitor",
+      "created_at": "2026-11-21T00:00:00",
+      "depth": "news"
     }
   ],
   "used_topics": [],
-  "last_update": "2026-11-21T00:00:00"
+  "last_update": "2026-11-21T00:00:00",
+  "news_ingested_hashes": [
+    "007efa1b5d47",
+    "396e9dab6af2",
+    "9b41db697c57",
+    "cfb17fbd81b2",
+    "d5bb78f10bff",
+    "f2404d973fed"
+  ]
 }

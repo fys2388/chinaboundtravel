@@ -68,11 +68,18 @@ jobs:
         run: |
           python scripts/policy_content_sync.py --apply --social || echo "⚠️ policy_sync failed (non-fatal), continuing"
 
+      - name: Inject news hotspots into blog topic pool
+        # 把 news_digest 里适合做 SEO 博文的时政/目的地/行业热点，作为 pending 选题
+        # 注入 config/topic_pool.json，由周度 Joran 生成器消费 → 实现「紧跟新闻 → 博文」。
+        # 幂等（按 _hash 去重）、防膨胀（pending 水位上限）、噪音/中文源/公民向话题过滤。
+        run: |
+          python scripts/news_to_topic_pool.py --apply || echo "⚠️ news_to_topic_pool failed (non-fatal), continuing"
+
       - name: Commit news digest & policy updates
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add config/news_digest.json config/official_policy_state.json config/policy_social_queue.json content/posts/ 2>/dev/null || true
+          git add config/news_digest.json config/official_policy_state.json config/policy_social_queue.json config/topic_pool.json content/posts/ 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
