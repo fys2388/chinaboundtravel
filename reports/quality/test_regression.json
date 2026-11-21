@@ -1,15 +1,31 @@
 {
-  "generated_at": "2026-11-20T15:41:19+00:00",
+  "generated_at": "2026-11-21T14:52:06+00:00",
   "counts": {
     "collected": 1347,
-    "failed": 1,
-    "passed": 1346,
+    "failed": 3,
+    "passed": 1344,
     "skipped": 0,
     "baseline": 0,
-    "new_failures": 1,
+    "new_failures": 3,
     "fixed_failures": 0
   },
   "new_failures": [
+    {
+      "node_id": "tests.test_brand_legacy_pilot::test_internal_links_audit_clean_for_pilots",
+      "likely_stale_test": false,
+      "file": "",
+      "commit": "",
+      "author": "",
+      "subject": ""
+    },
+    {
+      "node_id": "tests.test_internal_links::test_markdown_audit_clean",
+      "likely_stale_test": false,
+      "file": "",
+      "commit": "",
+      "author": "",
+      "subject": ""
+    },
     {
       "node_id": "tests.test_okr_and_experiment_semantics.TestExperimentPhantom::test_registry_age_days_detects_stale",
       "likely_stale_test": false,
@@ -21,6 +37,8 @@
   ],
   "fixed_baseline_failures": [],
   "all_current_failures": [
+    "tests.test_brand_legacy_pilot::test_internal_links_audit_clean_for_pilots",
+    "tests.test_internal_links::test_markdown_audit_clean",
     "tests.test_okr_and_experiment_semantics.TestExperimentPhantom::test_registry_age_days_detects_stale"
   ],
   "blocking": true
