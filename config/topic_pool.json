@@ -664,8 +664,144 @@
       "created_at": "2026-08-09T00:00:00",
       "depth": "deep",
       "used_at": "2026-08-30T03:36:20.870314+00:00"
+    },
+    {
+      "id": "refill-001",
+      "title": "China Hotels and Accommodation for Foreigners: Booking, Check-In, and Passport Registration",
+      "category": "accommodation",
+      "geo": "US",
+      "keywords": [
+        "accommodation china",
+        "china hotel foreigner",
+        "china passport registration hotel",
+        "book hotel china"
+      ],
+      "priority": 5,
+      "status": "pending",
+      "source": "gsc",
+      "created_at": "2026-11-21T00:00:00",
+      "depth": "deep"
+    },
+    {
+      "id": "refill-002",
+      "title": "144-Hour Visa-Free Transit China: Eligible Countries, Cities, and Step-by-Step 2026",
+      "category": "visa",
+      "geo": "EU",
+      "keywords": [
+        "144 hour transit visa china",
+        "144 hours visa china",
+        "china transit visa free",
+        "144 hour visa free cities"
+      ],
+      "priority": 5,
+      "status": "pending",
+      "source": "gsc",
+      "created_at": "2026-11-21T00:00:00",
+      "depth": "deep"
+    },
+    {
+      "id": "refill-003",
+      "title": "China High-Speed Rail vs Flying: Which Is Faster, Cheaper, and Easier for Foreigners",
+      "category": "transportation",
+      "geo": "AU",
+      "keywords": [
+        "china high speed rail vs flight",
+        "train or plane china",
+        "china rail comparison",
+        "china domestic flight"
+      ],
+      "priority": 4,
+      "status": "pending",
+      "source": "gsc",
+      "created_at": "2026-11-21T00:00:00",
+      "depth": "deep"
+    },
+    {
+      "id": "refill-004",
+      "title": "How Much Does a China Trip Cost in 2026: Real Budget Breakdown by Travel Style",
+      "category": "budget",
+      "geo": "US",
+      "keywords": [
+        "china trip cost 2026",
+        "china travel budget breakdown",
+        "how much china trip",
+        "china daily budget"
+      ],
+      "priority": 5,
+      "status": "pending",
+      "source": "gsc",
+      "created_at": "2026-11-21T00:00:00",
+      "depth": "deep"
+    },
+    {
+      "id": "refill-005",
+      "title": "Getting a Chinese SIM Card and eSIM as a Foreigner: Compare Options and Prices",
+      "category": "internet",
+      "geo": "EU",
+      "keywords": [
+        "china sim card foreigner",
+        "china esim",
+        "buy sim china airport",
+        "china mobile data"
+      ],
+      "priority": 4,
+      "status": "pending",
+      "source": "gsc",
+      "created_at": "2026-11-21T00:00:00",
+      "depth": "deep"
+    },
+    {
+      "id": "refill-006",
+      "title": "Chengdu Travel Guide: Pandas, Food, and Day Trips for First-Timers",
+      "category": "travel",
+      "geo": "AU",
+      "keywords": [
+        "chengdu travel guide",
+        "chengdu panda",
+        "chengdu food",
+        "chengdu day trip"
+      ],
+      "priority": 4,
+      "status": "pending",
+      "source": "gsc",
+      "created_at": "2026-11-21T00:00:00",
+      "depth": "deep"
+    },
+    {
+      "id": "refill-007",
+      "title": "China Travel Etiquette for First-Timers: Dining, Gifts, and Social Customs",
+      "category": "culture",
+      "geo": "US",
+      "keywords": [
+        "china etiquette",
+        "chinese dining customs",
+        "china social customs",
+        "china travel tips culture"
+      ],
+      "priority": 3,
+      "status": "pending",
+      "source": "gsc",
+      "created_at": "2026-11-21T00:00:00",
+      "depth": "deep"
+    },
+    {
+      "id": "refill-008",
+      "title": "Is China Safe for Solo Female Travelers: Honest 2026 Guide",
+      "category": "safety",
+      "geo": "AU",
+      "keywords": [
+        "china solo female travel",
+        "is china safe woman",
+        "china safety female",
+        "solo female china"
+      ],
+      "priority": 4,
+      "status": "pending",
+      "source": "gsc",
+      "created_at": "2026-11-21T00:00:00",
+      "depth": "deep"
     }
   ],
   "used_topics": [],
-  "last_update": "2026-08-09T00:00:00"
+  "last_update": "2026-11-21T00:00:00"
 }
