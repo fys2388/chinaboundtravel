@@ -2657,6 +2657,17 @@
       "error_message": "predeploy quality: pages=116 P0=47 P1=0 P2=1\n##[error]Process completed with exit code 1.",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20261121_145256",
+      "timestamp": "2026-11-21T14:52:56.039028",
+      "workflow_name": "Test Regression Gate (回归闸门)",
+      "run_id": "44916060520",
+      "category": "unknown",
+      "category_name": "未知错误",
+      "error_message": "##[error]Process completed with exit code 1.",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }

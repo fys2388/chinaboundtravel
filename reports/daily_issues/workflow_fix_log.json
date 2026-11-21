@@ -937,6 +937,13 @@
       "fixed_by": "auto_error_router:frontend",
       "fix_note": "已发送飞书告警(category=predeploy_quality_failed)",
       "fixed_at": "2026-11-21T06:43:58.690616"
+    },
+    {
+      "workflow": "Test Regression Gate (回归闸门)",
+      "status": "needs_manual",
+      "fixed_by": "auto_error_router:orchestrator",
+      "fix_note": "已创建Issue: https://github.com/fys2388/chinaboundtravel/issues/128",
+      "fixed_at": "2026-11-21T14:52:58.479340"
     }
   ]
 }
