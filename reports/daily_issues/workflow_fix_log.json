@@ -930,6 +930,13 @@
       "fixed_by": "auto_error_router:frontend",
       "fix_note": "已发送飞书告警(category=predeploy_quality_failed)",
       "fixed_at": "2026-11-21T06:23:46.087383"
+    },
+    {
+      "workflow": "Post-deploy Tasks",
+      "status": "alerted",
+      "fixed_by": "auto_error_router:frontend",
+      "fix_note": "已发送飞书告警(category=predeploy_quality_failed)",
+      "fixed_at": "2026-11-21T06:43:58.690616"
     }
   ]
 }

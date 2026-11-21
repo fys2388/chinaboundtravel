@@ -3,11 +3,11 @@
   "agent_name": "Frontend Agent (页面/视觉/响应式)",
   "task_id": "task_2026-11-21_frontend",
   "created_at": "2026-11-21T01:01:05.207121+00:00",
-  "updated_at": "2026-11-21T06:23:46.382868",
+  "updated_at": "2026-11-21T06:43:58.883910",
   "target_date": "2026-11-21",
-  "issue_count": 2,
+  "issue_count": 3,
   "severity_summary": {
-    "critical": 1,
+    "critical": 2,
     "high": 1,
     "medium": 0,
     "low": 0
@@ -32,6 +32,26 @@
       "assigned": true,
       "assigned_to": "frontend",
       "detected_at": "2026-11-21T06:23:44.854312+00:00"
+    },
+    {
+      "id": "workflow-44876845710-predeploy_quality_failed",
+      "type": "predeploy_quality_failed",
+      "title": "Post-deploy Tasks 失败：部署前质量门禁失败",
+      "description": "post-deploy / 2.0 Pre-deploy Quality Gate (P0/P1 blocker)",
+      "page": "Post-deploy Tasks",
+      "file": "Post-deploy Tasks",
+      "evidence": "predeploy quality: pages=116 P0=47 P1=0 P2=1\n##[error]Process completed with exit code 1.",
+      "recommended_action": "部署前静态质量门禁未通过。检查 reports/quality/predeploy_quality.json 中的页面与问题类型。",
+      "severity": "critical",
+      "agent": "frontend",
+      "action": "blocking_review",
+      "source": "workflow_failure",
+      "source_file": "",
+      "task_source": "workflow_failure",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "frontend",
+      "detected_at": "2026-11-21T06:43:57.561147+00:00"
     },
     {
       "id": "eda93581fbec80e3",
@@ -83,6 +103,6 @@
     "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=2, failed=0"
+    "note": "resolved=0, need_manual=3, failed=0"
   }
 }

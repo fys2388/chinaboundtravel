@@ -2646,6 +2646,17 @@
       "error_message": "predeploy quality: pages=116 P0=47 P1=0 P2=1\n##[error]Process completed with exit code 1.",
       "status": "pending",
       "attempts": 0
+    },
+    {
+      "id": "err_20261121_064357",
+      "timestamp": "2026-11-21T06:43:57.559464",
+      "workflow_name": "Post-deploy Tasks",
+      "run_id": "44876845710",
+      "category": "predeploy_quality_failed",
+      "category_name": "部署前质量门禁失败",
+      "error_message": "predeploy quality: pages=116 P0=47 P1=0 P2=1\n##[error]Process completed with exit code 1.",
+      "status": "pending",
+      "attempts": 0
     }
   ]
 }
