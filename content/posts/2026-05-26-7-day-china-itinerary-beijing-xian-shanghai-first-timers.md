@@ -242,3 +242,5 @@ No — China is massive and 7 days only covers three cities. But this itinerary 
 - [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
 
 - [China Remote Work Guide: Digital Nomad Tips](/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)
+
+- [China Photography Guide: Best Spots, Gear & Tips from a China Pro](/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/)

@@ -289,6 +289,8 @@ Set up Alipay or WeChat Pay first, get a Chinese number or eSIM, and you're read
 
 - [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)
 
+- [China Remote Work Guide: Digital Nomad Tips](/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)
+
 ## FAQ
 
 ### Is this guide up to date for 2026?

@@ -75,3 +75,15 @@ APEC 2026 won't change your Shenzhen itinerary tomorrow. But the Shenzhen Outloo
 If you're combining Shenzhen with Hong Kong or a wider Guangdong loop, start with our [China travel guide](/posts/chinabound-travel-guide-2026-09-monthly-update/) for the broader picture.
 
 *This article reflects publicly reported outcomes of the 2026 APEC Economic Leaders' Meeting in Shenzhen as of November 21, 2026. For the latest official details, refer to APEC and Chinese government releases.*
+
+## Related Reading
+
+- [Yunnan Travel Guide 2026: 7-Day Itinerary, Rice Terraces & Ancient Towns](/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/)
+
+## Related Reading
+
+- [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
+
+## Related Reading
+
+- [China Travel Guide August 2026: Latest Visa Rules & Updates](/posts/chinabound-travel-guide-2026-08-monthly-update/)

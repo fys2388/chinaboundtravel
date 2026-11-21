@@ -137,3 +137,5 @@ This itinerary takes you through three of China's most beautiful cities: Beijing
 - [How to Order Food Delivery in China: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
 
 - [China Photography Guide: Best Spots, Gear & Tips from a China Pro](/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/)
+
+- [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)

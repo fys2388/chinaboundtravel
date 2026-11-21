@@ -177,6 +177,8 @@ Keeping your phone connected in China is easier with an eSIM, which avoids a phy
 
 - [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)
 
+- [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
+
 ## FAQ
 
 ### Is this guide up to date for 2026?

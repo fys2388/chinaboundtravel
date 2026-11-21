@@ -114,6 +114,8 @@ Choosing your first city in China is an exciting and important decision. By cons
 
 - [China Photography Guide: Best Spots, Gear & Tips from a China Pro](/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/)
 
+- [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
+
 ## Related Reading
 
 - [China High-Speed Rail: Complete Ticket Booking Guide for](/posts/china-high-speed-rail-how-to-book-tickets/)
