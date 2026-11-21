@@ -1,10 +1,31 @@
 {
   "version": "1.0",
-  "last_updated": "2026-11-20T16:17:01.247119+00:00",
-  "last_updated_date": "2026-11-20",
+  "last_updated": "2026-11-21T04:06:53.326471+00:00",
+  "last_updated_date": "2026-11-21",
   "total_items": 40,
   "digest": {
     "visa_policy": [
+      {
+        "title": "中国240小时过境免签“朋友圈”扩展至57国",
+        "summary": "From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)",
+        "url": "https://www.gov.cn/lianbo/202608/content_7078699.htm",
+        "date": "2026-11-21",
+        "source": "State Council 57-country notice",
+        "category": "visa_policy",
+        "type": "policy_page",
+        "_hash": "d35a146c4b77"
+      },
+      {
+        "title": "China, Mongolia, South Korea,…: Visa exemptions set to expire at the end of 2026 - VisasNews",
+        "summary": "China, Mongolia, South Korea,…: Visa exemptions set to expire at the end of 2026 VisasNews",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPSFhJRTNlRUNXV19oUXpIWExVVlFxdGs4RFI4SHpEWXRsVEd4MWdSRUhpNE9qOGxuYWhxci10dnViUlgxNVJNb3FpcGpXSkV3Z1lKZzNpV2FTaHRYQXo1ZkVmTU5Ta0JsWjFYRkR4OHgzTEQyLXV1NXJyZ1VKU0o3dGR3WmxOdlYxV0gyaV9sUlZmaDlSUzZvVTJGRXpfblA1RERB?oc=5",
+        "date": "2026-11-20",
+        "source": "Google News RSS",
+        "source_query": "China+visa+policy+2026",
+        "category": "visa_policy",
+        "type": "news",
+        "_hash": "65d385844fb9"
+      },
       {
         "title": "Malaysia to end visa-free entry for Indians from January 2027: New rules and key dates - Gulf News",
         "summary": "Malaysia to end visa-free entry for Indians from January 2027: New rules and key dates Gulf News",
@@ -17,14 +38,15 @@
         "_hash": "82e615954b00"
       },
       {
-        "title": "中国240小时过境免签“朋友圈”扩展至57国",
-        "summary": "From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)",
-        "url": "https://www.gov.cn/lianbo/202608/content_7078699.htm",
-        "date": "2026-11-20",
-        "source": "State Council 57-country notice",
+        "title": "China visa-free entry after 31 December: what travellers need to know - Travelling for Business",
+        "summary": "China visa-free entry after 31 December: what travellers need to know Travelling for Business",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE8zcjVYbFpVbkc4ckNfV2ZnQ0xsRnNDQWwtcWQ1Zl8yeWkyanpiM0JTR1ZWZGhSSk0wYUY4dEdXWC16dU1vcGVSS0VuR2NtS25qSnBTREMzcWgweXR0alJfY0l4eW5LY2ZoR01GUnFWRmRmeXpBT0hBWW13?oc=5",
+        "date": "2026-11-19",
+        "source": "Google News RSS",
+        "source_query": "China+visa+free+transit+240+hour",
         "category": "visa_policy",
-        "type": "policy_page",
-        "_hash": "d35a146c4b77"
+        "type": "news",
+        "_hash": "396e9dab6af2"
       },
       {
         "title": "China’s New Rules for Overseas Investment and Offshore Wealth - IMI Daily",
@@ -38,26 +60,26 @@
         "_hash": "895222af7393"
       },
       {
-        "title": "I Visited China as an American Without a Visa—Here’s How You Can Do It Too - Condé Nast Traveler",
-        "summary": "I Visited China as an American Without a Visa—Here’s How You Can Do It Too Condé Nast Traveler",
-        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcEFZeVA5azlWWTNHUDh5U296a2p5T2VwbWExcnB5Q3lSWDF3UTVjN25jTVV5ZWo4N1NONzV6UDBhS0pXM1NqOS1wMGp1VnBJSEJVam1iUFBZdGJDVVpnQXBRSDlKUzVZRmpIZm5sVHNUcVVnZXBDUGI4bjhkeWFCU183dG9JMWpBekhZVmhTR3dJSXg0cnFGUGFXaHJabTJWSkJlSzBHMWJBQQ?oc=5",
-        "date": "2026-11-10",
-        "source": "Google News RSS",
-        "source_query": "China+visa+free+transit+240+hour",
-        "category": "visa_policy",
-        "type": "news",
-        "_hash": "7fcd3edbe304"
-      },
-      {
-        "title": "China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends - South China Morning Post",
-        "summary": "China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends South China Morning Post",
-        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVzZNSnQ0azFwbEtkS2VYcml6b2FNb0JKX0xJb3dadEJjcjJJaDllTS0tRi1Ib0k0eTY4TjJZQVhiWElwZWJxQm1QLVktOHVEX2dQWFUtTjZ2VXJrdXd4NEI2WmxObkJzb2d3UDMzMVR3M09iYW4xdklSY3p6eTBza1c4Zk1sQTM5X2ZPMnA1ZExyLW9kTHRZZXRyaGdGVUplZUdaSGx2OUh2Y3Z6czM4LUh1WDBMamJaYU5Z0gG7AUFVX3lxTFBlLTVjR0FpQXNBcU5obW0wZzI3dFFyRXNPd25JYS1kRU1PTFY2X0xFakt6dXZZRlZJSGhkVXVNbXo5RURYTzIyQWcyUmRaSHBqblI3MXYtOGVXazVTTkdHaDkwYVBWX290Y3JXNmNRd04wb2hwS0RrQnNVS0RybWdaR0p0aW5mRTAyUjlVa0JLV0xReUFkMjBnMTZTNDI2Y0Y5akdvMEhBeWYtckpROFBSM0t2NHhfOVhnUUU?oc=5",
-        "date": "2026-10-21",
+        "title": "Could China extend its 30-day visa-free policy through 2027? - VisasNews",
+        "summary": "Could China extend its 30-day visa-free policy through 2027? VisasNews",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPR0Yyc01BRmh3Y3FWVG82NHIyRUh5X2VGb3hkM2RzRk5zVktWUkdXTmlLS1pLZTlmOHZuaDhRM2ZOMm1Ld1hpd0VJSzVpUk5GbklFN2pYSV9TdV96ay1KQXd6M3lkeFJTXzZlU1kwcWc5MWlWZ3A1aUc3MzNBMW90eU90RmJ5QzRhRkxCQnhR?oc=5",
+        "date": "2026-11-12",
         "source": "Google News RSS",
         "source_query": "China+entry+policy+foreign+travelers",
         "category": "visa_policy",
         "type": "news",
-        "_hash": "454c6d010498"
+        "_hash": "965c1cefd5f0"
+      },
+      {
+        "title": "Outcry after Taiwan asks mainland Chinese tourist to sign independence statement - South China Morning Post",
+        "summary": "Outcry after Taiwan asks mainland Chinese tourist to sign independence statement South China Morning Post",
+        "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOR3BXTTN0bE4ybUo1RmF2N3BHb1ZIT1dpUVJwaWg1RWF3NTAwaWgwdnVFa1pKWURCcFZUMVRfX05fUTVfODhSdGNsalc4MjhvSnlEdnQ2cW9rVHl4RWRUcnFSNzZ6VjVxZnV3WmVwdEVxSmFyVWluSWsxMDN4QlNEVmMxWGN6dXRMZld0REk2UmhFN19hdTB4Ym5jM2VOc2lreVVXRmRocUMyTWc5SEIwQ0JaWEtHazYyT2Vkem5hMV9XalZObWgwa3hyd01ZR3PSAc8BQVVfeXFMT0MwWENsNGhXYWp4Wm5XWnhjQ1pLeGxyazVsWmRhaEtaY2JwYWFiYTNSZ2hpc1Rtb0N6QzhUN21hYVRUVzlBeFVNenAzSDdyQ3NaRFNTamQ1RjZ6ZEZ3WEpqVmJVMk53RWZmYUZScG1ZQWRNTkk3UmJpS1FMTEVRYmV3NGZrek42dFFTSGdGdWNOVHFraERKeUNSNE01WTg4M19hbjlTQnlHc1BlMFFrc0w2bXNoYldZSy1oQkx4V1ZvbEpJWTlRV25WbDB6T2NF?oc=5",
+        "date": "2026-11-11",
+        "source": "Google News RSS",
+        "source_query": "China+entry+policy+foreign+travelers",
+        "category": "visa_policy",
+        "type": "news",
+        "_hash": "ab42aa4c326a"
       },
       {
         "title": "China tightens travel restrictions for citizens - BBC",
@@ -69,17 +91,6 @@
         "category": "visa_policy",
         "type": "news",
         "_hash": "a670e57dd7ee"
-      },
-      {
-        "title": "China’s Tourism Industry Gains Momentum Thanks to Visa-Free Policies - The Diplomat – Asia-Pacific Current Affairs Magazine",
-        "summary": "China’s Tourism Industry Gains Momentum Thanks to Visa-Free Policies The Diplomat – Asia-Pacific Current Affairs Magazine",
-        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNR19ZY3B3QnFuLUlmTTFYdEtaUl9rYmh4clU4VHBTa0lGd0FNTkY4aElQeFNzZlAteHlzZ0kycHNPazE2cllUYlJTWlVWYXlla1FPenYyRU1IYUxjcjFMSzRxdzlMRUlyNkZmLWhadXBYdl9KYUREYURZc0d5bWxudFgyUFlnaFR5X19JdDAyOUgydnJSX3BQQ2lxSHU5OEZ4eEE?oc=5",
-        "date": "2026-08-28",
-        "source": "Google News RSS",
-        "source_query": "China+entry+policy+foreign+travelers",
-        "category": "visa_policy",
-        "type": "news",
-        "_hash": "b8786e439cef"
       },
       {
         "title": "China's 240-hour visa-free transit policy - English.gov.cn",
@@ -102,17 +113,6 @@
         "category": "visa_policy",
         "type": "news",
         "_hash": "fa00ba262d24"
-      },
-      {
-        "title": "China Issues New Regulations on Exit and Entry Administration - Newland Chase",
-        "summary": "China Issues New Regulations on Exit and Entry Administration Newland Chase",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPNFJYbmlYX19xLVBDcVpmRElGQ2V5a3RSZmk4dGRUT3B2TTVRaWd0Um9zYmdlZnpIckctcm1sbzBDclNLM096MF9IUlEwWjNKSks2QnQ4M0NLZ1hqLWhMZlR3OFRJUUV3VmhSNnJ2eUhsLUdzRENfY3FBd0RyS2dpV0Y5TzdDbks0emNxMm5nWEc?oc=5",
-        "date": "2026-08-06",
-        "source": "Google News RSS",
-        "source_query": "China+visa+policy+2026",
-        "category": "visa_policy",
-        "type": "news",
-        "_hash": "f6400329b9d7"
       }
     ],
     "travel_industry": [
@@ -126,6 +126,17 @@
         "category": "travel_industry",
         "type": "news",
         "_hash": "cfb17fbd81b2"
+      },
+      {
+        "title": "Upgraded FTA expected to boost Korea-China tourism ties, experts say - The Korea Times",
+        "summary": "Upgraded FTA expected to boost Korea-China tourism ties, experts say The Korea Times",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPa1lTeDVfT1hzWV9HWnJoelNwYl9Ta3hWUVlwM0NYRjhuMUFvdC04VXQ3R2cwSHVvZ0NBSDYxOV9Gdm1LTVJMdnlmbkdFLUUwWjVsUjlfYUtGblBRWFJkVGpta0Q4enZpcW1pTVlWNVdTNTdRSmNna1p3YkhQLUE3bkREaEswaDQ2a2xDTkpYRUZCLWM0UlF3NnBobFlOcFF1eWdRZlJlSFVvbFI3aFJoZHhyai1IbkZzX0hMUV9pb2MxWXNBOFHSAcsBQVVfeXFMTzRvYkhyWVhiQ05WZ0lPdUtMZ2tCejdocGVzT2d4bXMteGlQSkpCMGVnMjBIVWxGRFlnR2JzUmp3b19oMzZXWXdsNFZvVTFoeDV4RHRrNmc4blVZTW43aURTZVM2ZHRtVUJ6SUlURXRNLVkwT1pRX21sU0x6X0tYdGFFQWJoeGJkSDRFQ24xbUdraUQtZDJNTUt3b0dBZS1lMHFoYlpvY1ZXazVDNTM3UTRVUjFYeEhGQllSanBFVzZEU0NUZ2lIU0pyblk?oc=5",
+        "date": "2026-11-19",
+        "source": "Google News RSS",
+        "source_query": "China+tourism+news",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "6f4c24b192f0"
       },
       {
         "title": "China’s Inbound Tourism Has Room to Grow, Trip.com CEO Says - Caixin Global",
@@ -148,17 +159,6 @@
         "category": "travel_industry",
         "type": "news",
         "_hash": "ab6b647286b4"
-      },
-      {
-        "title": "Kim Jong Un visits new ski resort on China border, calls for more tourism - NK News",
-        "summary": "Kim Jong Un visits new ski resort on China border, calls for more tourism NK News",
-        "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE8yX21ESGRsNHBEbVQ2OXJyc0NiTi1VWnF1UW9lMXczMlBVTHhMa0lCSGZCbkZ3aWV0Wm9rMU1XZmhYRjVrYUtv?oc=5",
-        "date": "2026-11-17",
-        "source": "Google News RSS",
-        "source_query": "China+tourism+news",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "c492075c17b6"
       },
       {
         "title": "Chinese Ambassador to Ireland Zhao Xiyuan Introduces China’s Inbound Tourism Facilitation Policies in Irish Media - 中华人民共和国外交部",
@@ -240,37 +240,26 @@
         "_hash": "f2404d973fed"
       },
       {
-        "title": "Inside APEC leaders' lounge: Advanced AI, intangible cultural heritage - CGTN",
-        "summary": "Inside APEC leaders' lounge: Advanced AI, intangible cultural heritage CGTN",
-        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQN3FITnp6VGRuZjJqNlhoTHRzMTVRLVhmSFBfcTAybm5LQkdxUVhUZzNxeGJPcUtHUTZOYnZSanpfRFhQbkFuXy1ORzVkUHFabS05QldkbHhGbUUwYjJIYVBLb2lER0FmMTU2TG5IQUh3cHBVUlZpY19CYUpKM1lVM0dUeFBOWXROd0VCXzZxRkllT3h0b1B2YVI0bU56MUI4SHJHU3J5WXRRMDAwdldNcFRUNUpOdTk3VHdTMUtRUy1YQQ?oc=5",
-        "date": "2026-11-19",
+        "title": "CGTN: How cultural exchanges build a close Asia-Pacific community - markets.businessinsider.com",
+        "summary": "CGTN: How cultural exchanges build a close Asia-Pacific community markets.businessinsider.com",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNYXVLdXZfLXVUZ3BmSnRZVVhmQ1JDSFd4RzlmNTJvWS13cFVDOXQ5WXpKb2s5cFZPM1BKS3d3UjZteFBTWU9wM01sMHN2QnU0a2FDZ0FmdzNqc3hHcXQ5cTBLWDBVTllHUC1yVlZ4NWhZc2RUbjE1TEg5cmh0NVBxMzBJTTE3Z1V3UkZWMUUyUVRmdUpzSGdxS2s5QWpRWUl4a0xfdGFUYWFIYnBTZ0tjbTFvamswZTFua2x1NnhhTkI?oc=5",
+        "date": "2026-11-20",
         "source": "Google News RSS",
         "source_query": "China+cultural+heritage+news",
         "category": "destination_news",
         "type": "news",
-        "_hash": "3db7c7ce2a7e"
+        "_hash": "d2f0bd2ee078"
       },
       {
-        "title": "China's advanced AI, intangible cultural heritage featured in APEC leaders' lounge - Modern Ghana",
-        "summary": "China's advanced AI, intangible cultural heritage featured in APEC leaders' lounge Modern Ghana",
-        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5VZngwWUVVRWZhOFRTcmxXZ21aMlVoZWVtczhDR2h6a1VDUjlrdTJpUHVNUjRWZEZNX1RyYjVMdkFqZklONWVMbEpxdmpZSkpzdF8wWDB0ZHVlUHk1Zmxwb9IBXEFVX3lxTE9QOVJvZm9feXNpWUFkQVJqZXJuV1lPQXQ3ZDhGUjlZdkJYak9oakJxUDNpZzRiaG85NndWT3JOclM0TF9jNFUyeFctbmVVN01hamcta1YtMzh5dXFh?oc=5",
-        "date": "2026-11-19",
+        "title": "Traditional celebrations, immersive cultural experiences bring international tourists closer to China’s folk heritage - Global Times",
+        "summary": "Traditional celebrations, immersive cultural experiences bring international tourists closer to China’s folk heritage Global Times",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9lcnpZMUlJR3lwb1dmdUdmb05aTVEwZFc0UkF5NHZTQzE3cEdnWlVic19FNzNrZWRlWmdlakd1WUF1M05vZ0hmRUFyZUI3LU5xVTBVWS1QcEprMW1LVS1TMGFn?oc=5",
+        "date": "2026-11-20",
         "source": "Google News RSS",
         "source_query": "China+cultural+heritage+news",
         "category": "destination_news",
         "type": "news",
-        "_hash": "49102f6bbd07"
-      },
-      {
-        "title": "United Airlines ranks No. 1 globally for destinations served; China’s Big Three make top 10 - China Travel News",
-        "summary": "United Airlines ranks No. 1 globally for destinations served; China’s Big Three make top 10 China Travel News",
-        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE52blJ6bTFxQU11dDIwUkFUcW1jVkNnMEFXaEYtY2pEQ3pOOHdTOENhOXVVUG9qTVVVampYNUZjeE12Z2Q3N1JDM1FSaFNLVWdKNE8yVDdieDdqYTA?oc=5",
-        "date": "2026-11-18",
-        "source": "Google News RSS",
-        "source_query": "China+travel+destination+news",
-        "category": "destination_news",
-        "type": "news",
-        "_hash": "a32b00849bad"
+        "_hash": "9b41db697c57"
       },
       {
         "title": "UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou - UNESCO World Heritage Centre",
@@ -295,15 +284,15 @@
         "_hash": "6fe72a77cb3a"
       },
       {
-        "title": "2-Week China Itinerary for Families: Beijing, Luoyang, Xian, Chengdu and Shanghai - YouTube",
-        "summary": "2-Week China Itinerary for Families: Beijing, Luoyang, Xian, Chengdu and Shanghai YouTube",
-        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9MRlhyRXE5cjF6UThjN3R3RlZ3Z0szdlJsbWNiQ01RLUpCQm5mOWlwcWdfRHl3NWowV1VjWktzZ2xhUTBJd3VsbnVtRU5WUG5yU2psM1hQeTltaksw?oc=5",
-        "date": "2026-08-27",
+        "title": "China Travel News Highlights Emerging Destinations Attracting More Visitors - RESIDENT™ | A Luxury Lifestyle Magazine",
+        "summary": "China Travel News Highlights Emerging Destinations Attracting More Visitors RESIDENT™ | A Luxury Lifestyle Magazine",
+        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQM2lXUElvTzlTQlR5Mmk4T1huV25XejlPZjFqWGUtRU1oVFU3SUd3WXY4Tm4zX2dpMXZ4SkVpbHFMQ2FGWE1FNU5aSmpjeVRoRV94Y0NuZHZvVWdFWHExQlZENnpWeXZPaFZ5VWJvLUdOYUE1RGZXRDNZeGh4eVBLODNjbXNUNUp2aTVqWjB1bHhPbWdLQm1kM254UGMtbC1kaFB3TUpMX0hwdkF5cXNfcGFsMnFvUzRIVlpMaTJjLWNwdw?oc=5",
+        "date": "2026-09-11",
         "source": "Google News RSS",
-        "source_query": "Chengdu+Shanghai+Beijing+Xian+travel",
+        "source_query": "China+travel+destination+news",
         "category": "destination_news",
         "type": "news",
-        "_hash": "4f217dadf0f4"
+        "_hash": "69f48bf04a8c"
       },
       {
         "title": "China's factory tours are becoming the newest tourist attractions - Travel Weekly Asia",
@@ -337,6 +326,17 @@
         "category": "destination_news",
         "type": "news",
         "_hash": "b47cd01bad08"
+      },
+      {
+        "title": "12 of the best places to visit in China - The Times",
+        "summary": "12 of the best places to visit in China The Times",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQNXFwajlOQ2d6RW4wWXpKZXVJUXA4Y1VwbkgyV0RrcFNIYzNzaERjQkVhcG5nSG9OTWNGQ1pVQWQ0R3pHd1hvMFVITXJOaHVpVmhrLTgxdTFHY25xaDFwQ1BfTTlxUE5DTlJWMnNrNkF6TV9TaTdnV1c5NC0yWkhNcGlwczlPMm1pSm1DTjYyaVdtX3hmRW8xeTNObFF4VXFTX3JKY0JKbmtvbkdTeG9R?oc=5",
+        "date": "2026-01-29",
+        "source": "Google News RSS",
+        "source_query": "Chengdu+Shanghai+Beijing+Xian+travel",
+        "category": "destination_news",
+        "type": "news",
+        "_hash": "ba5c43a043da"
       }
     ],
     "safety_alerts": [
@@ -454,15 +454,15 @@
     ]
   },
   "llm_summary": {
-    "visa_policy": "- [2026-11-20] Malaysia to end visa-free entry for Indians from January 2027: New rules and key dates - Gulf News\n  Malaysia to end visa-free entry for Indians from January 2027: New rules and key dates Gulf News\n- [2026-11-20] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-11-19] China’s New Rules for Overseas Investment and Offshore Wealth - IMI Daily\n  China’s New Rules for Overseas Investment and Offshore Wealth IMI Daily",
-    "travel_industry": "- [2026-11-20] Trip.com steps up efforts to attract international tourists to China - China Daily\n  Trip.com steps up efforts to attract international tourists to China China Daily\n- [2026-11-19] China’s Inbound Tourism Has Room to Grow, Trip.com CEO Says - Caixin Global\n  China’s Inbound Tourism Has Room to Grow, Trip.com CEO Says Caixin Global\n- [2026-11-18] South Korea says China trade agreement to boost tourism, entertainment sectors - Reuters\n  South Korea says China trade agreement to boost tourism, entertainment sectors Reuters",
-    "destination_news": "- [2026-11-20] 2026 World's Travel & Hotel Awards Gloriously Released in Hong Kong, China - Thailand Business News\n  2026 World's Travel & Hotel Awards Gloriously Released in Hong Kong, China Thailand Business News\n- [2026-11-19] Inside APEC leaders' lounge: Advanced AI, intangible cultural heritage - CGTN\n  Inside APEC leaders' lounge: Advanced AI, intangible cultural heritage CGTN\n- [2026-11-19] China's advanced AI, intangible cultural heritage featured in APEC leaders' lounge - Modern Ghana\n  China's advanced AI, intangible cultural heritage featured in APEC leaders' lounge Modern Ghana",
+    "visa_policy": "- [2026-11-21] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-11-20] China, Mongolia, South Korea,…: Visa exemptions set to expire at the end of 2026 - VisasNews\n  China, Mongolia, South Korea,…: Visa exemptions set to expire at the end of 2026 VisasNews\n- [2026-11-20] Malaysia to end visa-free entry for Indians from January 2027: New rules and key dates - Gulf News\n  Malaysia to end visa-free entry for Indians from January 2027: New rules and key dates Gulf News",
+    "travel_industry": "- [2026-11-20] Trip.com steps up efforts to attract international tourists to China - China Daily\n  Trip.com steps up efforts to attract international tourists to China China Daily\n- [2026-11-19] Upgraded FTA expected to boost Korea-China tourism ties, experts say - The Korea Times\n  Upgraded FTA expected to boost Korea-China tourism ties, experts say The Korea Times\n- [2026-11-19] China’s Inbound Tourism Has Room to Grow, Trip.com CEO Says - Caixin Global\n  China’s Inbound Tourism Has Room to Grow, Trip.com CEO Says Caixin Global",
+    "destination_news": "- [2026-11-20] 2026 World's Travel & Hotel Awards Gloriously Released in Hong Kong, China - Thailand Business News\n  2026 World's Travel & Hotel Awards Gloriously Released in Hong Kong, China Thailand Business News\n- [2026-11-20] CGTN: How cultural exchanges build a close Asia-Pacific community - markets.businessinsider.com\n  CGTN: How cultural exchanges build a close Asia-Pacific community markets.businessinsider.com\n- [2026-11-20] Traditional celebrations, immersive cultural experiences bring international tourists closer to China’s folk heritage - Global Times\n  Traditional celebrations, immersive cultural experiences bring international tourists closer to China’s folk heritage Global Times",
     "safety_alerts": "- [2026-11-19] Winter weather alerts explained. Here are the differences. - The Weather Channel\n  Winter weather alerts explained. Here are the differences. The Weather Channel\n- [2026-11-18] Shipping from China to Australia [Updated November 2026 ] - Freightos\n  Shipping from China to Australia [Updated November 2026 ] Freightos\n- [2026-11-03] Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker - Anadolu Ajansı\n  Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker Anadolu Ajansı",
     "general": "- [2024-03-16] A local’s travel guide to Washington DC: what to eat, see and do in three days\n  Top sights in Washington include Capitol Hill Books, the Black Cat music venue and a top-rated Filipino restaurant From phone chargers to podcasts, th"
   },
   "sources": {
-    "Google News RSS": 38,
     "State Council 57-country notice": 1,
+    "Google News RSS": 38,
     "Travel | The Guardian": 1
   },
   "source_config": {
@@ -477,5 +477,5 @@
     "provinces": 24
   },
   "policy_change": null,
-  "official_state_checked_at": "2026-11-20T16:17:01.247312+00:00"
+  "official_state_checked_at": "2026-11-21T04:06:53.326666+00:00"
 }
