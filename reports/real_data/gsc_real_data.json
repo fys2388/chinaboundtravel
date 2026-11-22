@@ -1,25 +1,18 @@
 {
   "source": "gsc_api",
-  "pull_time": "2026-11-21T13:51:25.113314",
-  "data_date": "2026-11-18",
+  "pull_time": "2026-11-22T07:13:16.933635",
+  "data_date": "2026-11-19",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "impressions": 1065,
+    "impressions": 1096,
     "clicks": 1,
     "ctr": 0.09,
-    "average_position": 60.4,
+    "average_position": 59.2,
     "sitemap_count": 1,
     "sitemap_last_submitted": "2026-09-08T00:57:40.422Z"
   },
   "daily": [
-    {
-      "date": "2026-10-22",
-      "impressions": 61,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 39.0
-    },
     {
       "date": "2026-10-23",
       "impressions": 45,
@@ -208,6 +201,13 @@
       "clicks": 3,
       "ctr": 0.01,
       "position": 30.2
+    },
+    {
+      "date": "2026-11-19",
+      "impressions": 161,
+      "clicks": 2,
+      "ctr": 0.01,
+      "position": 18.8
     }
   ],
   "top_queries": [
@@ -286,7 +286,7 @@
       "impressions": 12,
       "clicks": 0,
       "ctr": 0,
-      "position": 69.3
+      "position": 68
     },
     {
       "query": "accommodation conditions and price range in chengdu",
@@ -341,45 +341,45 @@
   "top_pages": [
     {
       "page": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary/",
-      "impressions": 230,
-      "clicks": 4,
+      "impressions": 238,
+      "clicks": 5,
       "ctr": 0.02,
-      "position": 13.0
+      "position": 12.7
     },
     {
       "page": "https://www.chinaboundtravel.com/free-itinerary/",
-      "impressions": 99,
-      "clicks": 3,
-      "ctr": 0.03,
-      "position": 10.6
+      "impressions": 106,
+      "clicks": 4,
+      "ctr": 0.04,
+      "position": 10.4
     },
     {
       "page": "https://www.chinaboundtravel.com/",
-      "impressions": 16,
+      "impressions": 17,
       "clicks": 2,
       "ctr": 0.12,
-      "position": 9.1
+      "position": 8.6
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
-      "impressions": 84,
+      "impressions": 90,
       "clicks": 2,
       "ctr": 0.02,
-      "position": 10.0
+      "position": 10.6
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/",
-      "impressions": 208,
+      "impressions": 223,
       "clicks": 1,
       "ctr": 0.0,
-      "position": 20.6
+      "position": 20.7
     },
     {
       "page": "https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/",
-      "impressions": 56,
+      "impressions": 55,
       "clicks": 1,
       "ctr": 0.02,
-      "position": 39.1
+      "position": 40.6
     },
     {
       "page": "https://www.chinaboundtravel.com/7-day-china-itinerary/",
@@ -411,10 +411,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/ai-trip-planner/",
-      "impressions": 4,
+      "impressions": 5,
       "clicks": 0,
       "ctr": 0,
-      "position": 40
+      "position": 33
     },
     {
       "page": "https://www.chinaboundtravel.com/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/?utm_source=ig&utm_mediu",
@@ -474,10 +474,10 @@
     },
     {
       "page": "https://www.chinaboundtravel.com/cities/chengdu/",
-      "impressions": 15,
+      "impressions": 16,
       "clicks": 0,
       "ctr": 0,
-      "position": 8.7
+      "position": 8.6
     }
   ],
   "raw_source": "Google Search Console REST API v3",
@@ -487,7 +487,7 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 3,
-    "data_date": "2026-11-18"
+    "data_date": "2026-11-19"
   },
   "prompt_noise_filtered": 2
 }
