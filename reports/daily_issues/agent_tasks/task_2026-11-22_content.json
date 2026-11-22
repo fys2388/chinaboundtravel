@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-11-22_content",
   "created_at": "2026-11-22T01:01:05.523080+00:00",
-  "updated_at": "2026-11-22T04:07:04.542056",
+  "updated_at": "2026-11-22T04:31:04.771155",
   "target_date": "2026-11-22",
   "issue_count": 15,
   "severity_summary": {
@@ -114,7 +114,27 @@
       "detected_at": "2026-11-22T01:01:05.522431+00:00"
     },
     {
-      "id": "site_health-2f3f7c43dde5681",
+      "id": "site_health-755abee219dfc3b5",
+      "type": "draft_leak",
+      "title": "draft_leak",
+      "description": "draft_leak",
+      "page": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
+      "file": "content/_archived/2026-05-20-shanghai-like-a-local-hidden-neighborhoods-tourist.md",
+      "evidence": "draft:true的文章可能已发布到线上",
+      "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
+      "severity": "high",
+      "agent": "content",
+      "action": "manual_review",
+      "source": "site_health",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-11-22T04:31:04.099351+00:00"
+    },
+    {
+      "id": "site_health-7a07e56bbcf4e8f8",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -131,27 +151,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-22T04:07:04.246915+00:00"
-    },
-    {
-      "id": "site_health-20a147f42c7a0431",
-      "type": "draft_leak",
-      "title": "draft_leak",
-      "description": "draft_leak",
-      "page": "content/_archived/2026-07-22-cultural-etiquette-guide.md",
-      "file": "content/_archived/2026-07-22-cultural-etiquette-guide.md",
-      "evidence": "draft:true的文章可能已发布到线上",
-      "recommended_action": "[WL-002] content/7-day-china-itinerary.md 的 draft:true 是设计意图。这是订阅 lead-magnet 邮件模板，非公开落地页。公开 URL /7-day-china-itinerary/ 由 content/free-itinerary.md 通过 aliases=['/7-day-china-itinerary/'] 接管（GSC real_data 30 天实证：free-itinerary 23 imp / 2 clicks / pos 17.6，说明 URL 正常返回非断链）。",
-      "severity": "high",
-      "agent": "content",
-      "action": "manual_review",
-      "source": "site_health",
-      "source_file": "",
-      "task_source": "quality_gate",
-      "status": "new",
-      "assigned": true,
-      "assigned_to": "content",
-      "detected_at": "2026-11-22T04:07:04.246911+00:00"
+      "detected_at": "2026-11-22T04:31:04.099356+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -274,6 +274,26 @@
       "detected_at": "2026-11-22T04:07:04.149025"
     },
     {
+      "id": "site_health-35e400b0a2b954df",
+      "type": "ai_forbidden_word",
+      "title": "ai_forbidden_word",
+      "description": "ai_forbidden_word",
+      "page": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "evidence": "AI禁用词: cheapest",
+      "recommended_action": "无替换表: cheapest",
+      "severity": "medium",
+      "agent": "content",
+      "action": "manual_review",
+      "source": "site_health",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-11-22T04:31:04.099408+00:00"
+    },
+    {
       "id": "issue_9c2d500a7e20",
       "type": "ai_forbidden_word",
       "title": "AI禁用词: cheapest",
@@ -292,26 +312,6 @@
       "assigned": true,
       "assigned_to": "content",
       "detected_at": "2026-11-22T04:07:04.149031"
-    },
-    {
-      "id": "site_health-5dc39d07f2ad4b46",
-      "type": "ai_forbidden_word",
-      "title": "ai_forbidden_word",
-      "description": "ai_forbidden_word",
-      "page": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
-      "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
-      "evidence": "AI禁用词: cheapest",
-      "recommended_action": "无替换表: cheapest",
-      "severity": "medium",
-      "agent": "content",
-      "action": "manual_review",
-      "source": "site_health",
-      "source_file": "",
-      "task_source": "quality_gate",
-      "status": "new",
-      "assigned": true,
-      "assigned_to": "content",
-      "detected_at": "2026-11-22T04:07:04.246958+00:00"
     }
   ],
   "priority_issue": {
