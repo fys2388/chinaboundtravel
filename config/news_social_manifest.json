@@ -32,22 +32,6 @@
       ],
       "success": false
     },
-    "6fe72a77cb3a": {
-      "title": "Americans could be detained for years in popular travel dest",
-      "posted_at": "2026-10-23T05:51:10.999194+00:00",
-      "platforms": [
-        "x"
-      ],
-      "success": true
-    },
-    "1d6e7247fdc5": {
-      "title": "State Department warns travel to popular vacation destinatio",
-      "posted_at": "2026-10-23T05:51:14.536876+00:00",
-      "platforms": [
-        "x"
-      ],
-      "success": true
-    },
     "fa31abf1d061": {
       "title": "U.S. Adds Wrongful Detention Warning to China Travel Advisor",
       "posted_at": "2026-11-19T08:32:32.611749+00:00",
@@ -55,38 +39,6 @@
         "x"
       ],
       "success": false
-    },
-    "1c06495de6fa": {
-      "title": "September 2024 Tourism Market Analysis: Slowing Growth in Eu",
-      "posted_at": "2026-10-23T05:51:05.039129+00:00",
-      "platforms": [
-        "x"
-      ],
-      "success": true
-    },
-    "ec3c8cfb32cf": {
-      "title": "Inside Guangxi: How China-Vietnam ties boost trade and touri",
-      "posted_at": "2026-10-23T05:51:07.093924+00:00",
-      "platforms": [
-        "x"
-      ],
-      "success": true
-    },
-    "73cf06cbdf84": {
-      "title": "U.S. State Department China travel advisory: Key points to n",
-      "posted_at": "2026-10-23T05:51:09.318511+00:00",
-      "platforms": [
-        "x"
-      ],
-      "success": true
-    },
-    "246af33e95c4": {
-      "title": "Trump takes questions on China trip - FOX 10 Phoenix",
-      "posted_at": "2026-10-23T05:51:12.658068+00:00",
-      "platforms": [
-        "x"
-      ],
-      "success": true
     },
     "34870d3de399": {
       "title": "From embroidery to tourism, SW China's Yunnan turns ethnic t",
@@ -1058,11 +1010,11 @@
     },
     "c545d2b74bb9": {
       "title": "UNESCO–Africa–China Workshop strengthens World Heritage capa",
-      "posted_at": "2026-11-15T07:40:57.338866+00:00",
+      "posted_at": "2026-11-22T07:52:30.279786+00:00",
       "platforms": [
         "x"
       ],
-      "success": true
+      "success": false
     },
     "ebf2f8ea0257": {
       "title": "China leads in seamless digital travel experiences: European",
@@ -1202,7 +1154,7 @@
     },
     "d5bb78f10bff": {
       "title": "China’s Inbound Tourism Has Room to Grow, Trip.com CEO Says ",
-      "posted_at": "2026-11-20T08:14:31.762862+00:00",
+      "posted_at": "2026-11-22T07:52:29.757218+00:00",
       "platforms": [
         "x"
       ],
@@ -1287,9 +1239,25 @@
         "x"
       ],
       "success": true
+    },
+    "7cb165f10c3d": {
+      "title": "Tropical rainforest tourism thrives in China's Hainan - Glob",
+      "posted_at": "2026-11-22T07:52:27.171504+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "43a28dea4f97": {
+      "title": "Mainland Chinese travelling more but keeping a tighter grip ",
+      "posted_at": "2026-11-22T07:52:28.802209+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
     }
   },
-  "last_run": "2026-11-21T08:07:17.626991+00:00",
-  "total_posts": 161,
-  "total_failures": 97
+  "last_run": "2026-11-22T07:52:30.279812+00:00",
+  "total_posts": 157,
+  "total_failures": 99
 }
