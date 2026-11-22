@@ -199,3 +199,5 @@ One less thing to stress about. And that's often welcome. Before you land, make 
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
 
 - [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
+
+- [China Remote Work Guide: Digital Nomad Tips](/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)

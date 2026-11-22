@@ -165,6 +165,8 @@ Here are some related articles on chinaboundtravel.com that you might enjoy:
 
 - [Chinese Language Survival Phrases Guide 2026](/posts/chinese-language-survival-phrases-guide/)
 
+- [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
+
 ## FAQ
 
 ### What should I know about chengdu traditional tea ceremony experience?
