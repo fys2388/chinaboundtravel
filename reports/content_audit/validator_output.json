@@ -1739,6 +1739,34 @@
       "passed": true
     },
     {
+      "file": "apec-2026-shenzhen-outcomes-what-it-means-for-travelers.md",
+      "frontmatter_ok": true,
+      "content_id_ok": true,
+      "url_ok": true,
+      "canonical_ok": true,
+      "brand_issues": [],
+      "language_issues": [],
+      "mojibake_issues": [],
+      "encoding_errors": [],
+      "fact_issues": [],
+      "seo_issues": [
+        "title_too_long"
+      ],
+      "media_issues": [],
+      "cover_ok": true,
+      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/general/apec-2026-shenzhen-outcomes-what-it-means-for-travelers.webp",
+      "scores": {
+        "brand": 100,
+        "fact": 100,
+        "language": 100,
+        "mojibake": 100,
+        "seo": 80,
+        "media": 100
+      },
+      "trust_score": 97.0,
+      "passed": true
+    },
+    {
       "file": "best-china-itineraries-for-10-days-three-routes-compared.md",
       "frontmatter_ok": true,
       "content_id_ok": true,
@@ -1978,6 +2006,6 @@
       "passed": true
     }
   ],
-  "passed_count": 72,
-  "total": 73
+  "passed_count": 73,
+  "total": 74
 }
