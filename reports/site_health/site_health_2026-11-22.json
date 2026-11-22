@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-22T04:07:02.164824+00:00",
+  "timestamp": "2026-11-22T18:58:05.386740+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
@@ -13,7 +13,7 @@
     "resolved": 19,
     "inherited_resolved": 24,
     "in_progress": 0,
-    "last_updated": "2026-11-22T04:07:04.541442"
+    "last_updated": "2026-11-22T18:58:07.761708"
   },
   "issues": [
     {
@@ -74,7 +74,7 @@
       "status": "need_manual",
       "assigned": true,
       "resolved_by": "content_agent",
-      "resolution_note": "无替换表: cheapest"
+      "resolution_note": "无替换表: ai_forbidden_word"
     },
     {
       "type": "ai_forbidden_word",
@@ -86,7 +86,7 @@
       "status": "need_manual",
       "assigned": true,
       "resolved_by": "content_agent",
-      "resolution_note": "无替换表: ai_forbidden_word"
+      "resolution_note": "无替换表: cheapest"
     },
     {
       "type": "ai_forbidden_word",
@@ -97,7 +97,7 @@
       "agent": "content",
       "status": "need_manual",
       "resolved_by": "content_agent",
-      "resolution_note": "无替换表: ai_forbidden_word",
+      "resolution_note": "无替换表: cheapest",
       "resolved_at": "2026-10-12T20:48:26.363751+00:00",
       "assigned": true
     },
