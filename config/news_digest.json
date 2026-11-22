@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-11-22T03:19:35.546294+00:00",
+  "last_updated": "2026-11-22T15:30:18.480291+00:00",
   "last_updated_date": "2026-11-22",
   "total_items": 40,
   "digest": {
@@ -117,6 +117,17 @@
     ],
     "travel_industry": [
       {
+        "title": "China Focus: China's second homegrown large cruise ship begins maiden commercial voyage - Xinhua",
+        "summary": "China Focus: China's second homegrown large cruise ship begins maiden commercial voyage Xinhua",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9OSHV0M0lveEJiYzhweHZvT3E0MER5S0ZzLWtaSWlEN3RULVF2MzZoNFRVc0xPSS1ZUTJ0US1jb1RaZkRBSGFtb2hDMHBHUkNqRnRlaEJ4S0pzS3ltTU5VWEZiNHhqdnNNSFJyV3ZESlY1dlN0cFZTQzlvUU8?oc=5",
+        "date": "2026-11-22",
+        "source": "Google News RSS",
+        "source_query": "China+tourism+news",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "c047a99e84ae"
+      },
+      {
         "title": "Tropical rainforest tourism thrives in China's Hainan - Global Times",
         "summary": "Tropical rainforest tourism thrives in China's Hainan Global Times",
         "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBFWVRvZHFkTE1SQW1FZ2dLX3BHaHF1b0tGUlJnTGlPYWg4SDk1ZWItNktOd0lEaUtIdGV3ZlpNcEhjdUcyOVRaNjVqU3pkeUdsTThUM0ZMZkRhT2Fsa2VONjlB?oc=5",
@@ -148,17 +159,6 @@
         "category": "travel_industry",
         "type": "news",
         "_hash": "d5bb78f10bff"
-      },
-      {
-        "title": "South Korea says China trade agreement to boost tourism, entertainment sectors - Reuters",
-        "summary": "South Korea says China trade agreement to boost tourism, entertainment sectors Reuters",
-        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQa2cyUmpJMG9YanZfOGk4eUVBT0NfTEVSYjloblMwcUxYdGNsN3hrMFozbHdzdU0yMVdnVnFxeE5NVGJuTDdCeGtjdDFsaHhyWm5DQUMxVm1RWnRuOFBqRHloYk0zNW5BbHJDZC0wbkNIb0wzUUJlczk5ZDE5VlpsdFVhRzBNSWZqUkhrbW1aWkU1TFVpa1RGS01YUk13NUdGVS1peWJuY09RSmJFOEFSRVhMSmNBazQ?oc=5",
-        "date": "2026-11-18",
-        "source": "Google News RSS",
-        "source_query": "China+tourism+news",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "ab6b647286b4"
       },
       {
         "title": "Chinese arrivals to Thailand could fall 20% in final two months of 2026 - Nation Thailand",
@@ -216,18 +216,29 @@
         "_hash": "a670e57dd7ee"
       },
       {
-        "title": "China tightens travel rules over tech security - Reuters",
-        "summary": "China tightens travel rules over tech security Reuters",
-        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUU9BOGpkbUk0UVhJRjlsRVNXdUZtNUw4ZGR4RGxqWW94OEF1T184SWh4bmhCX2hMTmJCa2dNZGpsSWlSOEhwaUtrUlVpUm5Nd3g1blU1UkxOZkU3MDhYQ2MyRUVMR1EyMXdPbzVFLW5SQ2pKcktpMmpLcl9PcDIyXzdhMERQcjd5X3gzUjFPcEdvandGSlg2aXFLZnZEcTBOV3ZWNVNZMA?oc=5",
-        "date": "2026-09-15",
+        "title": "China Tightens Entry And Exit Rules From Sept 15 - Migrant Times",
+        "summary": "China Tightens Entry And Exit Rules From Sept 15 Migrant Times",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxObS1uWjBXeVJwRzV5Ui13N3BLbHhQM202X2lWRS00blc3b24zQk9NVVRmMXBFaFVPU2pBY3NVUlRibUQ4RFhIR3ZoNzNYX3dKVHhENmJ2UENxdl9wWkRIaWM4bmhVWHhyN09lSExTT21MdkdjeWpQZXQ3bFNZYm1WWXJKc2hXMkJoc0o1bGNnQ244Y092WlBJR2RBX1QxcFY1a2c?oc=5",
+        "date": "2026-08-15",
         "source": "Google News RSS",
         "source_query": "China+travel+restrictions+update",
         "category": "travel_industry",
         "type": "news",
-        "_hash": "347407ab4f96"
+        "_hash": "47da71bd3f02"
       }
     ],
     "destination_news": [
+      {
+        "title": "2026 World's Travel & Hotel Awards Gloriously Released in Hong Kong, China - Thailand Business News",
+        "summary": "2026 World's Travel & Hotel Awards Gloriously Released in Hong Kong, China Thailand Business News",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQUEMybEM3dmtvM1FfUDFkQXJsanhCS0xneVo2UFZFX0VXLUNzYlh2Nk55Qk5tYkdib1FWbFRjaGphU1BaVHhfUzNLZTlLbVRaU0JXVXlGMWJlaUhuV2I5SldCaXRQVlZySkVXYnNNTS1yY29jMk5SZDNtOGgwZTdxMXBYMWNIb0JJdkVIQnlydG9VMGt5TVFjRzNYeGpGcEdpLU5OY3NmakNkLXNRYmNIRDRPb0hpQzRLODFv?oc=5",
+        "date": "2026-11-20",
+        "source": "Google News RSS",
+        "source_query": "China+travel+destination+news",
+        "category": "destination_news",
+        "type": "news",
+        "_hash": "f2404d973fed"
+      },
       {
         "title": "CGTN: How cultural exchanges build a close Asia-Pacific community - markets.businessinsider.com",
         "summary": "CGTN: How cultural exchanges build a close Asia-Pacific community markets.businessinsider.com",
@@ -238,17 +249,6 @@
         "category": "destination_news",
         "type": "news",
         "_hash": "d2f0bd2ee078"
-      },
-      {
-        "title": "Inside APEC leaders' lounge: Advanced AI, intangible cultural heritage - CGTN",
-        "summary": "Inside APEC leaders' lounge: Advanced AI, intangible cultural heritage CGTN",
-        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQN3FITnp6VGRuZjJqNlhoTHRzMTVRLVhmSFBfcTAybm5LQkdxUVhUZzNxeGJPcUtHUTZOYnZSanpfRFhQbkFuXy1ORzVkUHFabS05QldkbHhGbUUwYjJIYVBLb2lER0FmMTU2TG5IQUh3cHBVUlZpY19CYUpKM1lVM0dUeFBOWXROd0VCXzZxRkllT3h0b1B2YVI0bU56MUI4SHJHU3J5WXRRMDAwdldNcFRUNUpOdTk3VHdTMUtRUy1YQQ?oc=5",
-        "date": "2026-11-19",
-        "source": "Google News RSS",
-        "source_query": "China+cultural+heritage+news",
-        "category": "destination_news",
-        "type": "news",
-        "_hash": "3db7c7ce2a7e"
       },
       {
         "title": "UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou - UNESCO World Heritage Centre",
@@ -284,15 +284,15 @@
         "_hash": "6fe72a77cb3a"
       },
       {
-        "title": "Chinese travelers to Europe, South America, Australia and NZ up over 40% for Golden Week while Japan drops out of top 10: travel agencies - Global Times",
-        "summary": "Chinese travelers to Europe, South America, Australia and NZ up over 40% for Golden Week while Japan drops out of top 10: travel agencies Global Times",
-        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE91RHBIOGwxWkluSnNzTHp4WGdETkhhMmp5Y25hY3JIeW55UnBOWjJMZTQ2bUFXRHpjN2NEd09jcDZyUk80Vk5ONWN5UnBwNnFwNG9kSXBacncxUHdRdjRQNzN3?oc=5",
-        "date": "2026-10-02",
+        "title": "ICE repatriates 58 objects of cultural heritage to the People’s Republic of China - ICE | U.S. Immigration and Customs Enforcement (.gov)",
+        "summary": "ICE repatriates 58 objects of cultural heritage to the People’s Republic of China ICE | U.S. Immigration and Customs Enforcement (.gov)",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNWkJFSVlqejhUaTZUank3TWMxVzM2Y0h0d3RnTXB3MlVFV28wS3JTa3BHalEtTDVJaEdRalpHYTV6bXhDaGpVdFpuNDM2LUtnQnRiLTFCVjdBVGFmbW9xNmFXZWJPcWtwRTk5WHVuNzVKeFpDYmJEd1IxTkswV1hDWU0tV2lfMjFtRlplX29IbVpaemMyOWxQRVZZN3g0VjNHZWxV?oc=5",
+        "date": "2026-09-30",
         "source": "Google News RSS",
-        "source_query": "China+travel+destination+news",
+        "source_query": "China+cultural+heritage+news",
         "category": "destination_news",
         "type": "news",
-        "_hash": "8ce17fb31626"
+        "_hash": "a7e960271e22"
       },
       {
         "title": "China Travel News Highlights Emerging Destinations Attracting More Visitors - RESIDENT™ | A Luxury Lifestyle Magazine",
@@ -317,6 +317,17 @@
         "_hash": "50db6fcb2739"
       },
       {
+        "title": "Top 20 theme parks in Asia - www.amusementsandattractions.com",
+        "summary": "Top 20 theme parks in Asia www.amusementsandattractions.com",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOR2NOeTJRRnhjZWs3ZFZCV1o1VlZxYkQ5OGhzdjdkT0lqZFlGZzBTSXMxdnIxVmswUTZjblhzeGVuQ3FpM3laN1I3dFNrTVVKVHdGSnM4RG1jd1dXbzREME9tdkIzLU10MXptaXpuZW4xS3h1VUJ3U1FQUnBaQ1RkUzRiZ1UwQ3owVjZ3MElSV2ZrQQ?oc=5",
+        "date": "2026-07-08",
+        "source": "Google News RSS",
+        "source_query": "China+new+attractions+open",
+        "category": "destination_news",
+        "type": "news",
+        "_hash": "fa74ef47c59f"
+      },
+      {
         "title": "On This Day | In 2016, ‘China’s Disneyland’ opens in Shanghai – SCMP archive - South China Morning Post",
         "summary": "On This Day | In 2016, ‘China’s Disneyland’ opens in Shanghai – SCMP archive South China Morning Post",
         "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQWmhuUUJvYmNtMEhiR21pR2tRMzJYUk54bHdHUUZxTlNreTVkVWlzQlVFUS1VLTMzdXlQZDdYTUV6QkljTllPWTU0NzNvOUppNWI3V3FoR0VaLTFvQV9KN2daRmI4Qlg2eFppOURaT21nZDlxZkRvd3V2UV81Tk5zdHBObWJ6ckEwQXhOLXRJS19UREdPUTZQdElXbWVwRDFqQVJXYUgwVHpiSHpXVWtLLW15Smw5d0pEeGJYbdIBvAFBVV95cUxQX2ZOVFd1YjF6am12T0kycVBjbVB1dFBRMnRib0xkSk1BbFJRWU5sVlIwMXk5dDZNY1VKNFVKeTBtaDhjektjeEN2WWw1ZHFFdS1pNkhlb0RoRlZVam9FNHhXckNPaFZFeU9MUnJMQTRsU3BPRU1JLUYxOElzc0MtdEh0R2owT2FMOGxNSV9ZNlBwdGhzcV9QR0R5Q0c5T2dwc205a2Jidk1vOGFRcG9ra1BJN2NRY3AtZy1ncQ?oc=5",
@@ -326,17 +337,6 @@
         "category": "destination_news",
         "type": "news",
         "_hash": "94aac9bc0109"
-      },
-      {
-        "title": "On the rise: local media IP in Asian attractions - blooloop",
-        "summary": "On the rise: local media IP in Asian attractions blooloop",
-        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1FSVgwWThGcmhWN2FacTZyX0pZd0pvS0JLLVpjX2FGR0YyQ2I2QmlERlg1Zl9Cd1pSN0N1VGNQdHAyd1pNMWZpOW0xTQ?oc=5",
-        "date": "2026-05-28",
-        "source": "Google News RSS",
-        "source_query": "China+new+attractions+open",
-        "category": "destination_news",
-        "type": "news",
-        "_hash": "b47cd01bad08"
       }
     ],
     "safety_alerts": [
@@ -455,8 +455,8 @@
   },
   "llm_summary": {
     "visa_policy": "- [2026-11-22] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-11-20] China, Mongolia, South Korea,…: Visa exemptions set to expire at the end of 2026 - VisasNews\n  China, Mongolia, South Korea,…: Visa exemptions set to expire at the end of 2026 VisasNews\n- [2026-11-20] Malaysia to end visa-free entry for Indians from January 2027: New rules and key dates - Gulf News\n  Malaysia to end visa-free entry for Indians from January 2027: New rules and key dates Gulf News",
-    "travel_industry": "- [2026-11-22] Tropical rainforest tourism thrives in China's Hainan - Global Times\n  Tropical rainforest tourism thrives in China's Hainan Global Times\n- [2026-11-21] Mainland Chinese travelling more but keeping a tighter grip on spending - South China Morning Post\n  Mainland Chinese travelling more but keeping a tighter grip on spending South China Morning Post\n- [2026-11-19] China’s Inbound Tourism Has Room to Grow, Trip.com CEO Says - Caixin Global\n  China’s Inbound Tourism Has Room to Grow, Trip.com CEO Says Caixin Global",
-    "destination_news": "- [2026-11-20] CGTN: How cultural exchanges build a close Asia-Pacific community - markets.businessinsider.com\n  CGTN: How cultural exchanges build a close Asia-Pacific community markets.businessinsider.com\n- [2026-11-19] Inside APEC leaders' lounge: Advanced AI, intangible cultural heritage - CGTN\n  Inside APEC leaders' lounge: Advanced AI, intangible cultural heritage CGTN\n- [2026-11-09] UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou - UNESCO World Heritage Centre\n  UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou UNESCO World Heritage Centre",
+    "travel_industry": "- [2026-11-22] China Focus: China's second homegrown large cruise ship begins maiden commercial voyage - Xinhua\n  China Focus: China's second homegrown large cruise ship begins maiden commercial voyage Xinhua\n- [2026-11-22] Tropical rainforest tourism thrives in China's Hainan - Global Times\n  Tropical rainforest tourism thrives in China's Hainan Global Times\n- [2026-11-21] Mainland Chinese travelling more but keeping a tighter grip on spending - South China Morning Post\n  Mainland Chinese travelling more but keeping a tighter grip on spending South China Morning Post",
+    "destination_news": "- [2026-11-20] 2026 World's Travel & Hotel Awards Gloriously Released in Hong Kong, China - Thailand Business News\n  2026 World's Travel & Hotel Awards Gloriously Released in Hong Kong, China Thailand Business News\n- [2026-11-20] CGTN: How cultural exchanges build a close Asia-Pacific community - markets.businessinsider.com\n  CGTN: How cultural exchanges build a close Asia-Pacific community markets.businessinsider.com\n- [2026-11-09] UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou - UNESCO World Heritage Centre\n  UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou UNESCO World Heritage Centre",
     "safety_alerts": "- [2026-11-19] Winter weather alerts explained. Here are the differences. - The Weather Channel\n  Winter weather alerts explained. Here are the differences. The Weather Channel\n- [2026-11-18] Shipping from China to Australia [Updated November 2026 ] - Freightos\n  Shipping from China to Australia [Updated November 2026 ] Freightos\n- [2026-11-03] Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker - Anadolu Ajansı\n  Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker Anadolu Ajansı",
     "general": "- [2024-03-16] A local’s travel guide to Washington DC: what to eat, see and do in three days\n  Top sights in Washington include Capitol Hill Books, the Black Cat music venue and a top-rated Filipino restaurant From phone chargers to podcasts, th"
   },
@@ -477,5 +477,5 @@
     "provinces": 24
   },
   "policy_change": null,
-  "official_state_checked_at": "2026-11-22T03:19:35.546473+00:00"
+  "official_state_checked_at": "2026-11-22T15:30:18.480493+00:00"
 }
