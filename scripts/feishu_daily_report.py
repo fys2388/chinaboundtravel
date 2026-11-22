@@ -879,6 +879,15 @@ class FeishuDailyReporter:
         if top_countries:
             country_lines = [f"{c['country']}: {c['users']} 人" for c in top_countries[:5]]
         country_str = "\n".join(country_lines)
+
+        # 机器/自刷流量标注：命中特征时，在渠道/地区旁直接标红，避免读者把机器流量当真增长
+        _bot = data.get("bot_traffic_assessment") or {}
+        if _bot.get("suspect"):
+            _low_note = "（小样本，特征不具统计意义）" if _bot.get("low_confidence") else ""
+            country_str += (f"\n🚩 机器/自刷流量特征命中{_low_note}：{_bot.get('detail','')}"
+                            f"\n→ 本段流量/趋势数字含机器流量，勿当真实读者增长；"
+                            f"正解是 GA4 后台 IP 内部流量过滤。")
+
         # GA4 一致性校验：小流量下 session 维度指标与事件级总量会背离。
         # 结论先行——页浏览（screenPageViews，事件级总量）是唯一可靠锚点；
         # 会话数与渠道明细都走 sessionization 管线，是派生量。
@@ -948,9 +957,22 @@ class FeishuDailyReporter:
             consistency_str += ("\n\n⚠️ 数据质量提示：平均时长 " + dur_str + " 异常，"
                                 "可能由 GA4 小流量/单会话长停留导致，建议以 7 日滚动口径为准")
         elif not _low_sample and avg_dur == 0 and (data.get("sessions") or 0) > 0:
-            consistency_str += ("\n\n⚠️ 数据质量提示：平均时长 0 秒（" + str(data.get("sessions")) +
-                                " 会话），疑似即时跳出或事件未上报，建议核对 GA4 埋点/consent 配置，"
-                                "以 7 日滚动口径为准")
+            # 优先判断：是否机器/自刷流量特征命中。命中时根因是"无人真实阅读"，
+            # 不是埋点/consent 坏了——此时建议查 IP 内部流量过滤，而非埋点。
+            _bot = data.get("bot_traffic_assessment") or {}
+            if _bot.get("suspect"):
+                _low_note = "（小样本，特征不具统计意义）" if _bot.get("low_confidence") else ""
+                consistency_str += (
+                    "\n\n⚠️ 机器/自刷流量特征命中" + _low_note + "：" + _bot.get("detail", "")
+                    + "\n→ 平均时长 0 秒的根因是「无真实读者阅读」，而非埋点/consent 故障。"
+                    + "建议在 GA4 后台配置 IP 内部流量过滤（把 agent/监控的固定 IP 段挡掉），"
+                    + "或在 GA4 里创建排除过滤器；在此之前日报的流量/趋势数字含机器流量，勿当真实增长。"
+                    + " " + _bot.get("note", "")
+                )
+            else:
+                consistency_str += ("\n\n⚠️ 数据质量提示：平均时长 0 秒（" + str(data.get("sessions")) +
+                                    " 会话），疑似即时跳出或事件未上报，建议核对 GA4 埋点/consent 配置，"
+                                    "以 7 日滚动口径为准")
         
         # ===== 2. 搜索表现 =====
         gsc_available = data.get("gsc_data_available", False)
@@ -2180,6 +2202,55 @@ class FeishuDailyReporter:
         print(f"   ⚠️ GA4 API 响应 {resp.status_code}: {resp.text[:200]}")
         return None
     
+    def _assess_bot_traffic(self, top_channels, top_countries,
+                            users, sessions, pageviews,
+                            bounce_rate, engagement_rate) -> dict:
+        """判断当日流量是否主要由机器/自刷流量构成（无需 IP，基于维度+比率特征）。
+
+        为什么不用 IP：GA4 隐私上不出 IP，IP 排除需精确段（配错会误杀真实访客，
+        是破坏性操作）。此方法用"无外部来源 + 全跳出零阅读 + 1:1:1 + 地区离散"
+        四个可观测特征给出保守判断，命中越多越像机器流量，供日报标注，不自动剔除。
+
+        返回 {suspect: bool, reasons: [..], detail: str}。流量极小（会话<5）时
+        特征不具统计意义，标 low_confidence，避免拿 3 个会话下"全是机器"结论。
+        """
+        reasons = []
+
+        # 1. 渠道：无外部来源（Organic/Referral/Paid 全 0，只剩 Direct）
+        external = 0
+        for c in top_channels or []:
+            if c.get("channel", "").lower() in ("direct", "(none)", ""):
+                continue
+            external += int(c.get("users", 0) or 0)
+        total_users = sum(int(c.get("users", 0) or 0) for c in top_channels) if top_channels else users
+        if total_users > 0 and external == 0:
+            reasons.append("100% 无外部来源（Organic/Referral/Paid=0，全 Direct，无 referrer/UTM）")
+
+        # 2. 全跳出零阅读
+        if (bounce_rate or 0) >= 95 and (engagement_rate or 0) <= 5:
+            reasons.append(f"跳出率 {bounce_rate}% + 互动率 {engagement_rate}%（全跳出、零阅读）")
+
+        # 3. 1:1:1（会话=访客=页浏览，每会话恰好 1 页）
+        if users and sessions and pageviews and users == sessions == pageviews:
+            reasons.append(f"访客=会话=页浏览={users}（每会话恰好 1 页，脚本/监控特征）")
+
+        # 4. 地区离散：主力 1 国 + 多个各 1 人的零散国家
+        if top_countries:
+            one_person = [c for c in top_countries if int(c.get("users", 0) or 0) == 1]
+            if len(one_person) >= 3:
+                reasons.append(f"{len(one_person)} 个国家各仅 1 人（离散，机器/代理流量特征）")
+
+        low_confidence = (sessions or 0) < 5
+        suspect = len(reasons) >= 2  # 命中 ≥2 个特征才判机器流量，避免单特征误判
+        detail = ("; ".join(reasons)) if reasons else "未发现明显机器流量特征"
+        return {
+            "suspect": suspect,
+            "low_confidence": low_confidence,
+            "reasons": reasons,
+            "detail": detail,
+            "note": "基于维度特征推断，非 IP 级确认；GA4 侧 IP 内部流量过滤才是最终正解",
+        }
+
     def _fetch_ga4(self) -> dict:
         """获取 GA4 数据（昨日 + 周同比 + 月同比 + 流量来源 + 互动指标）"""
         if not GA4_PROPERTY_ID:
@@ -2354,6 +2425,13 @@ class FeishuDailyReporter:
             # 按 path 去重：同一路径因 pageTitle 不同产生多条时只保留 views 最高的一条
             top_pages = self._dedup_top_pages(top_pages)
 
+            # === 机器/自刷流量特征判断（基于维度+比率，无需 IP；IP 排除仍是正解）===
+            bot_assessment = self._assess_bot_traffic(
+                top_channels, top_countries,
+                yesterday_users, yesterday_sessions, yesterday_pageviews,
+                yesterday_bounce, yesterday_engagement,
+            )
+
             return {
                 "report_date": yesterday,
                 "visitors": yesterday_users,
@@ -2375,7 +2453,8 @@ class FeishuDailyReporter:
                 "visitors_7d": int(roll_vals[0].get("value", "0")) if roll_vals else yesterday_users,
                 "top_channels": top_channels,
                 "top_countries": top_countries,
-                "top_pages": top_pages
+                "top_pages": top_pages,
+                "bot_traffic_assessment": bot_assessment,
             }
                 
         except Exception as e:
