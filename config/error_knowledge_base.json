@@ -894,9 +894,9 @@
       "hash": "content_quality_failed",
       "type": "选题",
       "message": "[P1] Word count 1842 is below 2000 target\n[P1] Only 1 H2 sections (target: 5-7)\n[P0] Hyphen-space compound-word artifact (1 instances): [('long', 'term')] - remove spaces around hyphens in these compound words",
-      "occurrences": 8,
+      "occurrences": 10,
       "first_seen": "2026-10-19T02:50:46.726070+00:00",
-      "last_seen": "2026-11-09T04:18:19.177338+00:00",
+      "last_seen": "2026-11-23T05:23:28.808206+00:00",
       "files": [
         "China Travel Insurance: Do You Really Need It And How To Choose Guide",
         "China Winter Travel Guide: Where to Go and How to Pack",
@@ -904,7 +904,9 @@
         "How To Choose Your First City In China: A Decision Guide",
         "China Travel Insurance: Do You Really Need It and How to Choose",
         "China Solo Travel Guide: Safety, Hostels, and Making Friends",
-        "Chinese Tea Culture and Teahouse Guide: A Journey Through the World of Chinese Tea"
+        "Chinese Tea Culture and Teahouse Guide: A Journey Through the World of Chinese Tea",
+        "China Travel Etiquette for First - Timers: Dining, Gifts, and Social Customs",
+        "China Visa - Free Entry After 31 December: What Travellers Need to Know"
       ],
       "suggestion": "避免政治敏感内容",
       "resolved": false,
@@ -913,8 +915,8 @@
     }
   ],
   "resolved_count": 20,
-  "total_errors": 52,
-  "last_updated": "2026-11-09T04:18:19.177358+00:00",
+  "total_errors": 54,
+  "last_updated": "2026-11-23T05:23:28.808225+00:00",
   "external_review": {
     "source": "codebuddy.work",
     "date": "2026-06-07",

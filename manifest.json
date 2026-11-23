@@ -1,8 +1,8 @@
 {
-  "month_post_count": 1,
+  "month_post_count": 2,
   "last_reset_date": "2026-11-01",
   "last_social_publish": "2026-11-06 03:32:29",
-  "daily_social_publish_date": "2026-11-16",
+  "daily_social_publish_date": "2026-11-23",
   "daily_social_publish_count": 0,
   "daily_social_publish_limit": 5,
   "history_topics": [
@@ -119,6 +119,12 @@
       "geo_region": "AU",
       "category": "travel",
       "create_date": "2026-11-02"
+    },
+    {
+      "topic": "China High-Speed Rail vs Flying: Which Is Faster, Cheaper, and Easier for Foreigners",
+      "geo_region": "AU",
+      "category": "general",
+      "create_date": "2026-11-23"
     }
   ],
   "keyword_convert_rate": {

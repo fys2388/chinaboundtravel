@@ -711,10 +711,11 @@
         "china domestic flight"
       ],
       "priority": 4,
-      "status": "pending",
+      "status": "used",
       "source": "gsc",
       "created_at": "2026-11-21T00:00:00",
-      "depth": "deep"
+      "depth": "deep",
+      "used_at": "2026-11-23T05:26:04.314426+00:00"
     },
     {
       "id": "refill-004",

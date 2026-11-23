@@ -1,8 +1,8 @@
 # P1-BRAND-02 — Legacy Persona Content Review
 
-- Generated: 2026-11-16
+- Generated: 2026-11-23
 
-统计：content/posts 共 73 篇，命中 legacy persona 短语 0 篇。
+统计：content/posts 共 75 篇，命中 legacy persona 短语 0 篇。
 
 本轮**不修改** legacy 文章；统一标记 LEGACY_PERSONA_CONTENT，后续单独处理。
 
@@ -69,9 +69,11 @@
 | 2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md | 0 | - |
 | 2026-10-31-china-winter-travel-guide-where-to-go-and-how-to-pack.md | 0 | - |
 | 2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md | 0 | - |
+| 2026-11-23-china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners.md | 0 | - |
 | 7-day-china-itinerary.md | 0 | - |
 | alipay-for-foreigners-guide.md | 0 | - |
 | alipay-wechat-pay-foreigners-guide.md | 0 | - |
+| apec-2026-shenzhen-outcomes-what-it-means-for-travelers.md | 0 | - |
 | best-china-itineraries-for-10-days-three-routes-compared.md | 0 | - |
 | best-travel-insurance-china.md | 0 | - |
 | china-airport-transfer-guide.md | 0 | - |
