@@ -110,7 +110,7 @@ If you want to learn more about China travel, check out these related articles:
 
 - [Dude, Where's My Panda? A Beijing Guy's Guide to the Chengdu Panda Base](https://www.chinaboundtravel.com/posts/2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c/)
 - [Ultimate Guide to China Visa for Tourists 2026](https://www.chinaboundtravel.com/posts/2026-06-02-ultimate-guide-to-china-visa-for-tourists/)
-- [China Extends 144-hour Visa-free Transit Policy to More Countries](https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+- [China Extends 240-hour Visa-free Transit Policy to More Countries](https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 - [Western Sichuan Overland Camping Route: My 7-Day Adventure Through China''s](https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/)
 - [PayPal Now Accepts Alipay and WeChat Pay  Finally, Right?](https://www.chinaboundtravel.com/posts/paypal-alipay-wechat-pay-qr-code-support/)
 - [7-Day China First Timer Itinerary: Beijing, Xi'an & Shanghai 2026](https://www.chinaboundtravel.com/posts/2026-05-26-7-day-china-itinerary-beijing-xian-shanghai-first-timers/)
@@ -123,7 +123,7 @@ If you want to learn more about China travel, check out these related articles:
 - [How to Use WeChat Pay as a Foreigner](https://www.chinaboundtravel.com/posts/2026-05-22-how-to-use-wechat-pay-as-a-foreigner/)
 - [How to Keep Your Internet Connected in China: eSIM vs. Local SIM vs. VPN (2026 Tested)](https://www.chinaboundtravel.com/posts/internet-connection-china-esim-vpn-guide/)
 - ['2026 Ultimate Guide to Using Alipay & WeChat Pay for Foreigners (No Chinese Bank Account Needed)'](https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/)
-- [144-Hour Visa-Free Transit in China-The Complete 2026 Guide](https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/)
+- [ Visa-Free Transit in China-The Complete 2026 Guide](https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/)
 - [Best Travel Insurance China](https://www.chinaboundtravel.com/posts/best-travel-insurance-china/)
 
 ## Related Reading

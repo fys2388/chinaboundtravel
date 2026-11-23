@@ -885,12 +885,25 @@
       "source": "news_monitor",
       "created_at": "2026-11-21T00:00:00",
       "depth": "news"
+    },
+    {
+      "id": "news-15a9882d",
+      "title": "China Visa Rules for Americans: Visa-Free Transit, Reciprocity and Limits",
+      "category": "visa",
+      "geo": "US",
+      "keywords": [],
+      "priority": 3,
+      "status": "pending",
+      "source": "news_monitor",
+      "created_at": "2026-11-23T00:00:00",
+      "depth": "news"
     }
   ],
   "used_topics": [],
-  "last_update": "2026-11-21T00:00:00",
+  "last_update": "2026-11-23T00:00:00",
   "news_ingested_hashes": [
     "007efa1b5d47",
+    "15a9882d3119",
     "396e9dab6af2",
     "6e08d89a0e7d",
     "9b41db697c57",
