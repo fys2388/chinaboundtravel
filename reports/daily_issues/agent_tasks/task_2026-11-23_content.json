@@ -3,13 +3,13 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-11-23_content",
   "created_at": "2026-11-23T01:00:34.695352+00:00",
-  "updated_at": "2026-11-23T01:30:37.478045",
+  "updated_at": "2026-11-23T01:45:05.625861",
   "target_date": "2026-11-23",
-  "issue_count": 14,
+  "issue_count": 15,
   "severity_summary": {
     "critical": 2,
     "high": 5,
-    "medium": 7,
+    "medium": 8,
     "low": 0
   },
   "issues": [
@@ -40,7 +40,7 @@
       "description": "内容质量验证(P0乱码)未通过",
       "page": "content/posts",
       "file": "content/posts",
-      "evidence": "content_quality_validator.py exit code=1; run_id=45006492302",
+      "evidence": "content_quality_validator.py exit code=1; run_id=45096272969",
       "recommended_action": "修复报告中的乱码、编码、front matter 或媒体合规问题后重跑内容质量巡检。",
       "severity": "critical",
       "agent": "content",
@@ -114,7 +114,7 @@
       "detected_at": "2026-11-23T01:00:34.694999+00:00"
     },
     {
-      "id": "site_health-364b4acb092992f1",
+      "id": "site_health-584a67ec933e2b71",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -131,10 +131,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-23T01:30:37.067419+00:00"
+      "detected_at": "2026-11-23T01:45:05.182918+00:00"
     },
     {
-      "id": "site_health-6df8e752e8f209b1",
+      "id": "site_health-696a9357c46d1b68",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -151,7 +151,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-23T01:30:37.067424+00:00"
+      "detected_at": "2026-11-23T01:45:05.182922+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -234,6 +234,26 @@
       "detected_at": "2026-11-23T01:00:34.695033+00:00"
     },
     {
+      "id": "content-seo-7-day-china-itinerary.md",
+      "type": "content_seo",
+      "title": "文章 SEO 字段或结构需要优化",
+      "description": "文章 SEO 字段或结构需要优化",
+      "page": "7-day-china-itinerary.md",
+      "file": "7-day-china-itinerary.md",
+      "evidence": "title_too_long",
+      "recommended_action": "修正标题、描述长度和正文标题层级。",
+      "severity": "medium",
+      "agent": "content",
+      "action": "manual_review",
+      "source": "content",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-11-23T01:45:05.182953+00:00"
+    },
+    {
       "id": "content-seo-apec-2026-shenzhen-outcomes-what-it-means-for-travelers.md",
       "type": "content_seo",
       "title": "文章 SEO 字段或结构需要优化",
@@ -274,7 +294,7 @@
       "detected_at": "2026-11-23T01:00:34.695041+00:00"
     },
     {
-      "id": "site_health-acfb8a1a41d553c",
+      "id": "site_health-53624fcab826c7ed",
       "type": "ai_forbidden_word",
       "title": "ai_forbidden_word",
       "description": "ai_forbidden_word",
@@ -291,7 +311,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-23T01:30:37.067485+00:00"
+      "detected_at": "2026-11-23T01:45:05.182969+00:00"
     }
   ],
   "priority_issue": {

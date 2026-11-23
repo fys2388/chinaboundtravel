@@ -1671,7 +1671,9 @@
       "mojibake_issues": [],
       "encoding_errors": [],
       "fact_issues": [],
-      "seo_issues": [],
+      "seo_issues": [
+        "title_too_long"
+      ],
       "media_issues": [],
       "cover_ok": true,
       "cover_image": "https://www.chinaboundtravel.com/img/china-dest/zhangjiajie/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.webp",
@@ -1680,10 +1682,10 @@
         "fact": 100,
         "language": 100,
         "mojibake": 100,
-        "seo": 100,
+        "seo": 80,
         "media": 100
       },
-      "trust_score": 100.0,
+      "trust_score": 97.0,
       "passed": true
     },
     {
