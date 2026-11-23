@@ -1,26 +1,20 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-11-22T13:43:57.085377",
-  "data_date": "2026-11-21",
+  "pull_time": "2026-11-23T16:44:37.290245",
+  "data_date": "2026-11-22",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "activeUsers": 280,
-    "sessions": 301,
-    "screenPageViews": 327,
-    "engagedSessions": 115,
-    "bounceRate": 0.6179401993355482,
-    "averageSessionDuration": 35.67456104983388,
-    "engagementRate": 0.38205980066445183,
-    "newUsers": 279
+    "activeUsers": 295,
+    "sessions": 316,
+    "screenPageViews": 342,
+    "engagedSessions": 113,
+    "bounceRate": 0.6424050632911392,
+    "averageSessionDuration": 33.79084339556962,
+    "engagementRate": 0.3575949367088608,
+    "newUsers": 294
   },
   "daily": [
-    {
-      "date": "2026-10-26",
-      "sessions": 2,
-      "activeUsers": 2,
-      "pageviews": 2
-    },
     {
       "date": "2026-10-27",
       "sessions": 4,
@@ -173,17 +167,23 @@
     },
     {
       "date": "2026-11-22",
-      "sessions": 15,
-      "activeUsers": 15,
-      "pageviews": 15
+      "sessions": 19,
+      "activeUsers": 19,
+      "pageviews": 19
+    },
+    {
+      "date": "2026-11-23",
+      "sessions": 39,
+      "activeUsers": 38,
+      "pageviews": 39
     }
   ],
   "top_pages": [
     {
       "path": "/",
       "title": "ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners",
-      "pageviews": 34,
-      "sessions": 34
+      "pageviews": 35,
+      "sessions": 35
     },
     {
       "path": "/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/",
@@ -224,8 +224,8 @@
     {
       "path": "/posts/7-day-china-itinerary/",
       "title": "Free 7-Day China Itinerary Template (2026)",
-      "pageviews": 10,
-      "sessions": 8
+      "pageviews": 11,
+      "sessions": 9
     },
     {
       "path": "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
@@ -240,6 +240,12 @@
       "sessions": 2
     },
     {
+      "path": "/pricing/",
+      "title": "Choose Your China Travel Pass | ChinaBound Travel",
+      "pageviews": 9,
+      "sessions": 8
+    },
+    {
       "path": "/2026-05-27-how-to-survive-chinese-train-station/",
       "title": "404 Page not found | ChinaBound Travel",
       "pageviews": 8,
@@ -252,12 +258,6 @@
       "sessions": 8
     },
     {
-      "path": "/pricing/",
-      "title": "Choose Your China Travel Pass | ChinaBound Travel",
-      "pageviews": 8,
-      "sessions": 7
-    },
-    {
       "path": "/china-airport-transfer-guide/",
       "title": "404 Page not found | ChinaBound Travel",
       "pageviews": 7,
@@ -266,22 +266,22 @@
     {
       "path": "/posts/144-hour-visa-free-transit-guide/",
       "title": "China 144 Hour Transit Visa: Complete Guide",
-      "pageviews": 6,
-      "sessions": 6
+      "pageviews": 7,
+      "sessions": 7
     }
   ],
   "traffic_sources": [
     {
       "channel": "Direct",
-      "sessions": 139,
-      "activeUsers": 136,
-      "engagementRate": 0.0288
+      "sessions": 156,
+      "activeUsers": 153,
+      "engagementRate": 0.0256
     },
     {
       "channel": "Organic Social",
-      "sessions": 121,
-      "activeUsers": 111,
-      "engagementRate": 0.8595
+      "sessions": 119,
+      "activeUsers": 109,
+      "engagementRate": 0.8571
     },
     {
       "channel": "Organic Search",
@@ -309,6 +309,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 1,
-    "data_date": "2026-11-21"
+    "data_date": "2026-11-22"
   }
 }
