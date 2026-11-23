@@ -31,23 +31,23 @@ Top 20 query opportunities (28-day window). ctr is a ratio (0.05 = 5%); page col
 
 | page | query | impressions | clicks | ctr | position | opportunity_type | recommended_action |
 |---|---|---|---|---|---|---|---|
-| https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/ |  | 159 | 0 | 0.0% | 19.55 | A_HIGH_IMP_LOW_CTR | META |
-| https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/ |  | 159 | 0 | 0.0% | 19.55 | D_HIGH_IMP_ZERO_CLICK | TITLE |
-| https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/ |  | 138 | 0 | 0.0% | 30.14 | A_HIGH_IMP_LOW_CTR | META |
-| https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/ |  | 138 | 0 | 0.0% | 30.14 | D_HIGH_IMP_ZERO_CLICK | TITLE |
-| https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/ |  | 107 | 0 | 0.0% | 22.33 | A_HIGH_IMP_LOW_CTR | META |
-| https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/ |  | 107 | 0 | 0.0% | 22.33 | D_HIGH_IMP_ZERO_CLICK | TITLE |
-| https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/ |  | 107 | 0 | 0.0% | 74.05 | A_HIGH_IMP_LOW_CTR | META |
-| https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/ |  | 107 | 0 | 0.0% | 74.05 | D_HIGH_IMP_ZERO_CLICK | TITLE |
-| https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/ |  | 87 | 0 | 0.0% | 41.87 | A_HIGH_IMP_LOW_CTR | META |
-| https://www.chinaboundtravel.com/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/ |  | 87 | 0 | 0.0% | 41.87 | D_HIGH_IMP_ZERO_CLICK | TITLE |
-| https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/ |  | 83 | 0 | 0.0% | 62.45 | A_HIGH_IMP_LOW_CTR | META |
-| https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/ |  | 83 | 0 | 0.0% | 62.45 | D_HIGH_IMP_ZERO_CLICK | TITLE |
-| https://www.chinaboundtravel.com/posts/2026-05-25-china-high-speed-rail-how-to-book-tickets/ |  | 55 | 0 | 0.0% | 38.47 | E_MULTI_QUERY_PAGE | INTERNAL_LINK |
-| https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/ |  | 52 | 0 | 0.0% | 11.4 | A_HIGH_IMP_LOW_CTR | META |
-| https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/ |  | 52 | 0 | 0.0% | 11.4 | D_HIGH_IMP_ZERO_CLICK | TITLE |
-| https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/ |  | 51 | 0 | 0.0% | 20.88 | A_HIGH_IMP_LOW_CTR | META |
-| https://www.chinaboundtravel.com/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/ |  | 51 | 0 | 0.0% | 20.88 | D_HIGH_IMP_ZERO_CLICK | TITLE |
-| https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/ |  | 40 | 0 | 0.0% | 20.7 | A_HIGH_IMP_LOW_CTR | META |
-| https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/ |  | 40 | 0 | 0.0% | 20.7 | D_HIGH_IMP_ZERO_CLICK | TITLE |
-| https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/ |  | 32 | 0 | 0.0% | 78.07 | E_MULTI_QUERY_PAGE | INTERNAL_LINK |
+| https://www.chinaboundtravel.com/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/ |  | 438 | 0 | 0.0% | 66.5 | A_HIGH_IMP_LOW_CTR | META |
+| https://www.chinaboundtravel.com/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/ |  | 438 | 0 | 0.0% | 66.5 | D_HIGH_IMP_ZERO_CLICK | TITLE |
+| https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/ |  | 408 | 0 | 0.0% | 6.66 | A_HIGH_IMP_LOW_CTR | META |
+| https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/ |  | 408 | 0 | 0.0% | 6.66 | D_HIGH_IMP_ZERO_CLICK | TITLE |
+| https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/ |  | 245 | 1 | 0.4% | 20.31 | A_HIGH_IMP_LOW_CTR | META |
+| https://www.chinaboundtravel.com/posts/china-high-speed-rail-how-to-book-tickets/ |  | 245 | 1 | 0.4% | 20.31 | F_HIGH_CLICK_WEAK_CTR | CONTENT_UPDATE |
+| https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/ |  | 146 | 0 | 0.0% | 62.86 | A_HIGH_IMP_LOW_CTR | META |
+| https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/ |  | 146 | 0 | 0.0% | 62.86 | D_HIGH_IMP_ZERO_CLICK | TITLE |
+| https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/ |  | 112 | 0 | 0.0% | 25.33 | A_HIGH_IMP_LOW_CTR | META |
+| https://www.chinaboundtravel.com/posts/cultural-etiquette-guide/ |  | 112 | 0 | 0.0% | 25.33 | D_HIGH_IMP_ZERO_CLICK | TITLE |
+| https://www.chinaboundtravel.com/ebook/7-day-china-itinerary.pdf |  | 108 | 0 | 0.0% | 6.02 | A_HIGH_IMP_LOW_CTR | META |
+| https://www.chinaboundtravel.com/ebook/7-day-china-itinerary.pdf |  | 108 | 0 | 0.0% | 6.02 | D_HIGH_IMP_ZERO_CLICK | TITLE |
+| https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-07-monthly-update/ |  | 81 | 0 | 0.0% | 7.01 | A_HIGH_IMP_LOW_CTR | META |
+| https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-07-monthly-update/ |  | 81 | 0 | 0.0% | 7.01 | D_HIGH_IMP_ZERO_CLICK | TITLE |
+| https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/ |  | 71 | 0 | 0.0% | 7.14 | A_HIGH_IMP_LOW_CTR | META |
+| https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/ |  | 71 | 0 | 0.0% | 7.14 | D_HIGH_IMP_ZERO_CLICK | TITLE |
+| https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/ |  | 66 | 0 | 0.0% | 19.17 | A_HIGH_IMP_LOW_CTR | META |
+| https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/ |  | 66 | 0 | 0.0% | 19.17 | D_HIGH_IMP_ZERO_CLICK | TITLE |
+| https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/ |  | 64 | 0 | 0.0% | 63.3 | A_HIGH_IMP_LOW_CTR | META |
+| https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/ |  | 64 | 0 | 0.0% | 63.3 | D_HIGH_IMP_ZERO_CLICK | TITLE |
