@@ -12539,6 +12539,192 @@
       "target": "https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared-au/",
       "detail": "OK: Indexing API notified: ok",
       "timestamp": "2026-11-22T10:55:17.725100"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "'Traveling To China For Business: Meetings, Dining &' -> 'Traveling To China For Business: Meetings, Dining &' (keyword: traveling to china for business)",
+      "timestamp": "2026-11-23T12:00:23.222741"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners -> shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide",
+      "detail": "score=1",
+      "timestamp": "2026-11-23T12:00:24.523593"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=1",
+      "timestamp": "2026-11-23T12:00:25.541873"
+    },
+    {
+      "type": "internal_link",
+      "target": "alipay-wechat-pay-foreigners-guide -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=1",
+      "timestamp": "2026-11-23T12:00:26.547910"
+    },
+    {
+      "type": "internal_link",
+      "target": "best-china-itineraries-for-10-days-three-routes-compared -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=1",
+      "timestamp": "2026-11-23T12:00:27.569712"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-high-speed-rail-how-to-book-tickets -> china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners",
+      "detail": "score=4",
+      "timestamp": "2026-11-23T12:00:28.590679"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-high-speed-train-survival-guide-booking-classes-and-insider-tips -> china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners",
+      "detail": "score=3",
+      "timestamp": "2026-11-23T12:00:29.604411"
+    },
+    {
+      "type": "internal_link",
+      "target": "how-to-use-wechat-pay-as-a-foreigner -> china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners",
+      "detail": "score=2",
+      "timestamp": "2026-11-23T12:00:30.626384"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-insurance-do-you-really-need-it-and-how-to-choose -> 7-day-china-itinerary",
+      "detail": "score=1",
+      "timestamp": "2026-11-23T12:00:31.644988"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners -> 7-day-china-itinerary",
+      "detail": "score=1",
+      "timestamp": "2026-11-23T12:00:32.664692"
+    },
+    {
+      "type": "internal_link",
+      "target": "best-china-itineraries-for-10-days-three-routes-compared -> 7-day-china-itinerary",
+      "detail": "score=1",
+      "timestamp": "2026-11-23T12:00:33.711571"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners -> china-high-speed-rail-how-to-book-tickets",
+      "detail": "score=4",
+      "timestamp": "2026-11-23T12:00:36.196932"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-etiquette-tipping-photos-and-unwritten-rules-guide -> chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls",
+      "detail": "score=1",
+      "timestamp": "2026-11-23T12:00:37.225316"
+    },
+    {
+      "type": "internal_link",
+      "target": "kung-fu-and-martial-arts-in-china-where-to-see-and-train -> chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls",
+      "detail": "score=1",
+      "timestamp": "2026-11-23T12:00:38.260881"
+    },
+    {
+      "type": "internal_link",
+      "target": "best-china-itineraries-for-10-days-three-routes-compared-au -> chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls",
+      "detail": "score=1",
+      "timestamp": "2026-11-23T12:00:39.290970"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-insurance-do-you-really-need-it-and-how-to-choose -> yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide",
+      "detail": "score=1",
+      "timestamp": "2026-11-23T12:00:40.314492"
+    },
+    {
+      "type": "internal_link",
+      "target": "paypal-alipay-wechat-pay-qr-code-support -> china-extends-144-hour-visa-free-transit-policy-to-more-countries",
+      "detail": "score=1",
+      "timestamp": "2026-11-23T12:00:41.841985"
+    },
+    {
+      "type": "internal_link",
+      "target": "the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide -> china-extends-144-hour-visa-free-transit-policy-to-more-countries",
+      "detail": "score=1",
+      "timestamp": "2026-11-23T12:00:42.862732"
+    },
+    {
+      "type": "internal_link",
+      "target": "shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture -> china-extends-144-hour-visa-free-transit-policy-to-more-countries",
+      "detail": "score=1",
+      "timestamp": "2026-11-23T12:00:43.897913"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-insurance-do-you-really-need-it-and-how-to-choose -> china-business-travel-guide-meetings-dining-and-networking",
+      "detail": "score=1",
+      "timestamp": "2026-11-23T12:00:44.930568"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners -> china-business-travel-guide-meetings-dining-and-networking",
+      "detail": "score=1",
+      "timestamp": "2026-11-23T12:00:45.953347"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/best-china-itineraries-for-10-days-three-routes-compared-au/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-23T12:00:46.499159"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-23T12:00:46.901006"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/shanghai-beyond-the-bund-hidden-neighborhoods-and-local-culture/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-23T12:00:47.330021"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/paypal-alipay-wechat-pay-qr-code-support/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-23T12:00:47.760595"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/alipay-wechat-pay-foreigners-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-23T12:00:48.214866"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/how-to-use-wechat-pay-as-a-foreigner/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-23T12:00:48.595922"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-23T12:00:48.991139"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/the-history-and-culture-of-the-great-wall-beyond-the-tourist-trail-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-23T12:00:49.409261"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-23T12:00:49.847367"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-23T12:00:50.232151"
     }
   ]
 }

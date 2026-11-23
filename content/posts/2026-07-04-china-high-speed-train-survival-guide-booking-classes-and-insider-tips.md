@@ -222,3 +222,5 @@ Travel insurance is one of the practical pieces of preparation that gives peace 
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
 
 - [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
+
+- [China High-Speed Rail vs Flying: Which Is Faster, Cheaper, and Easier for Foreigners](/posts/china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners/)

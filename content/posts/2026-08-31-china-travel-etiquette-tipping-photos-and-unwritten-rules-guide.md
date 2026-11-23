@@ -168,3 +168,5 @@ Reading Chinese menus, asking questions on the street, and translating a quick W
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
 
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
+
+- [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)

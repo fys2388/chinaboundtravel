@@ -215,3 +215,5 @@ Using the official app gives you a clear transaction history, which helps with b
 - [China Remote Work Guide: Digital Nomad Tips](/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)
 
 - [China Photography Guide: Best Spots, Gear & Tips from a China Pro](/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/)
+
+- [China High-Speed Rail vs Flying: Which Is Faster, Cheaper, and Easier for Foreigners](/posts/china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners/)

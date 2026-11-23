@@ -211,3 +211,5 @@ Venturing beyond the standard tourist route reveals a Shanghai that feels lived-
 - [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)
 
 - [China Remote Work Guide: Digital Nomad Tips](/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)
+
+- [China Extends 240-Hour Visa-Free Transit to 57 Countries (2026)](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)

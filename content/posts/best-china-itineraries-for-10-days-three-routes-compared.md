@@ -111,6 +111,8 @@ China is a vast and diverse country with something to offer everyone. Whether yo
 
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
 
+- [Free 7-Day China Itinerary Template (2026) — Visa-Ready, No-Download](/posts/7-day-china-itinerary/)
+
 ## Related Reading
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)
