@@ -961,13 +961,12 @@ class FeishuDailyReporter:
             # 不是埋点/consent 坏了——此时建议查 IP 内部流量过滤，而非埋点。
             _bot = data.get("bot_traffic_assessment") or {}
             if _bot.get("suspect"):
-                _low_note = "（小样本，特征不具统计意义）" if _bot.get("low_confidence") else ""
+                # 详情已在「流量来源/地区」段（country_str）完整给出，此处只作指针+根因，
+                # 避免同一 detail 在日报里重复打两遍。
                 consistency_str += (
-                    "\n\n⚠️ 机器/自刷流量特征命中" + _low_note + "：" + _bot.get("detail", "")
-                    + "\n→ 平均时长 0 秒的根因是「无真实读者阅读」，而非埋点/consent 故障。"
-                    + "建议在 GA4 后台配置 IP 内部流量过滤（把 agent/监控的固定 IP 段挡掉），"
-                    + "或在 GA4 里创建排除过滤器；在此之前日报的流量/趋势数字含机器流量，勿当真实增长。"
-                    + " " + _bot.get("note", "")
+                    "\n\n⚠️ 平均时长 0 秒的根因是机器/自刷流量特征命中（明细见上方流量来源段），"
+                    "并非埋点/consent 故障。正解：在 GA4 后台配置 IP 内部流量过滤"
+                    "（把 agent/监控的固定 IP 段挡掉）；在此之前日报流量/趋势数字含机器流量，勿当真实增长。"
                 )
             else:
                 consistency_str += ("\n\n⚠️ 数据质量提示：平均时长 0 秒（" + str(data.get("sessions")) +
