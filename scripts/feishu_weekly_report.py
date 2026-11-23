@@ -933,15 +933,24 @@ class FeishuWeeklyReporter:
         _we = data.get("week_end", "")
 
         review = []
+        # 内容周目标：与 OKR 表/产出统计同源（okr_utils._target_for weekly），
+        # 取代旧硬编码 5（周目标 5 时"发 3 篇算完成"，但 Q4 真实周目标只有 1 篇）。
+        _okr_r = okr_utils.load_okr()
+        _pub_goal = 5
+        if _okr_r:
+            _krs_r = okr_utils.pick_quarter_krs(_okr_r, okr_utils.current_quarter())
+            _c_kr = next((kr for kr in _krs_r if kr.get("id") == "content"), None)
+            if _c_kr:
+                _pub_goal = max(1, int(okr_utils._target_for(_c_kr, "weekly")))
         for item in last_week_plan:
             task = item.get("task", "")
             priority = item.get("priority", "medium")
 
             if "发布" in task and ("文章" in task or "攻略" in task):
-                progress = min(round(weekly_new_posts / 5 * 100, 0), 100)
-                if weekly_new_posts >= 5:
+                progress = min(round(weekly_new_posts / _pub_goal * 100, 0), 100)
+                if weekly_new_posts >= _pub_goal:
                     status = f"✅ 超额完成 ({progress}%)"
-                elif weekly_new_posts >= 3:
+                elif weekly_new_posts >= max(1, round(_pub_goal * 0.6)):
                     status = f"✅ 已完成 ({progress}%)"
                 else:
                     status = f"🟡 进行中 ({progress}%)"
@@ -1185,7 +1194,16 @@ class FeishuWeeklyReporter:
         weekly_new_posts = content_data.get("weekly_new_posts", 0)
         pending_posts = content_data.get("pending_posts", 0)
         drafts_in_posts_dir = content_data.get("drafts_in_posts_dir", 0)
-        content_goal = 5
+        # Deviation 6: 内容周目标改用 okr_utils._target_for(kr, "weekly") 派生
+        # （Q4 content KR 月目标 6 → weekly = round(6/4.3) = 1 篇），与 OKR 进度表
+        # 用的完全同一个函数、同一个口径。旧值硬编码 5，导致同一份周报里
+        # 产出统计"周目标 5 篇/完成 20%"与 OKR 表"目标 1 篇/100%"自相矛盾。
+        _content_goal_kr = None
+        if _okr:
+            _q_cg = okr_utils.current_quarter()
+            _krs_cg = okr_utils.pick_quarter_krs(_okr, _q_cg)
+            _content_goal_kr = next((kr for kr in _krs_cg if kr.get("id") == "content"), None)
+        content_goal = int(okr_utils._target_for(_content_goal_kr, "weekly")) if _content_goal_kr else 5
         content_rate = round(weekly_new_posts / content_goal * 100, 0) if content_goal > 0 else 0
 
         channels = data.get("channels", [])
@@ -1442,7 +1460,7 @@ class FeishuWeeklyReporter:
 ### 1. 产出统计
 - 站点总文章数：{total_posts} 篇
 - 本周新发：{weekly_new_posts} 篇
-- 周目标：5 篇 ｜ 完成率：{content_rate}% {content_rate_status}{batch_warning}
+- 周目标：{content_goal} 篇 ｜ 完成率：{content_rate}% {content_rate_status}{batch_warning}
 
 ### 2. 质量巡检报告
 | 检测项 | 检测规则 | 结果 | 状态 |
@@ -1460,7 +1478,7 @@ class FeishuWeeklyReporter:
 ### 1. 产出统计
 - 站点总文章数：{total_posts} 篇
 - 本周新发：{weekly_new_posts} 篇
-- 周目标：5 篇 ｜ 完成率：{content_rate}% {content_rate_status}{batch_warning}
+- 周目标：{content_goal} 篇 ｜ 完成率：{content_rate}% {content_rate_status}{batch_warning}
 
 ### 2. 质量巡检报告
 | 检测项 | 检测规则 | 结果 | 状态 |
@@ -1481,7 +1499,7 @@ class FeishuWeeklyReporter:
 ### 1. 产出统计
 - 站点总文章数：{total_posts} 篇
 - 本周新发：{weekly_new_posts} 篇
-- 周目标：5 篇 ｜ 完成率：{content_rate}% {content_rate_status}{batch_warning}
+- 周目标：{content_goal} 篇 ｜ 完成率：{content_rate}% {content_rate_status}{batch_warning}
 
 ### 2. 质量巡检报告
 | 检测项 | 检测规则 | 结果 | 状态 |
