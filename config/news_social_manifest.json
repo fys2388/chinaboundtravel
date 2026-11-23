@@ -40,14 +40,6 @@
       ],
       "success": false
     },
-    "34870d3de399": {
-      "title": "From embroidery to tourism, SW China's Yunnan turns ethnic t",
-      "posted_at": "2026-10-24T05:33:40.593710+00:00",
-      "platforms": [
-        "x"
-      ],
-      "success": true
-    },
     "23aafbaecd76": {
       "title": "Shipping from China to Australia [Updated October 2026 ] - F",
       "posted_at": "2026-10-25T05:49:48.057346+00:00",
@@ -546,7 +538,7 @@
     },
     "7a3227c9b470": {
       "title": "Iran exempts ships from India, China, Iraq, Qatar from Hormu",
-      "posted_at": "2026-11-21T08:07:10.733306+00:00",
+      "posted_at": "2026-11-23T08:45:19.439314+00:00",
       "platforms": [
         "x"
       ],
@@ -586,7 +578,7 @@
     },
     "d35a146c4b77": {
       "title": "中国240小时过境免签“朋友圈”扩展至57国",
-      "posted_at": "2026-11-21T08:07:04.477599+00:00",
+      "posted_at": "2026-11-23T08:45:16.039085+00:00",
       "platforms": [
         "x"
       ],
@@ -666,7 +658,7 @@
     },
     "cf9e85885c3a": {
       "title": "Shipping from China to Australia [Updated November 2026 ] - ",
-      "posted_at": "2026-11-21T08:07:10.188026+00:00",
+      "posted_at": "2026-11-23T08:45:18.885476+00:00",
       "platforms": [
         "x"
       ],
@@ -1010,7 +1002,7 @@
     },
     "c545d2b74bb9": {
       "title": "UNESCO–Africa–China Workshop strengthens World Heritage capa",
-      "posted_at": "2026-11-22T07:52:30.279786+00:00",
+      "posted_at": "2026-11-23T08:45:24.428431+00:00",
       "platforms": [
         "x"
       ],
@@ -1255,9 +1247,33 @@
         "x"
       ],
       "success": true
+    },
+    "895222af7393": {
+      "title": "China’s New Rules for Overseas Investment and Offshore Wealt",
+      "posted_at": "2026-11-23T08:45:18.298720+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "4eec7da02d4b": {
+      "title": "China's second homegrown large cruise ship begins maiden com",
+      "posted_at": "2026-11-23T08:45:21.704292+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "eebd798e9cb7": {
+      "title": "China is becoming easier to visit but harder to leave - The ",
+      "posted_at": "2026-11-23T08:45:23.621808+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
     }
   },
-  "last_run": "2026-11-22T07:52:30.279812+00:00",
-  "total_posts": 157,
-  "total_failures": 99
+  "last_run": "2026-11-23T08:45:24.428456+00:00",
+  "total_posts": 159,
+  "total_failures": 103
 }
