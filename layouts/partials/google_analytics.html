@@ -32,9 +32,17 @@
   try {
     gtag('consent', 'default', defaultConsent);
     gtag('js', new Date());
+    // 内部流量标记：站点自己的 agent/监控（site_health_agent / ops-dashboard）访问
+    // 时带 ?cbd_internal=1，GA4 据此把 traffic_type 设为 internal 并自动从报告剔除。
+    // 真人从不带该参数 → 零误伤。无需 IP 段（GA4 内部流量规则只认 IP，拿不到就不配）。
     gtag('config', '{{ site.Params.analytics.google.TrackingID }}', {
       'send_page_view': true
     });
+    try {
+      if (new RegExp('[?&]cbd_internal=1(&|$)').test(window.location.search)) {
+        gtag('set', 'traffic_type', 'internal');
+      }
+    } catch (e) { /* silent */ }
   } catch (e) { /* silent: GA init failure, analytics disabled for this session */ }
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.Params.analytics.google.TrackingID }}"

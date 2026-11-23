@@ -766,7 +766,15 @@ CHECK_PAGES = ["/", "/pricing/", "/contact/", "/posts/ultimate-guide-to-china-vi
 
 def _fetch_url(url):
     """获取URL响应，返回(response, html_content)或(None, None)
-    对 HTTPError（如 Cloudflare 403）也返回响应对象，供调用方判断状态码"""
+    对 HTTPError（如 Cloudflare 403）也返回响应对象，供调用方判断状态码
+
+    2026-11-23：agent 访问站点时统一带 cbd_internal=1 参数，使 GA4（见
+    layouts/partials/google_analytics.html）把该流量标为 traffic_type=internal
+    自动剔除——否则 agent 的伪装 Chrome 请求会污染 GA4 为"真人 Direct 流量"。
+    保留伪装 Chrome UA（否则 Cloudflare 会 403 拦巡检），只加 URL 标记。"""
+    # 幂等追加 cbd_internal=1（已有则不重复），不改动原 UA
+    if "cbd_internal=" not in url:
+        url = url + ("&cbd_internal=1" if "?" in url else "?cbd_internal=1")
     try:
         req = urllib.request.Request(url, headers={
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",

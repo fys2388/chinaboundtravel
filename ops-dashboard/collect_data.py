@@ -218,7 +218,10 @@ data = {"generated_at": (datetime.now(timezone.utc) + timedelta(hours=8)).strfti
 # 1. 网站状态
 try:
     import requests
-    r = requests.get("https://chinaboundtravel.com", timeout=10)
+    # 2026-11-23：带 cbd_internal=1 标记，GA4 据此把该巡检访问标为 traffic_type=internal
+    # 并自动剔除（见 layouts/partials/google_analytics.html）。每 30 分钟一次的轮询
+    # 是 GA4 里 1:1:1 全跳出 Direct 流量的主力来源，标记后不再污染真实访客指标。
+    r = requests.get("https://chinaboundtravel.com/?cbd_internal=1", timeout=10)
     data["site"] = {"url": "chinaboundtravel.com", "status": r.status_code, "up": r.status_code == 200, "response_ms": round(r.elapsed.total_seconds() * 1000), "server": r.headers.get("Server", "unknown")}
 except Exception as e:
     data["site"] = {"url": "chinaboundtravel.com", "status": 0, "up": False, "response_ms": 0, "server": "unreachable", "error": str(e)}
