@@ -1,22 +1,7 @@
 {
-  "timestamp": "2026-11-23T04:48:11.700493+00:00",
+  "timestamp": "2026-11-23T23:17:23.048731+00:00",
   "source": "site_health_agent",
   "issues": [
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
-      "message": "AI禁用词: cheapest",
-      "auto_fixable": false,
-      "agent": "content",
-      "assigned": false,
-      "assigned_to": "content",
-      "assigned_at": "2026-11-23T04:48:13.514530",
-      "status": "need_manual",
-      "resolved_by": "content_agent",
-      "resolution_note": "无替换表: cheapest",
-      "updated_at": "2026-11-23T04:48:13.864745"
-    },
     {
       "type": "ai_forbidden_word",
       "severity": "medium",
@@ -26,19 +11,42 @@
       "agent": "content",
       "assigned": false,
       "assigned_to": "content",
-      "assigned_at": "2026-11-23T04:48:13.514533",
+      "assigned_at": "2026-11-23T23:17:25.983574",
+      "status": "need_manual",
+      "resolved_by": "content_agent",
+      "resolution_note": "无替换表: cheapest",
+      "updated_at": "2026-11-23T23:17:26.407044"
+    },
+    {
+      "type": "ai_forbidden_word",
+      "severity": "medium",
+      "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+      "message": "AI禁用词: cheapest",
+      "auto_fixable": false,
+      "agent": "content",
+      "assigned": false,
+      "assigned_to": "content",
+      "assigned_at": "2026-11-23T23:17:25.983577",
       "status": "need_manual",
       "resolved_by": "content_agent",
       "resolution_note": "无替换表: ai_forbidden_word",
-      "updated_at": "2026-11-23T04:48:13.864161"
+      "updated_at": "2026-11-23T23:17:26.413526"
     },
     {
-      "type": "meta_description_too_long",
+      "type": "title_too_long",
       "severity": "low",
-      "file": "content/posts/apec-2026-shenzhen-outcomes-what-it-means-for-travelers.md",
-      "message": "Meta description过长(186字符)",
-      "auto_fixable": false,
-      "agent": "seo"
+      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "message": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
+      "auto_fixable": true,
+      "fix_action": "shorten_title",
+      "fix_hint": "缩短 front matter title 至 60 字符以内；若需保留“| ChinaBound Travel”后缀，建议控制在前 40 字符内",
+      "agent": "seo",
+      "fix_status": "failed",
+      "fix_message": "无 front matter",
+      "assigned": true,
+      "assigned_to": "seo",
+      "assigned_at": "2026-11-23T23:17:25.983579",
+      "status": "assigned"
     },
     {
       "type": "meta_description_too_long",
@@ -57,20 +65,12 @@
       "agent": "seo"
     },
     {
-      "type": "title_too_long",
+      "type": "meta_description_too_long",
       "severity": "low",
-      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
-      "message": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
-      "auto_fixable": true,
-      "fix_action": "shorten_title",
-      "fix_hint": "缩短 front matter title 至 60 字符以内；若需保留“| ChinaBound Travel”后缀，建议控制在前 40 字符内",
-      "agent": "seo",
-      "fix_status": "failed",
-      "fix_message": "无 front matter",
-      "assigned": true,
-      "assigned_to": "seo",
-      "assigned_at": "2026-11-23T04:48:13.514534",
-      "status": "assigned"
+      "file": "content/posts/apec-2026-shenzhen-outcomes-what-it-means-for-travelers.md",
+      "message": "Meta description过长(186字符)",
+      "auto_fixable": false,
+      "agent": "seo"
     }
   ]
 }

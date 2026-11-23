@@ -1,7 +1,7 @@
 {
   "queue_type": "manual",
   "reason": "issue type 不在 agent_task_executor.AUTO_FIXABLE_TYPES 内，executor 会返回 need_manual。改为一次性落盘，不再每天重派 agent 任务。",
-  "generated_at": "2026-11-23T04:48:13.514367",
+  "generated_at": "2026-11-23T23:17:25.983365",
   "target_date": "2026-11-23",
   "issue_count": 5,
   "by_agent": {
@@ -26,14 +26,14 @@
   },
   "issues": [
     {
-      "id": "issue_f889b24cd1e5",
+      "id": "issue_61362c16e9a6",
       "type": "social_no_traffic",
-      "description": "社媒曝光38但点击为0，需检查帖子链接和CTA",
+      "description": "社媒曝光8但点击为0，需检查帖子链接和CTA",
       "severity": "high",
       "agent": "social",
       "action": "audit_links_and_cta",
-      "source_file": "social_daily_2026-11-21.json",
-      "detected_at": "2026-11-23T04:48:13.509217",
+      "source_file": "social_daily_2026-11-22.json",
+      "detected_at": "2026-11-23T23:17:25.977396",
       "status": "new",
       "assigned": false,
       "auto_fixable": false
@@ -46,23 +46,9 @@
       "agent": "ops",
       "action": "diagnose_and_fix",
       "source_file": "subscription_health_20261019_210005.json",
-      "detected_at": "2026-11-23T04:48:13.512322",
+      "detected_at": "2026-11-23T23:17:25.981028",
       "status": "new",
       "assigned": false,
-      "auto_fixable": false
-    },
-    {
-      "id": "issue_741d470527ac",
-      "type": "meta_description_too_long",
-      "description": "Meta description过长(186字符)",
-      "severity": "low",
-      "agent": "seo",
-      "action": "optimize_meta",
-      "source_file": "site_health_issues_2026-11-23.json",
-      "detected_at": "2026-11-23T04:48:13.512532",
-      "status": "new",
-      "assigned": false,
-      "file": "content/posts/apec-2026-shenzhen-outcomes-what-it-means-for-travelers.md",
       "auto_fixable": false
     },
     {
@@ -73,7 +59,7 @@
       "agent": "seo",
       "action": "optimize_meta",
       "source_file": "site_health_issues_2026-11-23.json",
-      "detected_at": "2026-11-23T04:48:13.512534",
+      "detected_at": "2026-11-23T23:17:25.981329",
       "status": "new",
       "assigned": false,
       "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
@@ -87,10 +73,24 @@
       "agent": "seo",
       "action": "optimize_meta",
       "source_file": "site_health_issues_2026-11-23.json",
-      "detected_at": "2026-11-23T04:48:13.512537",
+      "detected_at": "2026-11-23T23:17:25.981332",
       "status": "new",
       "assigned": false,
       "file": "content/posts/7-day-china-itinerary.md",
+      "auto_fixable": false
+    },
+    {
+      "id": "issue_741d470527ac",
+      "type": "meta_description_too_long",
+      "description": "Meta description过长(186字符)",
+      "severity": "low",
+      "agent": "seo",
+      "action": "optimize_meta",
+      "source_file": "site_health_issues_2026-11-23.json",
+      "detected_at": "2026-11-23T23:17:25.981334",
+      "status": "new",
+      "assigned": false,
+      "file": "content/posts/apec-2026-shenzhen-outcomes-what-it-means-for-travelers.md",
       "auto_fixable": false
     }
   ]
