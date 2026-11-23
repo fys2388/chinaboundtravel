@@ -3,7 +3,7 @@
   "agent_name": "SEO Intelligent Agent (SEO智能优化)",
   "task_id": "task_2026-11-23_seo",
   "created_at": "2026-11-23T01:00:34.695734+00:00",
-  "updated_at": "2026-11-23T04:48:13.989787",
+  "updated_at": "2026-11-23T05:00:36.924720",
   "target_date": "2026-11-23",
   "issue_count": 4,
   "severity_summary": {
@@ -54,13 +54,13 @@
       "detected_at": "2026-11-23T04:48:13.512539"
     },
     {
-      "id": "site_health-60cfa2b436bd5b12",
+      "id": "site_health-1ef687173880e33c",
       "type": "title_too_long",
       "title": "title_too_long",
       "description": "title_too_long",
-      "page": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
-      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
-      "evidence": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
+      "page": "content/posts/7-day-china-itinerary.md",
+      "file": "content/posts/7-day-china-itinerary.md",
+      "evidence": "Title过长(68字符，模板上限60): Free 7-Day China Itinerary Template (202...",
       "recommended_action": "Review and remediate the reported issue.",
       "severity": "medium",
       "agent": "seo",
@@ -71,16 +71,16 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-11-23T04:48:13.560009+00:00"
+      "detected_at": "2026-11-23T05:00:36.547503+00:00"
     },
     {
-      "id": "site_health-2e1d6a71673d80db",
+      "id": "site_health-36338c76b7f2885d",
       "type": "meta_description_too_long",
       "title": "meta_description_too_long",
       "description": "meta_description_too_long",
-      "page": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
-      "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
-      "evidence": "Meta description过长(182字符)",
+      "page": "content/posts/apec-2026-shenzhen-outcomes-what-it-means-for-travelers.md",
+      "file": "content/posts/apec-2026-shenzhen-outcomes-what-it-means-for-travelers.md",
+      "evidence": "Meta description过长(186字符)",
       "recommended_action": "Review and remediate the reported issue.",
       "severity": "medium",
       "agent": "seo",
@@ -91,7 +91,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-11-23T04:48:13.560006+00:00"
+      "detected_at": "2026-11-23T05:00:36.547500+00:00"
     }
   ],
   "priority_issue": {
@@ -120,9 +120,9 @@
   ],
   "status": "partial",
   "execution": {
-    "resolved_count": 0,
+    "resolved_count": 1,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=2, failed=0"
+    "note": "resolved=1, need_manual=1, failed=0"
   }
 }
