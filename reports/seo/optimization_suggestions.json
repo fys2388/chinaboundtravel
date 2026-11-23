@@ -1,62 +1,62 @@
 [
   {
     "type": "title_meta_optimization",
-    "target": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
+    "target": "https://www.chinaboundtravel.com/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/",
     "file": "",
     "current_title": "",
     "current_meta": "",
     "priority": "medium",
-    "priority_score": 3.18,
+    "priority_score": 8.26,
     "suggestion": "Title过短（0字符），建议扩充至50-60字符，包含核心关键词; 建议在Title中加入数字或年份（如'2026'、'10 Tips'），可提升CTR约10%; 缺少Meta描述，建议添加150-160字符的描述，包含核心关键词和行动号召",
-    "estimated_impact": "预计可提升CTR至 2.0%，增加约 3 次点击",
+    "estimated_impact": "预计可提升CTR至 2.0%，增加约 8 次点击",
     "status": "pending"
   },
   {
     "type": "title_meta_optimization",
-    "target": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
+    "target": "https://www.chinaboundtravel.com/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/",
     "file": "",
     "current_title": "",
     "current_meta": "",
     "priority": "medium",
-    "priority_score": 3.18,
+    "priority_score": 8.26,
     "suggestion": "Title过短（0字符），建议扩充至50-60字符，包含核心关键词; 建议在Title中加入数字或年份（如'2026'、'10 Tips'），可提升CTR约10%; 缺少Meta描述，建议添加150-160字符的描述，包含核心关键词和行动号召",
-    "estimated_impact": "优化CTR至2%可增加约 3 次点击",
+    "estimated_impact": "优化CTR至2%可增加约 8 次点击",
     "status": "pending"
   },
   {
     "type": "title_meta_optimization",
-    "target": "https://www.chinaboundtravel.com/posts/144-hour-visa-free-transit-guide/",
-    "file": "144-hour-visa-free-transit-guide.md",
-    "current_title": "China 144 Hour Transit Visa: Complete Guide",
-    "current_meta": "240-hour visa-free transit 2026: eligible ports, entry process, common mistakes, and eSIM setup.",
-    "priority": "medium",
-    "priority_score": 2.14,
-    "suggestion": "Title长度合适，建议优化关键词位置和吸引力; Meta描述过短（96字符），建议扩充至150-160字符",
-    "estimated_impact": "预计可提升CTR至 2.0%，增加约 2 次点击",
-    "status": "pending"
-  },
-  {
-    "type": "title_meta_optimization",
-    "target": "https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/",
+    "target": "https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/",
     "file": "",
     "current_title": "",
     "current_meta": "",
     "priority": "medium",
-    "priority_score": 2.14,
+    "priority_score": 7.74,
     "suggestion": "Title过短（0字符），建议扩充至50-60字符，包含核心关键词; 建议在Title中加入数字或年份（如'2026'、'10 Tips'），可提升CTR约10%; 缺少Meta描述，建议添加150-160字符的描述，包含核心关键词和行动号召",
-    "estimated_impact": "预计可提升CTR至 2.0%，增加约 2 次点击",
+    "estimated_impact": "预计可提升CTR至 2.0%，增加约 7 次点击",
     "status": "pending"
   },
   {
     "type": "title_meta_optimization",
-    "target": "https://www.chinaboundtravel.com/posts/china-transportation-complete-guide-trains-subways-taxis-and-more/",
+    "target": "https://www.chinaboundtravel.com/posts/china-packing-list-2026-what-to-bring-and-what-to-leave-at-home/",
     "file": "",
     "current_title": "",
     "current_meta": "",
     "priority": "medium",
-    "priority_score": 2.14,
+    "priority_score": 7.74,
     "suggestion": "Title过短（0字符），建议扩充至50-60字符，包含核心关键词; 建议在Title中加入数字或年份（如'2026'、'10 Tips'），可提升CTR约10%; 缺少Meta描述，建议添加150-160字符的描述，包含核心关键词和行动号召",
-    "estimated_impact": "预计可提升CTR至 2.0%，增加约 2 次点击",
+    "estimated_impact": "优化CTR至2%可增加约 7 次点击",
+    "status": "pending"
+  },
+  {
+    "type": "title_meta_optimization",
+    "target": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary/",
+    "file": "7-day-china-itinerary.md",
+    "current_title": "Free 7-Day China Itinerary Template (2026) — Visa-Ready, No-Download",
+    "current_meta": "See a free 7-day China itinerary (Beijing → Xi'an → Shanghai) you can read right here — with a visa-application itinerary format, payment setup, and budgets. No sign-up needed to view.",
+    "priority": "medium",
+    "priority_score": 4.71,
+    "suggestion": "Title过长（68字符），建议精简至50-60字符; Meta描述过长（184字符），建议精简至150-160字符",
+    "estimated_impact": "预计可提升CTR至 2.021008%，增加约 4 次点击",
     "status": "pending"
   },
   {
@@ -78,10 +78,10 @@
     "target": "2026-09-01-chinabound-travel-guide-2026-09-monthly-update.md",
     "title": "ChinaBound Travel Guide 2026.09 Update",
     "issues": [
-      "内容不足（737词）"
+      "内容不足（759词）"
     ],
     "priority": "medium",
-    "priority_score": 12.63,
+    "priority_score": 12.41,
     "suggestion": "扩充内容至1000+词，增加FAQ、案例、详细步骤等",
     "estimated_impact": "优化后可提升排名和用户停留时长",
     "status": "pending"
@@ -91,10 +91,10 @@
     "target": "2026-07-01-chinabound-travel-guide-2026-07-monthly-update.md",
     "title": "China Travel Guide: July 2026 Updates",
     "issues": [
-      "内容不足（870词）"
+      "内容不足（892词）"
     ],
     "priority": "medium",
-    "priority_score": 11.3,
+    "priority_score": 11.08,
     "suggestion": "扩充内容至1000+词，增加FAQ、案例、详细步骤等",
     "estimated_impact": "优化后可提升排名和用户停留时长",
     "status": "pending"
@@ -102,65 +102,45 @@
   {
     "type": "content_optimization",
     "target": "7-day-china-itinerary.md",
-    "title": "Free 7-Day China Itinerary Template (2026)",
+    "title": "Free 7-Day China Itinerary Template (2026) — Visa-Ready, No-Download",
     "issues": [
-      "内容不足（878词）"
+      "内容不足（934词）"
     ],
     "priority": "medium",
-    "priority_score": 11.22,
+    "priority_score": 10.66,
     "suggestion": "扩充内容至1000+词，增加FAQ、案例、详细步骤等",
     "estimated_impact": "优化后可提升排名和用户停留时长",
     "status": "pending"
   },
   {
     "type": "content_optimization",
-    "target": "best-travel-insurance-china.md",
-    "title": "",
+    "target": "apec-2026-shenzhen-outcomes-what-it-means-for-travelers.md",
+    "title": "APEC 2026 in Shenzhen: What the Summit's Outcomes Mean for Travelers",
     "issues": [
-      "缺少Meta描述"
+      "内容不足（987词）"
     ],
     "priority": "medium",
-    "priority_score": 10.0,
-    "suggestion": "添加Meta描述（150-160字符），包含核心关键词",
+    "priority_score": 10.13,
+    "suggestion": "扩充内容至1000+词，增加FAQ、案例、详细步骤等",
     "estimated_impact": "优化后可提升排名和用户停留时长",
     "status": "pending"
   },
   {
     "type": "internal_link_optimization",
-    "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-08-monthly-update/",
+    "target": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary/",
     "related_posts": [],
     "priority": "low",
-    "priority_score": 2.5,
+    "priority_score": 9.83,
     "suggestion": "在文章中增加指向以下相关文章的内链: ",
     "estimated_impact": "增加内链可提升页面权重和用户停留时长",
     "status": "pending"
   },
   {
     "type": "internal_link_optimization",
-    "target": "https://www.chinaboundtravel.com/posts/chinese-food-delivery-meituan-eleme-guide/",
+    "target": "https://www.chinaboundtravel.com/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/",
     "related_posts": [],
     "priority": "low",
-    "priority_score": 1.15,
-    "suggestion": "在文章中增加指向以下相关文章的内链: ",
-    "estimated_impact": "增加内链可提升页面权重和用户停留时长",
-    "status": "pending"
-  },
-  {
-    "type": "internal_link_optimization",
-    "target": "https://www.chinaboundtravel.com/posts/shanghai-bund-french-concession-2-day-guide/",
-    "related_posts": [],
-    "priority": "low",
-    "priority_score": 0.55,
-    "suggestion": "在文章中增加指向以下相关文章的内链: ",
-    "estimated_impact": "增加内链可提升页面权重和用户停留时长",
-    "status": "pending"
-  },
-  {
-    "type": "internal_link_optimization",
-    "target": "https://www.chinaboundtravel.com/posts/guilin-and-yangshuo-the-ultimate-karst-landscape-guide-for-2026/",
-    "related_posts": [],
-    "priority": "low",
-    "priority_score": 0.25,
+    "priority_score": 1.6,
     "suggestion": "在文章中增加指向以下相关文章的内链: ",
     "estimated_impact": "增加内链可提升页面权重和用户停留时长",
     "status": "pending"
@@ -170,7 +150,27 @@
     "target": "https://www.chinaboundtravel.com/posts/western-sichuan-overland-camping-route/",
     "related_posts": [],
     "priority": "low",
-    "priority_score": 0.22,
+    "priority_score": 0.63,
+    "suggestion": "在文章中增加指向以下相关文章的内链: ",
+    "estimated_impact": "增加内链可提升页面权重和用户停留时长",
+    "status": "pending"
+  },
+  {
+    "type": "internal_link_optimization",
+    "target": "https://www.chinaboundtravel.com/posts/yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide/",
+    "related_posts": [],
+    "priority": "low",
+    "priority_score": 0.53,
+    "suggestion": "在文章中增加指向以下相关文章的内链: ",
+    "estimated_impact": "增加内链可提升页面权重和用户停留时长",
+    "status": "pending"
+  },
+  {
+    "type": "internal_link_optimization",
+    "target": "https://www.chinaboundtravel.com/posts/china-winter-travel-guide-where-to-go-and-how-to-pack-au/",
+    "related_posts": [],
+    "priority": "low",
+    "priority_score": 0.53,
     "suggestion": "在文章中增加指向以下相关文章的内链: ",
     "estimated_impact": "增加内链可提升页面权重和用户停留时长",
     "status": "pending"
