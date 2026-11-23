@@ -1,12 +1,12 @@
 # Duplicate Draft Merge Plan
 
-Generated 2026-11-22 08:55 UTC by `scripts/content_dedup_merge.py` (deterministic, no LLM).
+Generated 2026-11-23 09:54 UTC by `scripts/content_dedup_merge.py` (deterministic, no LLM).
 
 **Dry run — no files modified.** Re-run with `--apply` to merge.
 
-- Drafts scanned: **2**
+- Drafts scanned: **4**
 - `slug_conflict` (never merge): **0**
-- `topic_duplicate`: **2**
+- `topic_duplicate`: **4**
 - `publishable` (no conflict): **0**
 - Mergeable paragraphs total: **6**
 
@@ -40,3 +40,17 @@ Generated 2026-11-22 08:55 UTC by `scripts/content_dedup_merge.py` (deterministi
 
 > **6.** Another well-known teahouse in Chengdu is the Jinli Teahouse, which is located in the Jinli ancient street. This teahouse has a traditional Chinese architecture and offers a variety of Chinese teas and snacks. You can also enjoy a performance of Sichuan opera while sipping your tea.
 
+
+## `2026-11-23-china-travel-etiquette-for-first-timers-dining-gifts-and-social-customs-attempt1.md`
+- kind: `topic_duplicate`  sim=0.488
+- target: `content/posts/2026-08-31-china-travel-etiquette-tipping-photos-and-unwritten-rules-guide.md`
+- ⚠️ policy-gated topic(s): immigration — never merged
+- paragraphs: 1 total, 0 mergeable
+- action: skip: all content is policy-gated
+
+## `2026-11-23-china-visa-free-entry-after-31-december-what-travellers-need-to-know-attempt2.md`
+- kind: `topic_duplicate`  sim=0.397
+- target: `content/posts/2026-09-08-china-visa-free-entry-2026-complete-guide-countries-rules-tips.md`
+- ⚠️ policy-gated topic(s): target article is immigration — never merged
+- paragraphs: 3 total, 0 mergeable
+- action: skip: target is a policy-gated article; not merged
