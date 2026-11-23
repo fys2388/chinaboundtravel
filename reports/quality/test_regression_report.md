@@ -1,15 +1,13 @@
 # 测试回归报告
 
-生成时间: 2026-11-22T14:48:44
+生成时间: 2026-11-23T18:36:43
 
-- 本次运行: 1347 collected, 3 failed
+- 本次运行: 1347 collected, 2 failed
 - 基线存量失败: 0
-- **新增失败: 3**（阻断条件）
+- **新增失败: 2**（阻断条件）
 - 已修复的基线失败: 0（建议 --update-baseline 收敛）
 
 ## 新增失败（需要处理）
-
-- `tests.test_brand_legacy_pilot::test_internal_links_audit_clean_for_pilots`
 
 - `tests.test_internal_links::test_markdown_audit_clean`
 
