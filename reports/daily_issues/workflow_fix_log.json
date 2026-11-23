@@ -958,6 +958,13 @@
       "fixed_by": "auto_error_router:orchestrator",
       "fix_note": "已创建Issue: https://github.com/fys2388/chinaboundtravel/issues/128",
       "fixed_at": "2026-11-22T14:49:15.406810"
+    },
+    {
+      "workflow": "Content Quality Audit (2.0 内容质量综合巡检)",
+      "status": "alerted",
+      "fixed_by": "auto_error_router:content",
+      "fix_note": "已发送飞书告警(category=content_quality_p0)",
+      "fixed_at": "2026-11-23T01:45:46.205944"
     }
   ]
 }
