@@ -3,16 +3,36 @@
   "agent_name": "Frontend Agent (页面/视觉/响应式)",
   "task_id": "task_2026-11-23_frontend",
   "created_at": "2026-11-23T01:00:34.695648+00:00",
-  "updated_at": "2026-11-23T01:00:34.860288",
+  "updated_at": "2026-11-23T05:58:31.449006",
   "target_date": "2026-11-23",
-  "issue_count": 1,
+  "issue_count": 2,
   "severity_summary": {
-    "critical": 0,
+    "critical": 1,
     "high": 1,
     "medium": 0,
     "low": 0
   },
   "issues": [
+    {
+      "id": "workflow-45120974339-predeploy_quality_failed",
+      "type": "predeploy_quality_failed",
+      "title": "Post-deploy Tasks 失败：部署前质量门禁失败",
+      "description": "post-deploy / 2.0 Pre-deploy Quality Gate (P0/P1 blocker)",
+      "page": "Post-deploy Tasks",
+      "file": "Post-deploy Tasks",
+      "evidence": "predeploy quality: pages=117 P0=64 P1=0 P2=0\n##[error]Process completed with exit code 1.",
+      "recommended_action": "部署前静态质量门禁未通过。检查 reports/quality/predeploy_quality.json 中的页面与问题类型。",
+      "severity": "critical",
+      "agent": "frontend",
+      "action": "blocking_review",
+      "source": "workflow_failure",
+      "source_file": "",
+      "task_source": "workflow_failure",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "frontend",
+      "detected_at": "2026-11-23T05:58:30.187637+00:00"
+    },
     {
       "id": "eda93581fbec80e3",
       "type": "visual_audit_failed",
@@ -35,26 +55,27 @@
     }
   ],
   "priority_issue": {
-    "id": "eda93581fbec80e3",
-    "type": "visual_audit_failed",
-    "title": "visual_audit_failed",
-    "description": "visual_audit_failed",
-    "page": "/",
-    "file": "/",
-    "evidence": "Page.goto: Timeout 30000ms exceeded.\n[batch_dedup] 同批次 20 个页面同类超时，只保留 1 条",
-    "recommended_action": "Investigate the browser failure and rerun.",
-    "severity": "high",
+    "id": "workflow-45120974339-predeploy_quality_failed",
+    "type": "predeploy_quality_failed",
+    "title": "Post-deploy Tasks 失败：部署前质量门禁失败",
+    "description": "post-deploy / 2.0 Pre-deploy Quality Gate (P0/P1 blocker)",
+    "page": "Post-deploy Tasks",
+    "file": "Post-deploy Tasks",
+    "evidence": "predeploy quality: pages=117 P0=64 P1=0 P2=0\n##[error]Process completed with exit code 1.",
+    "recommended_action": "部署前静态质量门禁未通过。检查 reports/quality/predeploy_quality.json 中的页面与问题类型。",
+    "severity": "critical",
     "agent": "frontend",
-    "action": "manual_review",
-    "source": "visual",
+    "action": "blocking_review",
+    "source": "workflow_failure",
     "source_file": "",
-    "task_source": "quality_gate",
+    "task_source": "workflow_failure",
     "status": "new",
     "assigned": true,
     "assigned_to": "frontend",
-    "detected_at": "2026-11-23T01:00:34.695018+00:00"
+    "detected_at": "2026-11-23T05:58:30.187637+00:00"
   },
   "expected_actions": [
+    "blocking_review",
     "manual_review"
   ],
   "status": "partial",
@@ -62,6 +83,6 @@
     "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=1, failed=0"
+    "note": "resolved=0, need_manual=2, failed=0"
   }
 }
