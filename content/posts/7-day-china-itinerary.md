@@ -1,10 +1,10 @@
 ---
-title: "Free 7-Day China Itinerary Template (2026)"
-last_updated: "2026-10-31"
+title: "Free 7-Day China Itinerary Template (2026) — Visa-Ready, No-Download"
+last_updated: "2026-11-23"
 content_id: "cbt-7d7d2026abc1"
-description: "Download your free 7-day China itinerary template. Includes Beijing, Xi'an, Shanghai routes, visa tips, payment setup, and insider recommendations."
+description: "See a free 7-day China itinerary (Beijing → Xi'an → Shanghai) you can read right here — with a visa-application itinerary format, payment setup, and budgets. No sign-up needed to view."
 date: 2026-10-21
-lastmod: 2026-10-21
+lastmod: 2026-11-23
 slug: "7-day-china-itinerary"
 layout: "single"
 draft: false
@@ -12,14 +12,14 @@ author: "Joran"
 cover:
   image: "https://www.chinaboundtravel.com/img/china-dest/zhangjiajie/2026-06-30-zhangjiajie-avatar-mountains-complete-guide-to-chinas-most-spectacular-park.webp"
   alt: "China travel itinerary planning"
-keywords: ["china itinerary", "china travel plan", "7 days china", "china visa", "china guide"]
+keywords: ["china itinerary", "china travel plan", "7 days china", "china visa", "china guide", "china visa itinerary", "china visa application itinerary", "china itinerary sample", "7 day china visa itinerary"]
 ---
 
-## 🎁 Your Free China Travel Planning Toolkit
+## 7-Day China Itinerary You Can Read Right Now (Visa-Ready Format)
 
-Congratulations on taking the first step toward your China adventure! As a thank you for subscribing, we're sending you the **complete 7-Day China Itinerary Template** — the same framework our editorial team uses to plan realistic, well-paced trips for thousands of travelers.
+Planning a first trip to China — or gathering documents for a visa application that asks for an itinerary? This page gives you a realistic, well-paced **7-day route (Beijing → Xi'an → Shanghai)** you can read directly, no sign-up required. It's formatted so you can also hand it to a visa officer as a day-by-day travel plan, and it includes payment setup, budgets, and the pre-trip checklist that makes the whole thing easier.
 
-This isn't a generic itinerary. It's built around the three-city route (Beijing → Xi'an → Shanghai) that works for first-time visitors who want to see China's highlights without burning out on back-to-back transit days.
+The same three-city framework is also available as a downloadable template if you want to plan your own version — but you can plan the trip from what's right here.
 
 ---
 
