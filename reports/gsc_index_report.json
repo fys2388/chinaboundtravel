@@ -1,12 +1,34 @@
 {
-  "timestamp": "2026-11-17 10:30:21",
+  "timestamp": "2026-11-24 12:18:33",
   "site_url": "https://www.chinaboundtravel.com/",
   "status": "success",
-  "indexed_count": 7,
+  "indexed_count": 8,
   "submitted_count": 20,
   "total_sitemap_urls": 50,
   "submitted_urls": 20,
   "results": [
+    {
+      "url": "https://www.chinaboundtravel.com/posts/china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners/",
+      "status": "success",
+      "message": "indexing request submitted",
+      "inspect": {
+        "url": "https://www.chinaboundtravel.com/posts/china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners/",
+        "verdict": "NEUTRAL",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "status": "success"
+      }
+    },
+    {
+      "url": "https://www.chinaboundtravel.com/posts/apec-2026-shenzhen-outcomes-what-it-means-for-travelers/",
+      "status": "success",
+      "message": "indexing request submitted",
+      "inspect": {
+        "url": "https://www.chinaboundtravel.com/posts/apec-2026-shenzhen-outcomes-what-it-means-for-travelers/",
+        "verdict": "NEUTRAL",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "status": "success"
+      }
+    },
     {
       "url": "https://www.chinaboundtravel.com/posts/china-winter-travel-guide-where-to-go-and-how-to-pack-au/",
       "status": "success",
@@ -167,8 +189,8 @@
       "message": "indexing request submitted",
       "inspect": {
         "url": "https://www.chinaboundtravel.com/posts/china-travel-etiquette-tipping-photos-and-unwritten-rules-guide/",
-        "verdict": "NEUTRAL",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "verdict": "PASS",
+        "indexingState": "INDEXING_ALLOWED",
         "status": "success"
       }
     },
@@ -202,28 +224,6 @@
         "url": "https://www.chinaboundtravel.com/posts/chinese-tea-culture-where-to-experience-authentic-teahouses/",
         "verdict": "PASS",
         "indexingState": "INDEXING_ALLOWED",
-        "status": "success"
-      }
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/chinas-food-through-the-ages-guide/",
-      "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/chinas-food-through-the-ages-guide/",
-        "verdict": "NEUTRAL",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
-        "status": "success"
-      }
-    },
-    {
-      "url": "https://www.chinaboundtravel.com/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/",
-      "status": "success",
-      "message": "indexing request submitted",
-      "inspect": {
-        "url": "https://www.chinaboundtravel.com/posts/shanghai-vs-beijing-which-chinese-city-should-you-visit-first-guide/",
-        "verdict": "NEUTRAL",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "status": "success"
       }
     }
