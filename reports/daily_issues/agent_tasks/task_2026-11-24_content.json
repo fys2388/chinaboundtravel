@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-11-24_content",
   "created_at": "2026-11-24T01:01:11.683409+00:00",
-  "updated_at": "2026-11-24T07:39:20.921369",
+  "updated_at": "2026-11-24T08:01:04.793365",
   "target_date": "2026-11-24",
   "issue_count": 17,
   "severity_summary": {
@@ -114,7 +114,7 @@
       "detected_at": "2026-11-24T01:01:11.682888+00:00"
     },
     {
-      "id": "site_health-6b6a34168cc26d54",
+      "id": "site_health-351e11a2ce27cf5d",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -131,10 +131,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-24T07:39:20.168927+00:00"
+      "detected_at": "2026-11-24T08:01:04.513781+00:00"
     },
     {
-      "id": "site_health-251cbf76e1f9ad31",
+      "id": "site_health-1bc447bfece53732",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -151,7 +151,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-24T07:39:20.168932+00:00"
+      "detected_at": "2026-11-24T08:01:04.513787+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -314,14 +314,14 @@
       "detected_at": "2026-11-24T07:39:20.107475"
     },
     {
-      "id": "site_health-78d4c8b393012dcd",
+      "id": "site_health-92234c74ba32a8e",
       "type": "ai_forbidden_word",
       "title": "ai_forbidden_word",
       "description": "ai_forbidden_word",
       "page": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
       "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
       "evidence": "AI禁用词: cheapest",
-      "recommended_action": "无替换表: cheapest",
+      "recommended_action": "无替换表: ai_forbidden_word",
       "severity": "medium",
       "agent": "content",
       "action": "manual_review",
@@ -331,7 +331,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-24T07:39:20.168990+00:00"
+      "detected_at": "2026-11-24T08:01:04.513859+00:00"
     },
     {
       "id": "issue_cc89df866db9",
