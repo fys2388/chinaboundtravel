@@ -113,6 +113,8 @@ China is a vast and diverse country with something to offer everyone. Whether yo
 
 - [Free 7-Day China Itinerary Template (2026) — Visa-Ready, No-Download](/posts/7-day-china-itinerary/)
 
+- [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)
+
 ## Related Reading
 
 - [Ele.Me China 2026: Meituan & Ele.me](/posts/chinese-food-delivery-meituan-eleme-guide/)

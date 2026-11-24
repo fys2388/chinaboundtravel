@@ -12725,6 +12725,192 @@
       "target": "https://www.chinaboundtravel.com/posts/china-high-speed-train-survival-guide-booking-classes-and-insider-tips/",
       "detail": "OK: Indexing API notified: ok",
       "timestamp": "2026-11-23T12:00:50.232151"
+    },
+    {
+      "type": "title_optimization",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "'Traveling To China For Business: Meetings, Dining &' -> 'Traveling To China For Business: Meetings, Dining &' (keyword: traveling to china for business)",
+      "timestamp": "2026-11-24T13:25:59.273207"
+    },
+    {
+      "type": "internal_link",
+      "target": "best-china-itineraries-for-10-days-three-routes-compared -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=1",
+      "timestamp": "2026-11-24T13:26:00.964814"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-airport-transfer-guide -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=1",
+      "timestamp": "2026-11-24T13:26:02.624515"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-extends-144-hour-visa-free-transit-policy-to-more-countries -> china-travel-insurance-do-you-really-need-it-and-how-to-choose",
+      "detail": "score=1",
+      "timestamp": "2026-11-24T13:26:04.528166"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-insurance-do-you-really-need-it-and-how-to-choose -> 7-day-china-itinerary",
+      "detail": "score=1",
+      "timestamp": "2026-11-24T13:26:06.050918"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-solo-travel-guide-safety-hostels-and-making-friends -> 7-day-china-itinerary",
+      "detail": "score=1",
+      "timestamp": "2026-11-24T13:26:07.535260"
+    },
+    {
+      "type": "internal_link",
+      "target": "kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide -> 7-day-china-itinerary",
+      "detail": "score=1",
+      "timestamp": "2026-11-24T13:26:09.029675"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-insurance-do-you-really-need-it-and-how-to-choose -> chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls",
+      "detail": "score=1",
+      "timestamp": "2026-11-24T13:26:10.540205"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners -> chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls",
+      "detail": "score=1",
+      "timestamp": "2026-11-24T13:26:12.047024"
+    },
+    {
+      "type": "internal_link",
+      "target": "7-day-china-itinerary -> chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls",
+      "detail": "score=1",
+      "timestamp": "2026-11-24T13:26:13.560570"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-insurance-do-you-really-need-it-and-how-to-choose -> yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide",
+      "detail": "score=1",
+      "timestamp": "2026-11-24T13:26:15.110958"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-07-monthly-update -> 144-hour-visa-free-transit-guide",
+      "detail": "score=3",
+      "timestamp": "2026-11-24T13:26:16.601226"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinabound-travel-guide-2026-09-monthly-update -> 144-hour-visa-free-transit-guide",
+      "detail": "score=3",
+      "timestamp": "2026-11-24T13:26:18.110899"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls -> 144-hour-visa-free-transit-guide",
+      "detail": "score=2",
+      "timestamp": "2026-11-24T13:26:19.623488"
+    },
+    {
+      "type": "internal_link",
+      "target": "sichuan-hotpot-guide-history-best-restaurants-and-cultural-significance -> china-extends-144-hour-visa-free-transit-policy-to-more-countries",
+      "detail": "score=1",
+      "timestamp": "2026-11-24T13:26:21.169916"
+    },
+    {
+      "type": "internal_link",
+      "target": "xian-terracotta-army-history-discovery-and-insider-tips -> china-extends-144-hour-visa-free-transit-policy-to-more-countries",
+      "detail": "score=1",
+      "timestamp": "2026-11-24T13:26:22.674715"
+    },
+    {
+      "type": "internal_link",
+      "target": "chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls -> china-extends-144-hour-visa-free-transit-policy-to-more-countries",
+      "detail": "score=1",
+      "timestamp": "2026-11-24T13:26:24.172947"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-insurance-do-you-really-need-it-and-how-to-choose -> china-business-travel-guide-meetings-dining-and-networking",
+      "detail": "score=1",
+      "timestamp": "2026-11-24T13:26:25.678310"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-insurance-do-you-really-need-it-and-how-to-choose -> china-airport-transfer-guide",
+      "detail": "score=1",
+      "timestamp": "2026-11-24T13:26:27.251845"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners -> china-airport-transfer-guide",
+      "detail": "score=1",
+      "timestamp": "2026-11-24T13:26:28.766172"
+    },
+    {
+      "type": "internal_link",
+      "target": "china-travel-insurance-do-you-really-need-it-and-how-to-choose -> chinabound-travel-guide-2026-08-monthly-update",
+      "detail": "score=2",
+      "timestamp": "2026-11-24T13:26:30.268716"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-07-monthly-update/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-24T13:26:30.871476"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-24T13:26:31.165701"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-business-travel-guide-meetings-dining-and-networking/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-24T13:26:31.449033"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-solo-travel-guide-safety-hostels-and-making-friends/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-24T13:26:31.728174"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/xian-terracotta-army-history-discovery-and-insider-tips/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-24T13:26:32.019445"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/chinabound-travel-guide-2026-09-monthly-update/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-24T13:26:32.317348"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/7-day-china-itinerary/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-24T13:26:32.622147"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-24T13:26:32.894868"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-24T13:26:33.150239"
+    },
+    {
+      "type": "reindex",
+      "target": "https://www.chinaboundtravel.com/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/",
+      "detail": "OK: Indexing API notified: ok",
+      "timestamp": "2026-11-24T13:26:33.423541"
     }
   ]
 }

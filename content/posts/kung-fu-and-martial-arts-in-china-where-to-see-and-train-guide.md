@@ -106,6 +106,8 @@ If you're interested in learning more about Kung Fu and martial arts in China, b
 
 - [China Airport Transfer Guide (2026)](/posts/china-airport-transfer-guide/)
 
+- [Free 7-Day China Itinerary Template (2026) — Visa-Ready, No-Download](/posts/7-day-china-itinerary/)
+
 ## Related Reading
 
 - [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)

@@ -206,6 +206,8 @@ For more China travel tips and stories, explore our other guides: [Chengdu Panda
 
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
 
+- [China Extends 240-Hour Visa-Free Transit to 57 Countries (2026)](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+
 ## FAQ
 
 ### Is this guide up to date for 2026?

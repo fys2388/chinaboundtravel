@@ -150,3 +150,5 @@ Visit [chinaboundtravel.com/pricing](/pricing) to get the latest guide.
 - [China Photography Guide: Best Spots, Gear & Tips from a China Pro](/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/)
 
 - [WeChat Pay Setup Guide for Foreigners (2026)](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/)
+
+- [China 144 Hour Transit Visa: Complete Guide](/posts/144-hour-visa-free-transit-guide/)

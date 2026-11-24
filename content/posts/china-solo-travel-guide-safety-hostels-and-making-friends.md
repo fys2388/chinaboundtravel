@@ -176,6 +176,8 @@ If you're looking for more information on traveling to China, be sure to check o
 
 - [China Photography Guide: Best Spots, Gear & Tips from a China Pro](/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/)
 
+- [Free 7-Day China Itinerary Template (2026) — Visa-Ready, No-Download](/posts/7-day-china-itinerary/)
+
 ## Related Reading
 
 - [Travel To China Requirements 2026: August](/posts/chinabound-travel-guide-2026-08-monthly-update/)
