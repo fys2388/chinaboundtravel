@@ -1,50 +1,68 @@
 {{- if site.Params.analytics.google.TrackingID }}
-<!-- Google tag (gtag.js) - standard async load with Consent Mode v2 + graceful failure -->
+<!-- Google tag (gtag.js) — internal-traffic guard + Consent Mode v2 + graceful failure.
+
+     INTERNAL-TRAFFIC GUARD (data-hygiene gate):
+     站点自己的自动化工具（site_health / visual_audit / 未来任何 agent）访问时带
+     ?cbd_internal=1。守卫检测到该标识就【根本不加载 gtag.js】，GA4 一个事件都不发，
+     从数据入口杜绝机器流量污染统计。防护集中在此处（唯一数据入口），而非分散在
+     每个工具里各管各的——未来新增内部工具只要带标识访问，自动就被排除。
+     真人从不带该参数 → 零误伤。这是根治（不加载），不是事后估算/打标。
+-->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){
-    try { dataLayer.push(arguments); } catch(e) { /* silent: dataLayer unavailable */ }
-  }
-
-  // Consent Mode v2 - default denied until user chooses (GDPR compliant).
-  // For returning visitors with saved consent, we read it inline here so
-  // page_view is not held up by the cookie-consent script at end of body.
-  var defaultConsent = {
-    'ad_storage': 'denied',
-    'ad_user_data': 'denied',
-    'ad_personalization': 'denied',
-    'analytics_storage': 'denied',
-    'wait_for_update': 500
-  };
-  try {
-    var raw = localStorage.getItem('cbt_gdpr_consent');
-    if (raw) {
-      var c = JSON.parse(raw);
-      if (c && c.decision) {
-        defaultConsent['analytics_storage'] = c.analytics ? 'granted' : 'denied';
-        defaultConsent['ad_storage'] = c.marketing ? 'granted' : 'denied';
-        defaultConsent['ad_user_data'] = c.marketing ? 'granted' : 'denied';
-        defaultConsent['ad_personalization'] = c.marketing ? 'granted' : 'denied';
-      }
-    }
-  } catch (e) { /* ignore */ }
-
-  try {
-    gtag('consent', 'default', defaultConsent);
-    gtag('js', new Date());
-    // 内部流量标记：站点自己的 agent/监控（site_health_agent / ops-dashboard）访问
-    // 时带 ?cbd_internal=1，GA4 据此把 traffic_type 设为 internal 并自动从报告剔除。
-    // 真人从不带该参数 → 零误伤。无需 IP 段（GA4 内部流量规则只认 IP，拿不到就不配）。
-    gtag('config', '{{ site.Params.analytics.google.TrackingID }}', {
-      'send_page_view': true
-    });
+  (function () {
+    var isInternal = false;
     try {
-      if (new RegExp('[?&]cbd_internal=1(&|$)').test(window.location.search)) {
-        gtag('set', 'traffic_type', 'internal');
-      }
+      isInternal = /[?&]cbd_internal=1(&|$)/.test(window.location.search);
     } catch (e) { /* silent */ }
-  } catch (e) { /* silent: GA init failure, analytics disabled for this session */ }
+    if (isInternal) {
+      // 内部访问：清空可能残留的 dataLayer，不定义 gtag，不注入 gtag.js。
+      // 直接返回，GA4 完全不初始化。
+      window.dataLayer = [];
+      return;
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      try { dataLayer.push(arguments); } catch (e) { /* silent */ }
+    }
+
+    // Consent Mode v2 - default denied until user chooses (GDPR compliant).
+    // Returning visitors with saved consent are read inline so page_view is
+    // not held up by the cookie-consent script at end of body.
+    var defaultConsent = {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'wait_for_update': 500
+    };
+    try {
+      var raw = localStorage.getItem('cbt_gdpr_consent');
+      if (raw) {
+        var c = JSON.parse(raw);
+        if (c && c.decision) {
+          defaultConsent['analytics_storage'] = c.analytics ? 'granted' : 'denied';
+          defaultConsent['ad_storage'] = c.marketing ? 'granted' : 'denied';
+          defaultConsent['ad_user_data'] = c.marketing ? 'granted' : 'denied';
+          defaultConsent['ad_personalization'] = c.marketing ? 'granted' : 'denied';
+        }
+      }
+    } catch (e) { /* ignore */ }
+
+    try {
+      gtag('consent', 'default', defaultConsent);
+      gtag('js', new Date());
+      gtag('config', '{{ site.Params.analytics.google.TrackingID }}', {
+        'send_page_view': true
+      });
+      // 动态注入 gtag.js：只有非内部访问才走到这里。内部访问在上面的 return
+      // 已退出，永远不会创建这个 script 元素 → GA4 零事件。
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id={{ site.Params.analytics.google.TrackingID }}';
+      s.onerror = function () { /* graceful: GA load failure, analytics disabled */ };
+      document.head.appendChild(s);
+    } catch (e) { /* silent: GA init failure, analytics disabled for this session */ }
+  })();
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.Params.analytics.google.TrackingID }}"
-  onerror="this.onerror=null;"></script>
 {{- end }}
