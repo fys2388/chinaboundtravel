@@ -1113,6 +1113,7 @@ class FeishuDailyReporter:
 | 访客数 | {'未回填' if _single_day_missing else f"{data.get('visitors', 0):,} 人"} | 页面浏览 | {'未回填' if _single_day_missing else f"{data.get('requests', 0):,} 次"} |
 | 会话数 | {'未回填' if _single_day_missing else f"{data.get('sessions', 0):,} 次"} | 跳出率 | {'数据不足' if _single_day_missing else f"{data.get('bounce_rate', 0):.1f}%"} |
 | 互动率 | {'数据不足' if _single_day_missing else f"{data.get('engagement_rate', 0):.1f}%"} | 平均时长 | {'数据不足' if _single_day_missing else dur_str} |
+| 🧑 真实访客（剔除机器） | {('未回填' if _single_day_missing else f"约 {data.get('real_visitor_estimate', {}).get('real', data.get('visitors', 0)):,} 人")} | 🤖 机器流量（估算） | {('未回填' if _single_day_missing else f"约 {data.get('real_visitor_estimate', {}).get('bot', 0):,} 人")} |
 
 **📈 同比趋势**
 - 日环比: {data.get('visitors_trend', 'N/A')} ｜ 周同比: {data.get('week_trend', 'N/A')} ｜ 月同比: {data.get('month_trend', 'N/A')}{trend_note}{roll_line}{consistency_str}"""
@@ -2250,6 +2251,47 @@ class FeishuDailyReporter:
             "note": "基于维度特征推断，非 IP 级确认；GA4 侧 IP 内部流量过滤才是最终正解",
         }
 
+    def _estimate_real_visitors(self, top_channels, total_visitors) -> dict:
+        """按渠道估算「真实访客」，把机器流量从主数字里分离出来（方案 A）。
+
+        背景：GA4 的 traffic_type 手动打标不会自动从报告剔除（实测 traffic_type
+        不是有效维度），IP 内部流量规则又拿不到 agent 的 IP 段。所以在**分析层**
+        用渠道级质量指纹估算真人：某渠道若「跳出率≥90% 且 平均时长<5 秒」，
+        判为机器主导（agent/监控轮询特征：单页、秒退、零阅读），其访客不计入真人。
+
+        这是保守估算，不是精确剔除——Direct 渠道也可能混少量真人直接输网址，
+        但新站 Direct 几乎全是机器，按整渠道剔除比按会话猜更稳。返回估算值 +
+        依据，供流量总览单列「真实访客」，避免读者被总访客里的机器流量误导。
+        """
+        if not top_channels:
+            return {"real": total_visitors or 0, "bot": 0,
+                    "bot_channels": [], "basis": "无渠道数据，真实=总访客"}
+        real = 0
+        bot = 0
+        bot_channels = []
+        real_channels = []
+        for c in top_channels:
+            u = int(c.get("users", 0) or 0)
+            bounce = float(c.get("bounce_rate", 0) or 0) * 100 if \
+                float(c.get("bounce_rate", 0) or 0) <= 1 else float(c.get("bounce_rate", 0) or 0)
+            dur = float(c.get("avg_duration", 0) or 0)
+            is_bot = bounce >= 90 and dur < 5
+            if is_bot:
+                bot += u
+                bot_channels.append(f"{c.get('channel','?')}({u}人/跳出{bounce:.0f}%/{dur:.0f}秒)")
+            else:
+                real += u
+                real_channels.append(c.get("channel", "?"))
+        # 渠道只取了 Top5，若 Top5 用户合计 < 总访客，差额按 Top5 的真人占比折算
+        top_total = sum(int(c.get("users", 0) or 0) for c in top_channels)
+        if total_visitors and top_total > 0 and top_total < total_visitors:
+            real_ratio = real / top_total
+            real = round(total_visitors * real_ratio)
+            bot = max(0, total_visitors - real)
+        basis = (f"机器渠道(跳出≥90%且<5秒): {', '.join(bot_channels) or '无'}；"
+                 f"真人渠道: {', '.join(real_channels) or '无'}")
+        return {"real": real, "bot": bot, "bot_channels": bot_channels, "basis": basis}
+
     def _fetch_ga4(self) -> dict:
         """获取 GA4 数据（昨日 + 周同比 + 月同比 + 流量来源 + 互动指标）"""
         if not GA4_PROPERTY_ID:
@@ -2371,9 +2413,15 @@ class FeishuDailyReporter:
                 month_trend = f"+{m_change:.1f}%" if m_change >= 0 else f"{m_change:.1f}%"
             
             # === 流量来源渠道 Top5 ===
+            # Deviation 7: 渠道级补 bounceRate + averageSessionDuration，
+            # 用于按"跳出率高 + 时长短"指纹把机器渠道和真人渠道分开，
+            # 进而估算"真实访客"。旧查询只有 users/sessions，无法区分机器/真人。
             channel_payload = {
                 "dateRanges": [{"startDate": yesterday, "endDate": yesterday}],
-                "metrics": [{"name": "activeUsers"}, {"name": "sessions"}],
+                "metrics": [
+                    {"name": "activeUsers"}, {"name": "sessions"},
+                    {"name": "bounceRate"}, {"name": "averageSessionDuration"},
+                ],
                 "dimensions": [{"name": "sessionDefaultChannelGroup"}],
                 "orderBys": [{"metric": {"metricName": "activeUsers"}, "desc": True}],
                 "limit": 5
@@ -2383,9 +2431,16 @@ class FeishuDailyReporter:
             if channel_result and "rows" in channel_result:
                 for row in channel_result["rows"]:
                     ch_name = row.get("dimensionValues", [{}])[0].get("value", "N/A")
-                    ch_users = int(row.get("metricValues", [{}])[0].get("value", "0"))
-                    ch_sessions = int(row.get("metricValues", [{}])[1].get("value", "0"))
-                    top_channels.append({"channel": ch_name, "users": ch_users, "sessions": ch_sessions})
+                    mv = row.get("metricValues", [{}])
+                    ch_users = int(mv[0].get("value", "0")) if len(mv) > 0 else 0
+                    ch_sessions = int(mv[1].get("value", "0")) if len(mv) > 1 else 0
+                    # bounceRate / averageSessionDuration 是比例/秒，转 float
+                    ch_bounce = float(mv[2].get("value", "0")) if len(mv) > 2 else 0.0
+                    ch_dur = float(mv[3].get("value", "0")) if len(mv) > 3 else 0.0
+                    top_channels.append({
+                        "channel": ch_name, "users": ch_users, "sessions": ch_sessions,
+                        "bounce_rate": ch_bounce, "avg_duration": ch_dur,
+                    })
             
             # === Top 国家/地区 Top5 ===
             country_payload = {
@@ -2430,6 +2485,8 @@ class FeishuDailyReporter:
                 yesterday_users, yesterday_sessions, yesterday_pageviews,
                 yesterday_bounce, yesterday_engagement,
             )
+            # 渠道级真实访客估算（方案 A：分析层分离机器/真人）
+            real_visitor_estimate = self._estimate_real_visitors(top_channels, yesterday_users)
 
             return {
                 "report_date": yesterday,
@@ -2454,6 +2511,7 @@ class FeishuDailyReporter:
                 "top_countries": top_countries,
                 "top_pages": top_pages,
                 "bot_traffic_assessment": bot_assessment,
+                "real_visitor_estimate": real_visitor_estimate,
             }
                 
         except Exception as e:
