@@ -538,6 +538,16 @@ def main() -> int:
                 )
                 # Intercept live-domain requests and serve from local base URL
                 base_origin = args.base_url.rstrip("/")
+                # 追踪/广告域名：本审计用真实 Chromium 渲染，会执行页面里的
+                # gtag.js 并向这些域发送 GA4 埋点事件。若放行，GA4 会把每次审计
+                # 记成 Direct/Chrome/每页0秒的"访客"，污染真实流量统计。
+                # 在 route 层 abort，从源头杜绝（根治，非事后估算）。
+                _TRACKING_MARKERS = (
+                    "google-analytics.com", "googletagmanager.com",
+                    "googleadservices.com", "doubleclick.net",
+                    "googlesyndication.com", "connect.facebook.net",
+                    "analytics.tiktok.com", "clarium.io",
+                )
                 async def _intercept(route):
                     req = route.request
                     req_url = req.url
@@ -546,6 +556,8 @@ def main() -> int:
                         path_part = req_url.split("chinaboundtravel.com", 1)[1]
                         local_url = base_origin + path_part
                         await route.continue_(url=local_url)
+                    elif any(m in req_url for m in _TRACKING_MARKERS):
+                        await route.abort()
                     else:
                         await route.continue_()
                 context.route("**/*", _intercept)
