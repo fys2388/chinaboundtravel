@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-11-24_content",
   "created_at": "2026-11-24T01:01:11.683409+00:00",
-  "updated_at": "2026-11-24T21:00:22.310200",
+  "updated_at": "2026-11-24T21:51:50.118393",
   "target_date": "2026-11-24",
   "issue_count": 17,
   "severity_summary": {
@@ -114,7 +114,7 @@
       "detected_at": "2026-11-24T01:01:11.682888+00:00"
     },
     {
-      "id": "site_health-674c0c028842d0c2",
+      "id": "site_health-4b00e8871930a9f7",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -131,10 +131,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-24T21:00:21.981965+00:00"
+      "detected_at": "2026-11-24T21:51:49.698083+00:00"
     },
     {
-      "id": "site_health-175cc1282fd7eddb",
+      "id": "site_health-1a98ba93bcf10366",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -151,7 +151,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-24T21:00:21.981970+00:00"
+      "detected_at": "2026-11-24T21:51:49.698089+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -311,10 +311,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-24T07:39:20.107475"
+      "detected_at": "2026-11-24T07:39:20.107481"
     },
     {
-      "id": "site_health-5beacbe33d49b1ec",
+      "id": "site_health-4d3ba1a35486ee99",
       "type": "ai_forbidden_word",
       "title": "ai_forbidden_word",
       "description": "ai_forbidden_word",
@@ -331,7 +331,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-24T21:00:21.982035+00:00"
+      "detected_at": "2026-11-24T21:51:49.698140+00:00"
     },
     {
       "id": "issue_cc89df866db9",

@@ -1,6 +1,6 @@
 {
   "audit_date": "2026-11-24",
-  "audited_at": "2026-11-24T07:39:21.080579",
+  "audited_at": "2026-11-24T21:51:50.294066",
   "score": {
     "total_score": 75,
     "max_score": 100,
@@ -58,10 +58,10 @@
       "status": "pass",
       "issues": [],
       "details": {
-        "need_manual": 30,
-        "resolved": 21,
+        "need_manual": 29,
+        "resolved": 20,
         "execution_log_exists": true,
-        "total_executions": 12362
+        "total_executions": 12460
       }
     },
     {
