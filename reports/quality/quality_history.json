@@ -2,47 +2,6 @@
   "version": 1,
   "snapshots": [
     {
-      "timestamp": "2026-11-15T08:44:15.612500+00:00",
-      "summary": {
-        "total": 17,
-        "P0": 2,
-        "P1": 6,
-        "P2": 9,
-        "by_source": {
-          "content": 10,
-          "site_health": 5,
-          "visual": 1,
-          "site": 1
-        },
-        "by_owner": {
-          "content": 13,
-          "engineering": 1,
-          "seo": 3
-        }
-      },
-      "issue_ids": [
-        "content-check-quality_validator-failed",
-        "content-frontmatter-2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
-        "content-media-2026-10-19-best-china-itineraries-for-10-days-three-routes-compared-au.md",
-        "content-media-2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
-        "content-media-2026-10-31-china-winter-travel-guide-where-to-go-and-how-to-pack.md",
-        "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
-        "content-seo-2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
-        "content-seo-2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
-        "content-seo-2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
-        "content-seo-china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
-        "eda93581fbec80e3",
-        "f88a5fe66eae891f",
-        "site_health-13745de01d1f422d",
-        "site_health-146222d560f7cb8",
-        "site_health-3b75bea283b68f9e",
-        "site_health-5b5eb03d2379f8b4",
-        "site_health-7aa25e5b4e14d6d3"
-      ],
-      "opened": 5,
-      "resolved": 6
-    },
-    {
       "timestamp": "2026-11-15T09:01:30.906308+00:00",
       "summary": {
         "total": 18,
@@ -19865,7 +19824,50 @@
       ],
       "opened": 5,
       "resolved": 5
+    },
+    {
+      "timestamp": "2026-11-24T07:39:17.787961+00:00",
+      "summary": {
+        "total": 19,
+        "P0": 2,
+        "P1": 6,
+        "P2": 11,
+        "by_source": {
+          "content": 12,
+          "site_health": 5,
+          "visual": 1,
+          "site": 1
+        },
+        "by_owner": {
+          "content": 15,
+          "engineering": 1,
+          "seo": 3
+        }
+      },
+      "issue_ids": [
+        "content-check-quality_validator-failed",
+        "content-frontmatter-2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+        "content-media-2026-10-19-best-china-itineraries-for-10-days-three-routes-compared-au.md",
+        "content-media-2026-10-26-how-to-choose-your-first-city-in-china-a-decision-guide.md",
+        "content-media-2026-10-31-china-winter-travel-guide-where-to-go-and-how-to-pack.md",
+        "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
+        "content-seo-2026-07-05-yunnan-adventure-rice-terraces-ancient-towns-and-ethnic-minorities-guide.md",
+        "content-seo-2026-08-01-china-photography-guide-capturing-the-wonders-of-the-middle-kingdom.md",
+        "content-seo-2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+        "content-seo-7-day-china-itinerary.md",
+        "content-seo-apec-2026-shenzhen-outcomes-what-it-means-for-travelers.md",
+        "content-seo-china-extends-144-hour-visa-free-transit-policy-to-more-countries.md",
+        "eda93581fbec80e3",
+        "f88a5fe66eae891f",
+        "site_health-251cbf76e1f9ad31",
+        "site_health-56cc46c74ca08356",
+        "site_health-6b6a34168cc26d54",
+        "site_health-78d4c8b393012dcd",
+        "site_health-7d39dac4421f8dfb"
+      ],
+      "opened": 5,
+      "resolved": 5
     }
   ],
-  "updated_at": "2026-11-24T07:32:02.699554+00:00"
+  "updated_at": "2026-11-24T07:39:17.787961+00:00"
 }
