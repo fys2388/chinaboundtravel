@@ -1,8 +1,8 @@
 # ChinaBound Travel Social Learning 闭环报告
 
-**生成时间**: 2026-11-23 16:44:46
+**生成时间**: 2026-11-24 16:39:57
 **闭环版本**: 2.0
-**策略版本**: 2.1-20261123_164446_quality_gated
+**策略版本**: 2.1-20261124_163957_quality_gated
 
 ---
 
@@ -20,7 +20,7 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 
 | 指标 | 数值 |
 |------|------|
-| 历史帖子总数 | 865 |
+| 历史帖子总数 | 877 |
 | 本轮新增记录 | 0 |
 | 平台数量 | 6 |
 | 识别成功模式 | 1 |
@@ -31,23 +31,23 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 ## 📱 平台表现
 
 ### 🔴 facebook
-- 帖子数: 137
+- 帖子数: 138
 - 总展示: 2909
 - 总点击: 82
-- 平均CTR: 0.21%
+- 平均CTR: 0.20%
 - 平均互动率: 0.37%
 - 表现评级: needs_improvement
 
 ### 🟢 twitter
-- 帖子数: 301
+- 帖子数: 309
 - 总展示: 465
 - 总点击: 1
-- 平均CTR: 11.07%
+- 平均CTR: 10.79%
 - 平均互动率: 0.00%
 - 表现评级: excellent
 
 ### 🔴 instagram
-- 帖子数: 202
+- 帖子数: 203
 - 总展示: 4725
 - 总点击: 94
 - 平均CTR: 0.10%
@@ -55,11 +55,11 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 - 表现评级: needs_improvement
 
 ### 🔴 pinterest
-- 帖子数: 205
+- 帖子数: 207
 - 总展示: 9248
 - 总点击: 364
 - 平均CTR: 0.19%
-- 平均互动率: 0.29%
+- 平均互动率: 0.28%
 - 表现评级: needs_improvement
 
 ### 🟢 x
@@ -120,4 +120,4 @@ Observe ✅ → Record ✅ → Analyze ✅ → Learn ✅ → Decide ✅ → Act 
 ---
 
 *报告由Social Learning闭环系统自动生成*
-*生成时间: 2026-11-23 16:44:46*
+*生成时间: 2026-11-24 16:39:57*

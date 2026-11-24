@@ -1,6 +1,6 @@
 {
-  "version": "2.1-20261123_164446_quality_gated",
-  "last_updated": "2026-11-23T16:44:46.257315",
+  "version": "2.1-20261124_163957_quality_gated",
+  "last_updated": "2026-11-24T16:39:57.148847",
   "platforms": {
     "pinterest": {
       "best_times": [
@@ -109,7 +109,7 @@
   "learning_insights": [
     {
       "pattern": "高CTR帖子特征",
-      "description": "Top 20%帖子平均CTR 20.38%，比Bottom 20%高 20.38个百分点",
+      "description": "Top 20%帖子平均CTR 20.15%，比Bottom 20%高 20.15个百分点",
       "common_hooks": [],
       "best_times": [
         "22:00",
