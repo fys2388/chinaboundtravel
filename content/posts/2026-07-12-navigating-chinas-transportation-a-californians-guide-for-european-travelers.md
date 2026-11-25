@@ -167,6 +167,8 @@ For more information on China travel, check out these articles:
 
 - [WeChat Pay Setup Guide for Foreigners (2026)](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/)
 
+- [China 144 Hour Transit Visa: Complete Guide](/posts/144-hour-visa-free-transit-guide/)
+
 ## FAQ
 
 ### How do I book how to take train in china?

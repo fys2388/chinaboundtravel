@@ -241,3 +241,5 @@ Travel insurance is one of the practical pieces of preparation that gives peace 
 - [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
 
 - [China High-Speed Rail vs Flying: Which Is Faster, Cheaper, and Easier for Foreigners](/posts/china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners/)
+
+- [China Extends 240-Hour Visa-Free Transit to 57 Countries (2026)](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)

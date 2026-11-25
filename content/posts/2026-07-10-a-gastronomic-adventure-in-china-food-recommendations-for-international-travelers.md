@@ -196,6 +196,8 @@ If you want to learn more about China travel, be sure to check out these related
 
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
 
+- [China 144 Hour Transit Visa: Complete Guide](/posts/144-hour-visa-free-transit-guide/)
+
 ## FAQ
 
 ### What should I know about best food in china?
