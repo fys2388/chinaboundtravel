@@ -1,0 +1,97 @@
+{
+  "queue_type": "manual",
+  "reason": "issue type 不在 agent_task_executor.AUTO_FIXABLE_TYPES 内，executor 会返回 need_manual。改为一次性落盘，不再每天重派 agent 任务。",
+  "generated_at": "2026-11-25T06:08:25.973572",
+  "target_date": "2026-11-25",
+  "issue_count": 5,
+  "by_agent": {
+    "ops": {
+      "count": 1,
+      "types": [
+        "mailerlite_not_configured"
+      ]
+    },
+    "seo": {
+      "count": 3,
+      "types": [
+        "meta_description_too_long"
+      ]
+    },
+    "social": {
+      "count": 1,
+      "types": [
+        "social_zero_engagement"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue_4949ddb0bc06",
+      "type": "social_zero_engagement",
+      "description": "分析数据可用，社媒已发布4条但曝光为0，需检查发布与指标归属",
+      "severity": "medium",
+      "agent": "social",
+      "action": "analyze_and_optimize",
+      "source_file": "social_daily_2026-11-23.json",
+      "detected_at": "2026-11-25T06:08:25.969067",
+      "status": "new",
+      "assigned": false,
+      "auto_fixable": false
+    },
+    {
+      "id": "issue_4f1522e59b4e",
+      "type": "mailerlite_not_configured",
+      "description": "MailerLite 未配置/未连接（MAILERLITE_API_TOKEN 未配置），邮件订阅无法收集；需人工补 MailerLite API token（密钥，agent 不自动补）",
+      "severity": "high",
+      "agent": "ops",
+      "action": "diagnose_and_fix",
+      "source_file": "subscription_health_20261019_210005.json",
+      "detected_at": "2026-11-25T06:08:25.971727",
+      "status": "new",
+      "assigned": false,
+      "auto_fixable": false
+    },
+    {
+      "id": "issue_5539f68b0503",
+      "type": "meta_description_too_long",
+      "description": "Meta description过长(182字符)",
+      "severity": "low",
+      "agent": "seo",
+      "action": "optimize_meta",
+      "source_file": "site_health_issues_2026-11-25.json",
+      "detected_at": "2026-11-25T06:08:25.971941",
+      "status": "new",
+      "assigned": false,
+      "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+      "auto_fixable": false
+    },
+    {
+      "id": "issue_ffef488b77e8",
+      "type": "meta_description_too_long",
+      "description": "Meta description过长(184字符)",
+      "severity": "low",
+      "agent": "seo",
+      "action": "optimize_meta",
+      "source_file": "site_health_issues_2026-11-25.json",
+      "detected_at": "2026-11-25T06:08:25.971943",
+      "status": "new",
+      "assigned": false,
+      "file": "content/posts/7-day-china-itinerary.md",
+      "auto_fixable": false
+    },
+    {
+      "id": "issue_bd47767e3222",
+      "type": "meta_description_too_long",
+      "description": "Meta description过长(186字符)",
+      "severity": "low",
+      "agent": "seo",
+      "action": "optimize_meta",
+      "source_file": "site_health_issues_2026-11-25.json",
+      "detected_at": "2026-11-25T06:08:25.971945",
+      "status": "new",
+      "assigned": false,
+      "file": "content/posts/apec-2026-shenzhen-outcomes-what-it-means-for-travelers.md",
+      "auto_fixable": false
+    }
+  ]
+}

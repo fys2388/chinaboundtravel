@@ -3,18 +3,38 @@
   "agent_name": "SEO Intelligent Agent (SEO智能优化)",
   "task_id": "task_2026-11-25_seo",
   "created_at": "2026-11-25T01:01:06.863766+00:00",
-  "updated_at": "2026-11-25T06:00:50.109440",
+  "updated_at": "2026-11-25T06:08:26.443135",
   "target_date": "2026-11-25",
-  "issue_count": 2,
+  "issue_count": 3,
   "severity_summary": {
     "critical": 0,
     "high": 0,
-    "medium": 2,
+    "medium": 3,
     "low": 0
   },
   "issues": [
     {
-      "id": "site_health-3b82c14e4357f92a",
+      "id": "issue_09b827c38651",
+      "type": "title_too_long",
+      "title": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
+      "description": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
+      "page": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "evidence": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
+      "recommended_action": "Review the issue and apply the documented remediation.",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "optimize_title",
+      "source": "daily_issue_router",
+      "source_file": "site_health_issues_2026-11-25.json",
+      "task_source": "daily_issue_router",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-11-25T06:08:25.971939"
+    },
+    {
+      "id": "site_health-14541033d57a3d3d",
       "type": "title_too_long",
       "title": "title_too_long",
       "description": "title_too_long",
@@ -31,10 +51,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-11-25T06:00:49.818077+00:00"
+      "detected_at": "2026-11-25T06:08:26.018019+00:00"
     },
     {
-      "id": "site_health-4129e6f2784e060a",
+      "id": "site_health-22501eb98783fe13",
       "type": "meta_description_too_long",
       "title": "meta_description_too_long",
       "description": "meta_description_too_long",
@@ -51,37 +71,38 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-11-25T06:00:49.818072+00:00"
+      "detected_at": "2026-11-25T06:08:26.018016+00:00"
     }
   ],
   "priority_issue": {
-    "id": "site_health-3b82c14e4357f92a",
+    "id": "issue_09b827c38651",
     "type": "title_too_long",
-    "title": "title_too_long",
-    "description": "title_too_long",
+    "title": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
+    "description": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
     "page": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
     "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
     "evidence": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
-    "recommended_action": "Review and remediate the reported issue.",
+    "recommended_action": "Review the issue and apply the documented remediation.",
     "severity": "medium",
     "agent": "seo",
-    "action": "manual_review",
-    "source": "site_health",
-    "source_file": "",
-    "task_source": "quality_gate",
+    "action": "optimize_title",
+    "source": "daily_issue_router",
+    "source_file": "site_health_issues_2026-11-25.json",
+    "task_source": "daily_issue_router",
     "status": "new",
     "assigned": true,
     "assigned_to": "seo",
-    "detected_at": "2026-11-25T06:00:49.818077+00:00"
+    "detected_at": "2026-11-25T06:08:25.971939"
   },
   "expected_actions": [
-    "manual_review"
+    "manual_review",
+    "optimize_title"
   ],
   "status": "partial",
   "execution": {
     "resolved_count": 0,
     "failed_count": 0,
     "completed_at": null,
-    "note": "resolved=0, need_manual=1, failed=0"
+    "note": "resolved=0, need_manual=2, failed=0"
   }
 }
