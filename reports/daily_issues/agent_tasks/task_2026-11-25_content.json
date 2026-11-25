@@ -3,13 +3,13 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-11-25_content",
   "created_at": "2026-11-25T01:01:06.863176+00:00",
-  "updated_at": "2026-11-25T08:00:52.498271",
+  "updated_at": "2026-11-25T08:03:21.902377",
   "target_date": "2026-11-25",
-  "issue_count": 18,
+  "issue_count": 19,
   "severity_summary": {
     "critical": 3,
     "high": 5,
-    "medium": 10,
+    "medium": 11,
     "low": 0
   },
   "issues": [
@@ -60,7 +60,7 @@
       "description": "内容质量验证(P0乱码)未通过",
       "page": "content/posts",
       "file": "content/posts",
-      "evidence": "content_quality_validator.py exit code=1; run_id=45096272969",
+      "evidence": "content_quality_validator.py exit code=1; run_id=45572914827",
       "recommended_action": "修复报告中的乱码、编码、front matter 或媒体合规问题后重跑内容质量巡检。",
       "severity": "critical",
       "agent": "content",
@@ -134,7 +134,7 @@
       "detected_at": "2026-11-25T01:01:06.862516+00:00"
     },
     {
-      "id": "site_health-4df6568625dd8f8",
+      "id": "site_health-4ad2110cc2adfd02",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -151,10 +151,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-25T08:00:52.259442+00:00"
+      "detected_at": "2026-11-25T08:03:21.620163+00:00"
     },
     {
-      "id": "site_health-3b0a7d466b937a9d",
+      "id": "site_health-288bc714602a1ce6",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -171,7 +171,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-25T08:00:52.259445+00:00"
+      "detected_at": "2026-11-25T08:03:21.620169+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -254,6 +254,26 @@
       "detected_at": "2026-11-25T01:01:06.862568+00:00"
     },
     {
+      "id": "content-seo-2026-11-23-china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners.md",
+      "type": "content_seo",
+      "title": "文章 SEO 字段或结构需要优化",
+      "description": "文章 SEO 字段或结构需要优化",
+      "page": "2026-11-23-china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners.md",
+      "file": "2026-11-23-china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners.md",
+      "evidence": "title_too_long",
+      "recommended_action": "修正标题、描述长度和正文标题层级。",
+      "severity": "medium",
+      "agent": "content",
+      "action": "manual_review",
+      "source": "content",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "content",
+      "detected_at": "2026-11-25T08:03:21.620221+00:00"
+    },
+    {
       "id": "content-seo-7-day-china-itinerary.md",
       "type": "content_seo",
       "title": "文章 SEO 字段或结构需要优化",
@@ -334,7 +354,7 @@
       "detected_at": "2026-11-25T06:08:25.971933"
     },
     {
-      "id": "site_health-58bd91f6a0d738d4",
+      "id": "site_health-14f96e2764e6a32d",
       "type": "ai_forbidden_word",
       "title": "ai_forbidden_word",
       "description": "ai_forbidden_word",
@@ -351,7 +371,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-25T08:00:52.259483+00:00"
+      "detected_at": "2026-11-25T08:03:21.620241+00:00"
     },
     {
       "id": "issue_ed789c4865fc",

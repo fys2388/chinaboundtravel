@@ -629,7 +629,18 @@
       "url_ok": true,
       "canonical_ok": true,
       "brand_issues": [],
-      "language_issues": [],
+      "language_issues": [
+        "电",
+        "子",
+        "客",
+        "票",
+        "服",
+        "务",
+        "台",
+        "时",
+        "刻",
+        "表"
+      ],
       "mojibake_issues": [],
       "encoding_errors": [],
       "fact_issues": [],
@@ -640,12 +651,12 @@
       "scores": {
         "brand": 100,
         "fact": 100,
-        "language": 100,
+        "language": 0,
         "mojibake": 100,
         "seo": 100,
         "media": 100
       },
-      "trust_score": 100.0,
+      "trust_score": 95.0,
       "passed": true
     },
     {
@@ -1661,6 +1672,34 @@
       "passed": true
     },
     {
+      "file": "2026-11-23-china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners.md",
+      "frontmatter_ok": true,
+      "content_id_ok": true,
+      "url_ok": true,
+      "canonical_ok": true,
+      "brand_issues": [],
+      "language_issues": [],
+      "mojibake_issues": [],
+      "encoding_errors": [],
+      "fact_issues": [],
+      "seo_issues": [
+        "title_too_long"
+      ],
+      "media_issues": [],
+      "cover_ok": true,
+      "cover_image": "https://www.chinaboundtravel.com/img/china-dest/transport/china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners.jpg",
+      "scores": {
+        "brand": 100,
+        "fact": 100,
+        "language": 100,
+        "mojibake": 100,
+        "seo": 80,
+        "media": 100
+      },
+      "trust_score": 97.0,
+      "passed": true
+    },
+    {
       "file": "7-day-china-itinerary.md",
       "frontmatter_ok": true,
       "content_id_ok": true,
@@ -2008,6 +2047,6 @@
       "passed": true
     }
   ],
-  "passed_count": 73,
-  "total": 74
+  "passed_count": 74,
+  "total": 75
 }
