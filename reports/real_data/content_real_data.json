@@ -1,13 +1,13 @@
 {
   "source": "content_analytics",
-  "pull_time": "2026-11-24T16:39:56.907669",
-  "data_date": "2026-11-24",
+  "pull_time": "2026-11-25T16:23:27.080989",
+  "data_date": "2026-11-25",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
     "total_articles": 75,
     "articles_this_week": 0,
-    "avg_word_count": 2256,
+    "avg_word_count": 2262,
     "articles_with_affiliate_links": 39,
     "articles_with_internal_links": 74
   },
@@ -68,13 +68,13 @@
     },
     {
       "slug": "2026-05-28-chinese-food-delivery-meituan-eleme-guide",
-      "word_count": 1994,
+      "word_count": 2007,
       "has_affiliate_links": true,
       "has_internal_links": true
     },
     {
       "slug": "2026-05-29-paypal-alipay-wechat-pay-qr-code-support",
-      "word_count": 1591,
+      "word_count": 1604,
       "has_affiliate_links": true,
       "has_internal_links": true
     },

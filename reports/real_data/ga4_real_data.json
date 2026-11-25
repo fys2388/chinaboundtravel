@@ -1,26 +1,20 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-11-24T16:39:47.960424",
-  "data_date": "2026-11-23",
+  "pull_time": "2026-11-25T16:23:18.335065",
+  "data_date": "2026-11-24",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "activeUsers": 335,
-    "sessions": 357,
-    "screenPageViews": 383,
-    "engagedSessions": 117,
-    "bounceRate": 0.6722689075630253,
-    "averageSessionDuration": 30.221405809523805,
-    "engagementRate": 0.3277310924369748,
-    "newUsers": 334
+    "activeUsers": 353,
+    "sessions": 376,
+    "screenPageViews": 401,
+    "engagedSessions": 116,
+    "bounceRate": 0.6914893617021277,
+    "averageSessionDuration": 28.691906624999998,
+    "engagementRate": 0.30851063829787234,
+    "newUsers": 352
   },
   "daily": [
-    {
-      "date": "2026-10-28",
-      "sessions": 7,
-      "activeUsers": 2,
-      "pageviews": 21
-    },
     {
       "date": "2026-10-29",
       "sessions": 7,
@@ -173,9 +167,15 @@
     },
     {
       "date": "2026-11-24",
-      "sessions": 15,
-      "activeUsers": 15,
-      "pageviews": 15
+      "sessions": 22,
+      "activeUsers": 22,
+      "pageviews": 22
+    },
+    {
+      "date": "2026-11-25",
+      "sessions": 16,
+      "activeUsers": 16,
+      "pageviews": 16
     }
   ],
   "top_pages": [
@@ -186,22 +186,22 @@
       "sessions": 37
     },
     {
+      "path": "/posts/accommodation-tips-guide/",
+      "title": "Accommodation In China: Complete 2026 Guide",
+      "pageviews": 19,
+      "sessions": 19
+    },
+    {
       "path": "/posts/food-recommendations-guide/",
       "title": "China Food Guide 2026: What to Eat & Where",
       "pageviews": 18,
       "sessions": 18
     },
     {
-      "path": "/posts/accommodation-tips-guide/",
-      "title": "Accommodation In China: Complete 2026 Guide",
-      "pageviews": 16,
-      "sessions": 16
-    },
-    {
       "path": "/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/",
       "title": "404 Page not found | ChinaBound Travel",
-      "pageviews": 15,
-      "sessions": 16
+      "pageviews": 13,
+      "sessions": 14
     },
     {
       "path": "/posts/7-day-china-itinerary-beijing-xian-shanghai-first-timers/",
@@ -210,16 +210,16 @@
       "sessions": 13
     },
     {
+      "path": "/pricing/",
+      "title": "Choose Your China Travel Pass | ChinaBound Travel",
+      "pageviews": 13,
+      "sessions": 12
+    },
+    {
       "path": "/posts/7-day-china-itinerary/",
       "title": "Free 7-Day China Itinerary Template (2026)",
       "pageviews": 12,
       "sessions": 10
-    },
-    {
-      "path": "/pricing/",
-      "title": "Choose Your China Travel Pass | ChinaBound Travel",
-      "pageviews": 12,
-      "sessions": 11
     },
     {
       "path": "/best-china-itineraries-for-10-days-three-routes-compared/",
@@ -246,6 +246,12 @@
       "sessions": 2
     },
     {
+      "path": "/posts/144-hour-visa-free-transit-guide/",
+      "title": "China 144 Hour Transit Visa: Complete Guide",
+      "pageviews": 9,
+      "sessions": 9
+    },
+    {
       "path": "/posts/alipay-wechat-pay-foreigners-guide/",
       "title": "How to Use Alipay & WeChat Pay in China 2026",
       "pageviews": 9,
@@ -258,30 +264,24 @@
       "sessions": 10
     },
     {
-      "path": "/posts/144-hour-visa-free-transit-guide/",
-      "title": "China 144 Hour Transit Visa: Complete Guide",
+      "path": "/posts/alipay-for-foreigners-guide/",
+      "title": "Alipay in China: Setup & Payment Tips (2026)",
       "pageviews": 8,
-      "sessions": 8
-    },
-    {
-      "path": "/china-airport-transfer-guide/",
-      "title": "404 Page not found | ChinaBound Travel",
-      "pageviews": 7,
       "sessions": 8
     }
   ],
   "traffic_sources": [
     {
       "channel": "Direct",
-      "sessions": 190,
-      "activeUsers": 187,
-      "engagementRate": 0.0211
+      "sessions": 209,
+      "activeUsers": 206,
+      "engagementRate": 0.0191
     },
     {
       "channel": "Organic Social",
-      "sessions": 123,
-      "activeUsers": 113,
-      "engagementRate": 0.8618
+      "sessions": 122,
+      "activeUsers": 112,
+      "engagementRate": 0.8607
     },
     {
       "channel": "Organic Search",
@@ -309,6 +309,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 1,
-    "data_date": "2026-11-23"
+    "data_date": "2026-11-24"
   }
 }
