@@ -1,10 +1,20 @@
 {
   "version": "1.0",
-  "last_updated": "2026-11-24T18:59:56.945473+00:00",
-  "last_updated_date": "2026-11-24",
+  "last_updated": "2026-11-25T05:32:59.052104+00:00",
+  "last_updated_date": "2026-11-25",
   "total_items": 39,
   "digest": {
     "visa_policy": [
+      {
+        "title": "中国240小时过境免签“朋友圈”扩展至57国",
+        "summary": "From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)",
+        "url": "https://www.gov.cn/lianbo/202608/content_7078699.htm",
+        "date": "2026-11-25",
+        "source": "State Council 57-country notice",
+        "category": "visa_policy",
+        "type": "policy_page",
+        "_hash": "d35a146c4b77"
+      },
       {
         "title": "Chongqing and Sichuan Unveil Tourism Routes Linking Europe, the Americas, and Southeast Asia - iChongqing",
         "summary": "Chongqing and Sichuan Unveil Tourism Routes Linking Europe, the Americas, and Southeast Asia iChongqing",
@@ -15,16 +25,6 @@
         "category": "visa_policy",
         "type": "news",
         "_hash": "4c49ad7b8794"
-      },
-      {
-        "title": "中国240小时过境免签“朋友圈”扩展至57国",
-        "summary": "From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)",
-        "url": "https://www.gov.cn/lianbo/202608/content_7078699.htm",
-        "date": "2026-11-24",
-        "source": "State Council 57-country notice",
-        "category": "visa_policy",
-        "type": "policy_page",
-        "_hash": "d35a146c4b77"
       },
       {
         "title": "China Visa Rules for Americans: Visa-Free Transit, Reciprocity and Limits - Diplomacy and Law",
@@ -49,15 +49,15 @@
         "_hash": "c68d5690aed2"
       },
       {
-        "title": "Nauru’s CIP Now Receives 25 Applications a Month, Has Issued 221 Passports - IMI Daily",
-        "summary": "Nauru’s CIP Now Receives 25 Applications a Month, Has Issued 221 Passports IMI Daily",
-        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPUXhNTTlrNUdGbnBwNDd6ZVd3blI2U2ZWbWJSUHRaay1TUG9WRVVEZEVyeERicF9mUDVzTng0YTBSd2oyUlc1NGdoZm5kTjZXVFZVQk5IYVRVZFFUazdidTY1RkF5MVBKZHJyQy1NdDdGMlZfSi1TcXpndXRMV28tUXo1bnlOdEhDSzJOWlF1WkFIYXExZGxFX0ZDcE1ZTnZiTDlYTTFBTXZUVS1kSTlQVA?oc=5",
-        "date": "2026-11-23",
+        "title": "Chinese visa-free entry to PHL extended to Jan 15, 2028 - BusinessMirror",
+        "summary": "Chinese visa-free entry to PHL extended to Jan 15, 2028 BusinessMirror",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPS21zdWdGTmxSWHo3aDZxNHBSOTRucktnSG8wWXZWN2JaY3luTWh1ZWxNaGpIVFJvOFdPNUtGR0hOWVF0R2ZQMURwczZSVzNkem53SHJLcldjME1GYUV2UFM3Y25UdzlYcWFSNUt3RFA4N2EtOUw5d0xZVEF1cG1GRkRQSFhUUjU1Y1M2SGxJTUVrVEFfTVB6eWFkVDU?oc=5",
+        "date": "2026-11-22",
         "source": "Google News RSS",
-        "source_query": "China+passport+policy+update",
+        "source_query": "China+visa+policy+2026",
         "category": "visa_policy",
         "type": "news",
-        "_hash": "666a55a378b1"
+        "_hash": "9f79fd5e683d"
       },
       {
         "title": "China, Mongolia, South Korea,…: Visa exemptions set to expire at the end of 2026 - VisasNews",
@@ -65,32 +65,32 @@
         "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPSFhJRTNlRUNXV19oUXpIWExVVlFxdGs4RFI4SHpEWXRsVEd4MWdSRUhpNE9qOGxuYWhxci10dnViUlgxNVJNb3FpcGpXSkV3Z1lKZzNpV2FTaHRYQXo1ZkVmTU5Ta0JsWjFYRkR4OHgzTEQyLXV1NXJyZ1VKU0o3dGR3WmxOdlYxV0gyaV9sUlZmaDlSUzZvVTJGRXpfblA1RERB?oc=5",
         "date": "2026-11-20",
         "source": "Google News RSS",
-        "source_query": "China+visa+policy+2026",
+        "source_query": "China+entry+policy+foreign+travelers",
         "category": "visa_policy",
         "type": "news",
         "_hash": "65d385844fb9"
       },
       {
-        "title": "Could China extend its 30-day visa-free policy through 2027? - VisasNews",
-        "summary": "Could China extend its 30-day visa-free policy through 2027? VisasNews",
-        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPR0Yyc01BRmh3Y3FWVG82NHIyRUh5X2VGb3hkM2RzRk5zVktWUkdXTmlLS1pLZTlmOHZuaDhRM2ZOMm1Ld1hpd0VJSzVpUk5GbklFN2pYSV9TdV96ay1KQXd6M3lkeFJTXzZlU1kwcWc5MWlWZ3A1aUc3MzNBMW90eU90RmJ5QzRhRkxCQnhR?oc=5",
-        "date": "2026-11-12",
-        "source": "Google News RSS",
-        "source_query": "China+visa+policy+2026",
-        "category": "visa_policy",
-        "type": "news",
-        "_hash": "965c1cefd5f0"
-      },
-      {
-        "title": "China tightens travel restrictions for citizens - BBC",
-        "summary": "China tightens travel restrictions for citizens BBC",
-        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5HN2R0OGJtZHhZNXdSNnZQNGtKcGgyTGpJY1JxWEZWckNfQ0NIX1J5Y0lFNkZnV3lncXEzZFhEY1Q2aGJpMEcyVVIwdENwTWwtcl9JRTIzQ2lGek0?oc=5",
-        "date": "2026-09-15",
+        "title": "Alleged Chinese agent to remain in custody, judge rules, amid FBI concerns of flight risk - CBS News",
+        "summary": "Alleged Chinese agent to remain in custody, judge rules, amid FBI concerns of flight risk CBS News",
+        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPWERCaXk1NHYwSzFZZENXbTBLR3FubG9YdGRNelIzQXlfNmVtV3FUdHZzTnJEV1pMOVFhc285RTFxQWJ5VUo4S1M2bW81UHpJRlZJekY3b2V2VE5EQVFORGFPcUFKUklMWWducllkVHBUOUcycE9BWVQ5SUdJX2tKNFBTdw?oc=5",
+        "date": "2026-10-08",
         "source": "Google News RSS",
         "source_query": "China+passport+policy+update",
         "category": "visa_policy",
         "type": "news",
-        "_hash": "a670e57dd7ee"
+        "_hash": "f9267e2841cf"
+      },
+      {
+        "title": "China Can Now Ban Its Citizens From Leaving for Three Years, and Never Tell Them Why - IMI Daily",
+        "summary": "China Can Now Ban Its Citizens From Leaving for Three Years, and Never Tell Them Why IMI Daily",
+        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPWjNVNnpuRFZ1NmtKMGRyeUw3cENEUWdweTFGVmVTRUJUc1U0VWgtUjFGV3pIbVpicFJUODNxV0J4UlZ5T0p3WEZsZ3lveDBkTHhSQ0NySU5aZmYtYUMxODBRUk16Y2MtbnNfb2hOTVFLdGRxTW9LS0JwdlAzSHNXSGtaYWRzNHBKY2lnSlNoLVpYdERNQWVHQm1Ub1VncEVnZ0VGOHEta1BpRTVmUkJueVdLcjA4VjhJNHdOeUN6ZkY3QXc?oc=5",
+        "date": "2026-09-16",
+        "source": "Google News RSS",
+        "source_query": "China+passport+policy+update",
+        "category": "visa_policy",
+        "type": "news",
+        "_hash": "b3108c5c4f88"
       },
       {
         "title": "China's 240-hour visa-free transit policy - English.gov.cn",
@@ -98,21 +98,21 @@
         "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxONVB0Yk1udXR1NU5WTGpJMVNscHlVdnpJbGJzWDQ0ZmxuZHhfRVVBcVVvVVIxakdlVmxLUUNPRjk5MWtkcmpYS3VkNjU0ZXg2cUZQLWlyZXpkWEVqbDFJbEhBNWFOVWFUdHY1RlotYU5HMnBINERocWdlZFV2aHpRX2gzbWR0OTVxRHBLOVBSSkFyN21ndTdLTm9R?oc=5",
         "date": "2026-08-21",
         "source": "Google News RSS",
-        "source_query": "China+visa+free+transit+240+hour",
+        "source_query": "China+visa+policy+2026",
         "category": "visa_policy",
         "type": "news",
         "_hash": "007efa1b5d47"
       },
       {
-        "title": "China Issues New Regulations on Exit and Entry Administration - Newland Chase",
-        "summary": "China Issues New Regulations on Exit and Entry Administration Newland Chase",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPNFJYbmlYX19xLVBDcVpmRElGQ2V5a3RSZmk4dGRUT3B2TTVRaWd0Um9zYmdlZnpIckctcm1sbzBDclNLM096MF9IUlEwWjNKSks2QnQ4M0NLZ1hqLWhMZlR3OFRJUUV3VmhSNnJ2eUhsLUdzRENfY3FBd0RyS2dpV0Y5TzdDbks0emNxMm5nWEc?oc=5",
-        "date": "2026-08-06",
+        "title": "China Tightens Entry And Exit Rules From Sept 15 - Migrant Times",
+        "summary": "China Tightens Entry And Exit Rules From Sept 15 Migrant Times",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxObS1uWjBXeVJwRzV5Ui13N3BLbHhQM202X2lWRS00blc3b24zQk9NVVRmMXBFaFVPU2pBY3NVUlRibUQ4RFhIR3ZoNzNYX3dKVHhENmJ2UENxdl9wWkRIaWM4bmhVWHhyN09lSExTT21MdkdjeWpQZXQ3bFNZYm1WWXJKc2hXMkJoc0o1bGNnQ244Y092WlBJR2RBX1QxcFY1a2c?oc=5",
+        "date": "2026-08-15",
         "source": "Google News RSS",
         "source_query": "China+passport+policy+update",
         "category": "visa_policy",
         "type": "news",
-        "_hash": "f6400329b9d7"
+        "_hash": "47da71bd3f02"
       }
     ],
     "travel_industry": [
@@ -229,15 +229,15 @@
     ],
     "destination_news": [
       {
-        "title": "2026 World's Travel & Hotel Awards Gloriously Released in Hong Kong, China - Thailand Business News",
-        "summary": "2026 World's Travel & Hotel Awards Gloriously Released in Hong Kong, China Thailand Business News",
-        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQUEMybEM3dmtvM1FfUDFkQXJsanhCS0xneVo2UFZFX0VXLUNzYlh2Nk55Qk5tYkdib1FWbFRjaGphU1BaVHhfUzNLZTlLbVRaU0JXVXlGMWJlaUhuV2I5SldCaXRQVlZySkVXYnNNTS1yY29jMk5SZDNtOGgwZTdxMXBYMWNIb0JJdkVIQnlydG9VMGt5TVFjRzNYeGpGcEdpLU5OY3NmakNkLXNRYmNIRDRPb0hpQzRLODFv?oc=5",
-        "date": "2026-11-20",
+        "title": "Chinese Archaeologists Announce Findings From Four Key Sites - Sixth Tone",
+        "summary": "Chinese Archaeologists Announce Findings From Four Key Sites Sixth Tone",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNZnBNTHZDUkdGaGg4QmFPZ2VmNXJ6Ri1oSVltZng1QTdMZXA2d05XR2hyWjlycUtIMWlBQnFJQ3NvZjdnWF9xRHpheldWS3JrZTAtQ1VFWlJBM180LTRDZGd0VzRqanJpWTBUMW1HT0dDR2JzTUkyYUN2ZUtFejVtYU5xVC1OSk82QzdjVlVyUWFPTFV5by1wZnNTUnNWV0ha?oc=5",
+        "date": "2026-11-23",
         "source": "Google News RSS",
-        "source_query": "China+travel+destination+news",
+        "source_query": "China+cultural+heritage+news",
         "category": "destination_news",
         "type": "news",
-        "_hash": "f2404d973fed"
+        "_hash": "b3fc167c7042"
       },
       {
         "title": "UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou - UNESCO World Heritage Centre",
@@ -284,26 +284,26 @@
         "_hash": "6fe72a77cb3a"
       },
       {
-        "title": "Peppa Pig Play Cafe Opening in China, New Transformers Ride in Brazil - Variety",
-        "summary": "Peppa Pig Play Cafe Opening in China, New Transformers Ride in Brazil Variety",
-        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxORHZVdTQ3U2hYUjNhZlRiMHVUU3VIY0xiOXVfNkpQZG92V1poRzk1N3U0VmZVMk50akdJQnhWUFpsNjdTa09fbDBtMVRWVkE0Zk1XcWZ6TnpDUDJ4bVpoYm1vV05NMWNwbWZQb051R0JjT0NGcXkyWFp6ZzBKM0NWZi13X1d5bEpxS2p4UWJoQ3JNc2lBZzdjY09qYw?oc=5",
-        "date": "2026-10-06",
+        "title": "Chongqing Sees Holiday Tourism Gains as Cross-Provincial Travel Picks Up - iChongqing",
+        "summary": "Chongqing Sees Holiday Tourism Gains as Cross-Provincial Travel Picks Up iChongqing",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPMWN5Y1UxWTdsYmo0OUFKaHhkT2hzX2Q4TmViYW5FRzdSWG1NNmV1MG9Cakk3eXVSTE9nMnl4aW81d25QSmxGbjJ4Mm9Cek94SVFmMFRrYTlNdGpiTUVsZWhZamNPXzc2eDU0RmRBZzBsLVE1SGtsVGl1MHBzXzduSUhUdXowLW1RT3IyZFE5TDI1ZXBaNTNKU3hxRnVlTzd5S2dkX0k5eVowRnQydGRFUk530gG3AUFVX3lxTE5VRV9vSXVTeC16QUpfZG1aSWt5UEdzZ2ZkRWNaTUZKRUg2S3AxREVmM0d5SW5ITDJKSjAzRlU2VTRuWXlsOW1IUGtHY0J0LVBzaDNOTkNLWmR0VEZsZll6TF9BNEhEalI2Q3NXb2gwQXlQZWhXRG5tZWpQRS0yajhERi1Dc0xSY0pSNjF1cy1LeXJDZ0dyREViRWNVNE5iY0tCVWtnckxEVTdtSjBlV2NqbDBvalZTbw?oc=5",
+        "date": "2026-10-10",
         "source": "Google News RSS",
-        "source_query": "China+new+attractions+open",
+        "source_query": "Chengdu+Shanghai+Beijing+Xian+travel",
         "category": "destination_news",
         "type": "news",
-        "_hash": "ddef6c0eb336"
+        "_hash": "5889336961d7"
       },
       {
-        "title": "ICE repatriates 58 objects of cultural heritage to the People’s Republic of China - ICE | U.S. Immigration and Customs Enforcement (.gov)",
-        "summary": "ICE repatriates 58 objects of cultural heritage to the People’s Republic of China ICE | U.S. Immigration and Customs Enforcement (.gov)",
-        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNWkJFSVlqejhUaTZUank3TWMxVzM2Y0h0d3RnTXB3MlVFV28wS3JTa3BHalEtTDVJaEdRalpHYTV6bXhDaGpVdFpuNDM2LUtnQnRiLTFCVjdBVGFmbW9xNmFXZWJPcWtwRTk5WHVuNzVKeFpDYmJEd1IxTkswV1hDWU0tV2lfMjFtRlplX29IbVpaemMyOWxQRVZZN3g0VjNHZWxV?oc=5",
-        "date": "2026-09-30",
+        "title": "Chinese travelers to Europe, South America, Australia and NZ up over 40% for Golden Week while Japan drops out of top 10: travel agencies - Global Times",
+        "summary": "Chinese travelers to Europe, South America, Australia and NZ up over 40% for Golden Week while Japan drops out of top 10: travel agencies Global Times",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE91RHBIOGwxWkluSnNzTHp4WGdETkhhMmp5Y25hY3JIeW55UnBOWjJMZTQ2bUFXRHpjN2NEd09jcDZyUk80Vk5ONWN5UnBwNnFwNG9kSXBacncxUHdRdjRQNzN3?oc=5",
+        "date": "2026-10-02",
         "source": "Google News RSS",
-        "source_query": "China+cultural+heritage+news",
+        "source_query": "China+travel+destination+news",
         "category": "destination_news",
         "type": "news",
-        "_hash": "a7e960271e22"
+        "_hash": "8ce17fb31626"
       },
       {
         "title": "China Travel News Highlights Emerging Destinations Attracting More Visitors - RESIDENT™ | A Luxury Lifestyle Magazine",
@@ -352,37 +352,15 @@
         "_hash": "6050446bbafa"
       },
       {
-        "title": "China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan - Libya Update News - Libya Update News",
-        "summary": "China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan Libya Update News - Libya Update News",
-        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbnROODBlM2NRb3BXb3A2Q1A5LVh4OF9KSGt2cDZEY2RYZUZVREp4MGFRelVGQTNmWnRMQmt3ZzA3TFZxVlVrUThWZlA5Z1Z6RVRzbjFSQUZ1NjNoN0NXcllCem5RcDA5elZUd05mdzJxVHV5TWhuOWprY2FKN1pwbndaOHhEcGVNYjdUcUZwRVZXTjI1eV9zS185U1B5RW94T0JyOGRMaE5NMWIySC1vNnNMUVgwN0R5d2tTV2xhbw?oc=5",
-        "date": "2026-11-09",
+        "title": "Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker - Anadolu Ajansı",
+        "summary": "Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker Anadolu Ajansı",
+        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQWDRKUmdWclVhZlpLVnFCNlJvSkl0NHJXVHJkQXQtWkdYNWtRMnBjRkRlT1Q4NlRlUTlSa3Y5eEU4LUFqNEZla1J6QXlRTlg3TGpickMtUGNRR1o4dkYtTml0Qzl2YW00UGVoZEo1NXNDZ3V5a045RXEzeU8yamVpLWptNFRnaVhvZEpsN1RGVHZyT3gwQ08zenJILUppY1JtZFRjQTV5TUJIVUlfbXhfYlhQSVpTVzJRM0pESHJVYnZBQ245MGM3M1FkQktIUQ?oc=5",
+        "date": "2026-11-03",
         "source": "Google News RSS",
         "source_query": "China+transportation+update",
         "category": "safety_alerts",
         "type": "news",
-        "_hash": "8f537a18c6a9"
-      },
-      {
-        "title": "Chinese ambassador says travel warning is not aimed at Thailand - Nation Thailand",
-        "summary": "Chinese ambassador says travel warning is not aimed at Thailand Nation Thailand",
-        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1rNFFpRWhGdnBkU1JJc1VpR2FSbEVhejVtS1owVC1ZNWZvYk5UT2F0NXh0YTJiU1ZLeTRqT0FGLWFYUGZ5T3FEMUhTMjNmX0lIa25oLXJkRHJZUmR1V1pHM3ZR?oc=5",
-        "date": "2026-10-30",
-        "source": "Google News RSS",
-        "source_query": "China+travel+safety+alert",
-        "category": "safety_alerts",
-        "type": "news",
-        "_hash": "e69aacbdfa0b"
-      },
-      {
-        "title": "Mercedes readies 2030 strategy update with China at its core - Reuters",
-        "summary": "Mercedes readies 2030 strategy update with China at its core Reuters",
-        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPb3RXanRCZVNUand6bVBsaVdRS29UeGlGQ240NnhocVYyQ0pBdUdCZkhWM2F3RDhiZlIwdXNRb0tJbVpmQ1oxTy1Gel9EMFhzWU8xWXc1dnBXSzdkTjdDcjZ3YVFVSnR4TWROYXpUVlpjWEVUVWVHay1wcUhwNHgzOFNXcV8wUFZxczZXT0cwZTl2TUJ5SmlhUWQ2ZzNnMldGaVNaX2ZOUTFlajdoRkxoMkM4WWpPRmh3Wk51Y0hIZV8?oc=5",
-        "date": "2026-10-28",
-        "source": "Google News RSS",
-        "source_query": "China+transportation+update",
-        "category": "safety_alerts",
-        "type": "news",
-        "_hash": "e848ebb2cc94"
+        "_hash": "7a3227c9b470"
       },
       {
         "title": "U.S. Adds Wrongful Detention Warning to China Travel Advisory - AgroLatam",
@@ -396,15 +374,26 @@
         "_hash": "fa31abf1d061"
       },
       {
-        "title": "U.S. Issues New Travel Warnings for Multiple Countries - Fodors Travel Guide",
-        "summary": "U.S. Issues New Travel Warnings for Multiple Countries Fodors Travel Guide",
-        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQczZ5UnlzYzBsYnFXT2dfUDk1VWJINWlsNDh2bUZNOVV0ckpBeTNDZm1GRkZjVWx3NmtsRXdEWS1ZMUdHT01MZmd1X2NyRVRLako4TjR6anNrTWdVLUR3QWhaN1JJMXM2VVM5ZGJFQzRLdnFUWXYxeFFESXVzUWoyTjlZUkFaYmNLNWEteUNFWWpmZw?oc=5",
+        "title": "US adds ‘wrongful detention’ warning for Americans travelling to China - South China Morning Post",
+        "summary": "US adds ‘wrongful detention’ warning for Americans travelling to China South China Morning Post",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPbGVETjJPRS1DMEZHUmNsRU5uRFN3TlRnaFdNczR4S1NPejVscWFqQ1lHNzJwQzhLRWtqQ3Z2cEhENDk0MTBIaVdUTTBxWjRGakxCTnBmU1JWNG83M2dFQjFEYXVMRnZidWx6azZGYy0zSldLcDNkSE5TNnpuQmZjMGUwY1NWdWJGdC12aGotR1cwYXRjYzdoQ0NjN2g1YVhEd3FWNFNaQmRDb1d1Qjh5NGRVR0JMeEVXdVdN0gG7AUFVX3lxTE4zaEFHU19wX0VlWWdTZDNOekZXSmJIVjdnVWo5aUxuZ0VGZU9KMXpSVEtCLU5ra2RjeGNPbmxra0tESml6TDllUmVjYTZxSlBaSlhPNlQ2aGxUSTJUUXFUMlZuRU51WkNOX3N6blBNVnhxaU00WmZyVE1ZMHk5TFM4MVNkTXFJV2JNSjlXYUpyNUh6QzhDY3VTTW1qVGlXR3Faa1VKNnpKVElqRVB6OTM0QU1TOC1FanFpWTg?oc=5",
         "date": "2026-10-20",
         "source": "Google News RSS",
         "source_query": "China+travel+safety+alert",
         "category": "safety_alerts",
         "type": "news",
-        "_hash": "b81f67611792"
+        "_hash": "38c86176c05c"
+      },
+      {
+        "title": "US State Department updates China travel advisory, warning electronic communications surveillance - Digital Watch Observatory",
+        "summary": "US State Department updates China travel advisory, warning electronic communications surveillance Digital Watch Observatory",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBoeENnT1R0aXlzUnJKdDFlVTVTNkQ3aVR2aHgzZWNKNnZlamk0UU53NnZTLUZyNEVIUGJDbW9tODlZaExkNGM1RldqN1M4dm5uZl9SaHZaMTdKT2hJTng4Q2RJa29GR0FBUW1lc3dZRQ?oc=5",
+        "date": "2026-09-09",
+        "source": "Google News RSS",
+        "source_query": "China+travel+safety+alert",
+        "category": "safety_alerts",
+        "type": "news",
+        "_hash": "ef20aca264f6"
       },
       {
         "title": "Storm weakens, but disrupts travel in China - Taipei Times",
@@ -416,6 +405,17 @@
         "category": "safety_alerts",
         "type": "news",
         "_hash": "cb324ec34cae"
+      },
+      {
+        "title": "The New York Times. . Typhoon Dolphin is the strongest storm to hit China this year. The storm also intensified monsoon rains in the Philippines, disrupting maritime transportation and causing some areas to flood. Read more: https://nyti.ms/4q78Mg9 - Facebook",
+        "summary": "The New York Times. . Typhoon Dolphin is the strongest storm to hit China this year. The storm also intensified monsoon rains in the Philippines, disrupting maritime transportation and causing some areas to flood. Read more: https://nyti.ms/4q78Mg9 Facebook",
+        "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQX241bG1vNF9fNk03aUk2QTVfZFUwXzlkbEhsY2pjZ05fX3NOdFdkTVgwSWtJVXdxaFZETXRDaGpTbVRfRFktMTBPdnVhbjlJX0hGOVVrMmVXR2h5eVZjYWczM2lqemR5Z3lOQWliVHlYQm9XNHRxRVA5dXBTeGg4bllxak9FWDR5NHB0QUl1Y19IOHptSWNEYWxJcE04SWh2bFVlX0xUUUlQTkloUEpuY2sxYmV5N0VTTVhvRWhfd2xrNDNjYldGX19BakVRQmxXSTA5dA?oc=5",
+        "date": "2026-08-10",
+        "source": "Google News RSS",
+        "source_query": "China+transportation+update",
+        "category": "safety_alerts",
+        "type": "news",
+        "_hash": "5cf8c98416ce"
       },
       {
         "title": "Weather Alert: Typhoon Dolphin - U.S. Embassy & Consulates in China",
@@ -442,14 +442,14 @@
     ]
   },
   "llm_summary": {
-    "visa_policy": "- [2026-11-24] Chongqing and Sichuan Unveil Tourism Routes Linking Europe, the Americas, and Southeast Asia - iChongqing\n  Chongqing and Sichuan Unveil Tourism Routes Linking Europe, the Americas, and Southeast Asia iChongqing\n- [2026-11-24] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-11-23] China Visa Rules for Americans: Visa-Free Transit, Reciprocity and Limits - Diplomacy and Law\n  China Visa Rules for Americans: Visa-Free Transit, Reciprocity and Limits Diplomacy and Law",
+    "visa_policy": "- [2026-11-25] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-11-24] Chongqing and Sichuan Unveil Tourism Routes Linking Europe, the Americas, and Southeast Asia - iChongqing\n  Chongqing and Sichuan Unveil Tourism Routes Linking Europe, the Americas, and Southeast Asia iChongqing\n- [2026-11-23] China Visa Rules for Americans: Visa-Free Transit, Reciprocity and Limits - Diplomacy and Law\n  China Visa Rules for Americans: Visa-Free Transit, Reciprocity and Limits Diplomacy and Law",
     "travel_industry": "- [2026-11-24] Why Australia is a goldmine for China's inbound tourism - China Travel News\n  Why Australia is a goldmine for China's inbound tourism China Travel News\n- [2026-11-23] China's tourists are coming back to Australia next year - ABC News & Headlines – Australian Broadcasting Corporation\n  China's tourists are coming back to Australia next year ABC News & Headlines – Australian Broadcasting Corporation\n- [2026-11-23] Kung fu to technology: China captivates London - China Daily\n  Kung fu to technology: China captivates London China Daily",
-    "destination_news": "- [2026-11-20] 2026 World's Travel & Hotel Awards Gloriously Released in Hong Kong, China - Thailand Business News\n  2026 World's Travel & Hotel Awards Gloriously Released in Hong Kong, China Thailand Business News\n- [2026-11-09] UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou - UNESCO World Heritage Centre\n  UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou UNESCO World Heritage Centre\n- [2026-11-08] Only a fraction of World Heritage sites are in Africa. China wants to fix that - South China Morning Post\n  Only a fraction of World Heritage sites are in Africa. China wants to fix that South China Morning Post",
-    "safety_alerts": "- [2026-11-23] Rough weather expected to hit both coasts, may disrupt Thanksgiving travel - NBC News\n  Rough weather expected to hit both coasts, may disrupt Thanksgiving travel NBC News\n- [2026-11-09] China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan - Libya Update News - Libya Update News\n  China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan Libya Update News - Libya Update News\n- [2026-10-30] Chinese ambassador says travel warning is not aimed at Thailand - Nation Thailand\n  Chinese ambassador says travel warning is not aimed at Thailand Nation Thailand"
+    "destination_news": "- [2026-11-23] Chinese Archaeologists Announce Findings From Four Key Sites - Sixth Tone\n  Chinese Archaeologists Announce Findings From Four Key Sites Sixth Tone\n- [2026-11-09] UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou - UNESCO World Heritage Centre\n  UNESCO–Africa–China Workshop strengthens World Heritage capacity and cooperation in Quanzhou UNESCO World Heritage Centre\n- [2026-11-08] Only a fraction of World Heritage sites are in Africa. China wants to fix that - South China Morning Post\n  Only a fraction of World Heritage sites are in Africa. China wants to fix that South China Morning Post",
+    "safety_alerts": "- [2026-11-23] Rough weather expected to hit both coasts, may disrupt Thanksgiving travel - NBC News\n  Rough weather expected to hit both coasts, may disrupt Thanksgiving travel NBC News\n- [2026-11-03] Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker - Anadolu Ajansı\n  Iran exempts ships from India, China, Iraq, Qatar from Hormuz transit restrictions: Lawmaker Anadolu Ajansı\n- [2026-10-22] U.S. Adds Wrongful Detention Warning to China Travel Advisory - AgroLatam\n  U.S. Adds Wrongful Detention Warning to China Travel Advisory AgroLatam"
   },
   "sources": {
-    "Google News RSS": 38,
-    "State Council 57-country notice": 1
+    "State Council 57-country notice": 1,
+    "Google News RSS": 38
   },
   "source_config": {
     "google_news_queries": 15,
@@ -463,5 +463,5 @@
     "provinces": 24
   },
   "policy_change": null,
-  "official_state_checked_at": "2026-11-24T18:59:56.945667+00:00"
+  "official_state_checked_at": "2026-11-25T05:32:59.052294+00:00"
 }
