@@ -131,6 +131,26 @@ When you get to the platform, there will usually be a display showing the train 
 
 And once you see your train approaching, be ready to board quickly. The trains don't stop for very long, especially at smaller stations.
 
+## China High-Speed Rail E-Tickets: Boarding with Your Passport
+China's high-speed rail network has moved almost entirely to **e-tickets** (电子客票). For most foreign travelers this is good news: on the vast majority of routes you no longer need to collect a paper ticket at all.
+
+Here is how boarding works with an e-ticket:
+- **Book online** (12306 or Trip.com) using your **passport** exactly as it appears — name and passport number must match, or the gate will not recognize you.
+- **Skip the ticket counter.** With an e-ticket there is usually nothing to pick up. Your passport *is* your ticket.
+- **At the gate:** Place your **passport** on the reader at the automatic gate (or show it to staff at the manual lane). It matches your booking and opens the gate. You scan your passport again when you exit at your destination.
+- **Your "ticket" lives in the app.** In the 12306 app (or your Trip.com confirmation) you'll see your train number, carriage, and seat. Screenshot it or keep it open — carriage and seat numbers are shown there, not on any paper.
+
+> **Tip:** A small number of rural or older stations may still issue paper tickets. If in doubt, ask at the station service counter (服务台) — but for travel between major cities, expect to board with your passport alone.
+
+## How to Check China High-Speed Train Schedules
+Train schedules (时刻表) in China are dense and easy to check before you commit to a date:
+
+- **12306 website/app:** Enter your origin, destination, and date to see every departure that day with times, duration, and fare classes. This is the authoritative source and updates in real time.
+- **Trip.com:** Shows the same schedule in English, with approximate English names for stations — handy for planning even if you end up booking on 12306.
+- **Frequency:** Popular intercity routes (Beijing–Shanghai, Chengdu–Chongqing, Guangzhou–Shenzhen) run **multiple times per hour** from early morning to late evening, so missing one train is rarely a disaster. Long-distance and regional routes are less frequent — check the last departure if you're traveling in the evening.
+
+Schedules are usually released for booking around **15 days in advance**, which is why booking 3–5 days out (or as soon as your dates are fixed) gets you the best seat availability.
+
 ## What to Bring on the Train
 Many first-time travelers make the mistake of not bringing enough things with them, assuming they can just buy everything on the train. But sometimes, the options on the train can be limited or expensive.
 
@@ -141,12 +161,9 @@ So, here's a list of things you should bring:
 - **Comfort items**: If you're sensitive to noise or light, bring earplugs and an eye mask. And a small blanket can also make your journey more comfortable.
 
 ## Common Mistakes to Avoid
-One of the biggest mistakes first-time travelers make is not leaving enough time to get to the train station. In China, traffic can be unpredictable, especially in big cities like Chengdu. So, make sure you give yourself plenty of time to get to the station, check in, and find your platform.
-
-Another common mistake is not double-checking ticket details. Travelers occasionally get on the wrong train because they didn't pay attention to the train number. So, often make sure you're on the right train by checking your ticket carefully.
-
-And don't forget to bring your passport. You'll need it to board the train and to check in at the station.
-
+1. **Not leaving enough time to get to the station.** In China, traffic can be unpredictable, especially in big cities like Chengdu. Give yourself plenty of time to get to the station, clear security, and find your platform.
+2. **Not double-checking ticket details.** Travelers occasionally board the wrong train because they didn't pay attention to the train number. Always confirm the train number, departure time, and station before you go.
+3. **Forgetting your passport.** You'll need it to buy the ticket, pass security, and board the train — there is no boarding without it.
 4. **Not downloading the 12306 app.** The 12306 app (available on both App Store and Google Play) is much easier to use than the website. It supports passport registration, has an English toggle (albeit imperfect), and sends push notifications about your train status. Download it before your trip.
 
 ## Station Survival Guide
