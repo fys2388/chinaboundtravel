@@ -26,8 +26,8 @@ Many travelers learn this the hard way — a bike crash in Chengdu can rack up a
 
 ## ✅ Editorial Top Pick for China Travel
 
-{{< soft-recommend partner="hotel" topic="city" placement="article_mid_1" text="Search accommodation" >}}
-Where you stay shapes a city trip. Comparing hotel options across platforms helps you find the location and budget that fit your route.
+{{< soft-recommend partner="safetywing" topic="insurance" placement="article_mid_1" text="Compare travel insurance for China" >}}
+Medical costs abroad can be steep without coverage. Comparing travel insurance options helps you find coverage that fits your China trip.
 {{< /soft-recommend >}}
 
 <div style="padding: 1.25rem; background: #f0fdf4; border-radius: 0.5rem; margin: 1.5rem 0; border: 1px solid #dcfce7;">
