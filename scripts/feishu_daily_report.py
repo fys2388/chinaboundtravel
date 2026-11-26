@@ -884,9 +884,10 @@ class FeishuDailyReporter:
         _bot = data.get("bot_traffic_assessment") or {}
         if _bot.get("suspect"):
             _low_note = "（小样本，特征不具统计意义）" if _bot.get("low_confidence") else ""
-            country_str += (f"\n🚩 机器/自刷流量特征命中{_low_note}：{_bot.get('detail','')}"
-                            f"\n→ 本段流量/趋势数字含机器流量，勿当真实读者增长；"
-                            f"正解是 GA4 后台 IP 内部流量过滤。")
+            country_str += (f"\n🚩 机器流量特征命中{_low_note}：{_bot.get('detail','')}"
+                            f"\n→ 本段流量/趋势数字含爬虫噪音，勿当真实读者增长。"
+                            f"内部自动化源已根治；剩余为外部爬虫（IP 不固定，GA4 IP 过滤治不了），"
+                            f"无法根除、属互联网常态。跳出率/时长类建议已联动标注「含机器流量、暂不可信」。")
 
         # GA4 一致性校验：小流量下 session 维度指标与事件级总量会背离。
         # 结论先行——页浏览（screenPageViews，事件级总量）是唯一可靠锚点；
@@ -964,9 +965,12 @@ class FeishuDailyReporter:
                 # 详情已在「流量来源/地区」段（country_str）完整给出，此处只作指针+根因，
                 # 避免同一 detail 在日报里重复打两遍。
                 consistency_str += (
-                    "\n\n⚠️ 平均时长 0 秒的根因是机器/自刷流量特征命中（明细见上方流量来源段），"
-                    "并非埋点/consent 故障。正解：在 GA4 后台配置 IP 内部流量过滤"
-                    "（把 agent/监控的固定 IP 段挡掉）；在此之前日报流量/趋势数字含机器流量，勿当真实增长。"
+                    "\n\n⚠️ 平均时长 0 秒的根因是机器流量（爬虫/自动化访问全跳出、零阅读，"
+                    "明细见上方流量来源段），并非埋点/consent 故障。"
+                    "内部自动化源（视觉审计机器人）已根治——站内工具不再上报 GA4；"
+                    "剩余为外部爬虫（IP 不固定，来自机房），GA4 IP 过滤治不了、也无法根除，"
+                    "属互联网常态。处理方式：流量/趋势数字含爬虫噪音，勿当真实读者增长；"
+                    "跳出率/时长类建议已联动标注「含机器流量、暂不可信」，勿据此优化首屏或改内容。"
                 )
             else:
                 consistency_str += ("\n\n⚠️ 数据质量提示：平均时长 0 秒（" + str(data.get("sessions")) +
@@ -2247,7 +2251,8 @@ class FeishuDailyReporter:
             "low_confidence": low_confidence,
             "reasons": reasons,
             "detail": detail,
-            "note": "基于维度特征推断，非 IP 级确认；GA4 侧 IP 内部流量过滤才是最终正解",
+            "note": "基于维度特征推断，非 IP 级确认。内部自动化源已根治（站内工具不再上报 GA4）；"
+                    "剩余多为外部爬虫（IP 不固定，GA4 IP 过滤治不了），无法根除，属互联网常态。",
         }
 
     def _fetch_ga4(self) -> dict:

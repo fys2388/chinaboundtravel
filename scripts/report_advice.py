@@ -148,15 +148,28 @@ def generate_advice(data: dict, scope: str) -> list:
     # 3) 跳出率/时长
     # daily：用 7 日滚动口径 + 最低会话门槛（30 会话），避免 1-15 访客的单日噪声天天告警；
     # 其余周期本身已是聚合窗口，沿用原口径（users >= 5）。
+    # 机器流量联动：当 bot_traffic_assessment 判定 suspect，跳出率/时长是被爬虫"全跳出+
+    # 秒退"灌出来的，不代表真人体验。此时若照常给"优化首屏/强化钩子"，会误导去改一个
+    # 不存在的真人体验问题。改为明确标注"含机器流量、暂不可信"，等干净数据再评估。
+    _bot = data.get("bot_traffic_assessment") or {}
+    _bot_suspect = bool(_bot.get("suspect"))
     sample = _get(data, f["bounce_sessions"]) if scope == "daily" else users
     min_sample = 30 if scope == "daily" else 5
     window = "（7日滚动）" if scope == "daily" else ""
     if sample >= min_sample and bounce > 80:
-        advice.append({"icon": "🟡", "title": f"跳出率{window} {bounce:.0f}% 偏高",
-                       "detail": "首屏未抓住用户：检查页面加载速度、首屏内容与访客预期匹配度"})
+        if _bot_suspect:
+            advice.append({"icon": "🟡", "title": f"跳出率{window} {bounce:.0f}% 偏高",
+                           "detail": "⚠️ 含机器流量（爬虫全跳出灌高），暂不可信、勿据此优化首屏——等干净数据再评估真人体验"})
+        else:
+            advice.append({"icon": "🟡", "title": f"跳出率{window} {bounce:.0f}% 偏高",
+                           "detail": "首屏未抓住用户：检查页面加载速度、首屏内容与访客预期匹配度"})
     if sample >= min_sample and duration > 0 and duration < 30:
-        advice.append({"icon": "🟡", "title": f"平均时长{window} {duration:.0f} 秒",
-                       "detail": "内容未形成阅读：强化文章开头钩子与图文节奏，优先优化高流量页"})
+        if _bot_suspect:
+            advice.append({"icon": "🟡", "title": f"平均时长{window} {duration:.0f} 秒",
+                           "detail": "⚠️ 含机器流量（爬虫秒退压低），暂不可信、勿据此改内容——等干净数据再评估阅读深度"})
+        else:
+            advice.append({"icon": "🟡", "title": f"平均时长{window} {duration:.0f} 秒",
+                           "detail": "内容未形成阅读：强化文章开头钩子与图文节奏，优先优化高流量页"})
 
     # 4) 变现
     if tp_clicks > 0 and tp_orders == 0:
