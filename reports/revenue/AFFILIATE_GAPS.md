@@ -1,6 +1,6 @@
 # AFFILIATE GAPS
 
-- Generated: 2026-11-19
+- Generated: 2026-11-26
 
 Detection rules:
 - A: high commercial intent + no affiliate
@@ -11,7 +11,9 @@ Detection rules:
 
 | content_id | url | type | detail |
 |---|---|---|---|
+| cbt-7d7d2026abc1 | https://www.chinaboundtravel.com/posts/7-day-china-itinerary/ | A_HIGH_INTENT_NO_AFFILIATE | intent=VISA, impressions=5.0 |
 | cbt-0adceab18b53 | https://www.chinaboundtravel.com/posts/alipay-for-foreigners-guide/ | A_HIGH_INTENT_NO_AFFILIATE | intent=PAYMENT, impressions=0 |
+| cbt-5fb03fd3414a | https://www.chinaboundtravel.com/posts/china-high-speed-rail-vs-flying-which-is-faster-cheaper-and-easier-for-foreigners/ | A_HIGH_INTENT_NO_AFFILIATE | intent=TRAIN, impressions=0 |
 | cbt-1b29ba47ef46 | https://www.chinaboundtravel.com/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/ | A_HIGH_INTENT_NO_AFFILIATE | intent=INSURANCE, impressions=0 |
 | cbt-fee36f7750bd | https://www.chinaboundtravel.com/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train-guide/ | A_HIGH_INTENT_NO_AFFILIATE | intent=TRAIN, impressions=0 |
 | cbt-2c1a7da9138f | https://www.chinaboundtravel.com/posts/kung-fu-and-martial-arts-in-china-where-to-see-and-train/ | A_HIGH_INTENT_NO_AFFILIATE | intent=TRAIN, impressions=0 |
