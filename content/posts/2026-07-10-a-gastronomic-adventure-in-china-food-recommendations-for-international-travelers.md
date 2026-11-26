@@ -198,6 +198,8 @@ If you want to learn more about China travel, be sure to check out these related
 
 - [China 144 Hour Transit Visa: Complete Guide](/posts/144-hour-visa-free-transit-guide/)
 
+- [China Extends 240-Hour Visa-Free Transit to 57 Countries (2026)](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+
 ## FAQ
 
 ### What should I know about best food in china?

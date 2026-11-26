@@ -176,6 +176,8 @@ Another thing to keep in mind when visiting the Chengdu Panda Base is the crowds
 
 - [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
 
+- [China Extends 240-Hour Visa-Free Transit to 57 Countries (2026)](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+
 ## FAQ
 
 ### What should I know about dos and donts in china?

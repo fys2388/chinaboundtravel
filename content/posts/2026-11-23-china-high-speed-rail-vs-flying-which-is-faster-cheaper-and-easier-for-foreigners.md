@@ -134,6 +134,8 @@ If you want to learn more about China travel, check out these related articles:
 
 - [China Travel Guide August 2026: Latest Visa Rules & Updates](/posts/chinabound-travel-guide-2026-08-monthly-update/)
 
+- [Chinese Street Food: Night Markets Guide](/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/)
+
 ## Related Reading
 
 - [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)

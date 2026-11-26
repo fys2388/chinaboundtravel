@@ -208,6 +208,8 @@ For more China travel tips and stories, explore our other guides: [Chengdu Panda
 
 - [China Extends 240-Hour Visa-Free Transit to 57 Countries (2026)](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
+- [China Photography Guide: Best Spots, Gear & Tips from a China Pro](/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/)
+
 ## FAQ
 
 ### Is this guide up to date for 2026?

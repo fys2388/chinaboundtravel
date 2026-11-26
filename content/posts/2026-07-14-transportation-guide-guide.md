@@ -163,3 +163,5 @@ If you're interested in learning more about China's transportation system or pla
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
 
 - [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)
+
+- [China Extends 240-Hour Visa-Free Transit to 57 Countries (2026)](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)

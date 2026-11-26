@@ -179,3 +179,5 @@ Avoid sharing passport details or verification codes with third parties.
 - [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)
 
 - [WeChat Pay Setup Guide for Foreigners (2026)](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/)
+
+- [China 144 Hour Transit Visa: Complete Guide](/posts/144-hour-visa-free-transit-guide/)

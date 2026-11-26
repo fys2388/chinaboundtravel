@@ -162,3 +162,5 @@ For international travelers comparing options, flight search platforms help you 
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
 
 - [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)
+
+- [China 144 Hour Transit Visa: Complete Guide](/posts/144-hour-visa-free-transit-guide/)

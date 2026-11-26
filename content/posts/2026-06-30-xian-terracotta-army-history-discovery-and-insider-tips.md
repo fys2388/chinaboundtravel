@@ -239,3 +239,5 @@ So, what are you waiting for? Book your trip to Xi'an today and experience the w
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
 
 - [China Extends 240-Hour Visa-Free Transit to 57 Countries (2026)](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
+
+- [China Remote Work Guide: Digital Nomad Tips](/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)
