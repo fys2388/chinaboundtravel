@@ -3,7 +3,7 @@
   "agent_name": "Content Intelligence Agent (内容智能优化)",
   "task_id": "task_2026-11-26_content",
   "created_at": "2026-11-26T01:00:50.263726+00:00",
-  "updated_at": "2026-11-26T19:13:00.835601",
+  "updated_at": "2026-11-26T20:51:11.842381",
   "target_date": "2026-11-26",
   "issue_count": 18,
   "severity_summary": {
@@ -114,7 +114,7 @@
       "detected_at": "2026-11-26T01:00:50.263009+00:00"
     },
     {
-      "id": "site_health-22de4dba4843600d",
+      "id": "site_health-1a60f51310f89c2e",
       "type": "draft_leak",
       "title": "draft_leak",
       "description": "draft_leak",
@@ -131,10 +131,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-26T19:13:00.445732+00:00"
+      "detected_at": "2026-11-26T20:51:11.524139+00:00"
     },
     {
-      "id": "site_health-14a1622a162df570",
+      "id": "site_health-784cbba3bb99ec58",
       "type": "garbled_text",
       "title": "garbled_text",
       "description": "garbled_text",
@@ -151,7 +151,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-26T19:13:00.445736+00:00"
+      "detected_at": "2026-11-26T20:51:11.524143+00:00"
     },
     {
       "id": "content-seo-2026-05-20-dude-wheres-my-panda-a-beijing-guys-guide-to-the-c.md",
@@ -331,10 +331,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-26T05:59:59.684998"
+      "detected_at": "2026-11-26T05:59:59.685005"
     },
     {
-      "id": "site_health-31db14ccbfc4f3f3",
+      "id": "site_health-43823b9c693734cf",
       "type": "ai_forbidden_word",
       "title": "ai_forbidden_word",
       "description": "ai_forbidden_word",
@@ -351,7 +351,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "content",
-      "detected_at": "2026-11-26T19:13:00.445792+00:00"
+      "detected_at": "2026-11-26T20:51:11.524187+00:00"
     },
     {
       "id": "issue_447259c4473a",
