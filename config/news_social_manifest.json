@@ -2,11 +2,11 @@
   "posts": {
     "38c86176c05c": {
       "title": "US adds ‘wrongful detention’ warning for Americans travellin",
-      "posted_at": "2026-11-20T08:14:30.671517+00:00",
+      "posted_at": "2026-11-27T09:32:10.415766+00:00",
       "platforms": [
         "x"
       ],
-      "success": true
+      "success": false
     },
     "e3aa35ed5a33": {
       "title": "A local’s travel guide to Washington DC: what to eat, see an",
@@ -48,54 +48,6 @@
       ],
       "success": false
     },
-    "92cc489c6fe1": {
-      "title": "China updates visa application process for Indians, new rule",
-      "posted_at": "2026-10-28T06:43:54.713387+00:00",
-      "platforms": [
-        "x"
-      ],
-      "success": true
-    },
-    "f14323ceb2ef": {
-      "title": "Chinese travel alert misdirected, claims Sihasak - Thai PBS ",
-      "posted_at": "2026-10-28T06:43:56.597745+00:00",
-      "platforms": [
-        "x"
-      ],
-      "success": true
-    },
-    "2fb03e0b53dd": {
-      "title": "US ends visa waiver for Chinese over birth tourism, people s",
-      "posted_at": "2026-10-28T06:43:58.272221+00:00",
-      "platforms": [
-        "x"
-      ],
-      "success": true
-    },
-    "1107b7679af5": {
-      "title": "DHS Cracks Down on ‘Birth Tourism’ With China Visa-Free Trav",
-      "posted_at": "2026-10-28T06:43:59.547366+00:00",
-      "platforms": [
-        "x"
-      ],
-      "success": true
-    },
-    "c5c1e3b15dca": {
-      "title": "Artists honor Leshan's majestic cultural heritage - China Da",
-      "posted_at": "2026-10-28T06:44:04.625063+00:00",
-      "platforms": [
-        "x"
-      ],
-      "success": true
-    },
-    "ce787e34a0de": {
-      "title": "Cultural heritage brings new life to Chinese small products ",
-      "posted_at": "2026-10-28T06:44:09.216304+00:00",
-      "platforms": [
-        "x"
-      ],
-      "success": true
-    },
     "de71d167bc1c": {
       "title": "China has revised its visa application process for Indian tr",
       "posted_at": "2026-11-02T07:29:35.418923+00:00",
@@ -106,7 +58,7 @@
     },
     "e848ebb2cc94": {
       "title": "Mercedes readies 2030 strategy update with China at its core",
-      "posted_at": "2026-11-13T07:41:57.064704+00:00",
+      "posted_at": "2026-11-27T09:32:09.812273+00:00",
       "platforms": [
         "x"
       ],
@@ -474,7 +426,7 @@
     },
     "d35a146c4b77": {
       "title": "中国240小时过境免签“朋友圈”扩展至57国",
-      "posted_at": "2026-11-26T09:16:14.750792+00:00",
+      "posted_at": "2026-11-27T09:32:09.373892+00:00",
       "platforms": [
         "x"
       ],
@@ -1287,9 +1239,49 @@
         "x"
       ],
       "success": true
+    },
+    "1e46e108c38c": {
+      "title": "Gary Bowerman explores the forces reshaping China’s tourism ",
+      "posted_at": "2026-11-27T09:32:12.786252+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "eba3dd3619ef": {
+      "title": "China-Mongolia-Russia rail service restarts after 6-year hia",
+      "posted_at": "2026-11-27T09:32:19.192873+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "15b43bf3e667": {
+      "title": "Chinese culture comes to Kuwaiti youth at GUST International",
+      "posted_at": "2026-11-27T09:32:20.836762+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "2086dfedf2ac": {
+      "title": "Global mayors explore sustainable urban development, cultura",
+      "posted_at": "2026-11-27T09:32:22.758420+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
+    },
+    "9ce19c03a0b0": {
+      "title": "Foreign guests of third Orchid Awards explore Shanxi's cultu",
+      "posted_at": "2026-11-27T09:32:24.621454+00:00",
+      "platforms": [
+        "x"
+      ],
+      "success": true
     }
   },
-  "last_run": "2026-11-26T09:16:25.181693+00:00",
+  "last_run": "2026-11-27T09:32:24.621478+00:00",
   "total_posts": 160,
-  "total_failures": 111
+  "total_failures": 114
 }
