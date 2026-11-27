@@ -1,26 +1,20 @@
 {
   "source": "ga4_api",
-  "pull_time": "2026-11-26T15:57:36.164845",
-  "data_date": "2026-11-25",
+  "pull_time": "2026-11-27T15:46:01.661119",
+  "data_date": "2026-11-26",
   "is_real_data": true,
   "is_fresh": true,
   "metrics": {
-    "activeUsers": 369,
-    "sessions": 386,
-    "screenPageViews": 397,
-    "engagedSessions": 113,
-    "bounceRate": 0.7072538860103627,
-    "averageSessionDuration": 10.733485943005183,
-    "engagementRate": 0.2927461139896373,
-    "newUsers": 368
+    "activeUsers": 378,
+    "sessions": 395,
+    "screenPageViews": 406,
+    "engagedSessions": 112,
+    "bounceRate": 0.7164556962025317,
+    "averageSessionDuration": 10.412868524050634,
+    "engagementRate": 0.28354430379746837,
+    "newUsers": 377
   },
   "daily": [
-    {
-      "date": "2026-10-30",
-      "sessions": 11,
-      "activeUsers": 11,
-      "pageviews": 11
-    },
     {
       "date": "2026-10-31",
       "sessions": 10,
@@ -173,29 +167,35 @@
     },
     {
       "date": "2026-11-26",
-      "sessions": 14,
-      "activeUsers": 14,
-      "pageviews": 14
+      "sessions": 16,
+      "activeUsers": 16,
+      "pageviews": 16
+    },
+    {
+      "date": "2026-11-27",
+      "sessions": 16,
+      "activeUsers": 16,
+      "pageviews": 16
     }
   ],
   "top_pages": [
     {
       "path": "/",
       "title": "ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners",
-      "pageviews": 40,
-      "sessions": 40
+      "pageviews": 46,
+      "sessions": 46
     },
     {
       "path": "/posts/accommodation-tips-guide/",
       "title": "Accommodation In China: Complete 2026 Guide",
-      "pageviews": 20,
-      "sessions": 20
+      "pageviews": 19,
+      "sessions": 19
     },
     {
       "path": "/posts/food-recommendations-guide/",
       "title": "China Food Guide 2026: What to Eat & Where",
-      "pageviews": 18,
-      "sessions": 18
+      "pageviews": 17,
+      "sessions": 17
     },
     {
       "path": "/a-gastronomic-adventure-in-china-a-foodies-guide-for-european-travelers/",
@@ -224,8 +224,8 @@
     {
       "path": "/best-china-itineraries-for-10-days-three-routes-compared/",
       "title": "404 Page not found | ChinaBound Travel",
-      "pageviews": 11,
-      "sessions": 11
+      "pageviews": 10,
+      "sessions": 10
     },
     {
       "path": "/posts/alipay-vs-wechat-pay-which-tourists-should-use-china-2026/",
@@ -273,26 +273,26 @@
   "traffic_sources": [
     {
       "channel": "Direct",
-      "sessions": 223,
-      "activeUsers": 220,
-      "engagementRate": 0.0179
+      "sessions": 236,
+      "activeUsers": 233,
+      "engagementRate": 0.0169
     },
     {
       "channel": "Organic Social",
-      "sessions": 117,
-      "activeUsers": 111,
-      "engagementRate": 0.8889
+      "sessions": 115,
+      "activeUsers": 109,
+      "engagementRate": 0.8957
     },
     {
       "channel": "Organic Search",
-      "sessions": 37,
-      "activeUsers": 35,
-      "engagementRate": 0.1351
+      "sessions": 36,
+      "activeUsers": 34,
+      "engagementRate": 0.1389
     },
     {
       "channel": "Unassigned",
-      "sessions": 6,
-      "activeUsers": 2,
+      "sessions": 5,
+      "activeUsers": 1,
       "engagementRate": 0.0
     },
     {
@@ -309,6 +309,6 @@
     "fresh": true,
     "reason": "Fresh",
     "age_days": 1,
-    "data_date": "2026-11-25"
+    "data_date": "2026-11-26"
   }
 }
