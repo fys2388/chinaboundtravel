@@ -1,8 +1,8 @@
 {
   "version": "1.0",
-  "last_updated": "2026-11-27T05:13:45.155053+00:00",
+  "last_updated": "2026-11-27T17:34:52.384093+00:00",
   "last_updated_date": "2026-11-27",
-  "total_items": 38,
+  "total_items": 39,
   "digest": {
     "visa_policy": [
       {
@@ -49,26 +49,37 @@
         "_hash": "965c1cefd5f0"
       },
       {
-        "title": "I Visited China as an American Without a Visa—Here’s How You Can Do It Too - Condé Nast Traveler",
-        "summary": "I Visited China as an American Without a Visa—Here’s How You Can Do It Too Condé Nast Traveler",
-        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcEFZeVA5azlWWTNHUDh5U296a2p5T2VwbWExcnB5Q3lSWDF3UTVjN25jTVV5ZWo4N1NONzV6UDBhS0pXM1NqOS1wMGp1VnBJSEJVam1iUFBZdGJDVVpnQXBRSDlKUzVZRmpIZm5sVHNUcVVnZXBDUGI4bjhkeWFCU183dG9JMWpBekhZVmhTR3dJSXg0cnFGUGFXaHJabTJWSkJlSzBHMWJBQQ?oc=5",
-        "date": "2026-11-10",
+        "title": "China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends - South China Morning Post",
+        "summary": "China attracts 15.6% surge in foreign visitors as visa-free policies pay dividends South China Morning Post",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVzZNSnQ0azFwbEtkS2VYcml6b2FNb0JKX0xJb3dadEJjcjJJaDllTS0tRi1Ib0k0eTY4TjJZQVhiWElwZWJxQm1QLVktOHVEX2dQWFUtTjZ2VXJrdXd4NEI2WmxObkJzb2d3UDMzMVR3M09iYW4xdklSY3p6eTBza1c4Zk1sQTM5X2ZPMnA1ZExyLW9kTHRZZXRyaGdGVUplZUdaSGx2OUh2Y3Z6czM4LUh1WDBMamJaYU5Z0gG7AUFVX3lxTFBlLTVjR0FpQXNBcU5obW0wZzI3dFFyRXNPd25JYS1kRU1PTFY2X0xFakt6dXZZRlZJSGhkVXVNbXo5RURYTzIyQWcyUmRaSHBqblI3MXYtOGVXazVTTkdHaDkwYVBWX290Y3JXNmNRd04wb2hwS0RrQnNVS0RybWdaR0p0aW5mRTAyUjlVa0JLV0xReUFkMjBnMTZTNDI2Y0Y5akdvMEhBeWYtckpROFBSM0t2NHhfOVhnUUU?oc=5",
+        "date": "2026-10-21",
         "source": "Google News RSS",
-        "source_query": "China+visa+free+transit+240+hour",
+        "source_query": "China+entry+policy+foreign+travelers",
         "category": "visa_policy",
         "type": "news",
-        "_hash": "7fcd3edbe304"
+        "_hash": "454c6d010498"
       },
       {
-        "title": "China tightens travel restrictions for citizens - BBC",
-        "summary": "China tightens travel restrictions for citizens BBC",
-        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5HN2R0OGJtZHhZNXdSNnZQNGtKcGgyTGpJY1JxWEZWckNfQ0NIX1J5Y0lFNkZnV3lncXEzZFhEY1Q2aGJpMEcyVVIwdENwTWwtcl9JRTIzQ2lGek0?oc=5",
-        "date": "2026-09-15",
+        "title": "China's new travel curbs to prevent key talent from leaving unsettles tech firms and workers - DW.com",
+        "summary": "China's new travel curbs to prevent key talent from leaving unsettles tech firms and workers DW.com",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNUnl6Y3hCQkMyeTE5VURnbmJYT0lxZHJTZ3NGUE1PSHN6ajlxZTZlTFJLclhMSW91QTJINXA2RFc3WFZnMWc2R3dHempRTjJKX09ZeUFLVHNhYTg2bEhUS2hMbUZFZWxEbzl2blVMcXBmOVBSMUNhV0tqOTk3S285TTA0VlR2V1JJU0JobGl1WW0yUUpIZUdRaW05UHp2dnc5SW5PcHRzUdIBpwFBVV95cUxPWEJvUWM2WmxOLXhRcWpfYkwyZDBrbnBMOGNub2RkREJCdlB1LUdPZlNqR01PNC00QWEtZDB3Wi1lY2lVUTdTNkdmbldoeXpxc0FmQ19mcVVxckx0X3FzdVhVV080WWstMGJBM3Z1NldUQXdadGdnLVlCZDlOZEhLRU5peUs0bFRvanNadnpVQVZ3SVhraTNrVktzSzRzVEdRamdfRVlBaw?oc=5",
+        "date": "2026-09-23",
+        "source": "Google News RSS",
+        "source_query": "China+entry+policy+foreign+travelers",
+        "category": "visa_policy",
+        "type": "news",
+        "_hash": "6e08d89a0e7d"
+      },
+      {
+        "title": "China Can Now Ban Its Citizens From Leaving for Three Years, and Never Tell Them Why - IMI Daily",
+        "summary": "China Can Now Ban Its Citizens From Leaving for Three Years, and Never Tell Them Why IMI Daily",
+        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPWjNVNnpuRFZ1NmtKMGRyeUw3cENEUWdweTFGVmVTRUJUc1U0VWgtUjFGV3pIbVpicFJUODNxV0J4UlZ5T0p3WEZsZ3lveDBkTHhSQ0NySU5aZmYtYUMxODBRUk16Y2MtbnNfb2hOTVFLdGRxTW9LS0JwdlAzSHNXSGtaYWRzNHBKY2lnSlNoLVpYdERNQWVHQm1Ub1VncEVnZ0VGOHEta1BpRTVmUkJueVdLcjA4VjhJNHdOeUN6ZkY3QXc?oc=5",
+        "date": "2026-09-16",
         "source": "Google News RSS",
         "source_query": "China+passport+policy+update",
         "category": "visa_policy",
         "type": "news",
-        "_hash": "a670e57dd7ee"
+        "_hash": "b3108c5c4f88"
       },
       {
         "title": "China's 240-hour visa-free transit policy - English.gov.cn",
@@ -82,39 +93,39 @@
         "_hash": "007efa1b5d47"
       },
       {
-        "title": "Clamping down: China tightens exit rules - France 24",
-        "summary": "Clamping down: China tightens exit rules France 24",
-        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNbmJGY2FwdUpSbHNOVG9tMXk0SGMxMWNIanVJVV9mZEUxZW9RU19Sd2dZa1FlTWxQdGxuZEdZV19RcVk1MTY0c2lBNWJyQWtqdmZ2VkMzVEVySlNscnhHRFBVNFFBOER0WGZIS1NqRkltNThpQ2tlVEhQaklKRG9MNTQyNGZiMGRXUlRUenpDRlIxU1E?oc=5",
-        "date": "2026-08-18",
+        "title": "China: How does the 10-day visa-free transit policy work? - VisasNews",
+        "summary": "China: How does the 10-day visa-free transit policy work? VisasNews",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxObVo5a0VjUmlJY1ZjaWdLMzJ5UmVIZkdFbGtJSTNyMEs4ajlma0U3MTZHWmhHdWpvbjY1RkczaVJpTHdKMmFXbWl2bFRKNzlYT3ZqWFdzc2swSTU0VVE3anFqUTFMUWVhR2I5Mm5FMWVkS3haRGFIMHJ6cGVzSU5kNVhIZFJRNUdP?oc=5",
+        "date": "2026-08-20",
+        "source": "Google News RSS",
+        "source_query": "China+visa+free+transit+240+hour",
+        "category": "visa_policy",
+        "type": "news",
+        "_hash": "fa00ba262d24"
+      },
+      {
+        "title": "China Tightens Entry And Exit Rules From Sept 15 - Migrant Times",
+        "summary": "China Tightens Entry And Exit Rules From Sept 15 Migrant Times",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxObS1uWjBXeVJwRzV5Ui13N3BLbHhQM202X2lWRS00blc3b24zQk9NVVRmMXBFaFVPU2pBY3NVUlRibUQ4RFhIR3ZoNzNYX3dKVHhENmJ2UENxdl9wWkRIaWM4bmhVWHhyN09lSExTT21MdkdjeWpQZXQ3bFNZYm1WWXJKc2hXMkJoc0o1bGNnQ244Y092WlBJR2RBX1QxcFY1a2c?oc=5",
+        "date": "2026-08-15",
         "source": "Google News RSS",
         "source_query": "China+passport+policy+update",
         "category": "visa_policy",
         "type": "news",
-        "_hash": "6b1da85b4b26"
-      },
-      {
-        "title": "China Issues New Regulations on Exit and Entry Administration - Newland Chase",
-        "summary": "China Issues New Regulations on Exit and Entry Administration Newland Chase",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPNFJYbmlYX19xLVBDcVpmRElGQ2V5a3RSZmk4dGRUT3B2TTVRaWd0Um9zYmdlZnpIckctcm1sbzBDclNLM096MF9IUlEwWjNKSks2QnQ4M0NLZ1hqLWhMZlR3OFRJUUV3VmhSNnJ2eUhsLUdzRENfY3FBd0RyS2dpV0Y5TzdDbks0emNxMm5nWEc?oc=5",
-        "date": "2026-08-06",
-        "source": "Google News RSS",
-        "source_query": "China+entry+policy+foreign+travelers",
-        "category": "visa_policy",
-        "type": "news",
-        "_hash": "f6400329b9d7"
+        "_hash": "47da71bd3f02"
       }
     ],
     "travel_industry": [
       {
-        "title": "Gary Bowerman explores the forces reshaping China’s tourism and technology landscape in new book - Moodie Davitt Report",
-        "summary": "Gary Bowerman explores the forces reshaping China’s tourism and technology landscape in new book Moodie Davitt Report",
-        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPdE4xNXd2aVFVcG5pQklVbjlWZEtPSF9oSnRXUU1SODVlaTZvUnJxMngtRWNFbDBqWkJkWTVXc1U0cnFhQ3NhVWJkUjkySW9mNWlhT3hxXzV1M1lxcHY5WXBiR3hWd2FXdjVQLWhqelVacWJrWTJ4cnlnNnFWdHpWUVhQdlVpeFNaMXpxVXFjSXNUd2pTMmFnNERCYVhYbXU0dDdkVVdVOTYzVHFwb2dUNEZ2ZmFIR2FuSGRscWptUkd1aXAtdUE?oc=5",
-        "date": "2026-11-26",
+        "title": "Chinese and Vietnamese travel industries meet in Beijing to boost tourism cooperation - China.org.cn",
+        "summary": "Chinese and Vietnamese travel industries meet in Beijing to boost tourism cooperation China.org.cn",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBvOTMzWnJlNG50aUhVd1VrQkpVY1RtQXVYRFV2aWxQRDdsRno4TndnYjBBWEF6Q3dWTFp2TGo2ay1zaXFoOTM5UTZMUDNiOG9WT042SkxVVXJnLUUyQXpRRTVDWEdXU3E4OGc?oc=5",
+        "date": "2026-11-27",
         "source": "Google News RSS",
-        "source_query": "China+tourism+news",
+        "source_query": "China+travel+industry+2026",
         "category": "travel_industry",
         "type": "news",
-        "_hash": "1e46e108c38c"
+        "_hash": "c715aaf77935"
       },
       {
         "title": "China-Mongolia-Russia rail service restarts after 6-year hiatus - South China Morning Post",
@@ -150,17 +161,6 @@
         "_hash": "2133af0ac957"
       },
       {
-        "title": "Chongqing and Sichuan Unveil Tourism Routes Linking Europe, the Americas, and Southeast Asia - iChongqing",
-        "summary": "Chongqing and Sichuan Unveil Tourism Routes Linking Europe, the Americas, and Southeast Asia iChongqing",
-        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQRWJ2Qk9DQWZqZTQwV0k1U04zOGhEZ182eUhzSG9mUmp2TXlCbW9LTlZDaGhNWjYxTDhsVGFPVElGQ0w2bmp6WWdpUVRpckxnUVBHSEM5cGtrM1RqMXY3Z3RIdEIzclU2U1k2UlVTZ01GcjZTZDd2Mk0zbWNNd1Q0TEV6dmRCYjN2NGJ0TkJVdGk4QXllV0NLYmIwY3FxT2x4aTV2OTdCZ21ZSFVrdTNhUVZWc3hvX210ZFp3SlBnRUMzR2VpazJieXhB0gHPAUFVX3lxTE5OX1hSM2ZOZ1FqeHc0dmRQWlE0b0RkR3NoY3pIZ05OWEVZa25tVGUxY0JabjItdmVrc0M1aDdaS1ZZWGJDUGl2VzN3OWp1TXFZV2pJMl8yY1RvRVJaWi1abEdNTUUyTE5pYWxkbnZhQzdyX1NfU1A5akVxWE1udzNqX0diT2ZtRzdjSzhqSkg2OVRKZ2ZBZ3FPN2kzNXJFYkxMcW51MC01SUY3NnI0Zy1kTXJLY2hnSFI2TG1EN21xYk9kRUduS2p1UzgzdHF3OA?oc=5",
-        "date": "2026-11-24",
-        "source": "Google News RSS",
-        "source_query": "China+travel+industry+2026",
-        "category": "travel_industry",
-        "type": "news",
-        "_hash": "4c49ad7b8794"
-      },
-      {
         "title": "Why Australia is a goldmine for China's inbound tourism - China Travel News",
         "summary": "Why Australia is a goldmine for China's inbound tourism China Travel News",
         "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBaeFJPelFWeHBmRXZmMl82ZlpqTnpPS2loVzVUSWtHOHBWMkdZZG9yQV9wbHdsNFdiXzUyWU5ac1VneTB1eUcyZGhDLWhTR3BmODh1aktHa0ZQTTQ?oc=5",
@@ -172,15 +172,15 @@
         "_hash": "600591d119fa"
       },
       {
-        "title": "Chinese Outbound Travel in 2026: Why the Shopping Decision Starts Before Departure - China Trading Desk",
-        "summary": "Chinese Outbound Travel in 2026: Why the Shopping Decision Starts Before Departure China Trading Desk",
-        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQLUtORGFaN1FoaW8wRmJvb2V3d3Zac3UwZUx4Vzk2WjVwQ0RCX0c3N2hfX1cwVmQwM0dWeUl5X19Ecmp0LS1WczNRZGFBNjIxeG5kalRqNEY4eHRuSnZ2N3dBcFhXRTM5bl81OHZfR25INjFnVDl6Uk1kTjJzMFhPRnV1bWtrMXFBV2FNb0NqOUw3WkNXY0FfenhYWFBWSngtUFVCTU1DZE5QOTdvOFhWVlU0anBzWjdEVzNR?oc=5",
-        "date": "2026-11-17",
+        "title": "China's tourists are coming back to Australia next year - ABC News & Headlines – Australian Broadcasting Corporation",
+        "summary": "China's tourists are coming back to Australia next year ABC News & Headlines – Australian Broadcasting Corporation",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNdXJiSDZHSEFfaFhVNmhfVThyaTg1OHpCamNrenFYZGJFaS00dC1vYm92UW5CS1RqWnlqYnB1aWRuc3lfSzE4Ry1PWEdwMmJpd0RfZGdWcHZURHRpa29ocVhOZ2FfVTQxcVFVX3ZvMGRqTDhFTWFCd25lclJwS1Z5R3k0MmZpRkk?oc=5",
+        "date": "2026-11-23",
         "source": "Google News RSS",
-        "source_query": "China+travel+industry+2026",
+        "source_query": "China+tourism+news",
         "category": "travel_industry",
         "type": "news",
-        "_hash": "36842dc24cf6"
+        "_hash": "35f7895539e8"
       },
       {
         "title": "Chinese Ambassador to Ireland Zhao Xiyuan Introduces China’s Inbound Tourism Facilitation Policies in Irish Media - 中华人民共和国外交部",
@@ -214,6 +214,17 @@
         "category": "travel_industry",
         "type": "news",
         "_hash": "a670e57dd7ee"
+      },
+      {
+        "title": "China tightens travel rules over tech security - Reuters",
+        "summary": "China tightens travel rules over tech security Reuters",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUU9BOGpkbUk0UVhJRjlsRVNXdUZtNUw4ZGR4RGxqWW94OEF1T184SWh4bmhCX2hMTmJCa2dNZGpsSWlSOEhwaUtrUlVpUm5Nd3g1blU1UkxOZkU3MDhYQ2MyRUVMR1EyMXdPbzVFLW5SQ2pKcktpMmpLcl9PcDIyXzdhMERQcjd5X3gzUjFPcEdvandGSlg2aXFLZnZEcTBOV3ZWNVNZMA?oc=5",
+        "date": "2026-09-15",
+        "source": "Google News RSS",
+        "source_query": "China+travel+restrictions+update",
+        "category": "travel_industry",
+        "type": "news",
+        "_hash": "347407ab4f96"
       }
     ],
     "destination_news": [
@@ -229,6 +240,28 @@
         "_hash": "15b43bf3e667"
       },
       {
+        "title": "Chud Thai takes centre stage in China as Thailand awaits historic UNESCO heritage decision - Nation Thailand",
+        "summary": "Chud Thai takes centre stage in China as Thailand awaits historic UNESCO heritage decision Nation Thailand",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBmRk1OM3lteU5nV2FlZVlhTVZSMHNYZzBZeEg4a0UxVFpEVzZFeTFoVlVJSUR3bHV2VEVtSTBMTWJxRVJDR2pzNHJJTnlCV2VLbFluUjZJUnZxbEIzNTdfTlpDeTNrR3M?oc=5",
+        "date": "2026-11-27",
+        "source": "Google News RSS",
+        "source_query": "China+cultural+heritage+news",
+        "category": "destination_news",
+        "type": "news",
+        "_hash": "ca1763fc7bbe"
+      },
+      {
+        "title": "Exploring China the Indonesian Student Way: Favorite Destinations and Estimated Costs - Aktualita.co",
+        "summary": "Exploring China the Indonesian Student Way: Favorite Destinations and Estimated Costs Aktualita.co",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBjVnVmSHAxaXVBekphWmd2QzI2X0RmS1BibTJSZ3BhVERVcFpnLU1SUmZKMjVEemZVaV8xM0h4QUtLQm1yNzVuWC16ZWU5TXBCSTJhbzZWRU1WZ0g4MldLZ2owTFpFTHdfZUFhekpKOHg1ZzRMRlU4ZF9DVFBRajg?oc=5",
+        "date": "2026-11-26",
+        "source": "Google News RSS",
+        "source_query": "China+travel+destination+news",
+        "category": "destination_news",
+        "type": "news",
+        "_hash": "a3db2e16de32"
+      },
+      {
         "title": "Global mayors explore sustainable urban development, cultural heritage in China's Kashgar - Daily Sun",
         "summary": "Global mayors explore sustainable urban development, cultural heritage in China's Kashgar Daily Sun",
         "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPc211X2JLQ253NXNfal9TajlYS1RDYzJjRmNRUzM3N0phTFd6NXRaU0VRMm96dExHZnRFdm9WMnhqWjhicW9mT3VyN0c0ckMwbnpuSkJ4cDVrX1JMUE8xY2pBLTZ1dllXdGxNVG14b0Y0a3dvUjV1V3U0c2F2Y3cyZFVXRjAzM2d5YVNJZ1hiTEN6eTVfWjVocGw0RGhNMUNYQ2hxam00YmRSRmNSR3VhOV9obFZ0Qm83YnYwNXU3TTZTSnlRZ1E?oc=5",
@@ -240,17 +273,6 @@
         "_hash": "2086dfedf2ac"
       },
       {
-        "title": "Foreign guests of third Orchid Awards explore Shanxi's cultural heritage - 巴士的報",
-        "summary": "Foreign guests of third Orchid Awards explore Shanxi's cultural heritage 巴士的報",
-        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOdF9QSWtXOFBNMEpFaVlWRzh0RlQ0YUYxTkNiXzYtWVJreGx2T3VsWlIxalZ2SmpwQUh1Ym9vNzVvRmdqR2dGY29TSmlrRzdPckN2SVBrNUhJNEpZZ3R0SU1NMUl5aXBSUUFDSDhTUXkwTS1BVVVveENRaVZsQnNyT1hRdmU0VTNnNmpxdnloQ3FoQWpLUmRvank3MTFvZlp5S250NmR0Tm1VQTNYakpON1JVZDVvRl9HOVBMQy1ZZkw?oc=5",
-        "date": "2026-11-26",
-        "source": "Google News RSS",
-        "source_query": "China+cultural+heritage+news",
-        "category": "destination_news",
-        "type": "news",
-        "_hash": "9ce19c03a0b0"
-      },
-      {
         "title": "Americans could be detained for years in popular travel destination, officials warn - Fox News",
         "summary": "Americans could be detained for years in popular travel destination, officials warn Fox News",
         "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNREkwZEZOV0xpUG9ubFphM3dsbFBYTU9ZcXFrTDAyMGxsbDI5MUhqU0o0TGNaWGlKTlA5dC1USlhYZWVBTTVCNDRGeXVfMjFyeW0xNmNaM0c0ZDk2bmR1RU1FNmhCUGJ1eFFxVV9rVm5kajlPSy16YUltX3p4eFhWNzFENF9pWjhfTmJQQjB6Zmx4UdIBlwFBVV95cUxPQktOT0hNOEh6YWRxcDVEa0ozQ0twZ1pqVUJCbkd1ODJwREIyb3RxTjlJYndLcXVlWU5sZWJGQmhNck5jeVlkMTl0OVY2eGZhVXlMaDZsWURUQlc1UzRPZXhPV1VrV3Etak9TVVJWYTNpaVE1RHFsNFdPOVZiRzhXSko4V2M1LXpGWkZlNkY3WUlIVWVVZE9N?oc=5",
@@ -260,28 +282,6 @@
         "category": "destination_news",
         "type": "news",
         "_hash": "6fe72a77cb3a"
-      },
-      {
-        "title": "Hasbro unveils new immersive attractions and brand experiences across the world - blooloop",
-        "summary": "Hasbro unveils new immersive attractions and brand experiences across the world blooloop",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBxMDBFRkVyNkZXYUF1ODE2Sm5xSUpLM1J5eTNwcC16RDJXZ3cwVWw1TE5HbzV1ZEtUQnlNTHFBaFpvWXlJcHJyM3JYS2RvSDRFS2ktamlHdUozYktZOHpSOTRiZEQtUm1JTnBZYQ?oc=5",
-        "date": "2026-10-08",
-        "source": "Google News RSS",
-        "source_query": "China+new+attractions+open",
-        "category": "destination_news",
-        "type": "news",
-        "_hash": "adc3442d439b"
-      },
-      {
-        "title": "Chinese travelers to Europe, South America, Australia and NZ up over 40% for Golden Week while Japan drops out of top 10: travel agencies - Global Times",
-        "summary": "Chinese travelers to Europe, South America, Australia and NZ up over 40% for Golden Week while Japan drops out of top 10: travel agencies Global Times",
-        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE91RHBIOGwxWkluSnNzTHp4WGdETkhhMmp5Y25hY3JIeW55UnBOWjJMZTQ2bUFXRHpjN2NEd09jcDZyUk80Vk5ONWN5UnBwNnFwNG9kSXBacncxUHdRdjRQNzN3?oc=5",
-        "date": "2026-10-02",
-        "source": "Google News RSS",
-        "source_query": "China+travel+destination+news",
-        "category": "destination_news",
-        "type": "news",
-        "_hash": "8ce17fb31626"
       },
       {
         "title": "China Travel News Highlights Emerging Destinations Attracting More Visitors - RESIDENT™ | A Luxury Lifestyle Magazine",
@@ -317,6 +317,17 @@
         "_hash": "94aac9bc0109"
       },
       {
+        "title": "On the rise: local media IP in Asian attractions - blooloop",
+        "summary": "On the rise: local media IP in Asian attractions blooloop",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1FSVgwWThGcmhWN2FacTZyX0pZd0pvS0JLLVpjX2FGR0YyQ2I2QmlERlg1Zl9Cd1pSN0N1VGNQdHAyd1pNMWZpOW0xTQ?oc=5",
+        "date": "2026-05-28",
+        "source": "Google News RSS",
+        "source_query": "China+new+attractions+open",
+        "category": "destination_news",
+        "type": "news",
+        "_hash": "b47cd01bad08"
+      },
+      {
         "title": "12 of the best places to visit in China - The Times",
         "summary": "12 of the best places to visit in China The Times",
         "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQNXFwajlOQ2d6RW4wWXpKZXVJUXA4Y1VwbkgyV0RrcFNIYzNzaERjQkVhcG5nSG9OTWNGQ1pVQWQ0R3pHd1hvMFVITXJOaHVpVmhrLTgxdTFHY25xaDFwQ1BfTTlxUE5DTlJWMnNrNkF6TV9TaTdnV1c5NC0yWkhNcGlwczlPMm1pSm1DTjYyaVdtX3hmRW8xeTNObFF4VXFTX3JKY0JKbmtvbkdTeG9R?oc=5",
@@ -330,6 +341,28 @@
     ],
     "safety_alerts": [
       {
+        "title": "Thanksgiving travel plans in US face storm disruptions - China Daily",
+        "summary": "Thanksgiving travel plans in US face storm disruptions China Daily",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1uOUNXcGh4WFhXYlI5ZVBUbm9oUjNwVHpLWW1BdXFDajhsb28taTJwS2JmS0tocWtUZlE5dmp1Y1FDYlBDbVRXZHo5TXRlYVVMc2pIaC13c0E4dGQyOGozbm1UNDRucUhmZlY4MFdkbk5fSlY4LVllYTJPcmpPZw?oc=5",
+        "date": "2026-11-26",
+        "source": "Google News RSS",
+        "source_query": "China+weather+warning+travel",
+        "category": "safety_alerts",
+        "type": "news",
+        "_hash": "e2c687c81789"
+      },
+      {
+        "title": "China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan - Libya Update News - Libya Update News",
+        "summary": "China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan Libya Update News - Libya Update News",
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbnROODBlM2NRb3BXb3A2Q1A5LVh4OF9KSGt2cDZEY2RYZUZVREp4MGFRelVGQTNmWnRMQmt3ZzA3TFZxVlVrUThWZlA5Z1Z6RVRzbjFSQUZ1NjNoN0NXcllCem5RcDA5elZUd05mdzJxVHV5TWhuOWprY2FKN1pwbndaOHhEcGVNYjdUcUZwRVZXTjI1eV9zS185U1B5RW94T0JyOGRMaE5NMWIySC1vNnNMUVgwN0R5d2tTV2xhbw?oc=5",
+        "date": "2026-11-09",
+        "source": "Google News RSS",
+        "source_query": "China+transportation+update",
+        "category": "safety_alerts",
+        "type": "news",
+        "_hash": "8f537a18c6a9"
+      },
+      {
         "title": "Mercedes readies 2030 strategy update with China at its core - Reuters",
         "summary": "Mercedes readies 2030 strategy update with China at its core Reuters",
         "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPb3RXanRCZVNUand6bVBsaVdRS29UeGlGQ240NnhocVYyQ0pBdUdCZkhWM2F3RDhiZlIwdXNRb0tJbVpmQ1oxTy1Gel9EMFhzWU8xWXc1dnBXSzdkTjdDcjZ3YVFVSnR4TWROYXpUVlpjWEVUVWVHay1wcUhwNHgzOFNXcV8wUFZxczZXT0cwZTl2TUJ5SmlhUWQ2ZzNnMldGaVNaX2ZOUTFlajdoRkxoMkM4WWpPRmh3Wk51Y0hIZV8?oc=5",
@@ -341,15 +374,15 @@
         "_hash": "e848ebb2cc94"
       },
       {
-        "title": "U.S. Adds Wrongful Detention Warning to China Travel Advisory - AgroLatam",
-        "summary": "U.S. Adds Wrongful Detention Warning to China Travel Advisory AgroLatam",
-        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPX1lBcl9RQ2hOUWdVQ2dhSmJnRm5WU3E5cE9lR2R0SUMzWExtNURXYVlOTzZWa0tqN3VZTVB2OFp1ei1UckpjamhqeF9DdEh4U2M3cjh0OGxWVW1XSGJVQ2lwYnQ5SW1WS0NqSHZ1anJ1RW1BV3VUZS00cDhIU2I4UlczbXZiX2VfLTdrLXBmcmhNZUF4dW5HSzNIMUxIU2dmc1FqbERSWlR1RjJNVkhudmVtZERaQndBM1F3dg?oc=5",
+        "title": "Is it safe to go to China right now? What the U.S. State Department travel advisory warns about wrongful detentions - Clarin.com",
+        "summary": "Is it safe to go to China right now? What the U.S. State Department travel advisory warns about wrongful detentions Clarin.com",
+        "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOWlUyVHNPMHFWYkQxcVYxcHE3TDg2YmVCb2gybGxnaUtoVUwzVl9lUi1pUmsxVjg4YXI1QU5ndzFUR1NJZjhFZkpYMEhiZjE1bHJxdHd3SUJvaVk1OWstcHJMT3ZnZEIyRDZmUFNTVUZ2cXdFN29fSm9PbVo0Q0cyN29meVFlVDFvczZpUzJsNVlmTzJQN0VleG5yUDYtQk1NY0k4OEtYVjJteFMtSmV1RVUtVzdWUzRneUJwZDZEOEV1Q3IzWUhLbkd5eUhnUFN6SjNrdFczTkRHU3E3Qlg4SEphN0xBYlZWSWM4bzRuTGxnUmfSAfgBQVVfeXFMTUlYQ1V1QW9SSEg5LVdiWExkTmcxZW1EazYzZlBHbEc4U2o2UUEtZ2pid2o4NF9pMDJFdnJYaF8yOUZVWVZFZGIyNmFna1c1cGdWS21kcEtwT3hLT2o3c3FLY3d6X2ZudC1fOVd5Qm4wbHdGQXVDakFDVjZWanBXWDFWNG9EWnlxUEdmeTRsbFR5YlJiU3JvSDJrUjdqRzhtUDVZQWVRYmswbVRkam9uajE2Q2R4Y2t1Wmt3TUxvcWVRcXV1cjRGRmpFVjRuVTltUXNtekxsMEh1bkNNWFA1VUhuNm1wRkxZZzFZZHROQ2RrTEh5SXlPb3o?oc=5",
         "date": "2026-10-22",
         "source": "Google News RSS",
         "source_query": "China+travel+safety+alert",
         "category": "safety_alerts",
         "type": "news",
-        "_hash": "fa31abf1d061"
+        "_hash": "ee35e9a70e9e"
       },
       {
         "title": "US adds ‘wrongful detention’ warning for Americans travelling to China - South China Morning Post",
@@ -363,48 +396,26 @@
         "_hash": "38c86176c05c"
       },
       {
-        "title": "US State Department updates China travel advisory, warning electronic communications surveillance - Digital Watch Observatory",
-        "summary": "US State Department updates China travel advisory, warning electronic communications surveillance Digital Watch Observatory",
-        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBoeENnT1R0aXlzUnJKdDFlVTVTNkQ3aVR2aHgzZWNKNnZlamk0UU53NnZTLUZyNEVIUGJDbW9tODlZaExkNGM1RldqN1M4dm5uZl9SaHZaMTdKT2hJTng4Q2RJa29GR0FBUW1lc3dZRQ?oc=5",
-        "date": "2026-09-09",
+        "title": "U.S. Issues New Travel Warnings for Multiple Countries - Fodors Travel Guide",
+        "summary": "U.S. Issues New Travel Warnings for Multiple Countries Fodors Travel Guide",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQczZ5UnlzYzBsYnFXT2dfUDk1VWJINWlsNDh2bUZNOVV0ckpBeTNDZm1GRkZjVWx3NmtsRXdEWS1ZMUdHT01MZmd1X2NyRVRLako4TjR6anNrTWdVLUR3QWhaN1JJMXM2VVM5ZGJFQzRLdnFUWXYxeFFESXVzUWoyTjlZUkFaYmNLNWEteUNFWWpmZw?oc=5",
+        "date": "2026-10-20",
         "source": "Google News RSS",
         "source_query": "China+travel+safety+alert",
         "category": "safety_alerts",
         "type": "news",
-        "_hash": "ef20aca264f6"
+        "_hash": "b81f67611792"
       },
       {
-        "title": "China's 240-hour visa-free transit policy - English.gov.cn",
-        "summary": "China's 240-hour visa-free transit policy English.gov.cn",
-        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxONVB0Yk1udXR1NU5WTGpJMVNscHlVdnpJbGJzWDQ0ZmxuZHhfRVVBcVVvVVIxakdlVmxLUUNPRjk5MWtkcmpYS3VkNjU0ZXg2cUZQLWlyZXpkWEVqbDFJbEhBNWFOVWFUdHY1RlotYU5HMnBINERocWdlZFV2aHpRX2gzbWR0OTVxRHBLOVBSSkFyN21ndTdLTm9R?oc=5",
-        "date": "2026-08-21",
-        "source": "Google News RSS",
-        "source_query": "China+transportation+update",
-        "category": "safety_alerts",
-        "type": "news",
-        "_hash": "007efa1b5d47"
-      },
-      {
-        "title": "Storm weakens, but disrupts travel in China - Taipei Times",
-        "summary": "Storm weakens, but disrupts travel in China Taipei Times",
-        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1qaGEyc0FLaWhlWlBsejJ1ajdRTEZBcEZaTVRESFNqTUhGeTZzcE9PbW12N3ZLd1FyRGhsY1RRbXFVR3lsczU1RXE0ejV5N21WcGJGbHY4Y3VhYmtfZ0N0ZXNhMkppaGZJRG5tMVRYSExTUGZXdUFBMw?oc=5",
-        "date": "2026-08-11",
+        "title": "Weather Alert: Typhoon Saudel - U.S. Embassy & Consulates in China",
+        "summary": "Weather Alert: Typhoon Saudel U.S. Embassy & Consulates in China",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9TalVib2lpSGdER1J1amRaaDBRdUt4TEdrTXJKLTVSbEhISXN4WElmdWJuWThTQ3JkRFp0SFIzNmtwWFhBdVdnWFVmOWNyTlNFMmJjSFV0Z2hfUlpHdUtjYlZsYm5pd1Y0Vkd4T1ZDUlBXc3pj?oc=5",
+        "date": "2026-08-27",
         "source": "Google News RSS",
         "source_query": "China+weather+warning+travel",
         "category": "safety_alerts",
         "type": "news",
-        "_hash": "cb324ec34cae"
-      },
-      {
-        "title": "Typhoon Dolphin hits Beijing as city braces for one-third of annual rainfall over 24 hours - The Guardian",
-        "summary": "Typhoon Dolphin hits Beijing as city braces for one-third of annual rainfall over 24 hours The Guardian",
-        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQNm40MGItcW1hLV9ROVpGMGM5ZjNPOWFWYjVaZ1o0a0ZuM3ZxSFJYSERaRVpGdU5uaVp4UFN5SG9nUVhEVVItVkRkQW9RX3didHJNRC1GeXltbUVpdTVtMjc2MFV5NjM1Vm41VHpjMnpyaTl6c21fbFhzdjhQX3hIZ29UOHNtTEJHU0NEN29Va1gzcWZtMWZpRnY4c2QxTkt6?oc=5",
-        "date": "2026-08-11",
-        "source": "Google News RSS",
-        "source_query": "China+weather+warning+travel",
-        "category": "safety_alerts",
-        "type": "news",
-        "_hash": "78b6bbb544a1"
+        "_hash": "a1f1f9e17564"
       },
       {
         "title": "Weather Alert: Typhoon Dolphin - U.S. Embassy & Consulates in China",
@@ -432,13 +443,13 @@
   },
   "llm_summary": {
     "visa_policy": "- [2026-11-27] 中国240小时过境免签“朋友圈”扩展至57国\n  From State Council 57-country notice: China extends 240-hour visa-free transit to 57 countries (State Council, 2026-08-20)\n- [2026-11-23] China Visa Rules for Americans: Visa-Free Transit, Reciprocity and Limits - Diplomacy and Law\n  China Visa Rules for Americans: Visa-Free Transit, Reciprocity and Limits Diplomacy and Law\n- [2026-11-20] China, Mongolia, South Korea,…: Visa exemptions set to expire at the end of 2026 - VisasNews\n  China, Mongolia, South Korea,…: Visa exemptions set to expire at the end of 2026 VisasNews",
-    "travel_industry": "- [2026-11-26] Gary Bowerman explores the forces reshaping China’s tourism and technology landscape in new book - Moodie Davitt Report\n  Gary Bowerman explores the forces reshaping China’s tourism and technology landscape in new book Moodie Davitt Report\n- [2026-11-26] China-Mongolia-Russia rail service restarts after 6-year hiatus - South China Morning Post\n  China-Mongolia-Russia rail service restarts after 6-year hiatus South China Morning Post\n- [2026-11-26] Nha Trang – Khanh Hoa Brings Its Tourism Story to China, Starting in Beijing - Routesonline\n  Nha Trang – Khanh Hoa Brings Its Tourism Story to China, Starting in Beijing Routesonline",
-    "destination_news": "- [2026-11-27] Chinese culture comes to Kuwaiti youth at GUST International Cultural Day - Global Times\n  Chinese culture comes to Kuwaiti youth at GUST International Cultural Day Global Times\n- [2026-11-26] Global mayors explore sustainable urban development, cultural heritage in China's Kashgar - Daily Sun\n  Global mayors explore sustainable urban development, cultural heritage in China's Kashgar Daily Sun\n- [2026-11-26] Foreign guests of third Orchid Awards explore Shanxi's cultural heritage - 巴士的報\n  Foreign guests of third Orchid Awards explore Shanxi's cultural heritage 巴士的報",
-    "safety_alerts": "- [2026-10-28] Mercedes readies 2030 strategy update with China at its core - Reuters\n  Mercedes readies 2030 strategy update with China at its core Reuters\n- [2026-10-22] U.S. Adds Wrongful Detention Warning to China Travel Advisory - AgroLatam\n  U.S. Adds Wrongful Detention Warning to China Travel Advisory AgroLatam\n- [2026-10-20] US adds ‘wrongful detention’ warning for Americans travelling to China - South China Morning Post\n  US adds ‘wrongful detention’ warning for Americans travelling to China South China Morning Post"
+    "travel_industry": "- [2026-11-27] Chinese and Vietnamese travel industries meet in Beijing to boost tourism cooperation - China.org.cn\n  Chinese and Vietnamese travel industries meet in Beijing to boost tourism cooperation China.org.cn\n- [2026-11-26] China-Mongolia-Russia rail service restarts after 6-year hiatus - South China Morning Post\n  China-Mongolia-Russia rail service restarts after 6-year hiatus South China Morning Post\n- [2026-11-26] Nha Trang – Khanh Hoa Brings Its Tourism Story to China, Starting in Beijing - Routesonline\n  Nha Trang – Khanh Hoa Brings Its Tourism Story to China, Starting in Beijing Routesonline",
+    "destination_news": "- [2026-11-27] Chinese culture comes to Kuwaiti youth at GUST International Cultural Day - Global Times\n  Chinese culture comes to Kuwaiti youth at GUST International Cultural Day Global Times\n- [2026-11-27] Chud Thai takes centre stage in China as Thailand awaits historic UNESCO heritage decision - Nation Thailand\n  Chud Thai takes centre stage in China as Thailand awaits historic UNESCO heritage decision Nation Thailand\n- [2026-11-26] Exploring China the Indonesian Student Way: Favorite Destinations and Estimated Costs - Aktualita.co\n  Exploring China the Indonesian Student Way: Favorite Destinations and Estimated Costs Aktualita.co",
+    "safety_alerts": "- [2026-11-26] Thanksgiving travel plans in US face storm disruptions - China Daily\n  Thanksgiving travel plans in US face storm disruptions China Daily\n- [2026-11-09] China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan - Libya Update News - Libya Update News\n  China’s Forland Expands Its Presence in Libya with Local Manufacturing and Transport Services Plan Libya Update News - Libya Update News\n- [2026-10-28] Mercedes readies 2030 strategy update with China at its core - Reuters\n  Mercedes readies 2030 strategy update with China at its core Reuters"
   },
   "sources": {
     "State Council 57-country notice": 1,
-    "Google News RSS": 37
+    "Google News RSS": 38
   },
   "source_config": {
     "google_news_queries": 15,
@@ -452,5 +463,5 @@
     "provinces": 24
   },
   "policy_change": null,
-  "official_state_checked_at": "2026-11-27T05:13:45.155242+00:00"
+  "official_state_checked_at": "2026-11-27T17:34:52.384287+00:00"
 }
