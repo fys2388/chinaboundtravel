@@ -215,6 +215,8 @@ If you have topics you'd like to see covered in a future update, reply to any of
 
 - [China Photography Guide: Best Spots, Gear & Tips from a China Pro](/posts/china-photography-guide-capturing-the-wonders-of-the-middle-kingdom/)
 
+- [WeChat Pay Setup Guide for Foreigners (2026)](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/)
+
 ## FAQ
 
 ### Do I need a visa for China?

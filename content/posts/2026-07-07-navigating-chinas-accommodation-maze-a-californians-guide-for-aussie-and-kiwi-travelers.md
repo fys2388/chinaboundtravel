@@ -172,6 +172,8 @@ Finding the well-suited accommodation in China can be a challenge, but with a li
 
 - [China Extends 240-Hour Visa-Free Transit to 57 Countries (2026)](/posts/china-extends-144-hour-visa-free-transit-policy-to-more-countries/)
 
+- [China Remote Work Guide: Digital Nomad Tips](/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)
+
 ## FAQ
 
 ### What should I know about sichuan travel accommodation recommendations?

@@ -230,6 +230,8 @@ Safe travels, and zhu nǐ lǚxíng yúkuài — ! (Have a great trip!)
 
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
 
+- [WeChat Pay Setup Guide for Foreigners (2026)](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/)
+
 ## FAQ
 
 ### Is this guide up to date for 2026?

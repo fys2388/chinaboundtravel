@@ -230,3 +230,5 @@ If you're planning a nature-focused China trip, [Zhangjiajie's Avatar Mountains]
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
 
 - [WeChat Pay Setup Guide for Foreigners (2026)](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/)
+
+- [China Remote Work Guide: Digital Nomad Tips](/posts/china-remote-work-guide-a-californians-5-year-chengdu-experience/)

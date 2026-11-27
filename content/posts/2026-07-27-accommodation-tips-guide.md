@@ -242,6 +242,8 @@ Here are some related articles on chinaboundtravel.com that you might find inter
 
 - [China Travel Insurance: Do You Really Need It and How to Choose](/posts/china-travel-insurance-do-you-really-need-it-and-how-to-choose/)
 
+- [WeChat Pay Setup Guide for Foreigners (2026)](/posts/wechat-pay-for-foreigners-step-by-step-setup-and-common-mistakes-to-avoid-guide/)
+
 ## FAQ
 
 ### What should I know about sichuan travel accommodation recommendations?

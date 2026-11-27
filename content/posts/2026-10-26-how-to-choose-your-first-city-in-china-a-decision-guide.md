@@ -116,6 +116,8 @@ Choosing your first city in China is an exciting and important decision. By cons
 
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
 
+- [China 144 Hour Transit Visa: Complete Guide](/posts/144-hour-visa-free-transit-guide/)
+
 ## Related Reading
 
 - [China High-Speed Rail: Complete Ticket Booking Guide for](/posts/china-high-speed-rail-how-to-book-tickets/)
