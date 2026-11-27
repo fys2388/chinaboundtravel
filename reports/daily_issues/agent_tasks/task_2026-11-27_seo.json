@@ -3,7 +3,7 @@
   "agent_name": "SEO Intelligent Agent (SEO智能优化)",
   "task_id": "task_2026-11-27_seo",
   "created_at": "2026-11-27T01:00:50.777973+00:00",
-  "updated_at": "2026-11-27T05:54:10.137070",
+  "updated_at": "2026-11-27T06:00:54.213565",
   "target_date": "2026-11-27",
   "issue_count": 3,
   "severity_summary": {
@@ -34,7 +34,7 @@
       "detected_at": "2026-11-27T05:54:09.211709"
     },
     {
-      "id": "site_health-54a545f9d0a7a417",
+      "id": "site_health-5f76e66e07bd2850",
       "type": "title_too_long",
       "title": "title_too_long",
       "description": "title_too_long",
@@ -51,16 +51,16 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-11-27T05:54:09.275408+00:00"
+      "detected_at": "2026-11-27T06:00:53.964179+00:00"
     },
     {
-      "id": "site_health-65b17b95f20f5b2e",
+      "id": "site_health-4b2e76528589dbe1",
       "type": "meta_description_too_long",
       "title": "meta_description_too_long",
       "description": "meta_description_too_long",
-      "page": "content/posts/apec-2026-shenzhen-outcomes-what-it-means-for-travelers.md",
-      "file": "content/posts/apec-2026-shenzhen-outcomes-what-it-means-for-travelers.md",
-      "evidence": "Meta description过长(186字符)",
+      "page": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+      "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+      "evidence": "Meta description过长(182字符)",
       "recommended_action": "Review and remediate the reported issue.",
       "severity": "medium",
       "agent": "seo",
@@ -71,7 +71,7 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-11-27T05:54:09.275404+00:00"
+      "detected_at": "2026-11-27T06:00:53.964173+00:00"
     }
   ],
   "priority_issue": {
