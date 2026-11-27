@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-27T05:54:07.205504+00:00",
+  "timestamp": "2026-11-27T20:36:16.458656+00:00",
   "agent": "site_health",
   "permission_level": "L2",
   "summary": {
@@ -8,12 +8,12 @@
     "high": 0,
     "medium": 2,
     "low": 5,
-    "auto_fixed": 7,
-    "need_manual": 30,
-    "resolved": 21,
-    "inherited_resolved": 26,
+    "auto_fixed": 6,
+    "need_manual": 29,
+    "resolved": 20,
+    "inherited_resolved": 25,
     "in_progress": 0,
-    "last_updated": "2026-11-27T05:54:09.947740"
+    "last_updated": "2026-11-27T20:36:18.873791"
   },
   "issues": [
     {
@@ -65,36 +65,9 @@
       "resolved_at": "2026-09-23"
     },
     {
-      "type": "file_mojibake",
-      "severity": "medium",
-      "file": "config/news_digest.json",
-      "message": "检测到乱码字符（双编码）",
-      "auto_fixable": true,
-      "fix_action": "fix_encoding",
-      "agent": "site_health",
-      "status": "false_positive",
-      "resolved_by": "agent_captain",
-      "resolution_note": "[WL-005] config/news_digest.json 是合法 UTF-8 编码 JSON 文件（已通过 utf-8 decode + json.loads 验证）。site_health_agent.py 的 mojibake 检测逻辑对多字节 UTF-8 字符（如中文、emoji）误判为 latin-1 双字节编码残留。",
-      "resolved_at": "2026-10-29",
-      "fix_status": "fixed",
-      "fix_message": "已从latin-1转换为UTF-8"
-    },
-    {
       "type": "ai_forbidden_word",
       "severity": "medium",
       "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
-      "message": "AI禁用词: cheapest",
-      "auto_fixable": false,
-      "agent": "content",
-      "status": "need_manual",
-      "assigned": true,
-      "resolved_by": "content_agent",
-      "resolution_note": "无替换表: cheapest"
-    },
-    {
-      "type": "ai_forbidden_word",
-      "severity": "medium",
-      "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
       "message": "AI禁用词: cheapest",
       "auto_fixable": false,
       "agent": "content",
@@ -107,12 +80,24 @@
       "type": "ai_forbidden_word",
       "severity": "medium",
       "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
+      "message": "AI禁用词: cheapest",
+      "auto_fixable": false,
+      "agent": "content",
+      "status": "need_manual",
+      "assigned": true,
+      "resolved_by": "content_agent",
+      "resolution_note": "无替换表: cheapest"
+    },
+    {
+      "type": "ai_forbidden_word",
+      "severity": "medium",
+      "file": "content/posts/2026-11-02-china-winter-travel-guide-where-to-go-and-how-to-pack-au.md",
       "message": "AI禁用词: perfect",
       "auto_fixable": false,
       "agent": "content",
       "status": "need_manual",
       "resolved_by": "content_agent",
-      "resolution_note": "无替换表: ai_forbidden_word",
+      "resolution_note": "无替换表: cheapest",
       "resolved_at": "2026-10-12T20:48:26.363751+00:00",
       "assigned": true
     },
