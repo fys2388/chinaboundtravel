@@ -1,0 +1,87 @@
+{
+  "agent": "seo",
+  "agent_name": "SEO Intelligent Agent (SEO智能优化)",
+  "task_id": "task_2026-11-27_seo",
+  "created_at": "2026-11-27T01:00:50.777973+00:00",
+  "updated_at": "2026-11-27T01:00:51.114499",
+  "target_date": "2026-11-27",
+  "issue_count": 2,
+  "severity_summary": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0
+  },
+  "issues": [
+    {
+      "id": "site_health-25a921342606b932",
+      "type": "title_too_long",
+      "title": "title_too_long",
+      "description": "title_too_long",
+      "page": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+      "evidence": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
+      "recommended_action": "Review and remediate the reported issue.",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "manual_review",
+      "source": "site_health",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-11-27T01:00:50.777371+00:00"
+    },
+    {
+      "id": "site_health-3e5f9c8387994d5",
+      "type": "meta_description_too_long",
+      "title": "meta_description_too_long",
+      "description": "meta_description_too_long",
+      "page": "content/posts/apec-2026-shenzhen-outcomes-what-it-means-for-travelers.md",
+      "file": "content/posts/apec-2026-shenzhen-outcomes-what-it-means-for-travelers.md",
+      "evidence": "Meta description过长(186字符)",
+      "recommended_action": "Review and remediate the reported issue.",
+      "severity": "medium",
+      "agent": "seo",
+      "action": "manual_review",
+      "source": "site_health",
+      "source_file": "",
+      "task_source": "quality_gate",
+      "status": "new",
+      "assigned": true,
+      "assigned_to": "seo",
+      "detected_at": "2026-11-27T01:00:50.777368+00:00"
+    }
+  ],
+  "priority_issue": {
+    "id": "site_health-25a921342606b932",
+    "type": "title_too_long",
+    "title": "title_too_long",
+    "description": "title_too_long",
+    "page": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+    "file": "content/posts/2026-10-26-china-travel-insurance-do-you-really-need-it-and-how-to-choose.md",
+    "evidence": "Title过长(63字符，模板上限60): China Travel Insurance: Do You Really Ne...",
+    "recommended_action": "Review and remediate the reported issue.",
+    "severity": "medium",
+    "agent": "seo",
+    "action": "manual_review",
+    "source": "site_health",
+    "source_file": "",
+    "task_source": "quality_gate",
+    "status": "new",
+    "assigned": true,
+    "assigned_to": "seo",
+    "detected_at": "2026-11-27T01:00:50.777371+00:00"
+  },
+  "expected_actions": [
+    "manual_review"
+  ],
+  "status": "partial",
+  "execution": {
+    "resolved_count": 0,
+    "failed_count": 0,
+    "completed_at": null,
+    "note": "resolved=0, need_manual=1, failed=0"
+  }
+}
