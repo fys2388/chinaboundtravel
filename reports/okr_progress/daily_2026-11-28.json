@@ -1,0 +1,44 @@
+{
+  "report_type": "daily",
+  "period": "2026-11-28",
+  "generated_at": "2026-11-28 00:31:30",
+  "plan": [
+    {
+      "task": "🟠 自然搜索仅 1/18 人（6%）：搜索基本盘未起量：已收录页排名靠后，优先补内链与内容密度、持续提交新页 sitemap，观察排名波动（不自动改标题）",
+      "priority": "high",
+      "period": "今日"
+    },
+    {
+      "task": "🟡 日访问用户：当前 18人 / 目标 30人（60%），保持推进",
+      "priority": "high",
+      "period": "今日"
+    },
+    {
+      "task": "🟡 跳出率（7日滚动） 95% 偏高：⚠️ 含机器流量（爬虫全跳出灌高），暂不可信、勿据此优化首屏——等干净数据再评估真人体验",
+      "priority": "high",
+      "period": "今日"
+    },
+    {
+      "task": "🟡 平均时长（7日滚动） 1 秒：⚠️ 含机器流量（爬虫秒退压低），暂不可信、勿据此改内容——等干净数据再评估阅读深度",
+      "priority": "high",
+      "period": "今日"
+    },
+    {
+      "task": "🟡 联盟 3 次点击 / 0 转化：链路已被触达：CTA 破零已解冻并入队 affiliate_cta_adjust_queue.json（2 个 CTA slot，pending_review），由 CI 社媒密钥执行；仅 REV001、DRIVE-001 实验页保持冻结（REV002 已 RETIRED 不在范围），禁新增 partner/UTM/tracking",
+      "priority": "high",
+      "period": "今日"
+    },
+    {
+      "task": "审核并发布 5 篇草稿文章",
+      "priority": "high",
+      "period": "今日"
+    }
+  ],
+  "krs": {
+    "traffic": 18.0,
+    "content": 0.0,
+    "gsc": 1281.0,
+    "revenue": 0.0,
+    "email": 5.0
+  }
+}

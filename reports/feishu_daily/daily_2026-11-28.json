@@ -1,0 +1,472 @@
+{
+  "date": "2026-11-28",
+  "site_up": true,
+  "response_time": 214.012,
+  "visitors": 18,
+  "sessions": 18,
+  "requests": 18,
+  "visitors_trend": "+12.5%",
+  "week_trend": "-52.6%",
+  "month_trend": "+157.1%",
+  "bounce_rate": 100.0,
+  "avg_session_duration": 0,
+  "engagement_rate": 0.0,
+  "bounce_rate_7d": 94.8,
+  "engagement_rate_7d": 5.2,
+  "avg_session_duration_7d": 1.4567379595375722,
+  "sessions_7d": 173,
+  "visitors_7d": 172,
+  "top_pages": [
+    {
+      "path": "/",
+      "title": "ChinaBound Travel | China Travel Guide 2026 — Visa, Payment & Internet for Foreigners",
+      "views": 6
+    },
+    {
+      "path": "/posts/western-sichuan-overland-camping-route/",
+      "title": "Western Sichuan Overland Camping: 7-Day Route",
+      "views": 2
+    },
+    {
+      "path": "/contact/",
+      "title": "Contact ChinaBound Travel | ChinaBound Travel",
+      "views": 1
+    },
+    {
+      "path": "/posts/7-day-china-itinerary/",
+      "title": "Free 7-Day China Itinerary Template (2026) — Visa-Ready, No-",
+      "views": 1
+    },
+    {
+      "path": "/posts/apec-2026-shenzhen-outcomes-what-it-means-for-travelers/",
+      "title": "APEC 2026 in Shenzhen: What the Summit's Outcomes Mean for T",
+      "views": 1
+    },
+    {
+      "path": "/posts/china-airport-transfer-guide/",
+      "title": "China Airport Transfer Guide (2026) | ChinaBound Travel",
+      "views": 1
+    },
+    {
+      "path": "/posts/china-high-speed-rail-how-to-book-tickets/",
+      "title": "China High-Speed Rail: Complete Ticket Booking Guide for",
+      "views": 1
+    },
+    {
+      "path": "/posts/chinabound-travel-guide-2026-07-monthly-update/",
+      "title": "China Travel Guide: July 2026 Updates | ChinaBound Travel",
+      "views": 1
+    },
+    {
+      "path": "/posts/chinese-street-food-a-first-timers-guide-to-night-markets-and-street-stalls/",
+      "title": "Chinese Street Food: Night Markets Guide | ChinaBound Travel",
+      "views": 1
+    },
+    {
+      "path": "/posts/chinese-tea-culture-history-types-and-tea-ceremony-guide/",
+      "title": "Chinese Tea Culture: History & Types | ChinaBound Travel",
+      "views": 1
+    }
+  ],
+  "top_channels": [
+    {
+      "channel": "Direct",
+      "users": 17,
+      "sessions": 17
+    },
+    {
+      "channel": "Organic Search",
+      "users": 1,
+      "sessions": 1
+    }
+  ],
+  "top_countries": [
+    {
+      "country": "Singapore",
+      "users": 7
+    },
+    {
+      "country": "United States",
+      "users": 5
+    },
+    {
+      "country": "China",
+      "users": 2
+    },
+    {
+      "country": "Brazil",
+      "users": 1
+    },
+    {
+      "country": "Canada",
+      "users": 1
+    }
+  ],
+  "sitemap_count": 1,
+  "gsc_data_available": true,
+  "gsc_impressions": 1281,
+  "gsc_clicks": 11,
+  "gsc_ctr": 0.86,
+  "gsc_errors": 0,
+  "gsc_week_trend": "+28.2%",
+  "gsc_month_trend": "+85.9%",
+  "top_keywords": [
+    {
+      "keyword": "12306 credit card charge",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 11.5
+    },
+    {
+      "keyword": "30 day free visa china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 4.0
+    },
+    {
+      "keyword": "7 day china tour",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 12.0
+    },
+    {
+      "keyword": "accommodation china",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0.0,
+      "position": 52.0
+    },
+    {
+      "keyword": "accommodation conditions and price range in chengdu",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 86.0
+    },
+    {
+      "keyword": "accommodation selection suggestions for sichuan scenic spots",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 62.0
+    },
+    {
+      "keyword": "accommodation standards of chengdu china youth travel service",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 65.0
+    },
+    {
+      "keyword": "accommodation standards of chengdu international travel service",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 85.0
+    },
+    {
+      "keyword": "accommodation standards of chengdu tourism companies",
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0.0,
+      "position": 93.1
+    },
+    {
+      "keyword": "accommodation standards of chengdu youth travel service",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 60.0
+    },
+    {
+      "keyword": "accommodation standards of china tourism companies",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 59.0
+    },
+    {
+      "keyword": "accommodation standards of sichuan china international travel service",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 74.0
+    },
+    {
+      "keyword": "accommodation standards of sichuan international travel service",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 28.5
+    },
+    {
+      "keyword": "accommodation standards of sichuan tourism companies",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 40.0
+    },
+    {
+      "keyword": "accommodation standards of sichuan youth travel service",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 53.0
+    },
+    {
+      "keyword": "airport transfer service china",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0.0,
+      "position": 71.5
+    },
+    {
+      "keyword": "alipay and wechat pay",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.0,
+      "position": 30.0
+    },
+    {
+      "keyword": "alipay tutorial",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0.0,
+      "position": 55.8
+    },
+    {
+      "keyword": "alipay vs wechat pay",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "position": 55.0
+    },
+    {
+      "keyword": "alipay vs wechat pay in china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 50.0
+    },
+    {
+      "keyword": "beijing itinerary 7 days",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "position": 4.0
+    },
+    {
+      "keyword": "best places for photography in china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 71.0
+    },
+    {
+      "keyword": "booking china train tickets online",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 29.0
+    },
+    {
+      "keyword": "business travel in china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 62.0
+    },
+    {
+      "keyword": "business travel to china",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "position": 65.0
+    }
+  ],
+  "total_posts": 75,
+  "new_posts": 0,
+  "pending_posts": 5,
+  "placeholder_articles": 0,
+  "empty_links": 0,
+  "missing_alt": 0,
+  "total_content_issues": 0,
+  "tp_clicks": 3,
+  "tp_bookings": 0,
+  "tp_revenue": 0.0,
+  "tp_available": true,
+  "tp_inits": 0,
+  "tp_searches": 0,
+  "tp_inits_unreported": true,
+  "nord_available": false,
+  "nord_clicks": 0,
+  "nord_conversions": 0,
+  "nord_revenue": 0.0,
+  "top_converting_article": "N/A",
+  "affiliate_revenue": 0.0,
+  "ml_total_subscribers": 5,
+  "ml_new_subscribers": 0,
+  "ml_available": true,
+  "gh_blog_success": null,
+  "gh_report_success": true,
+  "gh_social_success": true,
+  "gh_api_ok": true,
+  "gh_api_error": null,
+  "gh_runs_total": 1000,
+  "gh_query_window_days": 8,
+  "gh_blog_paths_total": 0,
+  "gh_report_paths_total": 16,
+  "high_priority_todos": [
+    "🟠 自然搜索仅 1/18 人（6%）：搜索基本盘未起量：已收录页排名靠后，优先补内链与内容密度、持续提交新页 sitemap，观察排名波动（不自动改标题）",
+    "🟡 日访问用户：当前 18人 / 目标 30人（60%），保持推进",
+    "🟡 跳出率（7日滚动） 95% 偏高：⚠️ 含机器流量（爬虫全跳出灌高），暂不可信、勿据此优化首屏——等干净数据再评估真人体验",
+    "🟡 平均时长（7日滚动） 1 秒：⚠️ 含机器流量（爬虫秒退压低），暂不可信、勿据此改内容——等干净数据再评估阅读深度",
+    "🟡 联盟 3 次点击 / 0 转化：链路已被触达：CTA 破零已解冻并入队 affiliate_cta_adjust_queue.json（2 个 CTA slot，pending_review），由 CI 社媒密钥执行；仅 REV001、DRIVE-001 实验页保持冻结（REV002 已 RETIRED 不在范围），禁新增 partner/UTM/tracking",
+    "审核并发布 5 篇草稿文章"
+  ],
+  "data_status": [
+    "NordVPN/AffiliatesCN: 未接入自动化（Impact.com 无实时数据 API），该渠道的点击与佣金不进日报——合计佣金为已接入渠道的下限，不是全量",
+    "📧 订阅零增长：昨日新增订阅为 0（渠道已接入），需排查 Lead Magnet / 订阅 CTA 覆盖与投放"
+  ],
+  "report_date": "2026-11-27",
+  "bot_traffic_assessment": {
+    "suspect": true,
+    "low_confidence": false,
+    "reasons": [
+      "跳出率 100.0% + 互动率 0.0%（全跳出、零阅读）",
+      "访客=会话=页浏览=18（每会话恰好 1 页，脚本/监控特征）"
+    ],
+    "detail": "跳出率 100.0% + 互动率 0.0%（全跳出、零阅读）; 访客=会话=页浏览=18（每会话恰好 1 页，脚本/监控特征）",
+    "note": "基于维度特征推断，非 IP 级确认。内部自动化源已根治（站内工具不再上报 GA4）；剩余多为外部爬虫（IP 不固定，GA4 IP 过滤治不了），无法根除，属互联网常态。"
+  },
+  "gsc_avg_position": 25.73,
+  "gsc_window_start": "2026-11-19",
+  "gsc_window_end": "2026-11-25",
+  "gsc_window_days": 7,
+  "content_pages_scanned": 87,
+  "root_pages_scanned": 12,
+  "drafts_in_posts_dir": 0,
+  "ml_zero_growth_alert": true,
+  "gh_blog_window_days": 8,
+  "gh_blog_window_runs": 0,
+  "gh_blog_failure_count": 0,
+  "gh_blog_latest_failure_time": null,
+  "gh_blog_state": "no_runs",
+  "gh_blog_conclusion": null,
+  "gh_blog_run_time": null,
+  "gh_report_window_days": 2,
+  "gh_report_window_runs": 4,
+  "gh_report_failure_count": 0,
+  "gh_report_latest_failure_time": null,
+  "gh_report_state": "success",
+  "gh_report_conclusion": "success",
+  "gh_report_run_time": "2026-11-27T08:54:23Z",
+  "gh_report_display_title": "Feishu Daily Report",
+  "gh_report_running": true,
+  "gh_social_window_days": 2,
+  "gh_social_paths_total": 14,
+  "gh_social_window_runs": 7,
+  "gh_social_failure_count": 0,
+  "gh_social_latest_failure_time": null,
+  "gh_social_state": "success",
+  "gh_social_conclusion": "success",
+  "gh_social_run_time": "2026-11-28T00:24:56Z",
+  "gh_social_display_title": "Social Media Distributor",
+  "agent_health": {
+    "checked_at": "2026-11-28 00:31",
+    "overall": "✅ 健康",
+    "kill_switch": "✅ 未激活",
+    "unified_report": {
+      "generated_at": "2026-11-23 06:14:39",
+      "success": 6,
+      "failed": 0,
+      "fresh": "✅"
+    },
+    "agents": [
+      {
+        "name": "SEO智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-11-28",
+        "max_age_days": 8
+      },
+      {
+        "name": "自我学习引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-11-28",
+        "max_age_days": 8
+      },
+      {
+        "name": "收入分析引擎",
+        "status": "✅ 正常",
+        "last_run": "2026-11-28",
+        "max_age_days": 8
+      },
+      {
+        "name": "转化优化Agent",
+        "status": "✅ 正常",
+        "last_run": "2026-11-28",
+        "max_age_days": 8
+      },
+      {
+        "name": "内容智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-11-28",
+        "max_age_days": 2
+      },
+      {
+        "name": "社媒智能优化",
+        "status": "✅ 正常",
+        "last_run": "2026-11-28",
+        "max_age_days": 2
+      },
+      {
+        "name": "用户智能运营",
+        "status": "✅ 正常",
+        "last_run": "2026-11-28",
+        "max_age_days": 8
+      },
+      {
+        "name": "网站健康巡检",
+        "status": "✅ 正常",
+        "last_run": "2026-11-28",
+        "max_age_days": 1
+      }
+    ],
+    "healthy_count": 8,
+    "stale_count": 0,
+    "cross_agent_learning": "✅ 正常"
+  },
+  "site_health": {
+    "total_issues": 7,
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 5,
+    "auto_fixed": 6,
+    "need_manual": 29,
+    "resolved": 20,
+    "inherited_resolved": 25,
+    "in_progress": 0,
+    "last_updated": "2026-11-27T20:36:18.873791"
+  },
+  "reporting_snapshot": {
+    "as_of": "2026-11-27",
+    "generated_at": "2026-11-27",
+    "low_data_warning": true,
+    "gsc_impressions_28d": 1339,
+    "gsc_clicks_28d": 1,
+    "gsc_indexed_pages": 69,
+    "gsc_indexed_label": "CACHED",
+    "gsc_label": "LIVE",
+    "sessions_28d": 166,
+    "pageviews_28d": 374,
+    "revenue_value": null,
+    "revenue_status": "NOT_AVAILABLE",
+    "revenue_source": "NOT_AVAILABLE"
+  },
+  "okr_section": "---\n## 🟡 今日 OKR 速览（Q4 目标折算）\n| 关键结果 | 当前 | 目标 | 进度 | 状态 |\n| :--- | :--- | :--- | :--- | :--- |\n| 日访问用户 | 18人 | 30人 | 60% | 🟡 |\n| 日新增文章 | 0篇 | 1篇 | 0% | 🟡 今日无新发（距上次 5 天，周更节奏内） |\n| 日搜索曝光（7天窗口日均） | 183次 | 73次 | 100% | ✅ 当前 183次 = 目标的 3×，进度封顶 100%（目标偏低） |\n| 日联盟佣金 | 0$ | 2$ | 0% | 🟡 |\n| 邮件订阅（昨日新增） | 0人 | 3人 | 0% | 🟡 |",
+  "advice_section": "---\n## 📌 运营建议（自动生成）\n- 🟡 **跳出率（7日滚动） 95% 偏高**：⚠️ 含机器流量（爬虫全跳出灌高），暂不可信、勿据此优化首屏——等干净数据再评估真人体验\n- 🟡 **平均时长（7日滚动） 1 秒**：⚠️ 含机器流量（爬虫秒退压低），暂不可信、勿据此改内容——等干净数据再评估阅读深度\n- 🟡 **联盟 3 次点击 / 0 转化**：链路已被触达：CTA 破零已解冻并入队 affiliate_cta_adjust_queue.json（2 个 CTA slot，pending_review），由 CI 社媒密钥执行；仅 REV001、DRIVE-001 实验页保持冻结（REV002 已 RETIRED 不在范围），禁新增 partner/UTM/tracking\n- 🟠 **自然搜索仅 1/18 人（6%）**：搜索基本盘未起量：已收录页排名靠后，优先补内链与内容密度、持续提交新页 sitemap，观察排名波动（不自动改标题）"
+}
