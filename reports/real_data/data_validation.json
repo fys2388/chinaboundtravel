@@ -1,11 +1,11 @@
 {
-  "validation_time": "2026-11-27T15:46:07.471950",
+  "validation_time": "2026-11-28T14:41:50.998581",
   "overall_status": "PASS",
   "sources": {
     "ga4": {
       "is_real_data": true,
       "is_fresh": true,
-      "data_date": "2026-11-26",
+      "data_date": "2026-11-27",
       "status": "OK",
       "error": null,
       "disabled_reason": null,
@@ -14,7 +14,7 @@
     "gsc": {
       "is_real_data": true,
       "is_fresh": true,
-      "data_date": "2026-11-24",
+      "data_date": "2026-11-25",
       "status": "OK",
       "error": null,
       "disabled_reason": null,
@@ -23,7 +23,7 @@
     "social": {
       "is_real_data": true,
       "is_fresh": true,
-      "data_date": "2026-11-27",
+      "data_date": "2026-11-28",
       "status": "OK",
       "error": null,
       "disabled_reason": null,
@@ -32,7 +32,7 @@
     "content": {
       "is_real_data": true,
       "is_fresh": true,
-      "data_date": "2026-11-27",
+      "data_date": "2026-11-28",
       "status": "UNKNOWN",
       "error": null,
       "disabled_reason": null,
