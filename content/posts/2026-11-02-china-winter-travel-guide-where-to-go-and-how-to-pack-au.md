@@ -186,6 +186,8 @@ For more information on China travel, check out these articles:
 
 - [Free 7-Day China Itinerary Template (2026)](/posts/7-day-china-itinerary/)
 
+- [China 144 Hour Transit Visa: Complete Guide](/posts/144-hour-visa-free-transit-guide/)
+
 ## Related Reading
 
 - [China Winter Travel Guide: Where to Go and How to Pack](/posts/china-winter-travel-guide-where-to-go-and-how-to-pack/)
