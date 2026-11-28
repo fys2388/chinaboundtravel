@@ -3,7 +3,7 @@
   "agent_name": "SEO Intelligent Agent (SEO智能优化)",
   "task_id": "task_2026-11-28_seo",
   "created_at": "2026-11-28T01:00:59.363490+00:00",
-  "updated_at": "2026-11-28T02:00:51.025430",
+  "updated_at": "2026-11-28T02:30:55.539227",
   "target_date": "2026-11-28",
   "issue_count": 2,
   "severity_summary": {
@@ -14,7 +14,7 @@
   },
   "issues": [
     {
-      "id": "site_health-3fcf155f79ff5862",
+      "id": "site_health-38277429678871b6",
       "type": "title_too_long",
       "title": "title_too_long",
       "description": "title_too_long",
@@ -31,10 +31,10 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-11-28T02:00:50.543170+00:00"
+      "detected_at": "2026-11-28T02:30:55.140927+00:00"
     },
     {
-      "id": "site_health-10157b3b533fbba2",
+      "id": "site_health-289df288b2ca81d2",
       "type": "meta_description_too_long",
       "title": "meta_description_too_long",
       "description": "meta_description_too_long",
@@ -51,11 +51,11 @@
       "status": "new",
       "assigned": true,
       "assigned_to": "seo",
-      "detected_at": "2026-11-28T02:00:50.543165+00:00"
+      "detected_at": "2026-11-28T02:30:55.140923+00:00"
     }
   ],
   "priority_issue": {
-    "id": "site_health-3fcf155f79ff5862",
+    "id": "site_health-38277429678871b6",
     "type": "title_too_long",
     "title": "title_too_long",
     "description": "title_too_long",
@@ -72,7 +72,7 @@
     "status": "new",
     "assigned": true,
     "assigned_to": "seo",
-    "detected_at": "2026-11-28T02:00:50.543170+00:00"
+    "detected_at": "2026-11-28T02:30:55.140927+00:00"
   },
   "expected_actions": [
     "manual_review"
